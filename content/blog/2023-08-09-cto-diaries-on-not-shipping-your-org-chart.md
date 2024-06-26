@@ -21,3 +21,5 @@ You may argue that, "Does it really matter? Customers don't really care about ho
 Finally, the study also highlights collaboration patterns in the open source sphere that do not support the mirroring hypothesis (and thus, Conway's Law). My experience with OSS collaboration is mostly outside work so I'm interested to know if there is a case for adopting OSS-style structure within the organization. I think that's a good topic for another day.
 
 To conclude, instead of going with the warning "don't ship the org chart", since you will ship your org chart anyway, be aware of it, understand it, and make sure it works on your favor.
+
+<br>

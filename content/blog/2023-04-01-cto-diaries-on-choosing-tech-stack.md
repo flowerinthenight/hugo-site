@@ -1,8 +1,13 @@
 ---
-layout: post
 title: "CTO Diaries #3: On choosing technology stacks"
-location: "Japan"
+description: "2023-04-01"
+categories: ["Tech"]
+date: "2023-04-01"
+paige:
+  feed:
+    hide_page: true
 tags: [cto-diaries, cto, diaries, startup]
+weight: 1
 ---
 
 When it comes to tech stack selection, in general, I always approach it in terms of tradeoffs. And when it comes to understanding tradeoffs; what you gain vs what you lose, I think experience plays a big part. In my 18+ years of experience building systems, I've been bitten enough times that I view most of them with a fair bit of cynicism. I wouldn't really say that experience definitely makes me better at it; I still have my own biases and experience doesn't really 'fix' the illogical side of me being a human being with emotions. It gets in the way at times. Then there's the business side of it as well. An example would be to maintain business relations, or to honor partnership agreements, I would need to use (or integrate into) some tech stacks that I wouldn't normally choose in the first place. And to add to all of these, I also work in a startup with limited resources so there are other criteria that have a bigger influence on my approach to balancing tradeoffs. And at our phase right now, probably the biggest one is cost. Not just monetary but engineering costs as well: cost of operating and managing these systems. And I must admit that cost considerations is at times so pervasive to me that I would choose a technology purely because I got a significant discount for it even though at the back of my head, I know it's going to come back to me later on. So much for experience, huh.
@@ -20,3 +25,5 @@ What about hype, or in GitHub for example, the number of stars a project have? O
 So, how do I keep track with all of these information around criteria? Journaling. I take notes on all of them. I'm still working on the organization part of it though. It was and is a need so I'm sort of forced into it. But overtime, I think I've improved a lot on my documentations (and writing them) and it has grown on me so I don't mind it now.
 
 Alright, that's it for now. See you in the next one.
+
+<br>

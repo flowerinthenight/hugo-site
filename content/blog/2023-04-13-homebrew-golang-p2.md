@@ -1,8 +1,13 @@
 ---
-layout: post
 title: "Using Homebrew for distributing Go apps (part 2)"
-location: "Japan"
+description: "2023-04-13"
+categories: ["Tech"]
+date: "2023-04-13"
+paige:
+  feed:
+    hide_page: true
 tags: [homebrew, go, golang, goreleaser, homebrew, ruby]
+weight: 1
 ---
 
 For personal reference:
@@ -13,14 +18,14 @@ This is a followup on a [previous post](https://flowerinthenight.com/blog/2019/0
 
 Create a new GitHub public repository with a prefix `homebrew-`, i.e. `homebrew-tap`. This will host all the apps that you want to distribute via your tap. Users will install your apps using the following commands:
 
-{% highlight shell %}
+```sh
 # No need to include the 'homebrew-' prefix
 $ brew tap flowerinthenight/tap
 $ brew install <toolname>
 
 # Or one-liner
 $ brew install flowerinthenight/tap/<toolname>
-{% endhighlight %}
+```
 
 #### b) Let's use Github Actions to setup [goreleaser](https://github.com/goreleaser/goreleaser)
 
@@ -40,8 +45,10 @@ See the `name: Run goreleaser` section. You need to add a personal access token 
 
 Tagged releases should now do a deployment to your tap.
 
-{% highlight shell %}
+```sh
 $ git tag v1.0.0
 $ git push --tags
-{% endhighlight %}
+```
+
+<br>
 

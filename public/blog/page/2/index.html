@@ -756,24 +756,40 @@ table {
                 
             
         
-    
+            
+                
+            
         
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
+        
+            
                 
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+    
+        
             
                 
             
@@ -966,6 +982,135 @@ table {
         
 
         
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2022-09-27-cto-diaries-typical-day/">CTO Diaries #2: Typical day</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Hi. It’s been a year since my last「CTO diaries」post. Never mind the excuses, there’s a lot.
+Anyway, so what does my typical, or normal day, look like? Well, I usually start the day with checking the overall health of our systems. We don’t really have very sophisticated monitoring and alerting systems at this point so this means checking on several areas such as our Kubernetes clusters, databases, and critical services. On top of my head, I think the most common service crashes I noticed so far are OOM-related.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/cto/">Cto</a> · <a class="link-secondary" href="/tags/cto-diaries/">Cto-Diaries</a> · <a class="link-secondary" href="/tags/diaries/">Diaries</a> · <a class="link-secondary" href="/tags/startup/">Startup</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">3 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-07-08-package-distributed-locks/">dlock - package for distributed locks</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I’ve uploaded a package for distributed locks. It’s called dlock. At the moment, it supports using Kubernetes’ LeaseLock object and Redis. You might find it useful.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/distributed-locks/">Distributed-Locks</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/k8slock/">K8slock</a> · <a class="link-secondary" href="/tags/leaselock/">Leaselock</a> · <a class="link-secondary" href="/tags/redis/">Redis</a> · <a class="link-secondary" href="/tags/redislock/">Redislock</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
 
         
             
@@ -2574,72 +2719,6 @@ Example tool: $ sometool –flag1 –flag2 2&gt;&amp;1 | tee out.txt
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2023-04-06-restore-default-branch-from-tag/">Restore default branch from tag while preserving history</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Fore self reference:
-To restore default branch from a tag while preserving history, do:
-{% highlight shell %} $ git checkout tags/v1.2.3 -b v1.2.3 $ git diff main &gt; /tmp/diff.patch $ git checkout main $ cat /tmp/diff.patch | git apply $ git commit -am “Rolled back to v1.2.3” $ git push origin main {% endhighlight %}</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/git/">Git</a> · <a class="link-secondary" href="/tags/history/">History</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
         <p class="mb-0 paige-title text-center"><a href="/blog/2018-01-24-k8s-kops-aws/">Running Kubernetes on AWS using kops</a></p>
     
 
@@ -4193,74 +4272,6 @@ Recently though, I’ve been using glog more and more. And I quite like it. The 
 
     
         <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2019-07-30-homebrew-golang/">Using Homebrew for distributing Go (golang) apps</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">For personal reference:
-a) Create your own homebrew tap Create a new GitHub public repository with a prefix homebrew-, i.e. homebrew-tap. This will house all the apps that you want to distribute via your tap. Users will install your apps using the following commands:
-{% highlight shell %}
-No need to include the ‘homebrew-’ prefix $ brew tap flowerinthenight/tap $ brew install {% endhighlight %}
-The toolname part will correspond to the filename inside your repository tap.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/homebrew/">Homebrew</a> · <a class="link-secondary" href="/tags/ruby/">Ruby</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
     
 </div>
 

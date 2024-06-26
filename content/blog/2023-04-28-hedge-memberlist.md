@@ -1,8 +1,13 @@
 ---
-layout: post
-title: "Attempt to replace hedge's member tracking with hashicorp/memberlist"
-location: "Japan"
+title: "Attempt to replace `hedge`'s member tracking with `hashicorp/memberlist`"
+description: "2023-04-28"
+categories: ["Tech"]
+date: "2023-04-28"
+paige:
+  feed:
+    hide_page: true
 tags: [memberlist, hedge, distributed-computing, k8s, kubernetes]
+weight: 1
 ---
 
 I recently came across the [hashicorp/memberlist](https://github.com/hashicorp/memberlist) library while browsing GitHub and I thought it would be a good replacement for [hedge](https://github.com/flowerinthenight/hedge)'s internal member tracking logic. It seems to be widely used (thus more battle-tested) as well. I was quite excited as I always thought that hedge's equivalent logic is too barebones and untested outside of our use cases. It works just fine for its current intended purpose but I've been hesitating to build on top of it until I can really say that it's stable enough. With memberlist, it might just be what I needed.
@@ -12,3 +17,5 @@ After about a month of testing, I think it didn't really turn out quite well in 
 I am a little frustrated. I really wanted it to work; I even attempted to update memberlist to incorporate hedge's logic but it was too much for now, with my schedule. So now, back to the old one. By the way, the current logic is fairly rudimentary: all members in the cluster/group send a liveness heartbeat to the leader and the leader broadcasting the final list of members to all via hedge's broadcast mechanism. CPU usage between the two is fairly similar depending on the sync timeout.
 
 I've been trying to improve hedge's member tracking system as I want to build a distributed in-memory cache within hedge itself. Most of the available ones are [Raft](https://raft.github.io/)-based, and I still haven't figured out how to make Raft work in the same deployment configuration.
+
+<br>

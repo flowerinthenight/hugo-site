@@ -32,35 +32,19 @@
     
 
     
-        
+
     
 
     
-        
+
     
 
     
-        
+
     
 
     
-        
-    
 
-    
-        
-    
-
-    
-        
-    
-
-    
-        
-    
-
-    
-        
     
 
     
@@ -1214,83 +1198,6 @@ I0205 16:39:37.212187   13685 main.go:41] echo=hello alien world
             
 
             <title type="html"><![CDATA[Using k8s.io/klog together with cobra in golang]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>For personal reference:</p>
-<p>This is a followup on a <a href="https://flowerinthenight.com/blog/2019/07/30/homebrew-golang">previous post</a> that is a bit more manual. This is a little bit easier.</p>
-<h4 id="a-create-your-own-homebrew-tap">a) Create your own Homebrew tap</h4>
-<p>Create a new GitHub public repository with a prefix <code>homebrew-</code>, i.e. <code>homebrew-tap</code>. This will host all the apps that you want to distribute via your tap. Users will install your apps using the following commands:</p>
-<p>{% highlight shell %}</p>
-<h1 id="no-need-to-include-the-homebrew--prefix">No need to include the &lsquo;homebrew-&rsquo; prefix</h1>
-<p>$ brew tap flowerinthenight/tap
-$ brew install <toolname></p>
-<h1 id="or-one-liner">Or one-liner</h1>
-<p>$ brew install flowerinthenight/tap/<toolname>
-{% endhighlight %}</p>
-<h4 id="b-lets-use-github-actions-to-setup-goreleaserhttpsgithubcomgoreleasergoreleaser">b) Let&rsquo;s use Github Actions to setup <a href="https://github.com/goreleaser/goreleaser">goreleaser</a></h4>
-<p>First, add a <code>.goreleaser.yml</code> config file to your Go repo. Here&rsquo;s an example:</p>
-<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fflowerinthenight%2Fkubepfm%2Fblob%2Fmaster%2F.goreleaser.yml&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-<p>The section of note here is the <code>brews:</code> part. You can check goreleaser&rsquo;s <a href="https://goreleaser.com/quick-start/">Quickstart</a> guide for more information.</p>
-<p>Here&rsquo;s an example of a GitHub Action config on how to setup <a href="https://github.com/goreleaser/goreleaser">goreleaser</a> to do the release for our tags.</p>
-<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fflowerinthenight%2Fkubepfm%2Fblob%2Fmaster%2F.github%2Fworkflows%2Fmain.yml&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-<p>See the <code>name: Run goreleaser</code> section. You need to add a personal access token with <code>repo, workflow, write:packages</code> permissions to your repository&rsquo;s secrets. In this example, the name used is <code>GH_PAT</code> but you can use other names as well.</p>
-<h4 id="c-do-a-tagged-release">c) Do a tagged release</h4>
-<p>Tagged releases should now do a deployment to your tap.</p>
-<p>{% highlight shell %}
-$ git tag v1.0.0
-$ git push &ndash;tags
-{% endhighlight %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-04-13-homebrew-golang-p2/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-04-13-homebrew-golang-p2/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Using Homebrew for distributing Go apps (part 2)]]></title>
             <updated>0001-01-01T00:00:00Z</updated>
         </entry>
     
@@ -3282,69 +3189,6 @@ ip-x.x.x.x.ap-northeast-1&hellip;   Ready     node      1d    v1.8.6    1.2.3.8 
             
 
             
-                <content type="html"><![CDATA[<p>Fore self reference:</p>
-<p>To restore default branch from a tag while preserving history, do:</p>
-<p>{% highlight shell %}
-$ git checkout tags/v1.2.3 -b v1.2.3
-$ git diff main &gt; /tmp/diff.patch
-$ git checkout main
-$ cat /tmp/diff.patch | git apply
-$ git commit -am &ldquo;Rolled back to v1.2.3&rdquo;
-$ git push origin main
-{% endhighlight %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-04-06-restore-default-branch-from-tag/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-04-06-restore-default-branch-from-tag/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Restore default branch from tag while preserving history]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
                 <content type="html"><![CDATA[<p>Some golang-based tools I&rsquo;ve used (or even written) use the builtin <code>log</code> package that output logs to stderr by default. I also use <a href="https://en.wikipedia.org/wiki/Tee_(command)">tee</a> for piping console outputs to file for later viewing. This is the command I generally use:</p>
 <p>{% highlight shell %}</p>
 <h1 id="example-tool">Example tool:</h1>
@@ -4924,67 +4768,6 @@ wget -i -
             
 
             
-                <content type="html"><![CDATA[<p>When it comes to tech stack selection, in general, I always approach it in terms of tradeoffs. And when it comes to understanding tradeoffs; what you gain vs what you lose, I think experience plays a big part. In my 18+ years of experience building systems, I&rsquo;ve been bitten enough times that I view most of them with a fair bit of cynicism. I wouldn&rsquo;t really say that experience definitely makes me better at it; I still have my own biases and experience doesn&rsquo;t really &lsquo;fix&rsquo; the illogical side of me being a human being with emotions. It gets in the way at times. Then there&rsquo;s the business side of it as well. An example would be to maintain business relations, or to honor partnership agreements, I would need to use (or integrate into) some tech stacks that I wouldn&rsquo;t normally choose in the first place. And to add to all of these, I also work in a startup with limited resources so there are other criteria that have a bigger influence on my approach to balancing tradeoffs. And at our phase right now, probably the biggest one is cost. Not just monetary but engineering costs as well: cost of operating and managing these systems. And I must admit that cost considerations is at times so pervasive to me that I would choose a technology purely because I got a significant discount for it even though at the back of my head, I know it&rsquo;s going to come back to me later on. So much for experience, huh.</p>
-<p>The other criteria would be expertise. With our current budget, there is a certain ceiling to the level of engineering expertise I can afford to hire. And so far, ICs or principal level engineers who could handle such decisions for me are still out of my reach. So I still end up making the decisions most of the time. The one or two engineers I have who are fairly knowledgeable about systems and infrastructure are also doing development and technical support at the same time that there&rsquo;s just not enough time to do validations. They will have opinions of course based on their readings and experience but at the end of the day, I know that they didn&rsquo;t have enough time to validate so I roughly know the level of confidence they have on their opinions. And speaking of opinions, I am more interested in roughly knowing about the caveats, horror stories, real user feedback, etc., that means checking Reddit, Mastodon, Twitter to some extent, engineering blog posts, GitHub issues, HackerNews, etc. I would say that this is almost always a requirement of mine to myself as part of my due diligence.</p>
-<p>One thing that I enjoy in all of these however is the part where I do a small prototype of the tech in question. It&rsquo;s not all the time but when I do, it&rsquo;s always a good feeling. It gives me a sense of what the tech is about, what it can do, how it works (sort of), etc. For the core parts of our systems, I think this is pretty much already an imposed personal requirement.</p>
-<p>With all these requirements in mind, one might say that I will just end up choosing boring, mature, proven, old school tech all the way. For the most part, yes, but I&rsquo;m also aware that tech is also part of the hiring strategy. New tech being exciting for most engineers is probably a safe assumption to make so there is also that consideration. With that said though, I&rsquo;m very careful with this criteria. Over the years, I&rsquo;ve come to accept that building systems is engineering/programming over time. Engineers come and go. And tech is evolving at a rapid pace. And so does expertise and opinions evolve with it. Systems are dynamic; they are reshaped and redesigned by the people working on them over time so you will eventually end up with an amalgamation of all sorts of things, even beliefs and convictions. And when all is said and done, the systems running in the company is ultimately my responsibility; I can&rsquo;t just put the blame on somebody when things go wrong just because it was their choice and not mine. This leads me to another thing in my criteria: migration. For long-running systems, migrations are a matter of when, not if. I will try to imagine how it&rsquo;s going to look like, how painful it will be, and roughly how expensive it will be when the time comes. Then balance it out with us being a startup where the possibility of throwing away code, tech, product(s) even, at any time, along with the engineering behind it, is pretty high.</p>
-<p>Expanding on the migration bit, this is probably my first time dealing with systems with colossal amounts of data so the considerations for migration is significantly important. This covers our choices of data lakes, high traffic messaging systems, databases, and migrations between these systems. Based on experience, migrations of data-related systems or systems revolving around data are the most protracted and the most painful. Much more so than, say, compute.</p>
-<p>What about hype, or in GitHub for example, the number of stars a project have? Or in Twitter/Reddit, the chatter? In a way, they are an important consideration as well. Hype results to more early users, which means more feedback, which means more bugs reported, which means more bug fixes. The hype bit though; I&rsquo;ve been through several hype cycles of tech already that in a way, I can filter them out easily and see through the marketing PR. And I think I&rsquo;m not really alone in this. Most of the colleagues I talk to with long-ish experiences under their belt, it&rsquo;s true to them as well.</p>
-<p>So, how do I keep track with all of these information around criteria? Journaling. I take notes on all of them. I&rsquo;m still working on the organization part of it though. It was and is a need so I&rsquo;m sort of forced into it. But overtime, I think I&rsquo;ve improved a lot on my documentations (and writing them) and it has grown on me so I don&rsquo;t mind it now.</p>
-<p>Alright, that&rsquo;s it for now. See you in the next one.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-04-01-cto-diaries-on-choosing-tech-stack/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-04-01-cto-diaries-on-choosing-tech-stack/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[CTO Diaries #3: On choosing technology stacks]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
                 <content type="html"><![CDATA[<p>Hi. It’s been a year since my last「CTO diaries」post. Never mind the excuses, there’s a lot.</p>
 <p>Anyway, so what does my typical, or normal day, look like? Well, I usually start the day with checking the overall health of our systems. We don’t really have very sophisticated monitoring and alerting systems at this point so this means checking on several areas such as our Kubernetes clusters, databases, and critical services. On top of my head, I think the most common service crashes I noticed so far are OOM-related.</p>
 <p>I also check our month-to-date infrastructure spending. We use bits of the three (AWS, GCP, and Azure). I don’t really do this meticulously; more like checking for anomalies. We’ve been hacked several times in the past for mining and these usually show up as cost anomalies. I can also keep an eye on unpredictable usages such as data transfers. Our runway is one of the many things in my list of concerns so I’d like to keep an eye on runaway costs as much as I can.</p>
@@ -5585,62 +5368,6 @@ secretName: spannerbackup-keyfile
 
             
                 <content type="html"><![CDATA[<p>For self reference:</p>
-<p>Sample code as to how to authenticate <a href="https://github.com/aws/aws-sdk-go-v2">aws-sdk-go-v2</a> using <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">external ids</a>:</p>
-<p>{% gist 0b745685a95888084ceb7e47f56827f4 %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-03-01-authenticate-aws-sdk-v2-external-id/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-03-01-authenticate-aws-sdk-v2-external-id/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Authenticating Go AWS SDK v2 using external id]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>For self reference:</p>
 <p>To authenticate the <a href="https://github.com/aws/aws-sdk-go-v2">Golang AWS SDK v2</a> using assume roles, refer to the following code snippets:</p>
 <p>{% gist 33f5e03e9990abcc01203acbea178a1a %}</p>
 ]]></content>
@@ -5669,119 +5396,6 @@ secretName: spannerbackup-keyfile
             
 
             <title type="html"><![CDATA[Authenticating Go AWS SDK v2 using assume roles]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>For self reference:</p>
-<p>Sample code as to how to authenticate <a href="https://github.com/aws/aws-sdk-go">aws-sdk-go</a> using <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">external ids</a>:</p>
-<p>{% gist 5980424a19f6fe58e613f6c9c9392c3e %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2022-10-17-authenticate-aws-sdk-external-id/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2022-10-17-authenticate-aws-sdk-external-id/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Authenticating Go AWS SDK using external id]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>I recently came across the <a href="https://github.com/hashicorp/memberlist">hashicorp/memberlist</a> library while browsing GitHub and I thought it would be a good replacement for <a href="https://github.com/flowerinthenight/hedge">hedge</a>&rsquo;s internal member tracking logic. It seems to be widely used (thus more battle-tested) as well. I was quite excited as I always thought that hedge&rsquo;s equivalent logic is too barebones and untested outside of our use cases. It works just fine for its current intended purpose but I&rsquo;ve been hesitating to build on top of it until I can really say that it&rsquo;s stable enough. With memberlist, it might just be what I needed.</p>
-<p>After about a month of testing, I think it didn&rsquo;t really turn out quite well in the end. It is stable enough for deployments that are not spike-y in terms of workloads (frequent scaling up/down). Or if I set min = max in the <a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">HorizontalPodAutoscaler</a>. In these cases, memberlist can consistently track members just fine. What&rsquo;s better is that it works even in multiple deployments in the same namespace which I thought was brilliant. For example, if I have a deployment <code>app1</code> set to 10 pods in the <code>default</code> namespace using memberlist&rsquo;s default port numbers, and then I deploy another set, say, <code>app2</code>, within the same namespace using the same ports, app1&rsquo;s memberlist can track its 10 member pods just fine while app2&rsquo;s memberlist is also separated. But when applied to my use case, which has a minimum pod of 2 and a max of 150, with frequent scale up/down frequency depending on load, it can&rsquo;t seem to keep up. The potential for <a href="https://en.wikipedia.org/wiki/Byzantine_fault">Byzantine faults</a> is just too high: i.e. in a 50-pod scale, memberlist can end up having 2 groups of m-pods and n-pods where m+n=50. Very rarely, it can even go up to 3 groups.</p>
-<p>I am a little frustrated. I really wanted it to work; I even attempted to update memberlist to incorporate hedge&rsquo;s logic but it was too much for now, with my schedule. So now, back to the old one. By the way, the current logic is fairly rudimentary: all members in the cluster/group send a liveness heartbeat to the leader and the leader broadcasting the final list of members to all via hedge&rsquo;s broadcast mechanism. CPU usage between the two is fairly similar depending on the sync timeout.</p>
-<p>I&rsquo;ve been trying to improve hedge&rsquo;s member tracking system as I want to build a distributed in-memory cache within hedge itself. Most of the available ones are <a href="https://raft.github.io/">Raft</a>-based, and I still haven&rsquo;t figured out how to make Raft work in the same deployment configuration.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-04-28-hedge-memberlist/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-04-28-hedge-memberlist/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Attempt to replace hedge&rsquo;s member tracking with hashicorp/memberlist]]></title>
             <updated>0001-01-01T00:00:00Z</updated>
         </entry>
     
@@ -5896,116 +5510,6 @@ secretName: spannerbackup-keyfile
             
 
             <title type="html"><![CDATA[An automation-friendly, highly-scalable, and scriptable testing tool]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>Hey there,</p>
-<p>I wanted to let you know that Alphaus, the startup I work for, has recently launched a new engineering blog. If you&rsquo;re interested in checking it out, please go to <a href="https://labs.alphaus.cloud/blog/">https://labs.alphaus.cloud/blog/</a>. We will be posting updates about our products and sharing some insights and experiences from a technical point of view. So if that sounds like something you&rsquo;d be interested in, feel free to take a look. Thanks for your support!</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-04-20-alphaus-eng-blog/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-04-20-alphaus-eng-blog/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Alphaus engineering blog launched]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>Hey there,</p>
-<p>I just posted a blog about gRPC <a href="https://labs.alphaus.cloud/blog/2023/05/03/blue-api/">here</a>. If gRPC and grpc-gateway is right up your alley, you might find it interesting.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-05-03-alphaus-blue-api/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-05-03-alphaus-blue-api/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Alphaus Blue API]]></title>
             <updated>0001-01-01T00:00:00Z</updated>
         </entry>
     
