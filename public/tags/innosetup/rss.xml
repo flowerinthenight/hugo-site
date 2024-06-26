@@ -1,0 +1,143 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/innosetup/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/innosetup/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/innosetup/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/innosetup/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Innosetup · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>InstallShield seems ubiquitous when it comes to installer scripting, at least based on my experience with companies I&rsquo;ve worked for so far. But for my side projects, I&rsquo;ve always been a fan of <a href="http://www.jrsoftware.org/isinfo.php">InnoSetup</a>. It is simple to use and Pascal is not really that bad. It is free and can do probably all the things you require for an installer.</p>
+<p>Here&rsquo;s an example of an InnoSetup script that I have been using as baseline for creating installers for Windows.</p>
+<p>{% gist 009f11047563d2cb042a9a5a5e73f91a %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-02-28-simple-innosetup/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2017-02-28-simple-innosetup/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Simple Innosetup installation script</title>
+                
+            </item>
+        
+    </channel>
+</rss>

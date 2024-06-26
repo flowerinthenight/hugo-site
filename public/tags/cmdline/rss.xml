@@ -1,0 +1,264 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/cmdline/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/cmdline/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/cmdline/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/cmdline/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Cmdline · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>This is just a quick one.</p>
+<p>Although I use <a href="https://wiki.gnome.org/Apps/Clocks">Gnome Clocks</a> occassionally, most of the time I set an alarm via the commandline.</p>
+<p>{% highlight shell %}</p>
+<h1 id="os-is-pop_os-using-vlc">OS is POP_OS!, using VLC:</h1>
+<p>$ sleep 10m &amp;&amp; <br>
+cvlc ~/alarm.mp3 &ndash;play-and-exit &amp;&amp; <br>
+notify-send &lsquo;alarm done&rsquo;
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-11-08-alarm-from-cmdline/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2021-11-08-alarm-from-cmdline/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Setting alarm from commandline</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>This might be hacky and there might be a proper way to do this but recently, I needed to generate all the functions&rsquo; gRPC-generated full names from our protobuf definitions. This is part of our RBAC module that needs to filter gRPC function calls. I got the list from our <a href="https://github.com/alphauslabs/blue-sdk-go">generated Go client</a> using the following command(s):</p>
+<p>{% highlight shell %}</p>
+<h1 id="main-command">Main command:</h1>
+<p>$ grep -o -R -i -E &lsquo;&quot;/blueapi..*&quot;&rsquo; . | awk -F&rsquo;:&rsquo; &lsquo;{gsub(/&quot;/, &ldquo;&rdquo;, $2); print &ldquo;-&rdquo;, substr($2, 2);}&rsquo; | sort | uniq</p>
+<h1 id="actual-commands-save-as-yaml">Actual commands; save as yaml:</h1>
+<p>$ echo &ldquo;functions:&rdquo; &gt; /tmp/funcs.yaml
+$ grep -o -R -i -E &lsquo;&quot;/blueapi..*&quot;&rsquo; . | awk -F&rsquo;:&rsquo; &lsquo;{gsub(/&quot;/, &ldquo;&rdquo;, $2); print &ldquo;-&rdquo;, substr($2, 2);}&rsquo; | <br>
+sort | uniq &raquo; /tmp/funcs.yaml
+{% endhighlight %}</p>
+<p>The final list is uploaded to this <a href="https://github.com/alphauslabs/blueapi-functions">repository</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-07-31-extracting-grpc-funcs-to-list/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2021-07-31-extracting-grpc-funcs-to-list/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Extract gRPC-generated functions to a list</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p><em>For personal reference:</em></p>
+<p>Download the latest GitHub Releases asset using common command line tools:</p>
+<p>{% highlight shell %}</p>
+<h1 id="update-the-url-accordingly-the-uname--awk-subcmds-will-output-linuxdarwin">Update the url accordingly. The <code>uname | awk</code> subcmds will output &rsquo;linux&rsquo;|&lsquo;darwin&rsquo;.</h1>
+<p>$ curl -s <a href="https://api.github.com/repos/alphauslabs/bluectl/releases/latest">https://api.github.com/repos/alphauslabs/bluectl/releases/latest</a> | <br>
+jq -r &ldquo;.assets[] | select(.name | contains(&quot;$(uname -s | awk &lsquo;{print tolower($0)}&rsquo;)&quot;)) | .browser_download_url&rdquo; | <br>
+wget -i -
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2022-01-17-download-latest-github-release-cmdline/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2022-01-17-download-latest-github-release-cmdline/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Download the latest Github release using command line</title>
+                
+            </item>
+        
+    </channel>
+</rss>

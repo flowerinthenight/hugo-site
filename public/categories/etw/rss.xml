@@ -1,0 +1,141 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/categories/etw/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/categories/etw/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/categories/etw/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/categories/etw/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Etw · Categories · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I&rsquo;ve been dabbling a bit with Rust and so far, I&rsquo;m liking it. I&rsquo;ll probably use it more as replacement for my C/C++ projects. And I just uploaded a very simple ETW wrapper I&rsquo;m using in one of my side projects. You can check out the source code <a href="https://github.com/flowerinthenight/rusttrace">here</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-12-26-rust-etw/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-12-26-rust-etw/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Simple ETW wrapper for Rust</title>
+                
+            </item>
+        
+    </channel>
+</rss>

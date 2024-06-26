@@ -1,0 +1,268 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/linux/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/linux/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/linux/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/linux/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Linux · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>This is just a quick one.</p>
+<p>Although I use <a href="https://wiki.gnome.org/Apps/Clocks">Gnome Clocks</a> occassionally, most of the time I set an alarm via the commandline.</p>
+<p>{% highlight shell %}</p>
+<h1 id="os-is-pop_os-using-vlc">OS is POP_OS!, using VLC:</h1>
+<p>$ sleep 10m &amp;&amp; <br>
+cvlc ~/alarm.mp3 &ndash;play-and-exit &amp;&amp; <br>
+notify-send &lsquo;alarm done&rsquo;
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-11-08-alarm-from-cmdline/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2021-11-08-alarm-from-cmdline/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Setting alarm from commandline</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I shared a simple piece of code for getting a process&rsquo; memory usage in Linux. It&rsquo;s called <a href="https://github.com/flowerinthenight/memx"><code>memx</code></a>. It&rsquo;s Linux-specific only as it reads the <a href="https://en.wikipedia.org/wiki/Proportional_set_size">proportional set size (PSS)</a> data from either <code>/proc/{pid}/smaps_rollup</code> (if present) or <code>/proc/{pid}/smaps</code> file. I&rsquo;ve used this piece of code many times at work. We use memory-mapped files extensively in some of our services and this is how we get more accurate results. Very useful in debugging <code>OOMKilled</code> events in k8s.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2024-05-30-memx-memory-usage-linux/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2024-05-30-memx-memory-usage-linux/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>memx - Get process’ memory usage (Linux)</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>As of this writing, Torguard&rsquo;s desktop app still doesn&rsquo;t support Wireguard out of the box. I&rsquo;m using Ubuntu 19.10 for testing.</p>
+<p>If you haven&rsquo;t installed Wireguard yet, you can refer to the installation instructions <a href="https://www.wireguard.com/install/">here</a>. In my case, it was:</p>
+<p>{% highlight shell %}
+$ sudo apt install wireguard
+{% endhighlight %}</p>
+<p>Next, you need to login to your Torguard client area, go to Tools &ndash;&gt; Enable Wireguard Access. Select a location (in my case, I chose Asia-Singapore2) then click &lsquo;Enable Wireguard&rsquo;. You will be presented with an option to download the generated config file (in my case Asia-Singapore2.conf). Download it and save it to /etc/wireguard/.</p>
+<p>To enable the VPN connection, run:</p>
+<p>{% highlight shell %}</p>
+<h1 id="the-last-bit-should-correspond-to-the-filename-of-your-config-file-without-the-conf">The last bit should correspond to the filename of your config file without the &lsquo;.conf&rsquo;,</h1>
+<h1 id="in-my-case-asia-singapore2">in my case &lsquo;Asia-Singapore2&rsquo;</h1>
+<p>$ sudo wg-quick up Asia-Singapore2</p>
+<h1 id="confirm-with">Confirm with:</h1>
+<p>$ sudo wg</p>
+<h1 id="if-no-issues-you-can-check-your-public-ip-with">If no issues, you can check your public IP with:</h1>
+<p>$ curl ipecho.net/plain; echo
+{% endhighlight %}</p>
+<p>Finally, to disconnect, run:</p>
+<p>{% highlight shell %}
+$ sudo wg-quick down Asia-Singapore2
+{% endhighlight %}</p>
+<p>That&rsquo;s it.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-03-25-torguard-wireguard-ubuntu/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2020-03-25-torguard-wireguard-ubuntu/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Connecting to Torguard VPN using Wireguard from Ubuntu</title>
+                
+            </item>
+        
+    </channel>
+</rss>

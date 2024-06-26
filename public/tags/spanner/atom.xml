@@ -1,0 +1,318 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed  xml:lang="en"  xmlns="http://www.w3.org/2005/Atom">
+    
+        <author>
+            
+                <email>example@example.com</email>
+            
+
+            
+                <name>John Doe</name>
+            
+
+            
+                <uri>https://example.com</uri>
+            
+        </author>
+    
+
+    
+        <icon>http://localhost:1313/</icon>
+    
+
+    <id>tag:localhost:1313,0001-01-01:/tags/spanner/atom.xml</id>
+
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/spanner/atom.xml" rel="self" type="application/atom+xml"/>
+        
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/spanner/" rel="alternate" type="text/html"/>
+        
+    
+        
+
+        
+
+        
+            <link href="http://localhost:1313/tags/spanner/rss.xml" rel="alternate" type="application/rss+xml"/>
+        
+    
+
+    
+
+    
+        <logo>http://localhost:1313/</logo>
+    
+
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+    
+
+    
+
+    <title type="html"><![CDATA[Spanner · Tags · About]]></title>
+    <updated>2024-01-18T21:32:52-07:00</updated>
+
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>This library has been in our production for about a year already and is one of the critical components in our backend. We mainly use it for app-level orchestration between pods. It&rsquo;s called <code>hedge</code> and you can find the code <a href="https://github.com/flowerinthenight/hedge/">here</a>. Maybe it will be useful to anybody out there.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2022-09-21-spindle-based-distributed-computing-lib/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2022-09-21-spindle-based-distributed-computing-lib/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[hedge - A simple distributed computing library]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>As of this writing, GCP doesn&rsquo;t have an option to create <a href="https://cloud.google.com/spanner/">Spanner</a> backups automatically. This could be available when you&rsquo;re reading this in the future. At the moment, however, if you&rsquo;re using Kubernetes, you can utilize <a href="https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/">CronJob</a> to do a scheduled backup.</p>
+<p>Here&rsquo;s a sample CronJob deployment that uses <code>gcloud</code> to create the backups. First, you need to create a service account that has permissions to create Spanner backups. Once you have downloaded the JSON file for the service account, store it as a Kubernetes <a href="https://kubernetes.io/docs/concepts/configuration/secret/">Secret</a>.</p>
+<p>{% highlight shell %}
+$ kubectl create secret generic spannerbackup-keyfile &ndash;from-file svcacct.json
+{% endhighlight %}</p>
+<p>Make sure to update some of the information below as required, such as, name of the backup, instance name, database name, expiration date, etc. The example below uses the backup name <code>autobackup-yyyymmddthhmmssutc</code> format with a 3-day backup expiration.</p>
+<p>{% highlight yaml %}
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+name: spannerbackup
+spec:
+concurrencyPolicy: Forbid
+# Run every day @ 2:30am JST (below is UTC)
+schedule: &ldquo;30 17 * * *&rdquo;
+jobTemplate:
+spec:
+template:
+spec:
+containers:
+- name: spannerbackup
+image: google/cloud-sdk:307.0.0-slim
+command: [&quot;/bin/bash&quot;]
+args: [&quot;-c&quot;, &ldquo;NAME=autobackup-$(date +%Y%m%dT%H%M%S%Z | awk &lsquo;{print tolower($0)}&rsquo;); EXP=$(date -u -d &lsquo;+3 day&rsquo; +%FT%TZ); gcloud auth activate-service-account &ndash;key-file $GOOGLE_APPLICATION_CREDENTIALS &amp;&amp; gcloud spanner backups create $NAME &ndash;instance=<instancename> &ndash;database=<dbname> &ndash;expiration-date=$EXP &ndash;async&rdquo;]
+env:
+- name: GET_HOSTS_FROM
+value: dns
+- name: GOOGLE_APPLICATION_CREDENTIALS
+value: /etc/spannerbackup/svcacct.json
+volumeMounts:
+- name: keyfile
+mountPath: &ldquo;/etc/spannerbackup&rdquo;
+readOnly: true
+restartPolicy: OnFailure
+volumes:
+- name: keyfile
+secret:
+secretName: spannerbackup-keyfile
+{% endhighlight %}</p>
+<p>Finally, deploy to k8s.</p>
+<p>{% highlight shell %}</p>
+<h1 id="assuming-above-file-is-saved-as-backupyaml">Assuming above file is saved as <code>backup.yaml</code></h1>
+<p>$ kubectl create -f backup.yaml
+{% endhighlight %}</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2020-09-11-autobackup-spanner-k8s/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2020-09-11-autobackup-spanner-k8s/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Automate Spanner backup using Kubernetes CronJob]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>I uploaded a yet another distributed locking library, this time, based on <a href="https://cloud.google.com/spanner/">Cloud Spanner</a> and <a href="https://cloud.google.com/spanner/docs/true-time-external-consistency">TrueTime</a> technology. It&rsquo;s called <code>spindle</code> and you can find the code <a href="https://github.com/flowerinthenight/spindle/">here</a>. Maybe it will be useful to anybody out there.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2020-12-26-spanner-distributed-lock/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2020-12-26-spanner-distributed-lock/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[A Spanner-based distributed locking library]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+</feed>

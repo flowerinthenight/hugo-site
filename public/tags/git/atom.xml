@@ -1,0 +1,168 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed  xml:lang="en"  xmlns="http://www.w3.org/2005/Atom">
+    
+        <author>
+            
+                <email>example@example.com</email>
+            
+
+            
+                <name>John Doe</name>
+            
+
+            
+                <uri>https://example.com</uri>
+            
+        </author>
+    
+
+    
+        <icon>http://localhost:1313/</icon>
+    
+
+    <id>tag:localhost:1313,0001-01-01:/tags/git/atom.xml</id>
+
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/git/atom.xml" rel="self" type="application/atom+xml"/>
+        
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/git/" rel="alternate" type="text/html"/>
+        
+    
+        
+
+        
+
+        
+            <link href="http://localhost:1313/tags/git/rss.xml" rel="alternate" type="application/rss+xml"/>
+        
+    
+
+    
+
+    
+        <logo>http://localhost:1313/</logo>
+    
+
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+    
+
+    
+
+    <title type="html"><![CDATA[Git · Tags · About]]></title>
+    <updated>2024-01-18T21:32:52-07:00</updated>
+
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>Fore self reference:</p>
+<p>To restore default branch from a tag while preserving history, do:</p>
+<p>{% highlight shell %}
+$ git checkout tags/v1.2.3 -b v1.2.3
+$ git diff main &gt; /tmp/diff.patch
+$ git checkout main
+$ cat /tmp/diff.patch | git apply
+$ git commit -am &ldquo;Rolled back to v1.2.3&rdquo;
+$ git push origin main
+{% endhighlight %}</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2023-04-06-restore-default-branch-from-tag/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2023-04-06-restore-default-branch-from-tag/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Restore default branch from tag while preserving history]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+</feed>

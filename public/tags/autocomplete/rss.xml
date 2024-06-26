@@ -1,0 +1,193 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/autocomplete/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/autocomplete/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/autocomplete/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/autocomplete/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Autocomplete · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<h2 id="update">Update</h2>
+<p><a href="https://github.com/fatih/vim-go">vim-go</a> has already transitioned to <a href="https://github.com/golang/tools/blob/master/gopls/doc/user.md">gopls</a> as its default completion engine. I just noticed that my Vim is still using <a href="https://github.com/stamblerre/gocode">gocode</a> even though I updated to the latest version of vim-go. Commenting/removing the line <code>Plugin 'stamblerre/gocode', {'rtp': 'vim/'}</code> from my .vimrc did the trick for me. Hope this helps.</p>
+<p>Original post <a href="https://flowerinthenight.com/blog/2018/09/20/vimgo-go111-gocode">here</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-03-25-vimgo-gocode-gopls/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2020-03-25-vimgo-gocode-gopls/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Followup on autocompletion with gocode and vim-go in Go1.11, transition to gopls</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I use <a href="https://github.com/vim/vim">vim</a> with <a href="https://github.com/fatih/vim-go">vim-go</a> as my main editor for Go-based projects (and for anything else, really). Recently, I&rsquo;ve upgraded to Go1.11 and my autocompletion stopped working. I know <code>vim-go</code> uses <a href="https://github.com/mdempsky/gocode">gocode</a> as it&rsquo;s autocompletion engine but since <code>vim-go</code>&rsquo;s <code>:GoInstallBinaries</code> command handled the installation for me, I didn&rsquo;t really have to think about it. Fortunately, a quick update to my <a href="https://github.com/flowerinthenight/.files/blob/master/vimrc">vimrc</a> file did the trick for me. I just had to add <code>Plugin 'mdempsky/gocode', {'rtp': 'vim/'}</code> to my <code>vimrc</code> (I use <a href="https://github.com/VundleVim/Vundle.vim">Vundle</a>) and run <code>:PluginInstall</code> again. Works a treat.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-09-20-vimgo-go111-gocode/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2018-09-20-vimgo-go111-gocode/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Autocompletion with gocode and vim-go in Go1.11</title>
+                
+            </item>
+        
+    </channel>
+</rss>

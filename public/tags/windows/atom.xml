@@ -1,0 +1,540 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed  xml:lang="en"  xmlns="http://www.w3.org/2005/Atom">
+    
+        <author>
+            
+                <email>example@example.com</email>
+            
+
+            
+                <name>John Doe</name>
+            
+
+            
+                <uri>https://example.com</uri>
+            
+        </author>
+    
+
+    
+        <icon>http://localhost:1313/</icon>
+    
+
+    <id>tag:localhost:1313,0001-01-01:/tags/windows/atom.xml</id>
+
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/windows/atom.xml" rel="self" type="application/atom+xml"/>
+        
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/windows/" rel="alternate" type="text/html"/>
+        
+    
+        
+
+        
+
+        
+            <link href="http://localhost:1313/tags/windows/rss.xml" rel="alternate" type="application/rss+xml"/>
+        
+    
+
+    
+
+    
+        <logo>http://localhost:1313/</logo>
+    
+
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+    
+
+    
+
+    <title type="html"><![CDATA[Windows · Tags · About]]></title>
+    <updated>2024-01-18T21:32:52-07:00</updated>
+
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>In Docker&rsquo;s <a href="https://docs.docker.com/engine/admin/logging/etwlogs/">ETW logging driver doc</a>, it uses the tool <code>logman</code> to view the logs. In this article, I will show you how to use <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ff685116(v=vs.85).aspx">mftrace</a> to view Docker ETW logs in real-time.</p>
+<p>First, here&rsquo;s a simple application written in Go that logs to STDERR every second.</p>
+<p>{% gist 5ebeaaa38a59f7ce314a0b96b4357d4a %}</p>
+<p>Next, let&rsquo;s create a Docker image (Windows) using the Dockerfile below.</p>
+<p>{% gist 9935cfaf68d8de5b5da2d5c4b15b8d85 %}</p>
+<p>{% highlight shell %}</p>
+<h1 id="assuming-the-code-above-is-saved-in-a-directory-called-demoapp">assuming the code above is saved in a directory called &lsquo;demoapp&rsquo;</h1>
+<p>$ docker build -t demoapp .
+{% endhighlight %}</p>
+<p>To use mftrace, we need a config file.</p>
+<p>{% gist 4bd8968cc08c14cc98e03494624030a5 %}</p>
+<p>Open a command prompt (or Powershell) and run the following command.</p>
+<p>{% highlight shell %}
+$ mftrace.exe -c config.xml
+{% endhighlight %}</p>
+<p>Then open another command prompt (or Powershell) window and run the Docker image.</p>
+<p>{% highlight shell %}
+$ docker run -d &ndash;log-driver=etwlogs &ndash;name demoapp demoapp:latest
+{% endhighlight %}</p>
+<p>You should be able to view the application logs in the mftrace window.</p>
+<p>You can use this <a href="https://github.com/flowerinthenight/20170914-tokyo-mastercloud-presentation">repo</a> instead of creating your own folder structure. Instructions are provided in the README as well as an x86 version of mftrace.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2017-09-20-docker-etwlogs/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2017-09-20-docker-etwlogs/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Using Docker&rsquo;s ETW log driver in Windows]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>Updated 2019/03/13:</p>
+<p>A pretty good writeup that explains the internals of writing a camera filter driver in Windows can be found <a href="https://virusbulletin.com/virusbulletin/2018/09/through-looking-glass-webcam-interception-and-protection-kernel-mode/">here</a>. I&rsquo;m putting this information out as this repo is one of the references used in the writeup.</p>
+<p>Original post:</p>
+<p>This post is a bit of a departure from my usual golang/cloud-related ramblings. I posted an open-source <a href="https://github.com/flowerinthenight/windows-camera-class-filter-driver">camera class filter driver</a> for Windows ages ago hoping that it would help someone working on a similar project. If you are familiar with this type of driver, you probably know that it&rsquo;s not that straightforward to write mainly due to it being generally undocumented. A lot of reverse engineering has been done to write this driver. Anyway, recently, someone pointed out to me that it&rsquo;s been discussed in <a href="https://www.osronline.com/showthread.cfm?link=288736">this forum post</a>. So if you&rsquo;re working on a similar project, give it a whirl, and if you find some issues, I would appreciate it if you could submit a PR for fixes. Thanks.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2019-03-13-ccfltr-updates/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2019-03-13-ccfltr-updates/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Updates to Camera Class Filter Driver for Windows]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>I uploaded an ancient prototype driver code I used ages ago in testing the <a href="http://www.ti.com/lit/ds/symlink/drv2605.pdf">DRV2605</a> haptic device from Texas Instruments. I can&rsquo;t figure out (and I also don&rsquo;t have time either) how to make this thing build using the recent versions of Visual Studio. Nonetheless, I&rsquo;m putting this out there as reference to somebody doing something similar to this project. Source code is <a href="https://github.com/flowerinthenight/tidrv2605-haptic-driver-umdf">here</a>.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2019-04-28-drv2605-umdf-haptic-driver/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2019-04-28-drv2605-umdf-haptic-driver/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[UMDF driver code for DRV2605 haptic device]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>Note that this function assumes the caller to be running as SYSTEM as well (i.e. Windows service).</p>
+<p>For self reference:</p>
+<p>{% gist a5ab54fec75bbabf6dac33b917b44c9b %}</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2017-05-31-start-process-as-system/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2017-05-31-start-process-as-system/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Start process as system using CreateProcessAsUser]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>For self reference:</p>
+<p>Simulate a touch input down, drag, up programmatically.</p>
+<p>{% gist bd264001034db093413a0bb233760588 %}</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2017-03-28-simple-touch-input-funcs-windows/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2017-03-28-simple-touch-input-funcs-windows/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Simple touch/swipe input function in Windows]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>This post is a bit of a departure from my usual golang/cloud-related ramblings. I posted an open-source <a href="https://github.com/flowerinthenight/windows-camera-class-filter-driver">camera class filter driver</a> for Windows ages ago hoping that it would help someone working on a similar project. If you are familiar with this type of driver, you probably know that it&rsquo;s not that straightforward to write mainly due to it being generally undocumented. A lot of reverse engineering has been done to write this driver. Anyway, recently, someone pointed out to me that it&rsquo;s been discussed in <a href="https://www.osronline.com/showthread.cfm?link=288736">this forum post</a>. So if you&rsquo;re working on a similar project, give it a whirl, and if you find some issues, I would appreciate it if you could submit a PR for fixes. Thanks.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2018-04-30-camera-class-filter-driver/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2018-04-30-camera-class-filter-driver/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Camera Class Filter Driver for Windows]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>Yet another service code for Windows. This time, it&rsquo;s an ATL service. ATL services are basically the same as <a href="https://github.com/flowerinthenight/win32-base-service">traditional Windows services</a> but with some advantages.</p>
+<ul>
+<li>Can be started on-demand automatically by the first client call (via COM).</li>
+<li>Clients can call service functions with parameters and return values using COM. In traditional services, clients normally communicate using service control codes and you need some kind of IPC (named pipes, shared memory, etc.) for bi-directional data exchange.</li>
+</ul>
+<p>A client console app is provided to demonstrate service function call with return value and service-to-client notification via IDispatch.</p>
+<p>Check out the source code <a href="https://github.com/flowerinthenight/base-atlcom-svc">here</a>.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2017-01-18-base-atl-service/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2017-01-18-base-atl-service/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[ATL service base code]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+</feed>

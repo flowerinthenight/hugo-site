@@ -1,0 +1,145 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/update/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/update/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/update/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/update/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Update · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>The only options for updating modules that I&rsquo;m aware so far are a) <code>go get -u all</code>, and b) specific modules, i.e. <code>go get -u domain.com/module[@v1.2.3]</code>. For problematic ones, my only option is b), which is a bit time consuming. There must be some other way out there that I&rsquo;m not aware of but at the moment, I use this simple command:</p>
+<p>{% highlight shell %}
+$ cat go.mod | grep -i &lsquo;github&rsquo; | grep -i -v &lsquo;indirect&rsquo; | awk &lsquo;{print $1}&rsquo; &gt; update; <br>
+while read -r v; do go get -u $v; done &lt; update; rm update
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-06-30-hacky-way-update-go-modules/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2021-06-30-hacky-way-update-go-modules/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>A hacky way to update problematic Go modules</title>
+                
+            </item>
+        
+    </channel>
+</rss>

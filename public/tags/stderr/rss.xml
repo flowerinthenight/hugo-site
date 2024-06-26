@@ -1,0 +1,147 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/stderr/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/stderr/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/stderr/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/stderr/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Stderr · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Some golang-based tools I&rsquo;ve used (or even written) use the builtin <code>log</code> package that output logs to stderr by default. I also use <a href="https://en.wikipedia.org/wiki/Tee_(command)">tee</a> for piping console outputs to file for later viewing. This is the command I generally use:</p>
+<p>{% highlight shell %}</p>
+<h1 id="example-tool">Example tool:</h1>
+<p>$ sometool &ndash;flag1 &ndash;flag2 2&gt;&amp;1 | tee out.txt</p>
+<h1 id="21----redirect-stderr-to-stdout">2&gt;&amp;1 &lt;&ndash; redirect stderr to stdout</h1>
+<h1 id="tee----pipe-the-console-output-to-outtxt-while-retaining-the-actual-console-logs-during-command-execution">tee &lt;&ndash; pipe the console output to out.txt while retaining the actual console logs during command execution</h1>
+<p>{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2019-10-29-stderr-tee/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2019-10-29-stderr-tee/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Output golang cmdline tools to stdout and file using tee</title>
+                
+            </item>
+        
+    </channel>
+</rss>

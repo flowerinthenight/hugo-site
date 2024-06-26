@@ -1,0 +1,245 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed  xml:lang="en"  xmlns="http://www.w3.org/2005/Atom">
+    
+        <author>
+            
+                <email>example@example.com</email>
+            
+
+            
+                <name>John Doe</name>
+            
+
+            
+                <uri>https://example.com</uri>
+            
+        </author>
+    
+
+    
+        <icon>http://localhost:1313/</icon>
+    
+
+    <id>tag:localhost:1313,0001-01-01:/tags/ubuntu/atom.xml</id>
+
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/ubuntu/atom.xml" rel="self" type="application/atom+xml"/>
+        
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/ubuntu/" rel="alternate" type="text/html"/>
+        
+    
+        
+
+        
+
+        
+            <link href="http://localhost:1313/tags/ubuntu/rss.xml" rel="alternate" type="application/rss+xml"/>
+        
+    
+
+    
+
+    
+        <logo>http://localhost:1313/</logo>
+    
+
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+    
+
+    
+
+    <title type="html"><![CDATA[Ubuntu · Tags · About]]></title>
+    <updated>2024-01-18T21:32:52-07:00</updated>
+
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>I just upgraded my home server from Ubuntu 16.04 LTS to 18.04 LTS without any problems so far. For context, this server runs a Samba file server using ZFS. Although after update, I had to run the following command to my pool:</p>
+<p>{% highlight shell %}</p>
+<h1 id="pool-name-is-m0">pool name is &lsquo;m0&rsquo;</h1>
+<p>$ sudo zpool upgrade m0
+{% endhighlight %}</p>
+<p>By the way, at the time of this writing, Ubuntu Server update is not yet available (I think you have to wait for 18.04.1). I used the following command to update mine:</p>
+<p>{% highlight shell %}
+$ do-release-upgrade -m server -d
+{% endhighlight %}</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2018-05-06-xenial-to-bionic-lts-server-upgrade-zfs/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2018-05-06-xenial-to-bionic-lts-server-upgrade-zfs/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Ubuntu 16.04 LTS to Ubuntu 18.04 LTS]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>As of this writing, Torguard&rsquo;s desktop app still doesn&rsquo;t support Wireguard out of the box. I&rsquo;m using Ubuntu 19.10 for testing.</p>
+<p>If you haven&rsquo;t installed Wireguard yet, you can refer to the installation instructions <a href="https://www.wireguard.com/install/">here</a>. In my case, it was:</p>
+<p>{% highlight shell %}
+$ sudo apt install wireguard
+{% endhighlight %}</p>
+<p>Next, you need to login to your Torguard client area, go to Tools &ndash;&gt; Enable Wireguard Access. Select a location (in my case, I chose Asia-Singapore2) then click &lsquo;Enable Wireguard&rsquo;. You will be presented with an option to download the generated config file (in my case Asia-Singapore2.conf). Download it and save it to /etc/wireguard/.</p>
+<p>To enable the VPN connection, run:</p>
+<p>{% highlight shell %}</p>
+<h1 id="the-last-bit-should-correspond-to-the-filename-of-your-config-file-without-the-conf">The last bit should correspond to the filename of your config file without the &lsquo;.conf&rsquo;,</h1>
+<h1 id="in-my-case-asia-singapore2">in my case &lsquo;Asia-Singapore2&rsquo;</h1>
+<p>$ sudo wg-quick up Asia-Singapore2</p>
+<h1 id="confirm-with">Confirm with:</h1>
+<p>$ sudo wg</p>
+<h1 id="if-no-issues-you-can-check-your-public-ip-with">If no issues, you can check your public IP with:</h1>
+<p>$ curl ipecho.net/plain; echo
+{% endhighlight %}</p>
+<p>Finally, to disconnect, run:</p>
+<p>{% highlight shell %}
+$ sudo wg-quick down Asia-Singapore2
+{% endhighlight %}</p>
+<p>That&rsquo;s it.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2020-03-25-torguard-wireguard-ubuntu/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2020-03-25-torguard-wireguard-ubuntu/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Connecting to Torguard VPN using Wireguard from Ubuntu]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+</feed>

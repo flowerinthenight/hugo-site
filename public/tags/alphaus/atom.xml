@@ -1,0 +1,277 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed  xml:lang="en"  xmlns="http://www.w3.org/2005/Atom">
+    
+        <author>
+            
+                <email>example@example.com</email>
+            
+
+            
+                <name>John Doe</name>
+            
+
+            
+                <uri>https://example.com</uri>
+            
+        </author>
+    
+
+    
+        <icon>http://localhost:1313/</icon>
+    
+
+    <id>tag:localhost:1313,0001-01-01:/tags/alphaus/atom.xml</id>
+
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/alphaus/atom.xml" rel="self" type="application/atom+xml"/>
+        
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/alphaus/" rel="alternate" type="text/html"/>
+        
+    
+        
+
+        
+
+        
+            <link href="http://localhost:1313/tags/alphaus/rss.xml" rel="alternate" type="application/rss+xml"/>
+        
+    
+
+    
+
+    
+        <logo>http://localhost:1313/</logo>
+    
+
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+    
+
+    
+
+    <title type="html"><![CDATA[Alphaus · Tags · About]]></title>
+    <updated>2024-01-18T21:32:52-07:00</updated>
+
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>We just recently announced the public beta of our new product, <a href="https://lp.alphaus.cloud/">OCTO</a>. If you&rsquo;re interested, you can join our waiting list at <a href="https://lp.alphaus.cloud/waitlist">https://lp.alphaus.cloud/waitlist</a>.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2023-05-29-announcing-octo/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2023-05-29-announcing-octo/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Announcing our new product, OCTO]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>Hey there,</p>
+<p>I wanted to let you know that Alphaus, the startup I work for, has recently launched a new engineering blog. If you&rsquo;re interested in checking it out, please go to <a href="https://labs.alphaus.cloud/blog/">https://labs.alphaus.cloud/blog/</a>. We will be posting updates about our products and sharing some insights and experiences from a technical point of view. So if that sounds like something you&rsquo;d be interested in, feel free to take a look. Thanks for your support!</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2023-04-20-alphaus-eng-blog/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2023-04-20-alphaus-eng-blog/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Alphaus engineering blog launched]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>Hey there,</p>
+<p>I just posted a blog about gRPC <a href="https://labs.alphaus.cloud/blog/2023/05/03/blue-api/">here</a>. If gRPC and grpc-gateway is right up your alley, you might find it interesting.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2023-05-03-alphaus-blue-api/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2023-05-03-alphaus-blue-api/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Alphaus Blue API]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+</feed>

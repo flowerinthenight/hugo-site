@@ -1,0 +1,143 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/minimalis/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/minimalis/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/minimalis/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/minimalis/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Minimalis · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I am a fan of the <a href="https://www.gnome-look.org/p/1112273/">Minimalis</a> <a href="https://github.com/brndnmtthws/conky">conky</a> config for quite some time now. I&rsquo;ve tweaked it a little bit due to the original config not displaying some of the information. Mind you, my system is Linux-based (Pop!_OS) using wired connection only, no WIFI, so I&rsquo;ve removed the WIFI section and replaced it with the wired one. Here&rsquo;s a screenshot of it from my desktop.</p>
+<p><img alt="conky" src="https://bn1302files.storage.live.com/y4m2kfcOnlwKVRH5Gp1n5-ws20iU6M-O0BFHpBQ07D901QSt5XWZg5QTFFm6VBEyW7zYdeQnlYISyjFNQVRXPWP21yQKi8xQW8wBQE3Wbh0IXoQ_1AgJ4fVH0_rpxU09pCWdhqvfYjoxkmfe0iRVAOb88NWGZio78XO9Xt235l0D2sL6Nh8h-ebBb0OTbOB3yrc?width=826&height=1087&cropmode=none"></p>
+<p>The full configuration can be found <a href="https://github.com/flowerinthenight/.files/blob/master/conky.conf">here</a>, in case you&rsquo;re interested. Changes as far as I can remember are the addition of additional CPU cores, both CPU and GPU temperatures, processes, and network.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-03-27-minimalist-conky/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2021-03-27-minimalist-conky/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Updated config for Minimalis conky</title>
+                
+            </item>
+        
+    </channel>
+</rss>

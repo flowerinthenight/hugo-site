@@ -1,0 +1,736 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/k8s/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/k8s/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/k8s/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/k8s/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>K8s · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I&rsquo;ve been using <a href="https://github.com/wercker/stern"><code>stern</code></a> as my goto log viewer for Kubernetes. It supports multiple pods and other convenient functions on top of <code>kubectl logs</code>. And of course, grepping goes hand in hand with log viewing, doesn&rsquo;t it? To combine grep with stern, I use the following commands:</p>
+<p>{% highlight shell %}</p>
+<h1 id="for-osx">For OSX:</h1>
+<h1 id="stern-some-prod-prefix--grep--i---line-buffered--e-extended-regex">stern <some-prod-prefix> | grep -i &ndash;line-buffered -E &lsquo;<extended-regex>&rsquo;</h1>
+<p>$ stern user | grep -i &ndash;line-buffered -E &lsquo;failed&rsquo;</p>
+<h1 id="for-linux-ubuntu-specifically">For Linux (Ubuntu specifically):</h1>
+<h1 id="stern-some-prod-prefix--grep--i--e-extended-regex">stern <some-prod-prefix> | grep -i -E &lsquo;<extended-regex>&rsquo;</h1>
+<p>$ stern user -s 1h | grep -i -E &rsquo;error'
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2019-09-30-stern-grep/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2019-09-30-stern-grep/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Using stern together with grep</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Updated 2020/01/27:</p>
+<ul>
+<li>Support for forwarding to deployments and services</li>
+</ul>
+<p>Original post:</p>
+<p>I recently uploaded a tool to GitHub that wraps <code>kubectl port-forward</code> command and supports port-forwarding to multiple pods. It&rsquo;s called <a href="https://github.com/flowerinthenight/kubepfm"><code>kubepfm</code></a>. I use this tool heavily in my development work. You can check out the code <a href="https://github.com/flowerinthenight/kubepfm">here</a>. You might find this useful.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-01-27-kubepfm-update/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2020-01-27-kubepfm-update/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Update to kubepfm, a kubectl port-forward wrapper for multiple pods</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Updated 2019/02/20:</p>
+<ul>
+<li>Support for namespaces <a href="https://github.com/flowerinthenight/kubepfm/issues/1">https://github.com/flowerinthenight/kubepfm/issues/1</a></li>
+<li>Improved handling of input patterns</li>
+</ul>
+<p>Original post:</p>
+<p>I recently uploaded a tool to GitHub that wraps <code>kubectl port-forward</code> command and supports port-forwarding to multiple pods. It&rsquo;s called <a href="https://github.com/flowerinthenight/kubepfm"><code>kubepfm</code></a>. I use this tool heavily in my development work. You can check out the code <a href="https://github.com/flowerinthenight/kubepfm">here</a>. You might find this useful.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2019-02-20-kubepfm-update/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2019-02-20-kubepfm-update/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Update to kubepfm, a kubectl port-forward wrapper for multiple pods</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I recently uploaded a tool to GitHub that wraps the <code>kubectl get events -w</code> command for watching <code>OOMKilled</code> events in Kubernetes. It&rsquo;s called <a href="https://github.com/flowerinthenight/oomkill-watch"><code>oomkill-watch</code></a>. You can check out the code <a href="https://github.com/flowerinthenight/oomkill-watch">here</a>. You might find this useful.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2024-05-03-oomkill-watch/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2024-05-03-oomkill-watch/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>oomkill-watch - A tool to watch OOMKilled events in k8s</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I posted an <a href="https://tech.mobingi.com/2018/12/05/mochi-k8s-repo.html">article</a> for <a href="https://twitter.com/mobingi">@mobingi</a> about its Kubernetes clusters repo. Please check it out. Thanks.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-12-27-mochi-k8s-repo/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2018-12-27-mochi-k8s-repo/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Mobingi’s Kubernetes clusters repo</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I recently uploaded a tool to GitHub that wraps <code>kubectl port-forward</code> command and supports port-forwarding to multiple pods. It&rsquo;s called <a href="https://github.com/flowerinthenight/kubepfm"><code>kubepfm</code></a>. I use this tool heavily in my development work. You can check out the code <a href="https://github.com/flowerinthenight/kubepfm">here</a>. You might find this useful.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-07-24-kubepfm/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2018-07-24-kubepfm/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>kubepfm, a kubectl port-forward wrapper for multiple pods</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>This is related to a <a href="https://flowerinthenight.com/blog/2018/03/31/access-pods-k8s">previous post</a> about Kubernetes services. This time, it&rsquo;s about extending the timeout of an Ingress. We had a situation where we had to download a huge file from one of our exposed services. The download takes about two minutes to complete. This didn&rsquo;t really worked out since by default, GCP load balancers that are associated with k8s Ingresses have a timeout value of 30s. For a time, we just did manual updates by going to the GCP k8s Services and Ingress console, opening the backend service under the Ingress, and editing the Timeout section to the desired seconds. But since we do have a cluster blue/green deployment, we had to do this every time we recreate our clusters.</p>
+<p>Enter <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig">BackendConfig</a> custom resource. With this, we can associate a BackendConfig resource to the service in question using GCP-specific annotations. Reusing the reverse proxy YAML from <a href="https://flowerinthenight.com/blog/2018/03/31/access-pods-k8s">this post</a>, we add a BackendConfig resource.</p>
+<p>{% highlight ruby %}
+apiVersion: cloud.google.com/v1beta1
+kind: BackendConfig
+metadata:
+name: serviceproxy-backendconfig
+spec:
+timeoutSec: 7200
+connectionDraining:
+drainingTimeoutSec: 60</p>
+<hr>
+<p>apiVersion: v1
+kind: Service
+metadata:
+name: serviceproxy
+annotations:
+beta.cloud.google.com/backend-config: &lsquo;{&ldquo;ports&rdquo;: {&ldquo;80&rdquo;:&ldquo;serviceproxy-backendconfig&rdquo;}}&rsquo;
+spec:
+type: NodePort
+ports:</p>
+<ul>
+<li>name: http
+protocol: TCP
+port: 80
+targetPort: 80
+selector:
+app: serviceproxy
+{% endhighlight %}</li>
+</ul>
+<p>Deploying this will set the timeout of the service to two hours.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2019-11-28-gcp-backendconfig-k8s/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2019-11-28-gcp-backendconfig-k8s/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Extending the timeout of a Kubernetes service in GCP</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I&rsquo;ve uploaded a package for distributed locks. It&rsquo;s called <a href="https://github.com/flowerinthenight/dlock">dlock</a>. At the moment, it supports using Kubernetes&rsquo; LeaseLock object and Redis. You might find it useful.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-07-08-package-distributed-locks/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2020-07-08-package-distributed-locks/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>dlock - package for distributed locks</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>As of this writing, GCP doesn&rsquo;t have an option to create <a href="https://cloud.google.com/spanner/">Spanner</a> backups automatically. This could be available when you&rsquo;re reading this in the future. At the moment, however, if you&rsquo;re using Kubernetes, you can utilize <a href="https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/">CronJob</a> to do a scheduled backup.</p>
+<p>Here&rsquo;s a sample CronJob deployment that uses <code>gcloud</code> to create the backups. First, you need to create a service account that has permissions to create Spanner backups. Once you have downloaded the JSON file for the service account, store it as a Kubernetes <a href="https://kubernetes.io/docs/concepts/configuration/secret/">Secret</a>.</p>
+<p>{% highlight shell %}
+$ kubectl create secret generic spannerbackup-keyfile &ndash;from-file svcacct.json
+{% endhighlight %}</p>
+<p>Make sure to update some of the information below as required, such as, name of the backup, instance name, database name, expiration date, etc. The example below uses the backup name <code>autobackup-yyyymmddthhmmssutc</code> format with a 3-day backup expiration.</p>
+<p>{% highlight yaml %}
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+name: spannerbackup
+spec:
+concurrencyPolicy: Forbid
+# Run every day @ 2:30am JST (below is UTC)
+schedule: &ldquo;30 17 * * *&rdquo;
+jobTemplate:
+spec:
+template:
+spec:
+containers:
+- name: spannerbackup
+image: google/cloud-sdk:307.0.0-slim
+command: [&quot;/bin/bash&quot;]
+args: [&quot;-c&quot;, &ldquo;NAME=autobackup-$(date +%Y%m%dT%H%M%S%Z | awk &lsquo;{print tolower($0)}&rsquo;); EXP=$(date -u -d &lsquo;+3 day&rsquo; +%FT%TZ); gcloud auth activate-service-account &ndash;key-file $GOOGLE_APPLICATION_CREDENTIALS &amp;&amp; gcloud spanner backups create $NAME &ndash;instance=<instancename> &ndash;database=<dbname> &ndash;expiration-date=$EXP &ndash;async&rdquo;]
+env:
+- name: GET_HOSTS_FROM
+value: dns
+- name: GOOGLE_APPLICATION_CREDENTIALS
+value: /etc/spannerbackup/svcacct.json
+volumeMounts:
+- name: keyfile
+mountPath: &ldquo;/etc/spannerbackup&rdquo;
+readOnly: true
+restartPolicy: OnFailure
+volumes:
+- name: keyfile
+secret:
+secretName: spannerbackup-keyfile
+{% endhighlight %}</p>
+<p>Finally, deploy to k8s.</p>
+<p>{% highlight shell %}</p>
+<h1 id="assuming-above-file-is-saved-as-backupyaml">Assuming above file is saved as <code>backup.yaml</code></h1>
+<p>$ kubectl create -f backup.yaml
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-09-11-autobackup-spanner-k8s/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2020-09-11-autobackup-spanner-k8s/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Automate Spanner backup using Kubernetes CronJob</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I recently came across the <a href="https://github.com/hashicorp/memberlist">hashicorp/memberlist</a> library while browsing GitHub and I thought it would be a good replacement for <a href="https://github.com/flowerinthenight/hedge">hedge</a>&rsquo;s internal member tracking logic. It seems to be widely used (thus more battle-tested) as well. I was quite excited as I always thought that hedge&rsquo;s equivalent logic is too barebones and untested outside of our use cases. It works just fine for its current intended purpose but I&rsquo;ve been hesitating to build on top of it until I can really say that it&rsquo;s stable enough. With memberlist, it might just be what I needed.</p>
+<p>After about a month of testing, I think it didn&rsquo;t really turn out quite well in the end. It is stable enough for deployments that are not spike-y in terms of workloads (frequent scaling up/down). Or if I set min = max in the <a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">HorizontalPodAutoscaler</a>. In these cases, memberlist can consistently track members just fine. What&rsquo;s better is that it works even in multiple deployments in the same namespace which I thought was brilliant. For example, if I have a deployment <code>app1</code> set to 10 pods in the <code>default</code> namespace using memberlist&rsquo;s default port numbers, and then I deploy another set, say, <code>app2</code>, within the same namespace using the same ports, app1&rsquo;s memberlist can track its 10 member pods just fine while app2&rsquo;s memberlist is also separated. But when applied to my use case, which has a minimum pod of 2 and a max of 150, with frequent scale up/down frequency depending on load, it can&rsquo;t seem to keep up. The potential for <a href="https://en.wikipedia.org/wiki/Byzantine_fault">Byzantine faults</a> is just too high: i.e. in a 50-pod scale, memberlist can end up having 2 groups of m-pods and n-pods where m+n=50. Very rarely, it can even go up to 3 groups.</p>
+<p>I am a little frustrated. I really wanted it to work; I even attempted to update memberlist to incorporate hedge&rsquo;s logic but it was too much for now, with my schedule. So now, back to the old one. By the way, the current logic is fairly rudimentary: all members in the cluster/group send a liveness heartbeat to the leader and the leader broadcasting the final list of members to all via hedge&rsquo;s broadcast mechanism. CPU usage between the two is fairly similar depending on the sync timeout.</p>
+<p>I&rsquo;ve been trying to improve hedge&rsquo;s member tracking system as I want to build a distributed in-memory cache within hedge itself. Most of the available ones are <a href="https://raft.github.io/">Raft</a>-based, and I still haven&rsquo;t figured out how to make Raft work in the same deployment configuration.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2023-04-28-hedge-memberlist/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2023-04-28-hedge-memberlist/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Attempt to replace hedge’s member tracking with hashicorp/memberlist</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I uploaded an automation-friendly, highly-scalable, and scriptable API/generic testing tool built to run on <a href="https://kubernetes.io/">Kubernetes</a>. It&rsquo;s called <code>oops</code> and you can find the code <a href="https://github.com/flowerinthenight/oops/">here</a>. Maybe it will be useful to anybody out there.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-10-31-oops/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2020-10-31-oops/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>An automation-friendly, highly-scalable, and scriptable testing tool</title>
+                
+            </item>
+        
+    </channel>
+</rss>

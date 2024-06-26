@@ -1,0 +1,303 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/c++/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/c++/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/c++/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/c++/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>C++ · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>In this way, we can implement a FIFO queue without using explicit locking/synchronization for enqueueing/dequeueing.</p>
+<p>For self reference:</p>
+<p>{% gist 48d81f079d64dabbad7fa80928159461 %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-04-20-apc-as-fifo-queue/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2017-04-20-apc-as-fifo-queue/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Using APC as FIFO queue in Windows</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Note that this function assumes the caller to be running as SYSTEM as well (i.e. Windows service).</p>
+<p>For self reference:</p>
+<p>{% gist a5ab54fec75bbabf6dac33b917b44c9b %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-05-31-start-process-as-system/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2017-05-31-start-process-as-system/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Start process as system using CreateProcessAsUser</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>For self reference:</p>
+<p>Simulate a touch input down, drag, up programmatically.</p>
+<p>{% gist bd264001034db093413a0bb233760588 %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-03-28-simple-touch-input-funcs-windows/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2017-03-28-simple-touch-input-funcs-windows/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Simple touch/swipe input function in Windows</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Yet another service code for Windows. This time, it&rsquo;s an ATL service. ATL services are basically the same as <a href="https://github.com/flowerinthenight/win32-base-service">traditional Windows services</a> but with some advantages.</p>
+<ul>
+<li>Can be started on-demand automatically by the first client call (via COM).</li>
+<li>Clients can call service functions with parameters and return values using COM. In traditional services, clients normally communicate using service control codes and you need some kind of IPC (named pipes, shared memory, etc.) for bi-directional data exchange.</li>
+</ul>
+<p>A client console app is provided to demonstrate service function call with return value and service-to-client notification via IDispatch.</p>
+<p>Check out the source code <a href="https://github.com/flowerinthenight/base-atlcom-svc">here</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-01-18-base-atl-service/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2017-01-18-base-atl-service/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>ATL service base code</title>
+                
+            </item>
+        
+    </channel>
+</rss>

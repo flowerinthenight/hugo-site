@@ -1,0 +1,161 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed  xml:lang="en"  xmlns="http://www.w3.org/2005/Atom">
+    
+        <author>
+            
+                <email>example@example.com</email>
+            
+
+            
+                <name>John Doe</name>
+            
+
+            
+                <uri>https://example.com</uri>
+            
+        </author>
+    
+
+    
+        <icon>http://localhost:1313/</icon>
+    
+
+    <id>tag:localhost:1313,0001-01-01:/tags/gopls/atom.xml</id>
+
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/gopls/atom.xml" rel="self" type="application/atom+xml"/>
+        
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/gopls/" rel="alternate" type="text/html"/>
+        
+    
+        
+
+        
+
+        
+            <link href="http://localhost:1313/tags/gopls/rss.xml" rel="alternate" type="application/rss+xml"/>
+        
+    
+
+    
+
+    
+        <logo>http://localhost:1313/</logo>
+    
+
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+    
+
+    
+
+    <title type="html"><![CDATA[Gopls · Tags · About]]></title>
+    <updated>2024-01-18T21:32:52-07:00</updated>
+
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<h2 id="update">Update</h2>
+<p><a href="https://github.com/fatih/vim-go">vim-go</a> has already transitioned to <a href="https://github.com/golang/tools/blob/master/gopls/doc/user.md">gopls</a> as its default completion engine. I just noticed that my Vim is still using <a href="https://github.com/stamblerre/gocode">gocode</a> even though I updated to the latest version of vim-go. Commenting/removing the line <code>Plugin 'stamblerre/gocode', {'rtp': 'vim/'}</code> from my .vimrc did the trick for me. Hope this helps.</p>
+<p>Original post <a href="https://flowerinthenight.com/blog/2018/09/20/vimgo-go111-gocode">here</a>.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2020-03-25-vimgo-gocode-gopls/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2020-03-25-vimgo-gocode-gopls/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Followup on autocompletion with gocode and vim-go in Go1.11, transition to gopls]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+</feed>

@@ -1,0 +1,154 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/gist-it/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/gist-it/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/gist-it/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/gist-it/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Gist-It · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I&rsquo;ve found this <a href="https://gist-it.appspot.com/">nifty little tool</a> that can embed codes directly from your GitHub repositories without using Gist. It&rsquo;s very easy to use. For example, if you want to embed, say, <a href="https://github.com/flowerinthenight/rusttrace/blob/master/src/main.rs">this whole file</a>, you only need to add this snippet somewhere in your post.md file.</p>
+<p>{% highlight html %}</p>
+<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/flowerinthenight/rusttrace/blob/master/src/main.rs?footer=minimal"></script>
+<p>{% endhighlight %}</p>
+<p>The <code>?footer=minimal</code> part is optional. It will look something like this:</p>
+<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/flowerinthenight/rusttrace/blob/master/src/main.rs?footer=minimal"></script>
+<p>It can also embed just a section of code based on line numbers. For example, to embed line 234 to line 257 of <a href="https://github.com/flowerinthenight/rmq/blob/master/rabbitmq.go">this file</a>, this snippet will do.</p>
+<p>{% highlight html %}</p>
+<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/flowerinthenight/rmq/blob/master/rabbitmq.go?slice=233:257&footer=minimal"></script>
+<p>{% endhighlight %}</p>
+<p>It will look something like this:</p>
+<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/flowerinthenight/rmq/blob/master/rabbitmq.go?slice=233:257&footer=minimal"></script>
+<p>Just note that the <code>slice=</code> parameter is zero-based and GitHub&rsquo;s line numbering starts at 1.</p>
+<p>Finally, if you have an HTTPS blog, make sure to use <code>https://gist-it.appspot.com/...</code>, not <code>http://gist-it.appspot.com/...</code>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-11-28-embed-github-code/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2017-11-28-embed-github-code/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Embed code from GitHub to GitHub Pages blog like Gist</title>
+                
+            </item>
+        
+    </channel>
+</rss>

@@ -14,9 +14,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -100,8 +100,8 @@
 
     
 
-    <title type="html"><![CDATA[Markdown · Tags · Paige]]></title>
-    <updated>2023-09-24T21:29:31-07:00</updated>
+    <title type="html"><![CDATA[Markdown · Tags · About]]></title>
+    <updated>2024-01-18T21:32:52-07:00</updated>
 
     
         <entry>
@@ -299,7 +299,7 @@ SOFTWARE.
 </div>]]></content>
             
 
-            <id>tag:localhost:1313,2023-09-18:/blog/markdown-syntax/</id>
+            <id>tag:localhost:1313,2024-01-18:/blog/markdown-syntax/</id>
 
             
                 
@@ -314,7 +314,7 @@ SOFTWARE.
             
 
             
-                <published>2023-09-18T21:32:52-07:00</published>
+                <published>2024-01-18T21:32:52-07:00</published>
             
 
             
@@ -322,9 +322,11 @@ SOFTWARE.
             
 
             
+                <summary type="html"><![CDATA[2024-01-18: The ultimate guide to markdown syntax in paige.]]></summary>
+            
 
             <title type="html"><![CDATA[Markdown Syntax Guide]]></title>
-            <updated>2023-09-18T21:32:52-07:00</updated>
+            <updated>2024-01-18T21:32:52-07:00</updated>
         </entry>
     
 </feed>

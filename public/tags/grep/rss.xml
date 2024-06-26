@@ -1,0 +1,149 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/grep/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/grep/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/grep/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/grep/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Grep · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I&rsquo;ve been using <a href="https://github.com/wercker/stern"><code>stern</code></a> as my goto log viewer for Kubernetes. It supports multiple pods and other convenient functions on top of <code>kubectl logs</code>. And of course, grepping goes hand in hand with log viewing, doesn&rsquo;t it? To combine grep with stern, I use the following commands:</p>
+<p>{% highlight shell %}</p>
+<h1 id="for-osx">For OSX:</h1>
+<h1 id="stern-some-prod-prefix--grep--i---line-buffered--e-extended-regex">stern <some-prod-prefix> | grep -i &ndash;line-buffered -E &lsquo;<extended-regex>&rsquo;</h1>
+<p>$ stern user | grep -i &ndash;line-buffered -E &lsquo;failed&rsquo;</p>
+<h1 id="for-linux-ubuntu-specifically">For Linux (Ubuntu specifically):</h1>
+<h1 id="stern-some-prod-prefix--grep--i--e-extended-regex">stern <some-prod-prefix> | grep -i -E &lsquo;<extended-regex>&rsquo;</h1>
+<p>$ stern user -s 1h | grep -i -E &rsquo;error'
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2019-09-30-stern-grep/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2019-09-30-stern-grep/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Using stern together with grep</title>
+                
+            </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,200 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/categories/c%23/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/categories/c%23/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/categories/c%23/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/categories/c%23/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>C# · Categories · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Recently, I was working on a project that involves the encoding of .NET bitmaps using <a href="https://www.ffmpeg.org/">ffmpeg</a>&rsquo;s h264 encoder with <code>mp4</code> as container. This video output will be used in a <code>&lt;video&gt;</code> tag in html5. Sample codes have been all over the place so it took me quite a while to come up with a working solution. The official sample from ffmpeg only encodes to raw h264 stream. This is just a basic sample code for reference.</p>
+<p>Check out the source code <a href="https://github.com/flowerinthenight/ffmpeg-encode-h264mp4">here</a>.</p>
+<p>Lastly, some useful links that I used:</p>
+<ul>
+<li><a href="https://en.code-bude.net/2013/04/17/how-to-create-video-files-in-c-from-single-images/">https://en.code-bude.net/2013/04/17/how-to-create-video-files-in-c-from-single-images/</a></li>
+<li><a href="https://github.com/FFmpeg/FFmpeg/blob/master/doc/examples/decoding_encoding.c">https://github.com/FFmpeg/FFmpeg/blob/master/doc/examples/decoding_encoding.c</a></li>
+<li><a href="http://www.imc-store.com.au/Articles.asp?ID=276">http://www.imc-store.com.au/Articles.asp?ID=276</a></li>
+</ul>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-11-28-ffmpeg-encode-h264mp4/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-11-28-ffmpeg-encode-h264mp4/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Encoding .NET bitmaps to H264 using FFMPEG</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>For personal reference:</p>
+<p>{% gist 8fae6c9a56df98b8ff96f117a7c9f341 %}</p>
+<p>Full source code <a href="https://github.com/flowerinthenight/win-restclientserver-console">here</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-24-rest-client-server-c%23/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-08-24-rest-client-server-c%23/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>A simple REST client/server console app in C#</title>
+                
+            </item>
+        
+    </channel>
+</rss>

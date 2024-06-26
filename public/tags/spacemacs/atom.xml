@@ -1,0 +1,233 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed  xml:lang="en"  xmlns="http://www.w3.org/2005/Atom">
+    
+        <author>
+            
+                <email>example@example.com</email>
+            
+
+            
+                <name>John Doe</name>
+            
+
+            
+                <uri>https://example.com</uri>
+            
+        </author>
+    
+
+    
+        <icon>http://localhost:1313/</icon>
+    
+
+    <id>tag:localhost:1313,0001-01-01:/tags/spacemacs/atom.xml</id>
+
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/spacemacs/atom.xml" rel="self" type="application/atom+xml"/>
+        
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/spacemacs/" rel="alternate" type="text/html"/>
+        
+    
+        
+
+        
+
+        
+            <link href="http://localhost:1313/tags/spacemacs/rss.xml" rel="alternate" type="application/rss+xml"/>
+        
+    
+
+    
+
+    
+        <logo>http://localhost:1313/</logo>
+    
+
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+    
+
+    
+
+    <title type="html"><![CDATA[Spacemacs · Tags · About]]></title>
+    <updated>2024-01-18T21:32:52-07:00</updated>
+
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>Reference:</p>
+<p>Ever since I&rsquo;ve started using Spacemacs on Linux, I&rsquo;ve been using this simple script as a command alias to update Spacemacs using the command line.</p>
+<p>{% highlight shell %}
+alias upe=&lsquo;git -C ~/.emacs.d/ pull &amp;&amp; <br>
+emacs &ndash;batch -l ~/.emacs.d/init.el <br>
+&ndash;eval=&quot;(configuration-layer/update-packages t)&quot; 2&gt;&amp;1 | <br>
+tee /tmp/emacs-update &amp;&amp; <br>
+grep -i -E &ldquo;Found.*to.<em>update.</em>&rdquo; /tmp/emacs-update &amp;&amp; <br>
+emacs&rsquo;
+{% endhighlight %}</p>
+<p>I use the develop branch of Spacemacs, thus the update using git. Then it will check if there are package updates and if so, it will relaunch Spacemacs to actually install the updates.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2021-02-21-update-spacemacs-cmdline/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2021-02-21-update-spacemacs-cmdline/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Update Spacemacs from command line]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>It&rsquo;s been a year since I&rsquo;ve transitioned, sort of, from Vim to Emacs, so I thought I&rsquo;d write something about it.</p>
+<p><a href="https://www.vim.org/">Vim</a> has been my primary editor of choice for many years. I think I started Vim around 2003 on a RedHat box writing x86 assembly. Ever since, throughout my working carrier, whether it&rsquo;s on Windows, OSX, or Linux, it&rsquo;s been always Vim for me. Yes, even on Windows where the experience is really not that good, I still use Vim. My <a href="https://github.com/flowerinthenight/.files/blob/master/vimrc">config</a> now is reasonably compact after all the changes it went through with the plugins that I&rsquo;ve used all these years.</p>
+<p>But around January of 2020, I stumbled upon a <a href="https://www.youtube.com/watch?v=SzA2YODtgK4">YouTube video</a> about Org Mode. When I saw it, I thought it was fantastic. My wife has been doing <a href="https://bulletjournal.com/">bullet journaling</a> for a while now so I&rsquo;m a bit familiar with it and I thought it&rsquo;s pretty much a bullet journaling plugin in an editor. I gave it a try.</p>
+<p>I tried both <a href="https://www.spacemacs.org/">Spacemacs</a> and <a href="https://github.com/hlissner/doom-emacs">Doom Emacs</a> and eventually settled with Spacemacs. Not sure why. Both are brilliant. My leader key in Vim is Space so the transition was not that difficult. Now, Org Mode has become an essential tool for me in my work. I don&rsquo;t really code that much anymore so I spend more time in Org Mode now than in code. After a year -ish of Spacemacs usage, overall, my experience has been enjoyable. Mind you, I&rsquo;ve only used it in Linux as my main system is <a href="https://pop.system76.com/">Pop!_OS</a>.</p>
+<p>Some minor annoyances. First is the startup time. I never really thought much about it in Vim. You could say that I&rsquo;ve been spoiled with Vim&rsquo;s startup times that Spacemacs&rsquo; startup delay was a hard pill to swallow. It still is. At this time of writing, I&rsquo;m on Emacs 26.3. I tried 27.1 which is supposed to be faster due to its native support for JSON parsing, but, while faster overall, still noticeably and annoyingly slow. Still, once I open Spacemacs, I rarely close it, or I&rsquo;ve learned not to close it the way I use Vim so I&rsquo;d say I can live with it.</p>
+<p>Second is the <code>s</code> shortcut key. It&rsquo;s not really against Spacemacs or anything but after a year of use, I still stumble with it more times than I like. You see, in Vim, my goto &lsquo;replace&rsquo; shortcut is <code>s</code> by highlighting a word, or phrase, or a line, then pressing <code>s</code> to delete it while changing to edit mode at the same time. In Spacemacs, <code>s</code> is surround, not delete+edit. It&rsquo;s probably going to take me more years to master this especially that I still use Vim from time to time.</p>
+<p>Now, I still use Vim for quick edits, or, if I feel like it. It still has a special place in my heart. But for now, I look forward to more years of Emacs use.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2021-01-30-vim-emacs/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2021-01-30-vim-emacs/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[From Vim to Emacs]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+</feed>

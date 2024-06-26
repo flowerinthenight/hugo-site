@@ -1,0 +1,278 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed  xml:lang="en"  xmlns="http://www.w3.org/2005/Atom">
+    
+        <author>
+            
+                <email>example@example.com</email>
+            
+
+            
+                <name>John Doe</name>
+            
+
+            
+                <uri>https://example.com</uri>
+            
+        </author>
+    
+
+    
+        <icon>http://localhost:1313/</icon>
+    
+
+    <id>tag:localhost:1313,0001-01-01:/tags/driver/atom.xml</id>
+
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/driver/atom.xml" rel="self" type="application/atom+xml"/>
+        
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/driver/" rel="alternate" type="text/html"/>
+        
+    
+        
+
+        
+
+        
+            <link href="http://localhost:1313/tags/driver/rss.xml" rel="alternate" type="application/rss+xml"/>
+        
+    
+
+    
+
+    
+        <logo>http://localhost:1313/</logo>
+    
+
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+    
+
+    
+
+    <title type="html"><![CDATA[Driver · Tags · About]]></title>
+    <updated>2024-01-18T21:32:52-07:00</updated>
+
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>Updated 2019/03/13:</p>
+<p>A pretty good writeup that explains the internals of writing a camera filter driver in Windows can be found <a href="https://virusbulletin.com/virusbulletin/2018/09/through-looking-glass-webcam-interception-and-protection-kernel-mode/">here</a>. I&rsquo;m putting this information out as this repo is one of the references used in the writeup.</p>
+<p>Original post:</p>
+<p>This post is a bit of a departure from my usual golang/cloud-related ramblings. I posted an open-source <a href="https://github.com/flowerinthenight/windows-camera-class-filter-driver">camera class filter driver</a> for Windows ages ago hoping that it would help someone working on a similar project. If you are familiar with this type of driver, you probably know that it&rsquo;s not that straightforward to write mainly due to it being generally undocumented. A lot of reverse engineering has been done to write this driver. Anyway, recently, someone pointed out to me that it&rsquo;s been discussed in <a href="https://www.osronline.com/showthread.cfm?link=288736">this forum post</a>. So if you&rsquo;re working on a similar project, give it a whirl, and if you find some issues, I would appreciate it if you could submit a PR for fixes. Thanks.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2019-03-13-ccfltr-updates/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2019-03-13-ccfltr-updates/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Updates to Camera Class Filter Driver for Windows]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>I uploaded an ancient prototype driver code I used ages ago in testing the <a href="http://www.ti.com/lit/ds/symlink/drv2605.pdf">DRV2605</a> haptic device from Texas Instruments. I can&rsquo;t figure out (and I also don&rsquo;t have time either) how to make this thing build using the recent versions of Visual Studio. Nonetheless, I&rsquo;m putting this out there as reference to somebody doing something similar to this project. Source code is <a href="https://github.com/flowerinthenight/tidrv2605-haptic-driver-umdf">here</a>.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2019-04-28-drv2605-umdf-haptic-driver/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2019-04-28-drv2605-umdf-haptic-driver/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[UMDF driver code for DRV2605 haptic device]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>This post is a bit of a departure from my usual golang/cloud-related ramblings. I posted an open-source <a href="https://github.com/flowerinthenight/windows-camera-class-filter-driver">camera class filter driver</a> for Windows ages ago hoping that it would help someone working on a similar project. If you are familiar with this type of driver, you probably know that it&rsquo;s not that straightforward to write mainly due to it being generally undocumented. A lot of reverse engineering has been done to write this driver. Anyway, recently, someone pointed out to me that it&rsquo;s been discussed in <a href="https://www.osronline.com/showthread.cfm?link=288736">this forum post</a>. So if you&rsquo;re working on a similar project, give it a whirl, and if you find some issues, I would appreciate it if you could submit a PR for fixes. Thanks.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2018-04-30-camera-class-filter-driver/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2018-04-30-camera-class-filter-driver/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Camera Class Filter Driver for Windows]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+</feed>

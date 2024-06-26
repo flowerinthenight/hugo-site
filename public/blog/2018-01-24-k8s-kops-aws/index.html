@@ -1,0 +1,1147 @@
+
+
+<!doctype html>
+
+
+
+
+
+
+<html  data-paige="Paige theme from https://github.com/willfaught/paige"   lang="en" >
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+    
+
+<meta charset="utf-8">
+
+
+
+
+
+
+    <meta content="aws, devops, kops, kubernetes" name="keywords">
+
+
+<meta content="#0d6efd" name="msapplication-TileColor">
+
+
+    <meta content="/browserconfig.xml" name="msapplication-config">
+
+
+<meta content="https://github.com/willfaught/paige" name="theme">
+<meta content="#0d6efd" name="theme-color">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+
+<meta property="og:url" content="http://localhost:1313/blog/2018-01-24-k8s-kops-aws/">
+  <meta property="og:site_name" content="flowerinthenight">
+  <meta property="og:title" content="Running Kubernetes on AWS using kops">
+  <meta property="og:description" content="Overview This post will walk through the steps on how we provisioned our production Kubernetes cluster @mobingi. Some of the bits here are already automated in our case but I will try to include as much details as I can.
+Our goals would be the following:
+Provision a Kubernetes cluster on AWS using kops. The cluster will have two autoscaling groups: one for on-demand, one for spot instances. It’s going to be a gossip-based cluster.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:tag" content="Kubernetes">
+    <meta property="article:tag" content="Kops">
+    <meta property="article:tag" content="Aws">
+    <meta property="article:tag" content="Devops">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Running Kubernetes on AWS using kops">
+  <meta name="twitter:description" content="Overview This post will walk through the steps on how we provisioned our production Kubernetes cluster @mobingi. Some of the bits here are already automated in our case but I will try to include as much details as I can.
+Our goals would be the following:
+Provision a Kubernetes cluster on AWS using kops. The cluster will have two autoscaling groups: one for on-demand, one for spot instances. It’s going to be a gossip-based cluster.">
+
+
+
+    
+        <title>Running Kubernetes on AWS using kops ·  · About</title>
+    
+
+    
+
+
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+
+
+
+    <link href="/favicon.ico" rel="shortcut icon">
+
+
+
+    <link href="/favicon.png" rel="icon" type="image/png">
+
+
+
+    <link href="/favicon.svg" rel="icon" type="image/svg+xml">
+
+
+
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+
+
+
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+
+
+
+    <link color="#0d6efd" href="/safari-pinned-tab.svg" rel="mask-icon">
+
+
+
+    <link href="/site.webmanifest" rel="manifest">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+        
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+
+<link  crossorigin="anonymous"  href="/css/paige/bootstrap/6186ad141d391e4c0c10d2e9cb4eaeaadf75e809-paige.min.5a695f13e40d00e33dc2ef3b080efa570bbcc6991647824214ff6d7f4b20527e.css"  integrity="sha256-WmlfE&#43;QNAOM9wu87CA76Vwu8xpkWR4JCFP9tf0sgUn4="   referrerpolicy="no-referrer"  rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+    
+    
+
+
+<link  crossorigin="anonymous"  href="/css/paige/bootstrap-icons/bootstrap-icons.min.540116b7267d4b2410c74086ae6497566928c6d5715900be7ce7279ad45addcd.css"  integrity="sha256-VAEWtyZ9SyQQx0CGrmSXVmkoxtVxWQC&#43;fOcnmtRa3c0="   referrerpolicy="no-referrer"  rel="stylesheet">
+
+
+
+
+
+
+    
+
+<style>
+
+    #paige-authors,
+#paige-breadcrumbs,
+#paige-credit,
+#paige-date,
+#paige-file,
+#paige-keywords,
+#paige-prev-next,
+#paige-reading-time,
+#paige-series,
+#paige-toc,
+.paige-authors,
+.paige-date,
+.paige-keywords,
+.paige-reading-time,
+.paige-series,
+.paige-summary {
+    display: none;
+}
+
+
+
+.paige-figure-numbered {
+    counter-increment: paige-figure-numbered;
+}
+
+.paige-figure-numbered > div > figure > figcaption::before {
+    content: "Figure " counter(paige-figure-numbered) ": ";
+}
+
+.paige-figure-numbered > div > figure > figcaption:empty::before {
+    content: "Figure " counter(paige-figure-numbered);
+}
+
+.paige-header-link {
+    opacity: 0;
+    margin-left: 0.5rem;
+    position: absolute;
+    transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+.paige-header-link::after {
+    content: "#";
+}
+
+.paige-quote .blockquote-footer {
+    margin-top: 0;
+}
+
+.paige-quote blockquote {
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+blockquote {
+    padding: 0.5rem 1rem;
+    border-left: 0.25rem solid var(--bs-border-color);
+    border-right: 0.25rem solid var(--bs-body-bg);
+}
+
+td, th {
+    padding: 0.25rem;
+}
+
+.highlight .chroma .hl,
+.highlight .chroma .lnt {
+    display: flex;
+}
+
+.paige-figure .paige-quote,
+.paige-figure .paige-video,
+.paige-figure .highlight pre.chroma,
+.paige-figure .highlight .chroma pre,
+.paige-figure .paige-quote blockquote,
+.paige-figure figure > div > :last-child,
+.paige-gallery .paige-figure,
+.paige-gallery .paige-image,
+blockquote > p:last-of-type {
+    margin-bottom: 0;
+}
+
+.paige-figure,
+.paige-gallery,
+.paige-image,
+.paige-quote,
+.paige-video,
+table {
+    margin-bottom: 1rem;
+}
+
+.paige-header-link:focus,
+.paige-header-link:hover,
+:hover > .paige-header-link,
+:target > .paige-header-link {
+    opacity: 1;
+}
+
+
+
+
+    @media (prefers-color-scheme: dark) {
+        /* Background */ .bg { color: #c9d1d9; background-color: var(--bs-body-bg); }
+/* PreWrapper */ .chroma { color: #c9d1d9; background-color: var(--bs-body-bg); }
+/* Other */ .chroma .x {  }
+/* Error */ .chroma .err { color: #f85149 }
+/* CodeLine */ .chroma .cl {  }
+/* LineLink */ .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
+/* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+/* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
+/* LineHighlight */ .chroma .hl { background-color: #4f4f4d }
+/* LineNumbersTable */ .chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #64686c }
+/* LineNumbers */ .chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #6e7681 }
+/* Line */ .chroma .line { display: flex; }
+/* Keyword */ .chroma .k { color: #ff7b72 }
+/* KeywordConstant */ .chroma .kc { color: #79c0ff }
+/* KeywordDeclaration */ .chroma .kd { color: #ff7b72 }
+/* KeywordNamespace */ .chroma .kn { color: #ff7b72 }
+/* KeywordPseudo */ .chroma .kp { color: #79c0ff }
+/* KeywordReserved */ .chroma .kr { color: #ff7b72 }
+/* KeywordType */ .chroma .kt { color: #ff7b72 }
+/* Name */ .chroma .n {  }
+/* NameAttribute */ .chroma .na {  }
+/* NameBuiltin */ .chroma .nb {  }
+/* NameBuiltinPseudo */ .chroma .bp {  }
+/* NameClass */ .chroma .nc { color: #f0883e; font-weight: bold }
+/* NameConstant */ .chroma .no { color: #79c0ff; font-weight: bold }
+/* NameDecorator */ .chroma .nd { color: #d2a8ff; font-weight: bold }
+/* NameEntity */ .chroma .ni { color: #ffa657 }
+/* NameException */ .chroma .ne { color: #f0883e; font-weight: bold }
+/* NameFunction */ .chroma .nf { color: #d2a8ff; font-weight: bold }
+/* NameFunctionMagic */ .chroma .fm {  }
+/* NameLabel */ .chroma .nl { color: #79c0ff; font-weight: bold }
+/* NameNamespace */ .chroma .nn { color: #ff7b72 }
+/* NameOther */ .chroma .nx {  }
+/* NameProperty */ .chroma .py { color: #79c0ff }
+/* NameTag */ .chroma .nt { color: #7ee787 }
+/* NameVariable */ .chroma .nv { color: #79c0ff }
+/* NameVariableClass */ .chroma .vc {  }
+/* NameVariableGlobal */ .chroma .vg {  }
+/* NameVariableInstance */ .chroma .vi {  }
+/* NameVariableMagic */ .chroma .vm {  }
+/* Literal */ .chroma .l { color: #a5d6ff }
+/* LiteralDate */ .chroma .ld { color: #79c0ff }
+/* LiteralString */ .chroma .s { color: #a5d6ff }
+/* LiteralStringAffix */ .chroma .sa { color: #79c0ff }
+/* LiteralStringBacktick */ .chroma .sb { color: #a5d6ff }
+/* LiteralStringChar */ .chroma .sc { color: #a5d6ff }
+/* LiteralStringDelimiter */ .chroma .dl { color: #79c0ff }
+/* LiteralStringDoc */ .chroma .sd { color: #a5d6ff }
+/* LiteralStringDouble */ .chroma .s2 { color: #a5d6ff }
+/* LiteralStringEscape */ .chroma .se { color: #79c0ff }
+/* LiteralStringHeredoc */ .chroma .sh { color: #79c0ff }
+/* LiteralStringInterpol */ .chroma .si { color: #a5d6ff }
+/* LiteralStringOther */ .chroma .sx { color: #a5d6ff }
+/* LiteralStringRegex */ .chroma .sr { color: #79c0ff }
+/* LiteralStringSingle */ .chroma .s1 { color: #a5d6ff }
+/* LiteralStringSymbol */ .chroma .ss { color: #a5d6ff }
+/* LiteralNumber */ .chroma .m { color: #a5d6ff }
+/* LiteralNumberBin */ .chroma .mb { color: #a5d6ff }
+/* LiteralNumberFloat */ .chroma .mf { color: #a5d6ff }
+/* LiteralNumberHex */ .chroma .mh { color: #a5d6ff }
+/* LiteralNumberInteger */ .chroma .mi { color: #a5d6ff }
+/* LiteralNumberIntegerLong */ .chroma .il { color: #a5d6ff }
+/* LiteralNumberOct */ .chroma .mo { color: #a5d6ff }
+/* Operator */ .chroma .o { color: #ff7b72; font-weight: bold }
+/* OperatorWord */ .chroma .ow { color: #ff7b72; font-weight: bold }
+/* Punctuation */ .chroma .p {  }
+/* Comment */ .chroma .c { color: #8b949e; font-style: italic }
+/* CommentHashbang */ .chroma .ch { color: #8b949e; font-style: italic }
+/* CommentMultiline */ .chroma .cm { color: #8b949e; font-style: italic }
+/* CommentSingle */ .chroma .c1 { color: #8b949e; font-style: italic }
+/* CommentSpecial */ .chroma .cs { color: #8b949e; font-weight: bold; font-style: italic }
+/* CommentPreproc */ .chroma .cp { color: #8b949e; font-weight: bold; font-style: italic }
+/* CommentPreprocFile */ .chroma .cpf { color: #8b949e; font-weight: bold; font-style: italic }
+/* Generic */ .chroma .g {  }
+/* GenericDeleted */ .chroma .gd { color: #ffa198; background-color: #490202 }
+/* GenericEmph */ .chroma .ge { font-style: italic }
+/* GenericError */ .chroma .gr { color: #ffa198 }
+/* GenericHeading */ .chroma .gh { color: #79c0ff; font-weight: bold }
+/* GenericInserted */ .chroma .gi { color: #56d364; background-color: #0f5323 }
+/* GenericOutput */ .chroma .go { color: #8b949e }
+/* GenericPrompt */ .chroma .gp { color: #8b949e }
+/* GenericStrong */ .chroma .gs { font-weight: bold }
+/* GenericSubheading */ .chroma .gu { color: #79c0ff }
+/* GenericTraceback */ .chroma .gt { color: #ff7b72 }
+/* GenericUnderline */ .chroma .gl { text-decoration: underline }
+/* TextWhitespace */ .chroma .w { color: #6e7681 }
+
+    }
+
+    @media (prefers-color-scheme: light) {
+        /* Background */ .bg { background-color: #ffffff; }
+/* PreWrapper */ .chroma { background-color: #ffffff; }
+/* Other */ .chroma .x {  }
+/* Error */ .chroma .err { color: #a61717; background-color: #e3d2d2 }
+/* CodeLine */ .chroma .cl {  }
+/* LineLink */ .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
+/* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+/* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
+/* LineHighlight */ .chroma .hl { background-color: #ffffcc }
+/* LineNumbersTable */ .chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+/* LineNumbers */ .chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+/* Line */ .chroma .line { display: flex; }
+/* Keyword */ .chroma .k { color: #000000; font-weight: bold }
+/* KeywordConstant */ .chroma .kc { color: #000000; font-weight: bold }
+/* KeywordDeclaration */ .chroma .kd { color: #000000; font-weight: bold }
+/* KeywordNamespace */ .chroma .kn { color: #000000; font-weight: bold }
+/* KeywordPseudo */ .chroma .kp { color: #000000; font-weight: bold }
+/* KeywordReserved */ .chroma .kr { color: #000000; font-weight: bold }
+/* KeywordType */ .chroma .kt { color: #445588; font-weight: bold }
+/* Name */ .chroma .n {  }
+/* NameAttribute */ .chroma .na { color: #008080 }
+/* NameBuiltin */ .chroma .nb { color: #0086b3 }
+/* NameBuiltinPseudo */ .chroma .bp { color: #999999 }
+/* NameClass */ .chroma .nc { color: #445588; font-weight: bold }
+/* NameConstant */ .chroma .no { color: #008080 }
+/* NameDecorator */ .chroma .nd { color: #3c5d5d; font-weight: bold }
+/* NameEntity */ .chroma .ni { color: #800080 }
+/* NameException */ .chroma .ne { color: #990000; font-weight: bold }
+/* NameFunction */ .chroma .nf { color: #990000; font-weight: bold }
+/* NameFunctionMagic */ .chroma .fm {  }
+/* NameLabel */ .chroma .nl { color: #990000; font-weight: bold }
+/* NameNamespace */ .chroma .nn { color: #555555 }
+/* NameOther */ .chroma .nx {  }
+/* NameProperty */ .chroma .py {  }
+/* NameTag */ .chroma .nt { color: #000080 }
+/* NameVariable */ .chroma .nv { color: #008080 }
+/* NameVariableClass */ .chroma .vc { color: #008080 }
+/* NameVariableGlobal */ .chroma .vg { color: #008080 }
+/* NameVariableInstance */ .chroma .vi { color: #008080 }
+/* NameVariableMagic */ .chroma .vm {  }
+/* Literal */ .chroma .l {  }
+/* LiteralDate */ .chroma .ld {  }
+/* LiteralString */ .chroma .s { color: #dd1144 }
+/* LiteralStringAffix */ .chroma .sa { color: #dd1144 }
+/* LiteralStringBacktick */ .chroma .sb { color: #dd1144 }
+/* LiteralStringChar */ .chroma .sc { color: #dd1144 }
+/* LiteralStringDelimiter */ .chroma .dl { color: #dd1144 }
+/* LiteralStringDoc */ .chroma .sd { color: #dd1144 }
+/* LiteralStringDouble */ .chroma .s2 { color: #dd1144 }
+/* LiteralStringEscape */ .chroma .se { color: #dd1144 }
+/* LiteralStringHeredoc */ .chroma .sh { color: #dd1144 }
+/* LiteralStringInterpol */ .chroma .si { color: #dd1144 }
+/* LiteralStringOther */ .chroma .sx { color: #dd1144 }
+/* LiteralStringRegex */ .chroma .sr { color: #009926 }
+/* LiteralStringSingle */ .chroma .s1 { color: #dd1144 }
+/* LiteralStringSymbol */ .chroma .ss { color: #990073 }
+/* LiteralNumber */ .chroma .m { color: #009999 }
+/* LiteralNumberBin */ .chroma .mb { color: #009999 }
+/* LiteralNumberFloat */ .chroma .mf { color: #009999 }
+/* LiteralNumberHex */ .chroma .mh { color: #009999 }
+/* LiteralNumberInteger */ .chroma .mi { color: #009999 }
+/* LiteralNumberIntegerLong */ .chroma .il { color: #009999 }
+/* LiteralNumberOct */ .chroma .mo { color: #009999 }
+/* Operator */ .chroma .o { color: #000000; font-weight: bold }
+/* OperatorWord */ .chroma .ow { color: #000000; font-weight: bold }
+/* Punctuation */ .chroma .p {  }
+/* Comment */ .chroma .c { color: #999988; font-style: italic }
+/* CommentHashbang */ .chroma .ch { color: #999988; font-style: italic }
+/* CommentMultiline */ .chroma .cm { color: #999988; font-style: italic }
+/* CommentSingle */ .chroma .c1 { color: #999988; font-style: italic }
+/* CommentSpecial */ .chroma .cs { color: #999999; font-weight: bold; font-style: italic }
+/* CommentPreproc */ .chroma .cp { color: #999999; font-weight: bold; font-style: italic }
+/* CommentPreprocFile */ .chroma .cpf { color: #999999; font-weight: bold; font-style: italic }
+/* Generic */ .chroma .g {  }
+/* GenericDeleted */ .chroma .gd { color: #000000; background-color: #ffdddd }
+/* GenericEmph */ .chroma .ge { color: #000000; font-style: italic }
+/* GenericError */ .chroma .gr { color: #aa0000 }
+/* GenericHeading */ .chroma .gh { color: #999999 }
+/* GenericInserted */ .chroma .gi { color: #000000; background-color: #ddffdd }
+/* GenericOutput */ .chroma .go { color: #888888 }
+/* GenericPrompt */ .chroma .gp { color: #555555 }
+/* GenericStrong */ .chroma .gs { font-weight: bold }
+/* GenericSubheading */ .chroma .gu { color: #aaaaaa }
+/* GenericTraceback */ .chroma .gt { color: #aa0000 }
+/* GenericUnderline */ .chroma .gl { text-decoration: underline }
+/* TextWhitespace */ .chroma .w { color: #bbbbbb }
+
+    }
+
+
+@media (prefers-reduced-motion: reduce) {
+    .paige-header-link {
+        transition: none;
+    }
+}
+
+
+
+
+</style>
+
+
+    
+</head>
+
+    <body class="d-flex flex-column">
+
+        
+
+        <div class="container flex-fill" id="paige-root">
+            <div class="row">
+                <div class="col">
+                    
+
+
+    <header class="my-3" id="paige-header">
+        
+
+        
+
+
+    <p class="display-1 fw-bold mb-2 text-center">f/t</p>
+
+
+
+        
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+    <nav>
+        <ul class="align-items-center justify-content-center nav ">
+            
+                
+                
+                
+                
+                
+
+                <li class="nav-item ">
+                    <a   class="  nav-link   text-decoration-underline "  href="/"    >Home</a>
+
+                    
+                </li>
+            
+                
+                
+                
+                
+                
+
+                <li class="nav-item ">
+                    <a  aria-current="page"   class=" active  text-body-emphasis    nav-link   text-decoration-underline "  href="/blog/"    >Blog</a>
+
+                    
+                </li>
+            
+                
+                
+                
+                
+                
+
+                <li class="nav-item ">
+                    <a   class="  nav-link   text-decoration-underline "  href="/bookshelf/"    >Bookshelf</a>
+
+                    
+                </li>
+            
+                
+                
+                
+                
+                
+
+                <li class="nav-item ">
+                    <a   class="  nav-link   text-decoration-underline "  href="/tags/"    >Tags</a>
+
+                    
+                </li>
+            
+                
+                
+                
+                
+                
+
+                <li class="nav-item ">
+                    <a   class="  nav-link   text-decoration-underline "  href="/search/"    >Search</a>
+
+                    
+                </li>
+            
+        </ul>
+    </nav>
+
+
+        
+
+
+    <nav aria-label="Breadcrumbs" class="mt-3" id="paige-breadcrumbs">
+        <div class="d-flex justify-content-center">
+            <ol class="breadcrumb mb-0">
+                
+
+                
+
+                
+                    
+
+                    
+
+                    <li class="breadcrumb-item"><a href="/">About</a></li>
+                
+                    
+
+                    
+                        
+                    
+
+                    <li class="breadcrumb-item"><a href="/blog/">f/t</a></li>
+                
+            </ol>
+        </div>
+    </nav>
+
+
+
+        
+    </header>
+
+
+
+                    <main class="mt-3" id="paige-main">
+                        
+
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+        
+    
+
+
+
+
+<article  class="paige-published paige-single"  id="paige-article">
+    <div class="align-items-center d-flex flex-column mb-0">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mw-100" id="paige-metadata">
+    
+        <h1 class="fw-bold text-center" id="paige-title">Running Kubernetes on AWS using kops</h1>
+    
+
+    
+
+    
+        <div class="mb-3">
+            
+                <p class=" mb-0  text-center  text-secondary " id="paige-keywords">
+                    <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/devops/">Devops</a> · <a class="link-secondary" href="/tags/kops/">Kops</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a>
+                </p>
+            
+
+            
+
+            
+
+            
+
+            
+                <p class="mb-0 text-center text-secondary" id="paige-reading-time">5 minutes</p>
+            
+        </div>
+    
+</div>
+
+        
+
+
+
+        
+
+
+    <div class="mw-100" id="paige-toc">
+        <div class="border mb-3 pe-3 ps-3 pt-3 rounded">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#gossip-based-cluster">Gossip-based cluster</a></li>
+    <li><a href="#ssh-keypair">SSH keypair</a></li>
+    <li><a href="#create-the-cluster">Create the cluster</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#spot-instance-autoscaling-group">Spot instance autoscaling group</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#setup-cluster-autoscaler">Setup cluster autoscaler</a></li>
+    <li><a href="#ssh-to-a-node">SSH to a node</a></li>
+  </ol>
+</nav>
+        </div>
+    </div>
+
+
+        
+
+
+
+
+    <div class="mw-100" id="paige-content"><h2 id="overview">Overview<a aria-label="Link to this section" class="paige-header-link" href="#overview"></a></h2>
+<p>This post will walk through the steps on how we provisioned our production Kubernetes cluster <a href="https://twitter.com/mobingi">@mobingi</a>. Some of the bits here are already automated in our case but I will try to include as much details as I can.</p>
+<p>Our goals would be the following:</p>
+<ul>
+<li>Provision a Kubernetes cluster on AWS using <a href="https://github.com/kubernetes/kops">kops</a>.</li>
+<li>The cluster will have two autoscaling groups: one for on-demand, one for spot instances.</li>
+<li>It&rsquo;s going to be a gossip-based cluster.</li>
+<li>RBAC is enabled in the cluster.</li>
+</ul>
+<p>There is no need to rewrite the otherwise excellent installation instructions written in the <a href="https://github.com/kubernetes/kops/blob/master/docs/aws.md">kops wiki</a>. Basically, we can just follow the setup instructions there. The instructions in this post will be specific to our goals above.</p>
+<h2 id="gossip-based-cluster">Gossip-based cluster<a aria-label="Link to this section" class="paige-header-link" href="#gossip-based-cluster"></a></h2>
+<p>We will skip the DNS configuration section as we are provisioning a gossip-based cluster, meaning, the cluster name will be something like <code>&quot;&lt;some-name&gt;.k8s.local&quot;</code>. We will be using <code>&quot;mycluster.k8s.local&quot;</code> as our cluster name.</p>
+<h2 id="ssh-keypair">SSH keypair<a aria-label="Link to this section" class="paige-header-link" href="#ssh-keypair"></a></h2>
+<p>We will create the keypair in AWS under EC2 -&gt; Key Pairs -&gt; Create Key Pair. We need this keypair when we need to ssh to our cluster nodes. After saving the keypair somewhere, we will generate the public key using the following command:</p>
+<p>{% highlight shell %}
+$ ssh-keygen -y -f mycluster.pem &gt; mycluster.pem.pub
+{% endhighlight %}</p>
+<h2 id="create-the-cluster">Create the cluster<a aria-label="Link to this section" class="paige-header-link" href="#create-the-cluster"></a></h2>
+<p>At this point, we should already have our environment variables set, mainly <code>NAME</code> and <code>KOPS_STATE_STORE</code>. To create the cluster:</p>
+<p>{% highlight shell %}</p>
+<h1 id="im-from-japan-so-im-using-ap-northeast-1-tokyo">I&rsquo;m from Japan so I&rsquo;m using ap-northeast-1 (Tokyo)<a aria-label="Link to this section" class="paige-header-link" href="#im-from-japan-so-im-using-ap-northeast-1-tokyo"></a></h1>
+<p>$ kops create cluster <br>
+&ndash;ssh-public-key mycluster.pem.pub
+&ndash;zones ap-northeast-1a,ap-northeast-1c <br>
+&ndash;authorization RBAC <br>
+&ndash;cloud aws ${NAME} <br>
+&ndash;yes
+{% endhighlight %}</p>
+<p>It will take some time before the cluster will be ready. To validate the cluster:</p>
+<p>{% highlight shell %}
+$ kops validate cluster
+Using cluster from kubectl context: mycluster.k8s.local</p>
+<p>Validating cluster mycluster.k8s.local</p>
+<p>INSTANCE GROUPS
+NAME                    ROLE    MACHINETYPE     MIN     MAX     SUBNETS
+master-ap-northeast-1a  Master  m3.medium       1       1       &hellip;
+nodes                   Node    t2.medium       2       2       &hellip;</p>
+<p>NODE STATUS
+NAME                                                    ROLE    READY
+ip-x-x-x-x.ap-northeast-1.compute.internal              master  True
+ip-x-x-x-x.ap-northeast-1.compute.internal              node    True
+ip-x-x-x-x.ap-northeast-1.compute.internal              node    True
+&hellip;</p>
+<p>Your cluster mycluster.k8s.local is ready
+{% endhighlight %}</p>
+<p>Notice that we only have one instance for our master. We can also opt to have a highly available master using <a href="https://github.com/kubernetes/kops/blob/master/docs/commands.md#other-interesting-modes">these options</a>, which is generally recommended for production clusters. Based on our experience though, this single master instance setup is good enough for development and/or staging clusters. There&rsquo;s going to be downtime if master goes down in which case the duration will depend on how long AWS autoscaling group kicks in. During that window, k8s API won&rsquo;t be accessible but the nodes will continue to work, including our deployed applications.</p>
+<h2 id="spot-instance-autoscaling-group">Spot instance autoscaling group<a aria-label="Link to this section" class="paige-header-link" href="#spot-instance-autoscaling-group"></a></h2>
+<p>Once the cluster is ready, we will add another instance group for spot instances. The default instance group created in the previous command, named &ldquo;nodes&rdquo;, will be our on-demand group. To add:</p>
+<p>{% highlight shell %}
+$ kops create ig nodes-spots -subnet ap-northeast-1a,ap-northeast-1c
+{% endhighlight %}</p>
+<p>You can then edit using the following contents (modify values as needed):</p>
+<p>{% highlight ruby %}
+apiVersion: kops/v1alpha2
+kind: InstanceGroup
+metadata:
+creationTimestamp: <some-datetime-value-here>
+labels:
+kops.k8s.io/cluster: mycluster.k8s.local
+name: nodes-spot
+spec:
+image: kope.io/k8s-1.8-debian-jessie-amd64-hvm-ebs-2017-12-02
+machineType: t2.medium
+maxPrice: &ldquo;0.02&rdquo;
+maxSize: 10
+minSize: 2
+nodeLabels:
+kops.k8s.io/instancegroup: nodes
+spot: &ldquo;true&rdquo;
+role: Node
+subnets:</p>
+<ul>
+<li>ap-northeast-1a</li>
+<li>ap-northeast-1c
+{% endhighlight %}</li>
+</ul>
+<p>We can now update our cluster with the following commands:</p>
+<p>{% highlight shell %}</p>
+<h1 id="optional-update-our-on-demand-groups-max-size-to-some-number">[optional] update our on-demand group&rsquo;s max size to some number<a aria-label="Link to this section" class="paige-header-link" href="#optional-update-our-on-demand-groups-max-size-to-some-number"></a></h1>
+<p>$ kops edit ig nodes</p>
+<h1 id="optional-preview-the-changes-to-be-applied">[optional] preview the changes to be applied<a aria-label="Link to this section" class="paige-header-link" href="#optional-preview-the-changes-to-be-applied"></a></h1>
+<p>$ kops update cluster ${NAME}</p>
+<h1 id="actual-cluster-update">actual cluster update<a aria-label="Link to this section" class="paige-header-link" href="#actual-cluster-update"></a></h1>
+<p>$ kops update cluster ${NAME} &ndash;yes</p>
+<h1 id="optional-check-if-we-need-rolling-update">[optional] check if we need rolling update<a aria-label="Link to this section" class="paige-header-link" href="#optional-check-if-we-need-rolling-update"></a></h1>
+<p>$ kops rolling-update cluster</p>
+<h1 id="if-so-add---yes-option">if so, add &ndash;yes option<a aria-label="Link to this section" class="paige-header-link" href="#if-so-add---yes-option"></a></h1>
+<p>$ kops rolling-update cluster &ndash;yes
+{% endhighlight %}</p>
+<p>We can now validate the cluster to see our changes:</p>
+<p>{% highlight shell %}
+$ kops validate cluster
+Validating cluster mycluster.k8s.local</p>
+<p>INSTANCE GROUPS
+NAME                    ROLE    MACHINETYPE     MIN     MAX     SUBNETS
+master-ap-northeast-1a  Master  m3.medium       1       1       &hellip;
+nodes                   Node    t2.medium       2       4       &hellip;
+nodes-spot              Node    t2.medium       2       10      &hellip;</p>
+<p>NODE STATUS
+NAME                                                    ROLE    READY
+ip-x-x-x-x.ap-northeast-1.compute.internal              master  True
+ip-x-x-x-x.ap-northeast-1.compute.internal              node    True
+ip-x-x-x-x.ap-northeast-1.compute.internal              node    True
+&hellip;</p>
+<p>Your cluster mycluster.k8s.local is ready
+{% endhighlight %}</p>
+<p>When our cluster was created, kops also has automatically generated our config file for kubectl. To verify:</p>
+<p>{% highlight shell %}
+$ kubectl cluster-info
+Kubernetes master is running at https&hellip;
+KubeDNS is running at https&hellip;</p>
+<p>To further debug and diagnose cluster problems, use &lsquo;kubectl cluster-info dump&rsquo;.
+{% endhighlight %}</p>
+<h2 id="setup-cluster-autoscaler">Setup cluster autoscaler<a aria-label="Link to this section" class="paige-header-link" href="#setup-cluster-autoscaler"></a></h2>
+<p>Clusters created using kops use autoscaling groups, but without scaling policies (at the time of writing). To enable dynamic scaling of our cluster, we will use <a href="https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler/cloudprovider/aws">cluster autoscaler</a>. Before cluster autoscaler deployment, we need to setup some prerequisites.</p>
+<p>First, we need to attach the following permissions to master and nodes IAM role. Go to IAM roles console and add an inline policy to the roles created by kops. Role names would be something like:</p>
+<ul>
+<li>master.mycluster.k8s.local</li>
+<li>nodes.mycluster.k8s.local</li>
+</ul>
+<p>{% highlight json %}
+{
+&ldquo;Version&rdquo;: &ldquo;2012-10-17&rdquo;,
+&ldquo;Statement&rdquo;: [
+{
+&ldquo;Effect&rdquo;: &ldquo;Allow&rdquo;,
+&ldquo;Action&rdquo;: [
+&ldquo;autoscaling:DescribeAutoScalingGroups&rdquo;,
+&ldquo;autoscaling:DescribeAutoScalingInstances&rdquo;,
+&ldquo;autoscaling:DescribeTags&rdquo;,
+&ldquo;autoscaling:SetDesiredCapacity&rdquo;,
+&ldquo;autoscaling:TerminateInstanceInAutoScalingGroup&rdquo;
+],
+&ldquo;Resource&rdquo;: &ldquo;*&rdquo;
+}
+]
+}
+{% endhighlight %}</p>
+<p>The latest installation instructions can be found <a href="https://github.com/kubernetes/kops/tree/master/addons/cluster-autoscaler">here</a>. The general idea is to choose the latest yaml file, update it with your own values, and apply the file using kubectl. The readme file also provides a script that does the download and edit for us. We will be using the following command line arguments for our autoscaler:</p>
+<p>{% highlight ruby %}
+command:</p>
+<ul>
+<li>./cluster-autoscaler</li>
+<li>&ndash;cloud-provider=aws</li>
+<li>&ndash;v=4</li>
+<li>&ndash;stderrthreshold=info</li>
+<li>&ndash;scale-down-delay=5m</li>
+<li>&ndash;skip-nodes-with-local-storage=false</li>
+<li>&ndash;expander=least-waste</li>
+<li>&ndash;nodes=2:4:nodes.mycluster.k8s.local</li>
+<li>&ndash;nodes=2:10:nodes-spot.mycluster.k8s.local
+{% endhighlight %}</li>
+</ul>
+<p>You should update the last two line with your own autoscaling group min/max values. Finally, we deploy our autoscaler with:</p>
+<p>{% highlight shell %}
+$ kubectl create -f cluster-autoscaler.yml
+deployment &ldquo;cluster-autoscaler&rdquo; created
+{% endhighlight %}</p>
+<p>That&rsquo;s it. You may also want to install <a href="https://github.com/kubernetes/kops/blob/master/docs/addons.md#installing-kubernetes-addons">these addons</a> if you like.</p>
+<h2 id="ssh-to-a-node">SSH to a node<a aria-label="Link to this section" class="paige-header-link" href="#ssh-to-a-node"></a></h2>
+<p>{% highlight shell %}</p>
+<h1 id="sample-ips-only">sample ip&rsquo;s only<a aria-label="Link to this section" class="paige-header-link" href="#sample-ips-only"></a></h1>
+<p>$ kubectl get node -o wide
+NAME                           STATUS    ROLES     AGE   VERSION   EXTERNAL-IP  OS-IMAGE                      &hellip;
+ip-x.x.x.x.ap-northeast-1&hellip;   Ready     master    1d    v1.8.6    1.2.3.4      Debian GNU/Linux 8 (jessie)   &hellip;
+ip-x.x.x.x.ap-northeast-1&hellip;   Ready     node      1d    v1.8.6    1.2.3.5      Debian GNU/Linux 8 (jessie)   &hellip;
+ip-x.x.x.x.ap-northeast-1&hellip;   Ready     node      1d    v1.8.6    1.2.3.6      Debian GNU/Linux 8 (jessie)   &hellip;
+ip-x.x.x.x.ap-northeast-1&hellip;   Ready     node      1d    v1.8.6    1.2.3.7      Debian GNU/Linux 8 (jessie)   &hellip;
+ip-x.x.x.x.ap-northeast-1&hellip;   Ready     node      1d    v1.8.6    1.2.3.8      Debian GNU/Linux 8 (jessie)   &hellip;</p>
+<h1 id="default-username-is-admin">default username is <code>admin</code><a aria-label="Link to this section" class="paige-header-link" href="#default-username-is-admin"></a></h1>
+<p>$ ssh -i mycluster.pem <a href="mailto:admin@1.2.3.4">admin@1.2.3.4</a>
+{% endhighlight %}</p>
+</div>
+
+
+    </div>
+</article>
+
+
+
+
+    
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+                        
+                    </main>
+
+                    
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+        
+    
+
+
+<footer class="mb-3" id="paige-footer">
+    
+
+    
+        <div class="mb-3" id="paige-prev-next">
+            
+                <p class="mb-0 text-center text-secondary" id="paige-prev">
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2021-11-08-alarm-from-cmdline/">Setting alarm from commandline</a>
+                </p>
+            
+
+            
+                <p class="mb-0 text-center text-secondary" id="paige-next">
+                    <a class="link-secondary" href="http://localhost:1313/blog/2023-05-11-retries-backoff/">Retries with backoff in distributed systems</a> &rarr;
+                </p>
+            
+        </div>
+    
+
+    
+    <div class="mb-3" id="paige-file">
+        
+            <p class="mb-0 text-center" id="paige-file-edit">
+                <a class="link-secondary" href="https://github.com/willfaught/paige/edit/master/exampleSite/content/blog/2018-01-24-k8s-kops-aws.md">Edit this page</a>
+            </p>
+        
+
+        
+            <p class="mb-0 text-center" id="paige-file-history">
+                <a class="link-secondary" href="https://github.com/willfaught/paige/commits/master/exampleSite/content/blog/2018-01-24-k8s-kops-aws.md">Edit history</a>
+            </p>
+        
+    </div>
+    
+
+    
+        <p class="mb-0 text-center text-secondary" id="paige-copyright">© Flowerinthenight, 2016-2024. All rights reserved.</p>
+    
+
+    <p class="mb-0 text-center" id="paige-credit">
+        <a class="link-secondary text-decoration-none" href="https://github.com/willfaught/paige" >Paige Theme</a>
+    </p>
+
+    
+</footer>
+
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+<script  crossorigin="anonymous"   defer  integrity="sha256-gfPiYYSP&#43;RNtNeRBt45mJombFJmNf0V0Ipu785Obi0M="   referrerpolicy="no-referrer"  src="/js/paige/bootstrap/bootstrap.bundle.min.81f3e261848ff9136d35e441b78e6626899b14998d7f4574229bbbf3939b8b43.js" ></script>
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+<noscript>JavaScript is required</noscript>
+
+
+        
+    </body>
+</html>

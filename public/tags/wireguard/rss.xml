@@ -1,0 +1,161 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/wireguard/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/wireguard/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/wireguard/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/wireguard/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Wireguard · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>As of this writing, Torguard&rsquo;s desktop app still doesn&rsquo;t support Wireguard out of the box. I&rsquo;m using Ubuntu 19.10 for testing.</p>
+<p>If you haven&rsquo;t installed Wireguard yet, you can refer to the installation instructions <a href="https://www.wireguard.com/install/">here</a>. In my case, it was:</p>
+<p>{% highlight shell %}
+$ sudo apt install wireguard
+{% endhighlight %}</p>
+<p>Next, you need to login to your Torguard client area, go to Tools &ndash;&gt; Enable Wireguard Access. Select a location (in my case, I chose Asia-Singapore2) then click &lsquo;Enable Wireguard&rsquo;. You will be presented with an option to download the generated config file (in my case Asia-Singapore2.conf). Download it and save it to /etc/wireguard/.</p>
+<p>To enable the VPN connection, run:</p>
+<p>{% highlight shell %}</p>
+<h1 id="the-last-bit-should-correspond-to-the-filename-of-your-config-file-without-the-conf">The last bit should correspond to the filename of your config file without the &lsquo;.conf&rsquo;,</h1>
+<h1 id="in-my-case-asia-singapore2">in my case &lsquo;Asia-Singapore2&rsquo;</h1>
+<p>$ sudo wg-quick up Asia-Singapore2</p>
+<h1 id="confirm-with">Confirm with:</h1>
+<p>$ sudo wg</p>
+<h1 id="if-no-issues-you-can-check-your-public-ip-with">If no issues, you can check your public IP with:</h1>
+<p>$ curl ipecho.net/plain; echo
+{% endhighlight %}</p>
+<p>Finally, to disconnect, run:</p>
+<p>{% highlight shell %}
+$ sudo wg-quick down Asia-Singapore2
+{% endhighlight %}</p>
+<p>That&rsquo;s it.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-03-25-torguard-wireguard-ubuntu/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2020-03-25-torguard-wireguard-ubuntu/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Connecting to Torguard VPN using Wireguard from Ubuntu</title>
+                
+            </item>
+        
+    </channel>
+</rss>

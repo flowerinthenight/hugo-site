@@ -1,0 +1,151 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/manual/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/manual/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/manual/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/manual/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Manual · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Most of the time when I open a man page for a certain command or tool, I use Vim:</p>
+<p>{% highlight shell %}</p>
+<h1 id="open-man-page-for-the-dd-command">Open man page for the &lsquo;dd&rsquo; command:</h1>
+<p>$ man dd | col -b | vim -MR -
+{% endhighlight %}</p>
+<p>It&rsquo;s actually a handful to type but since I use <a href="https://www.zsh.org/">zsh</a> + <a href="https://github.com/junegunn/fzf">fzf</a>, it&rsquo;s not really a big deal as recalling the command is pretty straightforward.</p>
+<p>But yesterday, I came across this nifty little plugin called <a href="https://github.com/lambdalisue/vim-manpager">vim-manpager</a>. I tried adding it to my vimrc, added the environment variable below to my zshrc:</p>
+<p>{% highlight shell %}
+export MANPAGER=&ldquo;vim -c MANPAGER -&rdquo;
+{% endhighlight %}</p>
+<p>And now, I can open all man pages by calling the <code>man</code> command directly. I can also open man pages directly from within Vim. Brilliant!</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-04-22-open-manpages-vim/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2020-04-22-open-manpages-vim/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Open man pages in Vim</title>
+                
+            </item>
+        
+    </channel>
+</rss>

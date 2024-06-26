@@ -1,0 +1,227 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/commandline/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/commandline/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/commandline/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/commandline/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Commandline · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p><em>For personal reference:</em></p>
+<p>Lately, I&rsquo;ve been doing loads of CSV processing on the terminal with lots of string replacing/splitting. There are probably better (shorter) ways to do this but I&rsquo;ve been leaning on <code>awk</code> a lot recently.</p>
+<p>Some examples.</p>
+<p>{% highlight shell %}</p>
+<h1 id="one-line-separator-replace">One-line separator replace:</h1>
+<p>$ echo &ldquo;1,2,3,4,5&rdquo; | awk &lsquo;{gsub(/,/,&quot; &ldquo;);print}&rsquo;
+1 2 3 4 5</p>
+<h1 id="then-i-can-use-it-with-something-like">Then I can use it with something like:</h1>
+<p>for v in $(echo &ldquo;1,2,3,4,5&rdquo; | awk &lsquo;{gsub(/,/,&rdquo; &ldquo;);print}&rsquo;); do echo &ldquo;val=$v&rdquo;; done
+val=1
+val=2
+val=3
+val=4
+val=5</p>
+<h1 id="another-separator">Another separator:</h1>
+<p>$ echo &ldquo;1|2|3|4|5&rdquo; | awk &lsquo;{gsub(/|/,&rdquo;,&quot;);print}&rsquo;
+1,2,3,4,5</p>
+<h1 id="join-multiple-lines-with-a-separator">Join multiple lines with a separator&hellip;</h1>
+<h1 id="ref-httpswwwbaeldungcomlinuxjoin-multiple-lines">Ref: <a href="https://www.baeldung.com/linux/join-multiple-lines">https://www.baeldung.com/linux/join-multiple-lines</a></h1>
+<p>$ cat file.txt
+one
+two
+three
+four
+five
+five</p>
+<h1 id="while-removing-duplicates">&hellip;while removing duplicates:</h1>
+<p>$ cat file.txt | uniq | awk -v d=&quot;,&quot; &lsquo;{s=(NR==1?s:s d)$0}END{print s}&rsquo;
+one,two,three,four,five
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-06-17-string-split-awk/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2020-06-17-string-split-awk/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Simple string manipulations (splits/replaces) with awk</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>This is just a quick one.</p>
+<p>Although I use <a href="https://wiki.gnome.org/Apps/Clocks">Gnome Clocks</a> occassionally, most of the time I set an alarm via the commandline.</p>
+<p>{% highlight shell %}</p>
+<h1 id="os-is-pop_os-using-vlc">OS is POP_OS!, using VLC:</h1>
+<p>$ sleep 10m &amp;&amp; <br>
+cvlc ~/alarm.mp3 &ndash;play-and-exit &amp;&amp; <br>
+notify-send &lsquo;alarm done&rsquo;
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-11-08-alarm-from-cmdline/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2021-11-08-alarm-from-cmdline/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Setting alarm from commandline</title>
+                
+            </item>
+        
+    </channel>
+</rss>

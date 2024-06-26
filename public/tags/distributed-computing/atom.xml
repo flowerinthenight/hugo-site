@@ -1,0 +1,220 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed  xml:lang="en"  xmlns="http://www.w3.org/2005/Atom">
+    
+        <author>
+            
+                <email>example@example.com</email>
+            
+
+            
+                <name>John Doe</name>
+            
+
+            
+                <uri>https://example.com</uri>
+            
+        </author>
+    
+
+    
+        <icon>http://localhost:1313/</icon>
+    
+
+    <id>tag:localhost:1313,0001-01-01:/tags/distributed-computing/atom.xml</id>
+
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/distributed-computing/atom.xml" rel="self" type="application/atom+xml"/>
+        
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/distributed-computing/" rel="alternate" type="text/html"/>
+        
+    
+        
+
+        
+
+        
+            <link href="http://localhost:1313/tags/distributed-computing/rss.xml" rel="alternate" type="application/rss+xml"/>
+        
+    
+
+    
+
+    
+        <logo>http://localhost:1313/</logo>
+    
+
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+    
+
+    
+
+    <title type="html"><![CDATA[Distributed-Computing · Tags · About]]></title>
+    <updated>2024-01-18T21:32:52-07:00</updated>
+
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>This library has been in our production for about a year already and is one of the critical components in our backend. We mainly use it for app-level orchestration between pods. It&rsquo;s called <code>hedge</code> and you can find the code <a href="https://github.com/flowerinthenight/hedge/">here</a>. Maybe it will be useful to anybody out there.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2022-09-21-spindle-based-distributed-computing-lib/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2022-09-21-spindle-based-distributed-computing-lib/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[hedge - A simple distributed computing library]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>I recently came across the <a href="https://github.com/hashicorp/memberlist">hashicorp/memberlist</a> library while browsing GitHub and I thought it would be a good replacement for <a href="https://github.com/flowerinthenight/hedge">hedge</a>&rsquo;s internal member tracking logic. It seems to be widely used (thus more battle-tested) as well. I was quite excited as I always thought that hedge&rsquo;s equivalent logic is too barebones and untested outside of our use cases. It works just fine for its current intended purpose but I&rsquo;ve been hesitating to build on top of it until I can really say that it&rsquo;s stable enough. With memberlist, it might just be what I needed.</p>
+<p>After about a month of testing, I think it didn&rsquo;t really turn out quite well in the end. It is stable enough for deployments that are not spike-y in terms of workloads (frequent scaling up/down). Or if I set min = max in the <a href="https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/">HorizontalPodAutoscaler</a>. In these cases, memberlist can consistently track members just fine. What&rsquo;s better is that it works even in multiple deployments in the same namespace which I thought was brilliant. For example, if I have a deployment <code>app1</code> set to 10 pods in the <code>default</code> namespace using memberlist&rsquo;s default port numbers, and then I deploy another set, say, <code>app2</code>, within the same namespace using the same ports, app1&rsquo;s memberlist can track its 10 member pods just fine while app2&rsquo;s memberlist is also separated. But when applied to my use case, which has a minimum pod of 2 and a max of 150, with frequent scale up/down frequency depending on load, it can&rsquo;t seem to keep up. The potential for <a href="https://en.wikipedia.org/wiki/Byzantine_fault">Byzantine faults</a> is just too high: i.e. in a 50-pod scale, memberlist can end up having 2 groups of m-pods and n-pods where m+n=50. Very rarely, it can even go up to 3 groups.</p>
+<p>I am a little frustrated. I really wanted it to work; I even attempted to update memberlist to incorporate hedge&rsquo;s logic but it was too much for now, with my schedule. So now, back to the old one. By the way, the current logic is fairly rudimentary: all members in the cluster/group send a liveness heartbeat to the leader and the leader broadcasting the final list of members to all via hedge&rsquo;s broadcast mechanism. CPU usage between the two is fairly similar depending on the sync timeout.</p>
+<p>I&rsquo;ve been trying to improve hedge&rsquo;s member tracking system as I want to build a distributed in-memory cache within hedge itself. Most of the available ones are <a href="https://raft.github.io/">Raft</a>-based, and I still haven&rsquo;t figured out how to make Raft work in the same deployment configuration.</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2023-04-28-hedge-memberlist/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2023-04-28-hedge-memberlist/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Attempt to replace hedge&rsquo;s member tracking with hashicorp/memberlist]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+</feed>

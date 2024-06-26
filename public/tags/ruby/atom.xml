@@ -1,0 +1,298 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed  xml:lang="en"  xmlns="http://www.w3.org/2005/Atom">
+    
+        <author>
+            
+                <email>example@example.com</email>
+            
+
+            
+                <name>John Doe</name>
+            
+
+            
+                <uri>https://example.com</uri>
+            
+        </author>
+    
+
+    
+        <icon>http://localhost:1313/</icon>
+    
+
+    <id>tag:localhost:1313,0001-01-01:/tags/ruby/atom.xml</id>
+
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/ruby/atom.xml" rel="self" type="application/atom+xml"/>
+        
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/ruby/" rel="alternate" type="text/html"/>
+        
+    
+        
+
+        
+
+        
+            <link href="http://localhost:1313/tags/ruby/rss.xml" rel="alternate" type="application/rss+xml"/>
+        
+    
+
+    
+
+    
+        <logo>http://localhost:1313/</logo>
+    
+
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+    
+
+    
+
+    <title type="html"><![CDATA[Ruby · Tags · About]]></title>
+    <updated>2024-01-18T21:32:52-07:00</updated>
+
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>For personal reference:</p>
+<p>This is a followup on a <a href="https://flowerinthenight.com/blog/2019/07/30/homebrew-golang">previous post</a> that is a bit more manual. This is a little bit easier.</p>
+<h4 id="a-create-your-own-homebrew-tap">a) Create your own Homebrew tap</h4>
+<p>Create a new GitHub public repository with a prefix <code>homebrew-</code>, i.e. <code>homebrew-tap</code>. This will host all the apps that you want to distribute via your tap. Users will install your apps using the following commands:</p>
+<p>{% highlight shell %}</p>
+<h1 id="no-need-to-include-the-homebrew--prefix">No need to include the &lsquo;homebrew-&rsquo; prefix</h1>
+<p>$ brew tap flowerinthenight/tap
+$ brew install <toolname></p>
+<h1 id="or-one-liner">Or one-liner</h1>
+<p>$ brew install flowerinthenight/tap/<toolname>
+{% endhighlight %}</p>
+<h4 id="b-lets-use-github-actions-to-setup-goreleaserhttpsgithubcomgoreleasergoreleaser">b) Let&rsquo;s use Github Actions to setup <a href="https://github.com/goreleaser/goreleaser">goreleaser</a></h4>
+<p>First, add a <code>.goreleaser.yml</code> config file to your Go repo. Here&rsquo;s an example:</p>
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fflowerinthenight%2Fkubepfm%2Fblob%2Fmaster%2F.goreleaser.yml&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+<p>The section of note here is the <code>brews:</code> part. You can check goreleaser&rsquo;s <a href="https://goreleaser.com/quick-start/">Quickstart</a> guide for more information.</p>
+<p>Here&rsquo;s an example of a GitHub Action config on how to setup <a href="https://github.com/goreleaser/goreleaser">goreleaser</a> to do the release for our tags.</p>
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fflowerinthenight%2Fkubepfm%2Fblob%2Fmaster%2F.github%2Fworkflows%2Fmain.yml&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+<p>See the <code>name: Run goreleaser</code> section. You need to add a personal access token with <code>repo, workflow, write:packages</code> permissions to your repository&rsquo;s secrets. In this example, the name used is <code>GH_PAT</code> but you can use other names as well.</p>
+<h4 id="c-do-a-tagged-release">c) Do a tagged release</h4>
+<p>Tagged releases should now do a deployment to your tap.</p>
+<p>{% highlight shell %}
+$ git tag v1.0.0
+$ git push &ndash;tags
+{% endhighlight %}</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2023-04-13-homebrew-golang-p2/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2023-04-13-homebrew-golang-p2/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Using Homebrew for distributing Go apps (part 2)]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+            
+
+            
+
+            
+                <content type="html"><![CDATA[<p>For personal reference:</p>
+<h4 id="a-create-your-own-homebrew-tap">a) Create your own homebrew tap</h4>
+<p>Create a new GitHub public repository with a prefix <code>homebrew-</code>, i.e. <code>homebrew-tap</code>. This will house all the apps that you want to distribute via your tap. Users will install your apps using the following commands:</p>
+<p>{% highlight shell %}</p>
+<h1 id="no-need-to-include-the-homebrew--prefix">No need to include the &lsquo;homebrew-&rsquo; prefix</h1>
+<p>$ brew tap flowerinthenight/tap
+$ brew install <toolname>
+{% endhighlight %}</p>
+<p>The <code>toolname</code> part will correspond to the filename inside your repository tap. If your repository has an entry with a filename of <code>toolx.rb</code>, it can be installed using the following commands:</p>
+<p>{% highlight shell %}
+$ brew tap flowerinthenight/tap
+$ brew install toolx
+{% endhighlight %}</p>
+<p>Here&rsquo;s an example of a formula for a golang app:</p>
+<p>{% highlight ruby %}
+class Kubepfm &lt; Formula
+desc &ldquo;A simple wrapper to kubectl port-forward for multiple pods.&rdquo;
+homepage &ldquo;<a href="https://github.com/flowerinthenight/kubepfm"">https://github.com/flowerinthenight/kubepfm"</a>
+url &ldquo;<a href="https://github.com/flowerinthenight/kubepfm/archive/v0.0.3.tar.gz"">https://github.com/flowerinthenight/kubepfm/archive/v0.0.3.tar.gz"</a>
+sha256 &ldquo;7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207&rdquo;</p>
+<p>depends_on &ldquo;go&rdquo;</p>
+<p>def install
+ENV[&ldquo;GOPATH&rdquo;] = buildpath
+ENV[&ldquo;GO111MODULE&rdquo;] = &ldquo;on&rdquo;
+ENV[&ldquo;GOFLAGS&rdquo;] = &ldquo;-mod=vendor&rdquo;
+ENV[&ldquo;PATH&rdquo;] = &ldquo;#{ENV[&ldquo;PATH&rdquo;]}:#{buildpath}/bin&rdquo;
+(buildpath/&ldquo;src/github.com/flowerinthenight/kubepfm&rdquo;).install buildpath.children
+cd &ldquo;src/github.com/flowerinthenight/kubepfm&rdquo; do
+system &ldquo;go&rdquo;, &ldquo;build&rdquo;, &ldquo;-o&rdquo;, bin/&ldquo;kubepfm&rdquo;, &ldquo;.&rdquo;
+end
+end</p>
+<p>test do
+assert_match /Simple port-forward wrapper tool for multiple pods/, shell_output(&rdquo;#{bin}/kubepfm -h&rdquo;, 0)
+end
+end
+{% endhighlight %}</p>
+<p>You can check out <a href="https://github.com/flowerinthenight/homebrew-tap">https://github.com/flowerinthenight/homebrew-tap</a> for reference.</p>
+<p>The <code>url</code> part is the path of the source <code>tar.gz</code> of your source files. You can create this by using <a href="https://help.github.com/en/enterprise/2.16/user/articles/about-releases">tagged releases</a> in GitHub.</p>
+<p>You can generate the <code>sha256</code> part by running the <code>shasum</code> (OSX) or <code>sha256sum</code> (Linux) tool against your <code>tar.gz</code> file.</p>
+<h4 id="b-updating-your-formula">b) Updating your formula</h4>
+<p>If you have a new version of your tool, first, create a new tag or release. Download the new <code>tar.gz</code> file of the new release, run the <code>sha256sum/shasum</code> tool against it, and update the <code>.rb</code> file in your tap repository.</p>
+<p>Example:</p>
+<p>{% highlight shell %}
+$ git clone <a href="https://github.com/flowerinthenight/kubepfm">https://github.com/flowerinthenight/kubepfm</a>
+$ cd kubepfm/
+$ git tag v1.0.1 # our new tag
+$ git push &ndash;tags # push tags to remote
+$ wget <a href="https://github.com/flowerinthenight/kubepfm/archive/v1.0.1.tar.gz">https://github.com/flowerinthenight/kubepfm/archive/v1.0.1.tar.gz</a></p>
+<h1 id="osx">OSX</h1>
+<p>$ shasum -a 256 v1.0.1.tar.gz
+7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207  v1.0.1.tar.gz</p>
+<h1 id="linux">Linux</h1>
+<p>$ sha256sum v1.0.1.tar.gz
+7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207  v1.0.1.tar.gz
+{% endhighlight %}</p>
+<p>Finally, update the <code>url</code> and <code>sha256</code> part of your <code>.rb</code> file. Users will now be able to update their copies:</p>
+<p>{% highlight shell %}
+$ brew upgrade kubepfm
+{% endhighlight %}</p>
+]]></content>
+            
+
+            <id>tag:localhost:1313,0001-01-01:/blog/2019-07-30-homebrew-golang/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/blog/2019-07-30-homebrew-golang/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+
+            <title type="html"><![CDATA[Using Homebrew for distributing Go (golang) apps]]></title>
+            <updated>0001-01-01T00:00:00Z</updated>
+        </entry>
+    
+</feed>

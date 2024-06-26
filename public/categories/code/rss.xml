@@ -1,0 +1,1784 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/categories/code/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/categories/code/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/categories/code/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/categories/code/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Code · Categories · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>For personal reference:</p>
+<p>{% gist 29d147a50242198f082fd33f7d24677c %}</p>
+<p>To view syslog in realtime</p>
+<p>{% highlight shell %}
+tail -f /var/log/syslog
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-22-syslog-target-go/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-08-22-syslog-target-go/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Syslog as target in Go logs</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>For personal reference:</p>
+<p>{% gist f8114f79b6699ced9a054a595b6c991a %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-19-dir-cleanup-tool/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-08-19-dir-cleanup-tool/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Simple directory cleanup tool for Windows (golang)</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Vim has always been my go to editor/IDE when I&rsquo;m outside of Visual Studio. Here&rsquo;s my base <code>_vimrc</code> for Windows.</p>
+<p>{% highlight conf %}
+let mapleader = &quot; &quot;</p>
+<p>filetype off
+syntax on
+colorscheme darkblue</p>
+<p>&quot; let pc=$PC
+&quot; if pc == &lsquo;HOME&rsquo;
+&quot;     set guifont=Letter\ Gothic\ Std:h11
+&quot; else
+&quot;     set guifont=Lucida\ Sans\ Typewriter:h9
+&quot; endif</p>
+<p>&quot; Save marks to up to 100 files, save global marks as well (f1). To disable, f0
+set viminfo=&lsquo;100,f1</p>
+<p>&quot; Folding options
+set foldmethod=indent
+set foldnestmax=20
+set nofoldenable
+set foldlevel=0</p>
+<p>set guifont=Lucida\ Sans\ Typewriter
+set lines=70 columns=160
+set ai
+set nu
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set wrap
+set backspace=2
+set encoding=utf-8
+set fileencodings=utf-8
+set nocompatible
+set noswapfile
+set shortmess+=I
+set ignorecase
+set guioptions-=T
+set guioptions-=r
+set guioptions-=m
+set splitright
+set splitbelow
+set ruler
+set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
+call vundle#begin(&rsquo;$USERPROFILE/vimfiles/bundle/&rsquo;)
+Plugin &lsquo;VundleVim/Vundle.vim&rsquo;
+&quot; 1. Vim should be 64-bit (link in ycm site)
+&quot; 2. Python should be 64-bit
+Plugin &lsquo;Valloric/YouCompleteMe&rsquo;
+Plugin &lsquo;fatih/vim-go&rsquo;
+Plugin &lsquo;PProvost/vim-ps1&rsquo;
+call vundle#end()
+filetype plugin indent on
+&quot; To ignore plugin indent changes, instead use:
+&quot; filetype plugin on
+&quot; let g:netrw_liststyle=3</p>
+<p>let g:ycm_disable_for_files_larger_than_kb = 0
+let g:ycm_autoclose_preview_window_after_completion = 1</p>
+<p>&quot; Enable powershell syntax plug
+autocmd BufNewFile,BufReadPost *.ps1 set filetype=ps1</p>
+<p>&quot; Search for the word under cursor in the current dir (recursively)
+command CSM :execute &ldquo;vimgrep /&rdquo; . expand(&quot;<cword>&quot;) . &ldquo;/j ** <Bar> :cw&rdquo;
+nnoremap <leader>ms :CSM<CR></p>
+<p>&quot; Simple mappings for window manipulations
+nnoremap <leader>wq <C-W>q
+nnoremap <leader>ws <C-W>s
+nnoremap <leader>wv <C-W>v
+nnoremap <leader><left><left> <C-W><left>
+nnoremap <leader><right><right> <C-W><right>
+nnoremap <leader><up><up> <C-W><up>
+nnoremap <leader><down><down> <C-W><down></p>
+<p>&quot; Display buffers, then prep the colon for the next command
+nnoremap <leader>b :ls<CR>:</p>
+<p>&quot; Shortcut for save
+nnoremap <leader>s :w<CR></p>
+<p>&quot; Shortcut for netrw explorer
+nnoremap <leader>e :e.<CR></p>
+<p>&quot; JSON pretty print (all buffer)
+nnoremap <leader>pj :%!python -m json.tool<CR></p>
+<p>&quot; Diff all windows (should prep 2 windows for this)
+nnoremap <leader>dt :windo diffthis<CR>
+nnoremap <leader>do :windo diffoff!<CR>
+{% endhighlight %}</p>
+<p>And here&rsquo;s my base <code>.vimrc</code> for Linux and OSX.</p>
+<p>{% highlight conf %}
+let mapleader = &quot; &quot;</p>
+<p>filetype off
+syntax on
+colorscheme elflord
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin &lsquo;VundleVim/Vundle.vim&rsquo;
+Plugin &lsquo;Valloric/YouCompleteMe&rsquo;
+Plugin &lsquo;jelera/vim-javascript-syntax&rsquo;
+Plugin &lsquo;fatih/vim-go&rsquo;
+Plugin &lsquo;majutsushi/tagbar&rsquo;
+call vundle#end()
+filetype plugin indent on</p>
+<p>&quot; Save marks to up to 100 files, save global marks as well (f1). To disable, f0
+set viminfo=&lsquo;100,f1</p>
+<p>&quot; Folding options
+set foldmethod=indent
+set foldnestmax=20
+set nofoldenable
+set foldlevel=0</p>
+<p>set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set autoindent
+set nu
+set encoding=utf-8
+set noswapfile
+set shortmess+=I
+set backspace=2
+set nocompatible
+set ignorecase
+set splitright
+set splitbelow
+set ruler
+&quot; Temporary enable/disable YouCompleteMe. Active = disable, commented = enable
+&quot; let g:loaded_youcompleteme = 1
+let g:ycm_global_ycm_extra_conf = &ldquo;~/.ycm_extra_conf.py&rdquo;
+let g:ycm_disable_for_files_larger_than_kb = 0
+let g:ycm_autoclose_preview_window_after_completion = 1</p>
+<p>&quot; Options for netrw
+let g:netrw_liststyle = 0
+let g:netrw_altv = 1</p>
+<p>&quot; 1. :PluginInstall
+&quot; 2. :GoInstallBinaries (gotags, vim-go)
+&quot; 3. Install &lsquo;ctags&rsquo;
+&quot; 4. go get -u github.com/jstemmer/gotags
+let g:tagbar_type_go = {
+\ &lsquo;ctagstype&rsquo; : &lsquo;go&rsquo;,
+\ &lsquo;kinds&rsquo;     : [
+\ &lsquo;p:package&rsquo;,
+\ &lsquo;i:imports:1&rsquo;,
+\ &lsquo;c:constants&rsquo;,
+\ &lsquo;v:variables&rsquo;,
+\ &rsquo;t:types&rsquo;,
+\ &rsquo;n:interfaces&rsquo;,
+\ &lsquo;w:fields&rsquo;,
+\ &rsquo;e:embedded&rsquo;,
+\ &rsquo;m:methods&rsquo;,
+\ &lsquo;r:constructor&rsquo;,
+\ &lsquo;f:functions&rsquo;
+\ ],
+\ &lsquo;sro&rsquo; : &lsquo;.&rsquo;,
+\ &lsquo;kind2scope&rsquo; : {
+\ &rsquo;t&rsquo; : &lsquo;ctype&rsquo;,
+\ &rsquo;n&rsquo; : &rsquo;ntype&rsquo;
+\ },
+\ &lsquo;scope2kind&rsquo; : {
+\ &lsquo;ctype&rsquo; : &rsquo;t&rsquo;,
+\ &rsquo;ntype&rsquo; : &rsquo;n&rsquo;
+\ },
+\ &lsquo;ctagsbin&rsquo;  : &lsquo;gotags&rsquo;,
+\ &lsquo;ctagsargs&rsquo; : &lsquo;-sort -silent&rsquo;
+\ }</p>
+<p>nnoremap <F8> :TagbarToggle<CR></p>
+<p>&quot; Search for the word under cursor in the current dir (recursively)
+command CSM execute &ldquo;:vimgrep /&rdquo; . expand(&quot;<cword>&quot;) . &ldquo;/j ** <Bar> :cw&rdquo;
+nnoremap <leader>ms :CSM<CR>
+set wildignore+=jennah</p>
+<p>&quot; Simple mappings for window manipulations
+nnoremap <leader>wq <C-W>q
+nnoremap <leader>ws <C-W>s
+nnoremap <leader>wv <C-W>v
+nnoremap <leader><left><left> <C-W><left>
+nnoremap <leader><right><right> <C-W><right>
+nnoremap <leader><up><up> <C-W><up>
+nnoremap <leader><down><down> <C-W><down></p>
+<p>&quot; Display buffers, then prep the colon for the next command
+nnoremap <leader>b :ls<CR>:</p>
+<p>&quot; Shortcut for save
+nnoremap <leader>s :w<CR></p>
+<p>&quot; Shortcut for netrw explorer
+nnoremap <leader>e :e.<CR></p>
+<p>&quot; JSON pretty print (all buffer)
+nnoremap <leader>pj :%!python -m json.tool<CR></p>
+<p>&quot; Diff all windows (should prep 2 windows for this)
+nnoremap <leader>dt :windo diffthis<CR>
+nnoremap <leader>do :windo diffoff!<CR></p>
+<p>&quot; Highlight/no highlight for search
+nnoremap <leader>hl :set hlsearch<CR>
+nnoremap <leader>hn :set nohlsearch<CR></p>
+<p>&quot; Diff all windows (should prep two windows for this)
+nnoremap <leader>dt :windo diffthis<CR>
+nnoremap <leader>do :windo diffoff!<CR>
+{% endhighlight %}</p>
+<h3 id="update-20160824">Update (2016/08/24)</h3>
+<p>Updated <code>vimrc</code> can be viewed <a href="https://github.com/flowerinthenight/vim">here</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-07-27-sharing-my-vimrc/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-07-27-sharing-my-vimrc/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Sharing my .vimrc</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I use <code>tmux</code> heavily and in tandem with <code>vim</code>. Much more so now when it&rsquo;s supported on Bash on Windows as well. I don&rsquo;t have to spin up a Linux VM just for the purpose of being my <code>tmux</code> &ldquo;server&rdquo;.</p>
+<p>{% highlight conf %}</p>
+<h1 id="set-a-ctrl-b-shortcut-for-reloading-tmux-config">Set a Ctrl-b shortcut for reloading tmux config</h1>
+<p>unbind r
+bind r source-file ~/.tmux.conf</p>
+<h1 id="prefix-is-ctrl-a">Prefix is Ctrl-a</h1>
+<p>unbind C-b
+set -g prefix C-a
+bind C-a send-prefix</p>
+<h1 id="rename-terminals">Rename terminals</h1>
+<p>set -g set-titles on
+set -g set-titles-string &lsquo;#(whoami)@#h@#(curl ipecho.net/plain;echo)&rsquo;</p>
+<h1 id="status-bar-customization">Status bar customization</h1>
+<p>set -g status-bg black
+set -g status-fg white
+set -g status-interval 5
+set -g status-left-length 90
+set -g status-right-length 60
+set -g status-left &ldquo;#[fg=Green]#(whoami)#[fg=white]@#[fg=red]#(hostname -s)#[fg=white]|#[fg=yellow]#(curl ipecho.net/plain;echo)#[fg=white]|#[fg=yellow]#(hostname -I)#[fg=white]&rdquo;
+set -g status-justify left
+set -g status-right &lsquo;#[fg=Cyan]#S #[fg=white]%a %d %b %R&rsquo;</p>
+<h1 id="easy-to-remember-split-pane-commands">Easy to remember split pane commands</h1>
+<p>bind | split-window -h
+bind - split-window -v
+unbind &lsquo;&quot;&rsquo;
+unbind %</p>
+<h1 id="vim-friendly-settings-from-httpsgistgithubcomanonymous6bebae3eb9f7b972e6f0">Vim friendly settings (from <a href="https://gist.github.com/anonymous/6bebae3eb9f7b972e6f0">https://gist.github.com/anonymous/6bebae3eb9f7b972e6f0</a>)</h1>
+<p>setw -g monitor-activity on
+set -g visual-activity on
+set -g mode-keys vi</p>
+<h1 id="extend-history-limit">Extend history limit</h1>
+<p>set -g history-limit 10000
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-11-sharing-my-tmux-conf/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-08-11-sharing-my-tmux-conf/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Sharing my .tmux.conf</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Update 2017/03/24: Transferred to a separate repository <a href="https://github.com/flowerinthenight/git-cheatsheet">here</a>.</p>
+<p>For personal reference:</p>
+<h3 id="reset-a-file">Reset a file</h3>
+<p>{% highlight shell %}
+git checkout HEAD &ndash; my-file.txt
+{% endhighlight %}</p>
+<h3 id="delete-last-commit">Delete last commit</h3>
+<p>{% highlight shell %}
+git reset &ndash;hard HEAD~1
+{% endhighlight %}</p>
+<h3 id="delete-local-branch">Delete local branch</h3>
+<p>{% highlight shell %}
+git branch -d <branch-name>
+{% endhighlight %}</p>
+<p>or to force delete</p>
+<p>{% highlight shell %}
+git branch -D <branch-name>
+{% endhighlight %}</p>
+<h3 id="delete-branch-from-remote-repository">Delete branch from remote repository</h3>
+<p>{% highlight shell %}
+git push origin &ndash;delete <remote-branch-name>
+{% endhighlight %}</p>
+<h3 id="search-for-the-merge-commit-from-a-specific-commit">Search for the merge commit from a specific commit</h3>
+<p>{% highlight shell %}
+git log <SHA>..master &ndash;ancestry-path &ndash;merges
+{% endhighlight %}</p>
+<h3 id="search-for-a-commit-message">Search for a commit message</h3>
+<p>{% highlight shell %}
+git log | grep <pattern>
+{% endhighlight %}</p>
+<h3 id="list-commits-on-range-line-of-codes-for-one-file">List commits on range line of codes for one file</h3>
+<p>{% highlight shell %}
+git blame -L&lt;line#&gt;,+<offset> &ndash; <filename>
+{% endhighlight %}</p>
+<p>For example, three lines starting from line 257 of main.cpp</p>
+<p>{% highlight shell %}
+git blame -L257,+3 &ndash; main.cpp
+{% endhighlight %}</p>
+<h3 id="history-of-a-line-or-lines-in-a-file">History of a line (or lines) in a file</h3>
+<p>{% highlight shell %}
+git log &ndash;topo-order &ndash;graph -u -L <line-start>,<line-end>:<file>
+{% endhighlight %}</p>
+<p>For example, history of line 155 of main.cpp</p>
+<p>{% highlight shell %}
+git log &ndash;topo-order &ndash;graph -u -L 155,155:main.cpp
+{% endhighlight %}</p>
+<h3 id="compare-diff-a-file-from-the-current-branch-to-another-branch">Compare (diff) a file from the current branch to another branch</h3>
+<p>{% highlight shell %}
+git diff ..<target-branch> <path-to-file>
+{% endhighlight %}</p>
+<p>Or if <code>difftool</code> is configured</p>
+<p>{% highlight shell %}
+git difftool ..<target-branch> <path-to-file>
+{% endhighlight %}</p>
+<h3 id="rebasesquash-all-branch-commits">Rebase/squash all branch commits</h3>
+<p>{% highlight shell %}
+git checkout -b new-branch
+modify&hellip;
+commit&hellip;
+&hellip;
+git rebase -i master
+(sometimes, I branch out of master for a clean branch and do a git rebase -i clean-branch)
+git checkout master
+git rebase new-branch
+(delete clean-branch)
+{% endhighlight %}</p>
+<h3 id="combine-all-branch-commits-to-one-before-merging-to-master-sort-of-like-the-one-above">Combine all branch commits to one before merging to master (sort of like the one above)</h3>
+<p>{% highlight shell %}
+git checkout master
+git checkout -b clean
+git merge &ndash;squash branch_to_merge_to_one_commit
+git commit
+(add commit message)
+git checkout master
+git merge clean
+{% endhighlight %}</p>
+<h3 id="custom-format-for-log">Custom format for log</h3>
+<p>Add to global <code>.gitconfig</code> using <code>git config --global alias.logp &quot;...&quot;</code></p>
+<p>{% highlight shell %}
+git log &ndash;pretty=format:&rsquo;%Cred%h %C(yellow)%d%Creset %s %Cgreen(%cr|%ci) %C(bold blue)[%an]%Creset'
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-18-git-commands-notes/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-08-18-git-commands-notes/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>My commonly used commands in GIT</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>For personal reference:</p>
+<p>{% gist b6e639978dc2c21042ccea526700f214 %}</p>
+<h3 id="access-root">Access root</h3>
+<p>{% highlight shell %}
+http://localhost:8000
+{% endhighlight %}</p>
+<h3 id="access-expvar-information">Access expvar information</h3>
+<p>{% highlight shell %}
+http://localhost:8000/debug/vars
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-20-expvar-gorilla-mux/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-08-20-expvar-gorilla-mux/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>How to serve expvar when using gorilla/mux</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Recently, I was working on a project that involves the encoding of .NET bitmaps using <a href="https://www.ffmpeg.org/">ffmpeg</a>&rsquo;s h264 encoder with <code>mp4</code> as container. This video output will be used in a <code>&lt;video&gt;</code> tag in html5. Sample codes have been all over the place so it took me quite a while to come up with a working solution. The official sample from ffmpeg only encodes to raw h264 stream. This is just a basic sample code for reference.</p>
+<p>Check out the source code <a href="https://github.com/flowerinthenight/ffmpeg-encode-h264mp4">here</a>.</p>
+<p>Lastly, some useful links that I used:</p>
+<ul>
+<li><a href="https://en.code-bude.net/2013/04/17/how-to-create-video-files-in-c-from-single-images/">https://en.code-bude.net/2013/04/17/how-to-create-video-files-in-c-from-single-images/</a></li>
+<li><a href="https://github.com/FFmpeg/FFmpeg/blob/master/doc/examples/decoding_encoding.c">https://github.com/FFmpeg/FFmpeg/blob/master/doc/examples/decoding_encoding.c</a></li>
+<li><a href="http://www.imc-store.com.au/Articles.asp?ID=276">http://www.imc-store.com.au/Articles.asp?ID=276</a></li>
+</ul>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-11-28-ffmpeg-encode-h264mp4/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-11-28-ffmpeg-encode-h264mp4/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Encoding .NET bitmaps to H264 using FFMPEG</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>For personal reference:</p>
+<p>{% gist 8da2984e90dd4a3a26ff645e6a37f275 %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-21-log-prefix-fname-go/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-08-21-log-prefix-fname-go/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Add function name prefix to log.Println in Go</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Recently, I&rsquo;ve been working on a service that runs on a lot of VM&rsquo;s across different locations. If I have a new service build, updating all of the running instances quickly became a bit of a pain. I have to log in to every VM (in some cases through a VPN) and then do a manual upgrade. Now, there are probably tools that already exist for this type of use case but since I&rsquo;m still learning Go at the moment, I thought this would be a good exercise.</p>
+<p>Basically, this is a Windows service that has an http endpoint that accepts a file upload (in this case, a new version of itself). The service then saves this file, calls the <code>MoveFileEx</code> API with the <code>MOVEFILE_DELAY_UNTIL_REBOOT</code> flag, then reboots the system. I also added a simple client (still written in Go) that will upload the file.</p>
+<p>With these tools, I can now update all the running service instances with a script.</p>
+<p>Full source code <a href="https://github.com/flowerinthenight/go-windows-delay-update-svc">here</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-09-27-windows-delay-update-service-go/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-09-27-windows-delay-update-service-go/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>A Windows service with an http endpoint for uploading a new version of itself</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>{% highlight powershell %}
+function ZipFiles($ZipFileName, $SourceDir)
+{
+Add-Type -Assembly System.IO.Compression.FileSystem
+$compressionLevel = [System.IO.Compression.CompressionLevel]::Optimal
+[System.IO.Compression.ZipFile]::CreateFromDirectory($SourceDir, $ZipFileName, $compressionLevel, $false)
+}
+{% endhighlight %}</p>
+<p>To use the function:</p>
+<p>{% highlight powershell %}
+ZipFiles -ZipFileName test.zip -SourceDir .\folder\to\zip
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-04-05-zip-function-powershell/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-04-05-zip-function-powershell/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>A simple zip function in Powershell</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>{% highlight powershell %}
+function UnzipFiles($ZipFileName, $DestDir)
+{
+Add-Type -Assembly System.IO.Compression.FileSystem
+[System.IO.Compression.ZipFile]::ExtractToDirectory($ZipFileName, $DestDir)
+}
+{% endhighlight %}</p>
+<p>To use the function:</p>
+<p>{% highlight powershell %}
+UnzipFiles -ZipFileName .\folder\file.zip -DestDir .\destination
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-04-06-unzip-function-powershell/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-04-06-unzip-function-powershell/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>A simple unzip function in Powershell</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Personal reference:</p>
+<p>{% gist 1ea9a6b71bc9d4a6e5a269e63028d046 %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-13-signal-handler-linux-cpp/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-08-13-signal-handler-linux-cpp/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>A simple signal handler in C/C++ (Linux)</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>For personal reference:</p>
+<p>{% gist 8fae6c9a56df98b8ff96f117a7c9f341 %}</p>
+<p>Full source code <a href="https://github.com/flowerinthenight/win-restclientserver-console">here</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-24-rest-client-server-c%23/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-08-24-rest-client-server-c%23/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>A simple REST client/server console app in C#</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>A couple of days ago, I was working on a powershell-based script for mstest automation and I needed to call <code>vsdevcmd.bat</code> from Visual Studio&rsquo;s tools folder.</p>
+<p>{% highlight powershell %}
+function Invoke-Environment([Parameter(Mandatory=1)][string]$Command, [switch]$Output, [switch]$Force)
+{
+$stream = if ($Output) { ($temp = [IO.Path]::GetTempFileName()) } else { &rsquo;nul&rsquo; }
+$operator = if ($Force) {&rsquo;&amp;&rsquo;} else {&rsquo;&amp;&amp;'}</p>
+<pre><code>foreach($_ in cmd /c &quot; $Command &gt; `&quot;$stream`&quot; 2&gt;&amp;1 $operator SET&quot;)
+{
+    if ($_ -match '^([^=]+)=(.*)')
+    {
+        [System.Environment]::SetEnvironmentVariable($matches[1], $matches[2])
+    }
+}
+
+if ($Output)
+{
+    Get-Content -LiteralPath $temp
+    Remove-Item -LiteralPath $temp
+}
+</code></pre>
+<p>}
+{% endhighlight %}</p>
+<p>To use the function:</p>
+<p>{% highlight powershell %}
+Invoke-Environment &lsquo;&ldquo;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat&rdquo;&rsquo;
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-05-06-import-environment-powershell/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-05-06-import-environment-powershell/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>A simple Powershell function to import an environment</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Personal reference:</p>
+<p>{% gist 66dd730db7f15d4b79b2523d8a03a468 %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-06-13-folder-file-watcher-powershell/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-06-13-folder-file-watcher-powershell/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>A simple folder/file watcher in Powershell</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>A couple of days ago, I uploaded a generic service in GitHub that has a feature of updating itself. Check out the post <a href="http://flowerinthenight.com/blog/2016/09/27/windows-delay-update-service-go">here</a>. Today, I uploaded the actual service I&rsquo;m using in our CI environment, excluding the configuration file.</p>
+<p>Check out the source code <a href="https://github.com/flowerinthenight/holly">here</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-10-07-cron-like-windows-service-go/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-10-07-cron-like-windows-service-go/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>A simple cron-like Windows service</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Check out the codes in <a href="https://github.com/idrilsilverfoot/win32-etw-manifest">GitHub</a>.</p>
+<p>Basically, 2 steps:</p>
+<p>Create a C++ Windows Runtime Component (dll) that will use the ETW header file.
+Reference the WinRT DLL to C# project.</p>
+<h1 id="winrt-dll">WinRT DLL</h1>
+<p>My logging class looks like this:</p>
+<p>{% highlight cpp %}
+public ref class TraceCore sealed
+{
+private:
+TraceCore();
+~TraceCore();</p>
+<pre><code>static TraceCore^ m_Instance;
+</code></pre>
+<p>public:
+static property TraceCore^ Instance
+{
+TraceCore^ get()
+{
+if (m_Instance == nullptr)
+{
+m_Instance = ref new TraceCore();
+}</p>
+<pre><code>        return m_Instance;
+    }
+}
+
+void Verbose(Platform::String^ mod, Platform::String^ file, Platform::String^ func, Platform::String^ m);
+</code></pre>
+<p>};
+{% endhighlight %}</p>
+<p>And heres the implementation:</p>
+<p>{% highlight cpp %}
+#include &ldquo;pch.h&rdquo;
+#include &ldquo;TraceCore.h&rdquo;</p>
+<p>using namespace LibRTWrapperETW;
+using namespace Platform;</p>
+<p>#include &ldquo;jytrace.h&rdquo;</p>
+<p>TraceCore^ TraceCore::m_Instance = nullptr;</p>
+<p>TraceCore::TraceCore()
+{
+EventRegisterJyTrace();
+}</p>
+<p>TraceCore::~TraceCore()
+{
+EventUnregisterJyTrace();
+}</p>
+<p>void TraceCore::Verbose(String^ mod, String^ file, String^ func, String^ m)
+{
+EventWriteSimple(mod-&gt;Data(), file-&gt;Data(), func-&gt;Data(), L&quot;Trace&quot;, m-&gt;Data());
+}
+{% endhighlight %}</p>
+<h1 id="wrapper-class">Wrapper Class</h1>
+<p>Just like in part 5, I wrapped the C++ bits to a C# class so I can use the <code>CallerMemberName</code> and <code>CallerFilePath</code> attributes:</p>
+<p>{% highlight csharp %}
+public static class TraceCoreWrapper
+{
+public static void VerboseCore(
+string m,
+[CallerMemberName] string memberName = &ldquo;?&rdquo;,
+[CallerFilePath] string srcFile = &ldquo;?&rdquo;,
+[CallerLineNumber] int srcNum = 0)
+{
+TraceCore.Instance.Verbose(&ldquo;CORE_RT [&rdquo; + Environment.CurrentManagedThreadId + &ldquo;]&rdquo;, Path.GetFileName(srcFile), memberName, m);
+}
+}
+{% endhighlight %}</p>
+<p>And finally, the actual logging in C#:</p>
+<p>{% highlight csharp %}
+TraceCoreWrapper.VerboseCore(&ldquo;Hello from UApp (CS) world!&rdquo;);
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-03-22-etw-part6/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-03-22-etw-part6/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>[Part 6] Logging with Universal Apps</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Check out the codes in <a href="https://github.com/idrilsilverfoot/win32-etw-manifest">GitHub</a>.</p>
+<p>I generated a C# logging class using this command:</p>
+<p>{% highlight shell %}
+mc -css &lt;Namespace_here&gt; jytrace.man
+{% endhighlight %}</p>
+<p>So far, most of my event templates use an ANSI string data type which (I believe) is not supported by C#. As you can see in part 1, I use ANSI data type for my File and Function fields so that I can use <code>__FILE__</code> and <code>__FUNCTION__</code> as inputs in C++. Thats why I added a new event template with all fields using UNICODE data types. Again, you can refer to the whole package here for reference.</p>
+<p>To use the logging class, I added the generated file to my project. I also added a wrapper class so I can use the <code>CallerMemberName</code> and <code>CallerFilePath</code> attributes in C#.</p>
+<p>{% highlight csharp %}
+public static bool Verbose(
+string m,
+[CallerMemberName] string memberName = &ldquo;?&rdquo;,
+[CallerFilePath] string srcFile = &ldquo;?&rdquo;,
+[CallerLineNumber] int srcNum = 0)
+{
+return JyTrace.ProviderJyTrace.EventWriteSimple(&ldquo;ETWTest&rdquo;, Path.GetFileName(srcFile), memberName, &ldquo;Trace:&rdquo;, m);
+}
+{% endhighlight %}</p>
+<p>The actual log call:</p>
+<p>{% highlight csharp %}
+TraceCore.Verbose(&ldquo;Hello from CS!&rdquo;);
+{% endhighlight %}</p>
+<p>Check out <a href="http://flowerinthenight.com/blog/2016/03/22/etw-part6">part 6</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-03-19-etw-part5/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-03-19-etw-part5/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>[Part 5] Logging with C# applications</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Check out the codes in <a href="https://github.com/idrilsilverfoot/win32-etw-manifest">GitHub</a>.</p>
+<h1 id="getting-the-logs">Getting the logs</h1>
+<p>Now that I have my modules spitting out logs for me, it&rsquo;s time to actually consume (or view) them. Most of the time, I use <code>MFTrace</code> and <code>logman</code> tools.</p>
+<h1 id="mftrace">MFTrace</h1>
+<p>Although <code>MFTrace</code> is primarily a tool for generating logs for Media Foundation apps, it is a great tool for viewing ETW logs in general as well. It is included in the MS SDK.</p>
+<p>To view logs in real time, I use this command in either Powershell or command line:</p>
+<p>{% highlight shell %}
+mftrace -c config.xml
+{% endhighlight %}</p>
+<p>To stop the trace collection, press <code>CTRL+C</code>.</p>
+<h1 id="logman">logman</h1>
+<p><code>logman</code> is a very powerful builtin performance counter and event trace log tool from Microsoft. For more information, have a look at <a href="https://technet.microsoft.com/en-us/library/bb490956.aspx">here</a>.</p>
+<p>You can use <code>logman</code> as alternative to <code>MFTrace</code>.</p>
+<h2 id="start-tracing">Start tracing</h2>
+<p>{% highlight shell %}
+logman start <name> -p &lt;provider_guid_or_name&gt; <kw> <level> -o &lt;output.etl&gt; -ets
+{% endhighlight %}</p>
+<h3 id="examples">Examples</h3>
+<p>{% highlight shell %}
+logman start lms -p {3A8FD7D2-CAB3-455D-A8E5-9E1741365FEB} 0x1 win:Verbose -o c:\output.etl -ets
+logman start lms -p MyProviderName 0x3 win:Informational -o c:\output.etl -ets
+logman start lms -p {277c604b-1962-47fa-9307-7ce0855dfea6} 0xffffffffffffffff 0xff -o c:\output.etl -ets
+{% endhighlight %}</p>
+<h2 id="stop-tracing">Stop tracing</h2>
+<p>{% highlight shell %}
+logman stop <name> -ets
+{% endhighlight %}</p>
+<h3 id="examples-1">Examples</h3>
+<p>{% highlight shell %}
+logman stop lms -ets
+{% endhighlight %}</p>
+<h1 id="collecting-etw-traces-from-testproduction-systems">Collecting ETW traces from test/production systems</h1>
+<p>To collect ETW trace logs from test/production systems, manifest file and message/resource file need not be registered.</p>
+<p>{% highlight shell %}
+mftrace -c config.xml -o c:\output.etl
+{% endhighlight %}</p>
+<p><code>c:\output.etl</code> is just an example. You can use any location and any filename as long as the extension is .etl. The output .etl file can only be read on a system where the manifest file and the resource/message file are registered. To read the traces:</p>
+<p>{% highlight shell %}
+tracerpt -y output.etl
+{% endhighlight %}</p>
+<p>The default readable output file that contains all the trace information will be <code>dumpfile.xml</code>. A <code>summary.txt</code> file will also be generated. For more information about <code>tracerpt</code>, have a look at <a href="https://technet.microsoft.com/en-us/library/bb490959.aspx">here</a>.</p>
+<p>Check out <a href="http://flowerinthenight.com/blog/2016/03/19/etw-part5">part 5</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-03-07-etw-part4/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-03-07-etw-part4/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>[Part 4] Log collection</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Check out the codes in <a href="https://github.com/idrilsilverfoot/win32-etw-manifest">GitHub</a>.</p>
+<p>If you remember in part 2, we compiled our manifest file with</p>
+<p>{% highlight shell %}
+mc -um &lt;manifest_file&gt;.man
+{% endhighlight %}</p>
+<p>and we got a header file as one of the outputs. We just have to include that header file to our sources and we are good to go.</p>
+<p>{% highlight cpp %}
+#include &hellip;
+#include &ldquo;&lt;manifest_file&gt;.h&rdquo;</p>
+<p>int main(&hellip;)
+{
+EventRegister&lt;provider_name_in_manifest&gt;();
+&hellip;
+CreateFile(&hellip;);
+// Example of using the LastError event in our manifest file
+EventWriteLastError(L&quot;THIS_EXE&quot;, <strong>FILE</strong>, <strong>FUNC</strong>, L&quot;CreateFile&quot;, GetLastError());
+&hellip;
+EventUnregister&lt;provider_name_in_manifest&gt;();
+}
+{% endhighlight %}</p>
+<h1 id="notes">Notes</h1>
+<ul>
+<li>Any module can use the ETW provider, be it dll or exe, simultaneously. But you can also create a provider for each module if you prefer.</li>
+<li>For a dll, you can call the <code>EventRegister()</code> inside your <code>DllMain</code> -&gt; <code>DLL_PROCESS_ATTACH</code> and your <code>EventUnregister()</code> in <code>DLL_PROCESS_DETACH</code>.</li>
+</ul>
+<p>Check out <a href="http://flowerinthenight.com/blog/2016/03/07/etw-part4">part 4</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-03-03-etw-part3/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-03-03-etw-part3/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>[Part 3] Logging with C/C++ applications</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Check out the codes in <a href="https://github.com/idrilsilverfoot/win32-etw-manifest">GitHub</a>.</p>
+<h1 id="compiling-the-manifest-file">Compiling the manifest file</h1>
+<p>This is how I compiled my manifest file.</p>
+<ul>
+<li>Open Visual Studio command prompt.</li>
+<li>Compile manifest file.</li>
+</ul>
+<p>{% highlight shell %}
+mc -um &lt;manifest_file&gt;.man
+{% endhighlight %}</p>
+<p>When successful, output files are:</p>
+<p>{% highlight shell %}
+<filename>.h
+<filename>.rc
+<filename>TEMP.BIN
+MSG00001.bin
+{% endhighlight %}</p>
+<h1 id="creating-the-message-resource-dll">Creating the message resource DLL</h1>
+<p>I like to create a separate dll just for the manifest file resource although you can also add the .rc file to any of your existing dll or exe.</p>
+<h2 id="compile-rc-to-res">Compile .rc to .res</h2>
+<p>{% highlight shell %}
+rc <filename>.rc
+{% endhighlight %}</p>
+<h2 id="create-dll-from-res">Create .dll from .res</h2>
+<p>{% highlight shell %}
+link -dll -noentry -out:<out>.dll <filename>.res
+{% endhighlight %}</p>
+<h1 id="register-the-manifest-to-the-system-optional">Register the manifest to the system (optional)</h1>
+<p>I always register the manifest file on my development systems. As for client systems, its up to you. I dont.</p>
+<p>Open admin command prompt and execute</p>
+<p>{% highlight shell %}
+wevtutil im &lt;manifest_file&gt;.man /rf:&ldquo;full_path_to_resource_dll&rdquo; /mf:&ldquo;full_path_to_resource_dll&rdquo;
+{% endhighlight %}</p>
+<h1 id="remove-the-manifest-from-the-system">Remove the manifest from the system</h1>
+<p>Open admin command prompt and execute</p>
+<p>{% highlight shell %}
+wevtutil um &lt;manifest_file&gt;.man
+{% endhighlight %}</p>
+<p>Check out <a href="http://flowerinthenight.com/blog/2016/03/03/etw-part3">part 3</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-03-02-etw-part2/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-03-02-etw-part2/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>[Part 2] Manifest file compilation and setup</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>Check out the codes in <a href="https://github.com/idrilsilverfoot/win32-etw-manifest">GitHub</a>.</p>
+<p>Ive been using ETW as my go-to logging mechanism for Windows development. I will be sharing how I setup my environment here.</p>
+<h1 id="creating-the-manifest-file-man">Creating the manifest file (.man)</h1>
+<p>I use <code>ecmangen.exe</code> to create my manifest file. This tool is included in the SDK. I have Visual Studio 2015 installed on a Win10 64-bit machine, and its location is <code>C:\Program Files (x86)\Windows Kits\10\bin\x64\</code>. It looks something like this (my completed manifest):</p>
+<p>{% include image.html url=&quot;../../../../images/etw1.png&quot; %}</p>
+<p>The red strip is the manifest file name, or my ETW provider name.</p>
+<p>I started by right-clicking Events Section -&gt; New -&gt; Provider, then gave it a name. Then prepended the string Provider to the existing name for the Symbol, auto-generated the GUID, left the other fields as blank, then Save.</p>
+<h1 id="setting-up-keywords">Setting up Keywords</h1>
+<p>{% include image.html url=&quot;../../../../images/etw2.png&quot; %}</p>
+<p>Keywords basically is a mask for filtering log outputs. Mine is just a simple logging mechanism so I have only two keywords. Im not even using <code>KeywordFunctionEntryExit</code> (set to 0x1) that much nowadays so <code>KeywordGeneric</code> (set to 0x2) for me is enough. With this, I have the option later to output only the logs with the keyword <code>KeywordFunctionEntryExit</code> or <code>KeywordGeneric</code>, or both.</p>
+<h1 id="setting-up-templates">Setting up Templates</h1>
+<p>{% include image.html url=&quot;../../../../images/etw3.png&quot; %}</p>
+<p>Templates are, well, templates for the events (in this context, a log is basically an event). Templates will contain the fields (with data types) I want to include in my log. My goal was to have logs with a format of <code>[module_name: src_file_name:  function_name] key: value</code>, where <code>key</code> would be any label, say, variable name, and <code>value</code> as, well, any value, be it int or bool, or last error, etc. I thought that this format is generic enough for me to log any information from my code.</p>
+<p>All events require a template (whether your template or default, which I admit I have never used). Multiple events can use a single template.</p>
+<h1 id="setting-up-events">Setting up Events</h1>
+<p>{% include image.html url=&quot;../../../../images/etw4.png&quot; %}</p>
+<p>Lastly, the events themselves. From the image above, I defined quite a number of events. If you noticed, my <code>LastError</code> event (which I use to log the <code>GetLastError()</code> API) specified the template <code>TemplateKeyValueLastError</code> and the keyword <code>KeywordGeneric</code>.</p>
+<p>When the manifest file is compiled, all the defined events by default (can be modified during compilation) will generate a logging API with the name <code>EventWrite&lt;event_name&gt;</code>, which in the case of the highlighted one, <code>EventWriteLastError()</code>.</p>
+<p>Another thing to point out is the <code>Message</code>. The <code>%[number]</code> corresponds to the fields defined in the template used. First field will be %1, second field will be %2, and so on and so on.</p>
+<p>Lastly, save your manifest file. The xml file will have a <code>.man</code> extension.</p>
+<p>Check out <a href="http://flowerinthenight.com/blog/2016/03/02/etw-part2">part 2</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-03-01-etw-part1/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2016-03-01-etw-part1/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>[Part 1] How I set up ETW for logging (native, .NET, Metro and UApp)</title>
+                
+            </item>
+        
+    </channel>
+</rss>

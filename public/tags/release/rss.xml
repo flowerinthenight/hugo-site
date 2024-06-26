@@ -1,0 +1,198 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/release/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/release/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/release/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/release/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Release · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p><em>For personal reference:</em></p>
+<p>Download the latest GitHub Releases asset using common command line tools:</p>
+<p>{% highlight shell %}</p>
+<h1 id="update-the-url-accordingly-the-uname--awk-subcmds-will-output-linuxdarwin">Update the url accordingly. The <code>uname | awk</code> subcmds will output &rsquo;linux&rsquo;|&lsquo;darwin&rsquo;.</h1>
+<p>$ curl -s <a href="https://api.github.com/repos/alphauslabs/bluectl/releases/latest">https://api.github.com/repos/alphauslabs/bluectl/releases/latest</a> | <br>
+jq -r &ldquo;.assets[] | select(.name | contains(&quot;$(uname -s | awk &lsquo;{print tolower($0)}&rsquo;)&quot;)) | .browser_download_url&rdquo; | <br>
+wget -i -
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2022-01-17-download-latest-github-release-cmdline/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2022-01-17-download-latest-github-release-cmdline/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Download the latest Github release using command line</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>We just recently announced the public beta of our new product, <a href="https://lp.alphaus.cloud/">OCTO</a>. If you&rsquo;re interested, you can join our waiting list at <a href="https://lp.alphaus.cloud/waitlist">https://lp.alphaus.cloud/waitlist</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2023-05-29-announcing-octo/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2023-05-29-announcing-octo/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Announcing our new product, OCTO</title>
+                
+            </item>
+        
+    </channel>
+</rss>

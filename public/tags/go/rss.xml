@@ -1,0 +1,669 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/go/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/go/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/go/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+
+        <link>http://localhost:1313/tags/go/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Go · Tags · About</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I uploaded a <a href="https://github.com/flowerinthenight/rmq">simple wrapper</a> to <a href="https://github.com/streadway/amqp">streadway/amqp</a> library for RabbitMQ with support for auto reconnections. This is a simplified version of what I&rsquo;m using in production.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-06-30-amqp-wrapper/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2017-06-30-amqp-wrapper/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Wrapper for amqp library for RabbitMQ</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>This post is to show a simple way of using Docker&rsquo;s <a href="https://github.com/docker/docker-credential-helpers">credential helper package</a> to utilize the system&rsquo;s native credential store as storage for your Golang-based CLI applications&rsquo; login credentials. This means Keychain for OSX, <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa374792(v=vs.85).aspx"><code>wincred</code></a> for Windows, and <a href="https://www.passwordstore.org/"><code>pass</code></a> for Linux. We use <a href="https://www.passwordstore.org/"><code>pass</code></a> here since <a href="https://specifications.freedesktop.org/secret-service/"><code>secretservice</code></a>, although supported, doesn&rsquo;t work out of the box in headless servers.</p>
+<p>Here&rsquo;s a simple implementation of our <code>Set</code>, <code>Get</code>, and <code>Del</code> functions.</p>
+<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore.go?footer=minimal"></script>
+<p>Then we create our <code>_darwin.go</code>, <code>_linux.go</code>, and <code>_windows.go</code> files for OS specific implementations.</p>
+<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore_darwin.go?footer=minimal"></script>
+<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore_windows.go?footer=minimal"></script>
+<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore_linux.go?footer=minimal"></script>
+<p>Here&rsquo;s a quickstart guide to setup <a href="https://www.passwordstore.org/"><code>pass</code></a> in Ubuntu systems.</p>
+<p>{% highlight shell %}</p>
+<h1 id="install-pass">install pass</h1>
+<p>$ sudo apt-get install pass</p>
+<h1 id="generate-your-own-key-using-gpg2-do-not-use-a-passphrase">generate your own key using gpg2, do not use a passphrase</h1>
+<p>$ gpg2 &ndash;gen-key</p>
+<h1 id="if-the-cmd-seems-stuck-due-to-lack-of-entropy-you-can-open-another-window-and-run-the-ff-cmd">if the cmd seems stuck due to lack of entropy, you can open another window and run the ff cmd:</h1>
+<h1 id="dd-ifdevsda-ofdevzero">dd if=/dev/sda of=/dev/zero</h1>
+<h1 id="list-your-keys">list your keys</h1>
+<h2 id="homeusergnupgpubringkbx">$ gpg2 &ndash;list-keys
+/home/user/.gnupg/pubring.kbx</h2>
+<p>pub   rsa2048/5486B0F6 2017-09-22 [SC]
+uid         [ultimate] IamGroot <a href="mailto:iamgroot@domain.com">iamgroot@domain.com</a>
+sub   rsa2048/CDC4C430 2017-09-22 [E]</p>
+<h1 id="initialize-pass-use-the-pub-key-id">initialize pass (use the pub key id)</h1>
+<p>$ pass init 5486B0F6
+{% endhighlight %}</p>
+<p>Here&rsquo;s an example on how to use our nativestore functions.</p>
+<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore_test.go?footer=minimal"></script>
+<p>Finally, you can refer to the whole package <a href="https://github.com/mobingilabs/mobingi-sdk-go/tree/master/pkg/nativestore">here</a>.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-10-30-nativestore/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2017-10-30-nativestore/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Using OS specific stores for storing CLI credentials for golang apps</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>For personal reference:</p>
+<p>This is a followup on a <a href="https://flowerinthenight.com/blog/2019/07/30/homebrew-golang">previous post</a> that is a bit more manual. This is a little bit easier.</p>
+<h4 id="a-create-your-own-homebrew-tap">a) Create your own Homebrew tap</h4>
+<p>Create a new GitHub public repository with a prefix <code>homebrew-</code>, i.e. <code>homebrew-tap</code>. This will host all the apps that you want to distribute via your tap. Users will install your apps using the following commands:</p>
+<p>{% highlight shell %}</p>
+<h1 id="no-need-to-include-the-homebrew--prefix">No need to include the &lsquo;homebrew-&rsquo; prefix</h1>
+<p>$ brew tap flowerinthenight/tap
+$ brew install <toolname></p>
+<h1 id="or-one-liner">Or one-liner</h1>
+<p>$ brew install flowerinthenight/tap/<toolname>
+{% endhighlight %}</p>
+<h4 id="b-lets-use-github-actions-to-setup-goreleaserhttpsgithubcomgoreleasergoreleaser">b) Let&rsquo;s use Github Actions to setup <a href="https://github.com/goreleaser/goreleaser">goreleaser</a></h4>
+<p>First, add a <code>.goreleaser.yml</code> config file to your Go repo. Here&rsquo;s an example:</p>
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fflowerinthenight%2Fkubepfm%2Fblob%2Fmaster%2F.goreleaser.yml&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+<p>The section of note here is the <code>brews:</code> part. You can check goreleaser&rsquo;s <a href="https://goreleaser.com/quick-start/">Quickstart</a> guide for more information.</p>
+<p>Here&rsquo;s an example of a GitHub Action config on how to setup <a href="https://github.com/goreleaser/goreleaser">goreleaser</a> to do the release for our tags.</p>
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fflowerinthenight%2Fkubepfm%2Fblob%2Fmaster%2F.github%2Fworkflows%2Fmain.yml&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+<p>See the <code>name: Run goreleaser</code> section. You need to add a personal access token with <code>repo, workflow, write:packages</code> permissions to your repository&rsquo;s secrets. In this example, the name used is <code>GH_PAT</code> but you can use other names as well.</p>
+<h4 id="c-do-a-tagged-release">c) Do a tagged release</h4>
+<p>Tagged releases should now do a deployment to your tap.</p>
+<p>{% highlight shell %}
+$ git tag v1.0.0
+$ git push &ndash;tags
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2023-04-13-homebrew-golang-p2/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2023-04-13-homebrew-golang-p2/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Using Homebrew for distributing Go apps (part 2)</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>For personal reference:</p>
+<h4 id="a-create-your-own-homebrew-tap">a) Create your own homebrew tap</h4>
+<p>Create a new GitHub public repository with a prefix <code>homebrew-</code>, i.e. <code>homebrew-tap</code>. This will house all the apps that you want to distribute via your tap. Users will install your apps using the following commands:</p>
+<p>{% highlight shell %}</p>
+<h1 id="no-need-to-include-the-homebrew--prefix">No need to include the &lsquo;homebrew-&rsquo; prefix</h1>
+<p>$ brew tap flowerinthenight/tap
+$ brew install <toolname>
+{% endhighlight %}</p>
+<p>The <code>toolname</code> part will correspond to the filename inside your repository tap. If your repository has an entry with a filename of <code>toolx.rb</code>, it can be installed using the following commands:</p>
+<p>{% highlight shell %}
+$ brew tap flowerinthenight/tap
+$ brew install toolx
+{% endhighlight %}</p>
+<p>Here&rsquo;s an example of a formula for a golang app:</p>
+<p>{% highlight ruby %}
+class Kubepfm &lt; Formula
+desc &ldquo;A simple wrapper to kubectl port-forward for multiple pods.&rdquo;
+homepage &ldquo;<a href="https://github.com/flowerinthenight/kubepfm"">https://github.com/flowerinthenight/kubepfm"</a>
+url &ldquo;<a href="https://github.com/flowerinthenight/kubepfm/archive/v0.0.3.tar.gz"">https://github.com/flowerinthenight/kubepfm/archive/v0.0.3.tar.gz"</a>
+sha256 &ldquo;7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207&rdquo;</p>
+<p>depends_on &ldquo;go&rdquo;</p>
+<p>def install
+ENV[&ldquo;GOPATH&rdquo;] = buildpath
+ENV[&ldquo;GO111MODULE&rdquo;] = &ldquo;on&rdquo;
+ENV[&ldquo;GOFLAGS&rdquo;] = &ldquo;-mod=vendor&rdquo;
+ENV[&ldquo;PATH&rdquo;] = &ldquo;#{ENV[&ldquo;PATH&rdquo;]}:#{buildpath}/bin&rdquo;
+(buildpath/&ldquo;src/github.com/flowerinthenight/kubepfm&rdquo;).install buildpath.children
+cd &ldquo;src/github.com/flowerinthenight/kubepfm&rdquo; do
+system &ldquo;go&rdquo;, &ldquo;build&rdquo;, &ldquo;-o&rdquo;, bin/&ldquo;kubepfm&rdquo;, &ldquo;.&rdquo;
+end
+end</p>
+<p>test do
+assert_match /Simple port-forward wrapper tool for multiple pods/, shell_output(&rdquo;#{bin}/kubepfm -h&rdquo;, 0)
+end
+end
+{% endhighlight %}</p>
+<p>You can check out <a href="https://github.com/flowerinthenight/homebrew-tap">https://github.com/flowerinthenight/homebrew-tap</a> for reference.</p>
+<p>The <code>url</code> part is the path of the source <code>tar.gz</code> of your source files. You can create this by using <a href="https://help.github.com/en/enterprise/2.16/user/articles/about-releases">tagged releases</a> in GitHub.</p>
+<p>You can generate the <code>sha256</code> part by running the <code>shasum</code> (OSX) or <code>sha256sum</code> (Linux) tool against your <code>tar.gz</code> file.</p>
+<h4 id="b-updating-your-formula">b) Updating your formula</h4>
+<p>If you have a new version of your tool, first, create a new tag or release. Download the new <code>tar.gz</code> file of the new release, run the <code>sha256sum/shasum</code> tool against it, and update the <code>.rb</code> file in your tap repository.</p>
+<p>Example:</p>
+<p>{% highlight shell %}
+$ git clone <a href="https://github.com/flowerinthenight/kubepfm">https://github.com/flowerinthenight/kubepfm</a>
+$ cd kubepfm/
+$ git tag v1.0.1 # our new tag
+$ git push &ndash;tags # push tags to remote
+$ wget <a href="https://github.com/flowerinthenight/kubepfm/archive/v1.0.1.tar.gz">https://github.com/flowerinthenight/kubepfm/archive/v1.0.1.tar.gz</a></p>
+<h1 id="osx">OSX</h1>
+<p>$ shasum -a 256 v1.0.1.tar.gz
+7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207  v1.0.1.tar.gz</p>
+<h1 id="linux">Linux</h1>
+<p>$ sha256sum v1.0.1.tar.gz
+7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207  v1.0.1.tar.gz
+{% endhighlight %}</p>
+<p>Finally, update the <code>url</code> and <code>sha256</code> part of your <code>.rb</code> file. Users will now be able to update their copies:</p>
+<p>{% highlight shell %}
+$ brew upgrade kubepfm
+{% endhighlight %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2019-07-30-homebrew-golang/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2019-07-30-homebrew-golang/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Using Homebrew for distributing Go (golang) apps</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>In Docker&rsquo;s <a href="https://docs.docker.com/engine/admin/logging/etwlogs/">ETW logging driver doc</a>, it uses the tool <code>logman</code> to view the logs. In this article, I will show you how to use <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ff685116(v=vs.85).aspx">mftrace</a> to view Docker ETW logs in real-time.</p>
+<p>First, here&rsquo;s a simple application written in Go that logs to STDERR every second.</p>
+<p>{% gist 5ebeaaa38a59f7ce314a0b96b4357d4a %}</p>
+<p>Next, let&rsquo;s create a Docker image (Windows) using the Dockerfile below.</p>
+<p>{% gist 9935cfaf68d8de5b5da2d5c4b15b8d85 %}</p>
+<p>{% highlight shell %}</p>
+<h1 id="assuming-the-code-above-is-saved-in-a-directory-called-demoapp">assuming the code above is saved in a directory called &lsquo;demoapp&rsquo;</h1>
+<p>$ docker build -t demoapp .
+{% endhighlight %}</p>
+<p>To use mftrace, we need a config file.</p>
+<p>{% gist 4bd8968cc08c14cc98e03494624030a5 %}</p>
+<p>Open a command prompt (or Powershell) and run the following command.</p>
+<p>{% highlight shell %}
+$ mftrace.exe -c config.xml
+{% endhighlight %}</p>
+<p>Then open another command prompt (or Powershell) window and run the Docker image.</p>
+<p>{% highlight shell %}
+$ docker run -d &ndash;log-driver=etwlogs &ndash;name demoapp demoapp:latest
+{% endhighlight %}</p>
+<p>You should be able to view the application logs in the mftrace window.</p>
+<p>You can use this <a href="https://github.com/flowerinthenight/20170914-tokyo-mastercloud-presentation">repo</a> instead of creating your own folder structure. Instructions are provided in the README as well as an x86 version of mftrace.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-09-20-docker-etwlogs/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2017-09-20-docker-etwlogs/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Using Docker’s ETW log driver in Windows</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I posted an <a href="https://tech.mobingi.com/2018/12/05/mochi-k8s-repo.html">article</a> for <a href="https://twitter.com/mobingi">@mobingi</a> about its Kubernetes clusters repo. Please check it out. Thanks.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-12-27-mochi-k8s-repo/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2018-12-27-mochi-k8s-repo/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Mobingi’s Kubernetes clusters repo</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I posted an <a href="https://tech.mobingi.com/2018/09/25/ouchan-monorepo.html">article</a> for <a href="https://twitter.com/mobingi">@mobingi</a> about its Golang-based monorepo. Please check it out. Thanks.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-09-25-ouchan-monorepo/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2018-09-25-ouchan-monorepo/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>Mobingi’s golang monorepo</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>For self reference:</p>
+<p>{% gist caa8ae4a0112f25eeabb67d0fbd837dd %}</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-08-31-golang-json-prettify/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2017-08-31-golang-json-prettify/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>JSON prettifier function in Go</title>
+                
+            </item>
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>I uploaded an example of a golang-based monorepo in <a href="https://github.com/flowerinthenight/golang-monorepo">GitHub</a>. This is a stripped down version of what we have <a href="https://twitter.com/mobingi">@mobingi</a>. If you are planning to have a golang-based monorepo, please have a look.</p>
+]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-02-06-golang-monorepo/</guid>
+
+                
+                    <link>http://localhost:1313/blog/2018-02-06-golang-monorepo/</link>
+                
+
+                
+                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
+                
+
+                
+                    <title>A golang-based monorepo example</title>
+                
+            </item>
+        
+    </channel>
+</rss>
