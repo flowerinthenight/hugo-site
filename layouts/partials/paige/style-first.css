@@ -1,0 +1,18 @@
+#paige-authors,
+#paige-breadcrumbs,
+#paige-credit,
+#paige-date,
+#paige-file,
+#paige-keywords,
+#paige-prev-next,
+#paige-reading-time,
+#paige-series,
+#paige-toc,
+.paige-authors,
+.paige-date,
+.paige-keywords,
+.paige-reading-time,
+.paige-series,
+.paige-summary {
+    display: none;
+}

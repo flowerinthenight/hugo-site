@@ -1,0 +1,99 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/privacy/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/privacy/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/privacy/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+            <lastBuildDate>2023-09-18 21:33:24 -0700 -0700</lastBuildDate>
+        
+
+        <link>http://localhost:1313/tags/privacy/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Privacy · Tags · Paige</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+    </channel>
+</rss>

@@ -1,0 +1,189 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/style/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/style/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/style/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+            <lastBuildDate>2023-09-18 20:21:05 -0700 -0700</lastBuildDate>
+        
+
+        <link>http://localhost:1313/tags/style/</link>
+
+        
+            <managingEditor>example@example.com (John Doe)</managingEditor>
+        
+
+        <title>Style · Tags · Paige</title>
+
+        
+            <webMaster>example@example.com (John Doe)</webMaster>
+        
+
+        
+            <item>
+                
+                
+                
+                
+                
+                
+                
+
+                
+
+                
+                    
+
+                    
+                
+
+                
+
+                
+
+                
+                
+
+                
+
+                
+
+                
+                    <description><![CDATA[<p>This site uses the default styles on the other pages. This page changes them.</p>
+<h2 id="parameters">Parameters</h2>
+<p>This page has the following parameters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">paige</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">file_link</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">disable</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-authors,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-credit,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-date,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-file,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-keywords,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-prev-next,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-reading-time,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-series,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-toc,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-authors,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-date,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-keywords,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-reading-time,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-series,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-summary {
+</span></span></span><span class="line"><span class="cl"><span class="sd">        display: block;
+</span></span></span><span class="line"><span class="cl"><span class="sd">    }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-authors { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-content { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-date { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-description { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-file { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-keywords { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-reading-time { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-series { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-title { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-toc { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-copyright { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-credit { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-authors { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-date { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-keyword { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-series { font-style: italic; }
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-summary { font-style: italic; }</span><span class="w">    
+</span></span></span></code></pre></div>]]></description>
+                
+
+                <guid isPermaLink="false">tag:localhost:1313,2023-09-18:/customization/style/</guid>
+
+                
+                    <link>http://localhost:1313/customization/style/</link>
+                
+
+                
+                    <pubDate>Mon, 18 Sep 2023 20:21:05 -0700</pubDate>
+                
+
+                
+                    <title>Style Data</title>
+                
+            </item>
+        
+    </channel>
+</rss>

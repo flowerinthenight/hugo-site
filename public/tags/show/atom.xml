@@ -1,0 +1,196 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed  xml:lang="en"  xmlns="http://www.w3.org/2005/Atom">
+    
+        <author>
+            
+                <email>example@example.com</email>
+            
+
+            
+                <name>John Doe</name>
+            
+
+            
+                <uri>https://example.com</uri>
+            
+        </author>
+    
+
+    
+        <icon>http://localhost:1313/</icon>
+    
+
+    <id>tag:localhost:1313,0001-01-01:/tags/show/atom.xml</id>
+
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/show/atom.xml" rel="self" type="application/atom+xml"/>
+        
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/show/" rel="alternate" type="text/html"/>
+        
+    
+        
+
+        
+
+        
+            <link href="http://localhost:1313/tags/show/rss.xml" rel="alternate" type="application/rss+xml"/>
+        
+    
+
+    
+
+    
+        <logo>http://localhost:1313/</logo>
+    
+
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+    
+
+    
+
+    <title type="html"><![CDATA[Show · Tags · Paige]]></title>
+    <updated>2024-06-03T21:21:05-07:00</updated>
+
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                
+                    <author>
+                        
+
+                        
+                            <name>Author Demo</name>
+                        
+
+                        
+                    </author>
+                
+            
+
+            
+                <content type="html"><![CDATA[<p>This site hides some single page data by default. This page shows it all.</p>
+<h2 id="parameters">Parameters</h2>
+<p>This page has the following parameters:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">paige</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">file_link</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">disable</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">style</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-authors,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-credit,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-date,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-file,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-keywords,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-prev-next,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-reading-time,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-series,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    #paige-toc,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-authors,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-date,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-keywords,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-reading-time,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-series,
+</span></span></span><span class="line"><span class="cl"><span class="sd">    .paige-summary {
+</span></span></span><span class="line"><span class="cl"><span class="sd">        display: block;
+</span></span></span><span class="line"><span class="cl"><span class="sd">    }</span><span class="w">    
+</span></span></span></code></pre></div>]]></content>
+            
+
+            <id>tag:localhost:1313,2023-09-18:/customization/show/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="http://localhost:1313/customization/show/" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+                <published>2023-09-18T21:21:05-07:00</published>
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+                <summary type="html"><![CDATA[Demonstration of Paige customization that shows data.]]></summary>
+            
+
+            <title type="html"><![CDATA[Show Data]]></title>
+            <updated>2023-09-18T21:21:05-07:00</updated>
+        </entry>
+    
+</feed>
