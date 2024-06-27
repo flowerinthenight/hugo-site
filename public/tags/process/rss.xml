@@ -52,7 +52,7 @@
             
 
             
-                <link href="//localhost:1313/tags/process/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="http://localhost:1313/tags/process/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -62,7 +62,7 @@
             
 
             
-                <link href="//localhost:1313/tags/process/" rel="alternate" type="text/html"/>
+                <link href="http://localhost:1313/tags/process/" rel="alternate" type="text/html"/>
             
         
             
@@ -70,12 +70,14 @@
             
 
             
-                <link href="//localhost:1313/tags/process/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="http://localhost:1313/tags/process/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -85,19 +87,19 @@
         
 
         
-            <lastBuildDate>2024-05-30 00:00:00 +0000 UTC</lastBuildDate>
+            <lastBuildDate>2024-05-30 00:00:00 -0700 PDT</lastBuildDate>
         
 
-        <link>//localhost:1313/tags/process/</link>
+        <link>http://localhost:1313/tags/process/</link>
 
         
-            <managingEditor>example@example.com (John Doe)</managingEditor>
+            <managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor>
         
 
         <title>Process · Tags · About</title>
 
         
-            <webMaster>example@example.com (John Doe)</webMaster>
+            <webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster>
         
 
         

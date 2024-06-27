@@ -43,21 +43,21 @@
     
         <author>
             
-                <email>example@example.com</email>
+                <email>root@flowerinthenight.com</email>
             
 
             
-                <name>John Doe</name>
+                <name>Flowerinthenight</name>
             
 
             
-                <uri>https://example.com</uri>
+                <uri>https://flowerinthenight.com</uri>
             
         </author>
     
 
     
-        <icon>//localhost:1313/</icon>
+        <icon>http://localhost:1313/</icon>
     
 
     <id>tag:localhost:1313,0001-01-01:/tags/kubectl/atom.xml</id>
@@ -70,7 +70,7 @@
         
 
         
-            <link href="//localhost:1313/tags/kubectl/atom.xml" rel="self" type="application/atom+xml"/>
+            <link href="http://localhost:1313/tags/kubectl/atom.xml" rel="self" type="application/atom+xml"/>
         
     
         
@@ -80,7 +80,7 @@
         
 
         
-            <link href="//localhost:1313/tags/kubectl/" rel="alternate" type="text/html"/>
+            <link href="http://localhost:1313/tags/kubectl/" rel="alternate" type="text/html"/>
         
     
         
@@ -88,22 +88,24 @@
         
 
         
-            <link href="//localhost:1313/tags/kubectl/rss.xml" rel="alternate" type="application/rss+xml"/>
+            <link href="http://localhost:1313/tags/kubectl/rss.xml" rel="alternate" type="application/rss+xml"/>
         
     
 
     
 
     
-        <logo>//localhost:1313/</logo>
+        <logo>http://localhost:1313/</logo>
     
 
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
     
 
     
 
     <title type="html"><![CDATA[Kubectl · Tags · About]]></title>
-    <updated>2024-05-30T00:00:00Z</updated>
+    <updated>2024-05-30T00:00:00-07:00</updated>
 
     
 </feed>

@@ -58,7 +58,7 @@
 <meta content="#0d6efd" name="theme-color">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 
-<meta property="og:url" content="//localhost:1313/tags/kubernetes/">
+<meta property="og:url" content="http://localhost:1313/tags/kubernetes/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Kubernetes">
   <meta property="og:locale" content="en">
@@ -184,9 +184,9 @@
 
 
 
-    <link href="//localhost:1313/tags/kubernetes/atom.xml" rel="alternate" type="application/atom+xml">
+    <link href="http://localhost:1313/tags/kubernetes/atom.xml" rel="alternate" type="application/atom+xml">
 
-    <link href="//localhost:1313/tags/kubernetes/rss.xml" rel="alternate" type="application/rss+xml">
+    <link href="http://localhost:1313/tags/kubernetes/rss.xml" rel="alternate" type="application/rss+xml">
 
 
     
@@ -629,6 +629,28 @@ table {
         </div>
     </nav>
 
+
+
+        
+            
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZWHM5C9YT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EZWHM5C9YT');
+        }
+      </script>
+    
+  
 
 
         
@@ -1497,6 +1519,78 @@ a keyfile, filename.key a certificate file, filename.crt an intermediate certifi
 </div>
 
         
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-01-24-k8s-kops-aws/">Running Kubernetes on AWS using kops</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-01-24</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Overview This post will walk through the steps on how we provisioned our production Kubernetes cluster @mobingi. Some of the bits here are already automated in our case but I will try to include as much details as I can.
+Our goals would be the following:
+Provision a Kubernetes cluster on AWS using kops. The cluster will have two autoscaling groups: one for on-demand, one for spot instances. It’s going to be a gossip-based cluster.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/devops/">Devops</a> · <a class="link-secondary" href="/tags/kops/">Kops</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-01-24">January 24, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">5 minutes</p>
+    
+</div>
+
+        
 
         
     
@@ -1504,36 +1598,6 @@ a keyfile, filename.key a certificate file, filename.crt an intermediate certifi
     
     
 
-    
-        <div id="paige-pagination">
-            <div class="d-flex justify-content-center">
-                <nav aria-label="Page list navigation">
-                    <ul class="pagination">
-                        
-                            <li class="page-item  disabled ">
-                                <a aria-label="First" class="page-link" href="/tags/kubernetes/"><span aria-hidden="true">&laquo;</span></a>
-                            </li>
-
-                            <li class="page-item  disabled ">
-                                <a  class="page-link" >
-                                    <span aria-hidden="true">&lsaquo;</span>
-                                </a>
-                            </li>
-
-                            <li class="page-item ">
-                                <a  aria-label="Next"  class="page-link"  href="/tags/kubernetes/page/2/" >
-                                    <span aria-hidden="true">&rsaquo;</span>
-                                </a>
-                            </li>
-
-                            <li class="page-item ">
-                                <a aria-label="Last" class="page-link" href="/tags/kubernetes/page/2/"><span aria-hidden="true">&raquo;</span></a>
-                            </li>
-                        
-                    </ul>
-                </nav>
-            </div>
-        </div>
     
 
     </div>
@@ -1562,6 +1626,8 @@ a keyfile, filename.key a certificate file, filename.crt an intermediate certifi
 
     
 
+    
+        <p class="mb-0 text-center text-secondary" id="paige-copyright">© Flowerinthenight, 2016-2024. All rights reserved.</p>
     
 
     <p class="mb-0 text-center" id="paige-credit">

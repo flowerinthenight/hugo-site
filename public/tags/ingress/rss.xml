@@ -48,7 +48,7 @@
             
 
             
-                <link href="//localhost:1313/tags/ingress/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="http://localhost:1313/tags/ingress/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -58,7 +58,7 @@
             
 
             
-                <link href="//localhost:1313/tags/ingress/" rel="alternate" type="text/html"/>
+                <link href="http://localhost:1313/tags/ingress/" rel="alternate" type="text/html"/>
             
         
             
@@ -66,12 +66,14 @@
             
 
             
-                <link href="//localhost:1313/tags/ingress/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="http://localhost:1313/tags/ingress/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -81,19 +83,19 @@
         
 
         
-            <lastBuildDate>2019-11-28 00:00:00 +0000 UTC</lastBuildDate>
+            <lastBuildDate>2019-11-28 00:00:00 -0800 PST</lastBuildDate>
         
 
-        <link>//localhost:1313/tags/ingress/</link>
+        <link>http://localhost:1313/tags/ingress/</link>
 
         
-            <managingEditor>example@example.com (John Doe)</managingEditor>
+            <managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor>
         
 
         <title>Ingress · Tags · About</title>
 
         
-            <webMaster>example@example.com (John Doe)</webMaster>
+            <webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster>
         
 
         

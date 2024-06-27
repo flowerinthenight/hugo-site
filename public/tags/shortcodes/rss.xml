@@ -44,7 +44,7 @@
             
 
             
-                <link href="//localhost:1313/tags/shortcodes/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="http://localhost:1313/tags/shortcodes/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -54,7 +54,7 @@
             
 
             
-                <link href="//localhost:1313/tags/shortcodes/" rel="alternate" type="text/html"/>
+                <link href="http://localhost:1313/tags/shortcodes/" rel="alternate" type="text/html"/>
             
         
             
@@ -62,12 +62,14 @@
             
 
             
-                <link href="//localhost:1313/tags/shortcodes/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="http://localhost:1313/tags/shortcodes/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -80,16 +82,16 @@
             <lastBuildDate>2023-09-18 21:33:24 -0700 -0700</lastBuildDate>
         
 
-        <link>//localhost:1313/tags/shortcodes/</link>
+        <link>http://localhost:1313/tags/shortcodes/</link>
 
         
-            <managingEditor>example@example.com (John Doe)</managingEditor>
+            <managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor>
         
 
         <title>Shortcodes · Tags · About</title>
 
         
-            <webMaster>example@example.com (John Doe)</webMaster>
+            <webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster>
         
 
         

@@ -46,7 +46,7 @@
             
 
             
-                <link href="//localhost:1313/tags/typesetting/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="http://localhost:1313/tags/typesetting/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -56,7 +56,7 @@
             
 
             
-                <link href="//localhost:1313/tags/typesetting/" rel="alternate" type="text/html"/>
+                <link href="http://localhost:1313/tags/typesetting/" rel="alternate" type="text/html"/>
             
         
             
@@ -64,12 +64,14 @@
             
 
             
-                <link href="//localhost:1313/tags/typesetting/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="http://localhost:1313/tags/typesetting/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -82,16 +84,16 @@
             <lastBuildDate>2023-09-18 21:33:03 -0700 -0700</lastBuildDate>
         
 
-        <link>//localhost:1313/tags/typesetting/</link>
+        <link>http://localhost:1313/tags/typesetting/</link>
 
         
-            <managingEditor>example@example.com (John Doe)</managingEditor>
+            <managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor>
         
 
         <title>Typesetting · Tags · About</title>
 
         
-            <webMaster>example@example.com (John Doe)</webMaster>
+            <webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster>
         
 
         
@@ -172,7 +174,7 @@ $$</p>]]></description>
                 <guid isPermaLink="false">tag:localhost:1313,2023-09-18:/tmp/math-typesetting/</guid>
 
                 
-                    <link>//localhost:1313/tmp/math-typesetting/</link>
+                    <link>http://localhost:1313/tmp/math-typesetting/</link>
                 
 
                 

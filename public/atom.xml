@@ -279,21 +279,21 @@
     
         <author>
             
-                <email>example@example.com</email>
+                <email>root@flowerinthenight.com</email>
             
 
             
-                <name>John Doe</name>
+                <name>Flowerinthenight</name>
             
 
             
-                <uri>https://example.com</uri>
+                <uri>https://flowerinthenight.com</uri>
             
         </author>
     
 
     
-        <icon>//localhost:1313/</icon>
+        <icon>http://localhost:1313/</icon>
     
 
     <id>tag:localhost:1313,0001-01-01:/atom.xml</id>
@@ -306,7 +306,7 @@
         
 
         
-            <link href="//localhost:1313/atom.xml" rel="self" type="application/atom+xml"/>
+            <link href="http://localhost:1313/atom.xml" rel="self" type="application/atom+xml"/>
         
     
         
@@ -316,7 +316,7 @@
         
 
         
-            <link href="//localhost:1313/" rel="alternate" type="text/html"/>
+            <link href="http://localhost:1313/" rel="alternate" type="text/html"/>
         
     
         
@@ -324,7 +324,7 @@
         
 
         
-            <link href="//localhost:1313/paige-search.json" rel="alternate" type="application/json"/>
+            <link href="http://localhost:1313/paige-search.json" rel="alternate" type="application/json"/>
         
     
         
@@ -332,22 +332,24 @@
         
 
         
-            <link href="//localhost:1313/rss.xml" rel="alternate" type="application/rss+xml"/>
+            <link href="http://localhost:1313/rss.xml" rel="alternate" type="application/rss+xml"/>
         
     
 
     
 
     
-        <logo>//localhost:1313/</logo>
+        <logo>http://localhost:1313/</logo>
     
 
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
     
 
     
 
     <title type="html"><![CDATA[About]]></title>
-    <updated>2024-05-30T00:00:00Z</updated>
+    <updated>2024-05-30T00:00:00-07:00</updated>
 
     
         <entry>
@@ -553,7 +555,7 @@ SOFTWARE.
                 
                     
 
-                    <link href="//localhost:1313/tmp/markdown-syntax/" rel="alternate" type="text/html"/>
+                    <link href="http://localhost:1313/tmp/markdown-syntax/" rel="alternate" type="text/html"/>
                 
             
 
@@ -563,6 +565,8 @@ SOFTWARE.
                 <published>2024-01-18T21:32:52-07:00</published>
             
 
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
             
 
             
@@ -705,7 +709,7 @@ SOFTWARE.
                 
                     
 
-                    <link href="//localhost:1313/tmp/video/" rel="alternate" type="text/html"/>
+                    <link href="http://localhost:1313/tmp/video/" rel="alternate" type="text/html"/>
                 
             
 
@@ -715,6 +719,8 @@ SOFTWARE.
                 <published>2023-09-24T21:29:31-07:00</published>
             
 
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
             
 
             
@@ -763,7 +769,7 @@ SOFTWARE.
 
             
                 <content type="html"><![CDATA[<p>It takes you to the home page.</p>
-<p><a href="//localhost:1313/tmp/link/" title="Link">⏎</a></p>]]></content>
+<p><a href="http://localhost:1313/tmp/link/" title="Link">⏎</a></p>]]></content>
             
 
             <id>tag:localhost:1313,2023-09-24:/tmp/link/</id>
@@ -784,6 +790,8 @@ SOFTWARE.
                 <published>2023-09-24T21:29:30-07:00</published>
             
 
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
             
 
             
@@ -879,7 +887,7 @@ $$</p>]]></content>
                 
                     
 
-                    <link href="//localhost:1313/tmp/math-typesetting/" rel="alternate" type="text/html"/>
+                    <link href="http://localhost:1313/tmp/math-typesetting/" rel="alternate" type="text/html"/>
                 
             
 
@@ -889,6 +897,8 @@ $$</p>]]></content>
                 <published>2023-09-18T21:33:03-07:00</published>
             
 
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
             
 
             
@@ -975,7 +985,7 @@ SOFTWARE.
                 
                     
 
-                    <link href="//localhost:1313/tmp/emoji-support/" rel="alternate" type="text/html"/>
+                    <link href="http://localhost:1313/tmp/emoji-support/" rel="alternate" type="text/html"/>
                 
             
 
@@ -985,6 +995,8 @@ SOFTWARE.
                 <published>2023-09-18T21:32:40-07:00</published>
             
 
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
             
 
             
@@ -1043,7 +1055,7 @@ SOFTWARE.
                 
                     
 
-                    <link href="//localhost:1313/tmp/alert/" rel="alternate" type="text/html"/>
+                    <link href="http://localhost:1313/tmp/alert/" rel="alternate" type="text/html"/>
                 
             
 
@@ -1053,6 +1065,8 @@ SOFTWARE.
                 <published>2023-09-18T21:21:05-07:00</published>
             
 
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
             
 
             

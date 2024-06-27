@@ -46,7 +46,7 @@
             
 
             
-                <link href="//localhost:1313/tags/alerts/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="http://localhost:1313/tags/alerts/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -56,7 +56,7 @@
             
 
             
-                <link href="//localhost:1313/tags/alerts/" rel="alternate" type="text/html"/>
+                <link href="http://localhost:1313/tags/alerts/" rel="alternate" type="text/html"/>
             
         
             
@@ -64,12 +64,14 @@
             
 
             
-                <link href="//localhost:1313/tags/alerts/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="http://localhost:1313/tags/alerts/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -82,16 +84,16 @@
             <lastBuildDate>2023-09-18 21:21:05 -0700 -0700</lastBuildDate>
         
 
-        <link>//localhost:1313/tags/alerts/</link>
+        <link>http://localhost:1313/tags/alerts/</link>
 
         
-            <managingEditor>example@example.com (John Doe)</managingEditor>
+            <managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor>
         
 
         <title>Alerts · Tags · About</title>
 
         
-            <webMaster>example@example.com (John Doe)</webMaster>
+            <webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster>
         
 
         
@@ -135,7 +137,7 @@
                 <guid isPermaLink="false">tag:localhost:1313,2023-09-18:/tmp/alert/</guid>
 
                 
-                    <link>//localhost:1313/tmp/alert/</link>
+                    <link>http://localhost:1313/tmp/alert/</link>
                 
 
                 

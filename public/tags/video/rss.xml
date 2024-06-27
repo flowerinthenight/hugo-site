@@ -46,7 +46,7 @@
             
 
             
-                <link href="//localhost:1313/tags/video/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="http://localhost:1313/tags/video/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -56,7 +56,7 @@
             
 
             
-                <link href="//localhost:1313/tags/video/" rel="alternate" type="text/html"/>
+                <link href="http://localhost:1313/tags/video/" rel="alternate" type="text/html"/>
             
         
             
@@ -64,12 +64,14 @@
             
 
             
-                <link href="//localhost:1313/tags/video/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="http://localhost:1313/tags/video/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -82,16 +84,16 @@
             <lastBuildDate>2023-09-24 21:29:31 -0700 -0700</lastBuildDate>
         
 
-        <link>//localhost:1313/tags/video/</link>
+        <link>http://localhost:1313/tags/video/</link>
 
         
-            <managingEditor>example@example.com (John Doe)</managingEditor>
+            <managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor>
         
 
         <title>Video · Tags · About</title>
 
         
-            <webMaster>example@example.com (John Doe)</webMaster>
+            <webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster>
         
 
         
@@ -219,7 +221,7 @@
                 <guid isPermaLink="false">tag:localhost:1313,2023-09-24:/tmp/video/</guid>
 
                 
-                    <link>//localhost:1313/tmp/video/</link>
+                    <link>http://localhost:1313/tmp/video/</link>
                 
 
                 

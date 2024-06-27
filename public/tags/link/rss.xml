@@ -46,7 +46,7 @@
             
 
             
-                <link href="//localhost:1313/tags/link/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="http://localhost:1313/tags/link/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -56,7 +56,7 @@
             
 
             
-                <link href="//localhost:1313/tags/link/" rel="alternate" type="text/html"/>
+                <link href="http://localhost:1313/tags/link/" rel="alternate" type="text/html"/>
             
         
             
@@ -64,12 +64,14 @@
             
 
             
-                <link href="//localhost:1313/tags/link/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="http://localhost:1313/tags/link/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -82,16 +84,16 @@
             <lastBuildDate>2023-09-24 21:29:30 -0700 -0700</lastBuildDate>
         
 
-        <link>//localhost:1313/tags/link/</link>
+        <link>http://localhost:1313/tags/link/</link>
 
         
-            <managingEditor>example@example.com (John Doe)</managingEditor>
+            <managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor>
         
 
         <title>Link · Tags · About</title>
 
         
-            <webMaster>example@example.com (John Doe)</webMaster>
+            <webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster>
         
 
         
@@ -130,7 +132,7 @@
 
                 
                     <description><![CDATA[<p>It takes you to the home page.</p>
-<p><a href="//localhost:1313/tmp/link/" title="Link">⏎</a></p>]]></description>
+<p><a href="http://localhost:1313/tmp/link/" title="Link">⏎</a></p>]]></description>
                 
 
                 <guid isPermaLink="false">tag:localhost:1313,2023-09-24:/tmp/link/</guid>

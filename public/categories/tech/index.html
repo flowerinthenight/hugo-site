@@ -58,7 +58,7 @@
 <meta content="#0d6efd" name="theme-color">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 
-<meta property="og:url" content="//localhost:1313/categories/tech/">
+<meta property="og:url" content="http://localhost:1313/categories/tech/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Tech">
   <meta property="og:locale" content="en">
@@ -184,9 +184,9 @@
 
 
 
-    <link href="//localhost:1313/categories/tech/atom.xml" rel="alternate" type="application/atom+xml">
+    <link href="http://localhost:1313/categories/tech/atom.xml" rel="alternate" type="application/atom+xml">
 
-    <link href="//localhost:1313/categories/tech/rss.xml" rel="alternate" type="application/rss+xml">
+    <link href="http://localhost:1313/categories/tech/rss.xml" rel="alternate" type="application/rss+xml">
 
 
     
@@ -629,6 +629,28 @@ table {
         </div>
     </nav>
 
+
+
+        
+            
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZWHM5C9YT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EZWHM5C9YT');
+        }
+      </script>
+    
+  
 
 
         
@@ -1518,6 +1540,505 @@ No need to include the &#39;homebrew-&#39; prefix $ brew tap flowerinthenight/ta
 </div>
 
         
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-04-06-restore-default-branch-from-tag/">Restore default branch from tag while preserving history</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-04-06</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Fore self reference:
+To restore default branch from a tag while preserving history, do:
+$ git checkout tags/v1.2.3 -b v1.2.3 $ git diff main &gt; /tmp/diff.patch $ git checkout main $ cat /tmp/diff.patch | git apply $ git commit -am &#34;Rolled back to v1.2.3&#34; $ git push origin main</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/git/">Git</a> · <a class="link-secondary" href="/tags/history/">History</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-04-06">April 6, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-04-01-cto-diaries-on-choosing-tech-stack/">CTO Diaries #3: On choosing technology stacks</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-04-01</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">When it comes to tech stack selection, in general, I always approach it in terms of tradeoffs. And when it comes to understanding tradeoffs; what you gain vs what you lose, I think experience plays a big part. In my 18&#43; years of experience building systems, I’ve been bitten enough times that I view most of them with a fair bit of cynicism. I wouldn’t really say that experience definitely makes me better at it; I still have my own biases and experience doesn’t really ‘fix’ the illogical side of me being a human being with emotions.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/cto/">Cto</a> · <a class="link-secondary" href="/tags/cto-diaries/">Cto-Diaries</a> · <a class="link-secondary" href="/tags/diaries/">Diaries</a> · <a class="link-secondary" href="/tags/startup/">Startup</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-04-01">April 1, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">5 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-03-01-authenticate-aws-sdk-v2-external-id/">Authenticating Go AWS SDK v2 using external id</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-03-01</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For self reference:
+Sample code as to how to authenticate aws-sdk-go-v2 using external ids:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/assume/">Assume</a> · <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/external-id/">External-Id</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/roles/">Roles</a> · <a class="link-secondary" href="/tags/sdk/">Sdk</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/v2/">V2</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-03-01">March 1, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2022-10-17-authenticate-aws-sdk-external-id/">Authenticating Go AWS SDK using external id</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2022-10-17</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For self reference:
+Sample code as to how to authenticate aws-sdk-go using external ids:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/assume/">Assume</a> · <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/external-id/">External-Id</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/roles/">Roles</a> · <a class="link-secondary" href="/tags/sdk/">Sdk</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2022-10-17">October 17, 2022</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-28-setup-samba-server/">How I set up my Samba file server</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-03-28</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I installed Samba to my Ubuntu Server (which is an old ThinkPad laptop that has been gathering dust in my closet for ages):
+sudo apt-get install samba I have three 3-TB HDDs that I planned to use as my main server storage; one main server, and the other two for backup. All of these HDDs are in ext4 format.
+Then I created a new directory under /media where I will mount my main server storage:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-03-28">March 28, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup git for my WordPress installation in BlueHost</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-02-24</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I’m not sure if this is the “proper” way to do it. Well, it sort of works for me at the moment so I thought I’ll share it here. I did use FTP at first (using FileZilla) but I didnt really like the workflow.
+Host: BlueHost shared account Client: Windows 10 Prerequisites SSH/Shell Access should be enabled. I enabled this from my cPanel -&gt; SSH/Shell Access menu. Server/Host side SSH to BlueHost host.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/bluehost/">Bluehost</a> · <a class="link-secondary" href="/tags/git/">Git</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/wordpress/">Wordpress</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-02-24">February 24, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-02-22-ssh-from-windows-to-linux-server/">SSH from a Windows client to a Linux server</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-02-22</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">At the moment, I’m still in the process of setting up my home network server. I’ll be taking notes about my progress here so this might be a series of related posts.
+I’m using an Ubuntu 14.04 Server (headless). Client is a Windows 10 machine.
+The simple way Server side Install ssh. How to do this depends on what distro you are using. For Ubuntu, you can do an apt-get install ssh.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/ssh/">Ssh</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-02-22">February 22, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
 
         
     
@@ -1525,36 +2046,6 @@ No need to include the &#39;homebrew-&#39; prefix $ brew tap flowerinthenight/ta
     
     
 
-    
-        <div id="paige-pagination">
-            <div class="d-flex justify-content-center">
-                <nav aria-label="Page list navigation">
-                    <ul class="pagination">
-                        
-                            <li class="page-item  disabled ">
-                                <a aria-label="First" class="page-link" href="/categories/tech/"><span aria-hidden="true">&laquo;</span></a>
-                            </li>
-
-                            <li class="page-item  disabled ">
-                                <a  class="page-link" >
-                                    <span aria-hidden="true">&lsaquo;</span>
-                                </a>
-                            </li>
-
-                            <li class="page-item ">
-                                <a  aria-label="Next"  class="page-link"  href="/categories/tech/page/2/" >
-                                    <span aria-hidden="true">&rsaquo;</span>
-                                </a>
-                            </li>
-
-                            <li class="page-item ">
-                                <a aria-label="Last" class="page-link" href="/categories/tech/page/2/"><span aria-hidden="true">&raquo;</span></a>
-                            </li>
-                        
-                    </ul>
-                </nav>
-            </div>
-        </div>
     
 
     </div>
@@ -1583,6 +2074,8 @@ No need to include the &#39;homebrew-&#39; prefix $ brew tap flowerinthenight/ta
 
     
 
+    
+        <p class="mb-0 text-center text-secondary" id="paige-copyright">© Flowerinthenight, 2016-2024. All rights reserved.</p>
     
 
     <p class="mb-0 text-center" id="paige-credit">

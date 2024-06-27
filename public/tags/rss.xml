@@ -36,7 +36,7 @@
             
 
             
-                <link href="//localhost:1313/tags/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="http://localhost:1313/tags/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -46,7 +46,7 @@
             
 
             
-                <link href="//localhost:1313/tags/" rel="alternate" type="text/html"/>
+                <link href="http://localhost:1313/tags/" rel="alternate" type="text/html"/>
             
         
             
@@ -54,12 +54,14 @@
             
 
             
-                <link href="//localhost:1313/tags/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="http://localhost:1313/tags/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Browse by tag:</description>
@@ -70,16 +72,16 @@
 
         
 
-        <link>//localhost:1313/tags/</link>
+        <link>http://localhost:1313/tags/</link>
 
         
-            <managingEditor>example@example.com (John Doe)</managingEditor>
+            <managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor>
         
 
         <title>Tags · About</title>
 
         
-            <webMaster>example@example.com (John Doe)</webMaster>
+            <webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster>
         
 
         

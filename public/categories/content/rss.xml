@@ -84,7 +84,7 @@
             
 
             
-                <link href="//localhost:1313/categories/content/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="http://localhost:1313/categories/content/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -94,7 +94,7 @@
             
 
             
-                <link href="//localhost:1313/categories/content/" rel="alternate" type="text/html"/>
+                <link href="http://localhost:1313/categories/content/" rel="alternate" type="text/html"/>
             
         
             
@@ -102,12 +102,14 @@
             
 
             
-                <link href="//localhost:1313/categories/content/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="http://localhost:1313/categories/content/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -120,16 +122,16 @@
             <lastBuildDate>2024-01-18 21:32:52 -0700 -0700</lastBuildDate>
         
 
-        <link>//localhost:1313/categories/content/</link>
+        <link>http://localhost:1313/categories/content/</link>
 
         
-            <managingEditor>example@example.com (John Doe)</managingEditor>
+            <managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor>
         
 
         <title>Content · Categories · About</title>
 
         
-            <webMaster>example@example.com (John Doe)</webMaster>
+            <webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster>
         
 
         
@@ -206,7 +208,7 @@ SOFTWARE.
 <h3 id="blockquote-with-attribution">Blockquote with attribution</h3>
 <blockquote>
 <p>Don&rsquo;t communicate by sharing memory, share memory by communicating.<br>
-— <cite>Rob Pike<sup id="fnref:1"><a href="//localhost:1313/tmp/markdown-syntax/#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite></p>
+— <cite>Rob Pike<sup id="fnref:1"><a href="http://localhost:1313/tmp/markdown-syntax/#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></cite></p>
 </blockquote>
 <h2 id="tables">Tables</h2>
 <p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.</p>
@@ -319,7 +321,7 @@ SOFTWARE.
 <hr>
 <ol>
 <li id="fn:1">
-<p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015.&#160;<a href="//localhost:1313/tmp/markdown-syntax/#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>The above quote is excerpted from Rob Pike&rsquo;s <a href="https://www.youtube.com/watch?v=PAAkCSZUG1c">talk</a> during Gopherfest, November 18, 2015.&#160;<a href="http://localhost:1313/tmp/markdown-syntax/#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>]]></description>
@@ -328,7 +330,7 @@ SOFTWARE.
                 <guid isPermaLink="false">tag:localhost:1313,2024-01-18:/tmp/markdown-syntax/</guid>
 
                 
-                    <link>//localhost:1313/tmp/markdown-syntax/</link>
+                    <link>http://localhost:1313/tmp/markdown-syntax/</link>
                 
 
                 
@@ -464,7 +466,7 @@ SOFTWARE.
                 <guid isPermaLink="false">tag:localhost:1313,2023-09-24:/tmp/video/</guid>
 
                 
-                    <link>//localhost:1313/tmp/video/</link>
+                    <link>http://localhost:1313/tmp/video/</link>
                 
 
                 
@@ -511,7 +513,7 @@ SOFTWARE.
 
                 
                     <description><![CDATA[<p>It takes you to the home page.</p>
-<p><a href="//localhost:1313/tmp/link/" title="Link">⏎</a></p>]]></description>
+<p><a href="http://localhost:1313/tmp/link/" title="Link">⏎</a></p>]]></description>
                 
 
                 <guid isPermaLink="false">tag:localhost:1313,2023-09-24:/tmp/link/</guid>
@@ -606,7 +608,7 @@ $$</p>]]></description>
                 <guid isPermaLink="false">tag:localhost:1313,2023-09-18:/tmp/math-typesetting/</guid>
 
                 
-                    <link>//localhost:1313/tmp/math-typesetting/</link>
+                    <link>http://localhost:1313/tmp/math-typesetting/</link>
                 
 
                 
@@ -686,7 +688,7 @@ SOFTWARE.
                 <guid isPermaLink="false">tag:localhost:1313,2023-09-18:/tmp/emoji-support/</guid>
 
                 
-                    <link>//localhost:1313/tmp/emoji-support/</link>
+                    <link>http://localhost:1313/tmp/emoji-support/</link>
                 
 
                 
@@ -738,7 +740,7 @@ SOFTWARE.
                 <guid isPermaLink="false">tag:localhost:1313,2023-09-18:/tmp/alert/</guid>
 
                 
-                    <link>//localhost:1313/tmp/alert/</link>
+                    <link>http://localhost:1313/tmp/alert/</link>
                 
 
                 
