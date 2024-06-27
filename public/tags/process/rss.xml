@@ -25,8 +25,6 @@
     
 
     
-        
-    
 
 
 
@@ -104,52 +102,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>Note that this function assumes the caller to be running as SYSTEM as well (i.e. Windows service).</p>
-<p>For self reference:</p>
-<p>{% gist a5ab54fec75bbabf6dac33b917b44c9b %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-05-31-start-process-as-system/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2017-05-31-start-process-as-system/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Start process as system using CreateProcessAsUser</title>
-                
-            </item>
         
     </channel>
 </rss>

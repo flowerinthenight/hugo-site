@@ -14,11 +14,7 @@
 
 
     
-        
-    
 
-    
-        
     
 
 
@@ -105,117 +101,5 @@
     <title type="html"><![CDATA[Go · Categories · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>Recently, I&rsquo;ve been working on a service that runs on a lot of VM&rsquo;s across different locations. If I have a new service build, updating all of the running instances quickly became a bit of a pain. I have to log in to every VM (in some cases through a VPN) and then do a manual upgrade. Now, there are probably tools that already exist for this type of use case but since I&rsquo;m still learning Go at the moment, I thought this would be a good exercise.</p>
-<p>Basically, this is a Windows service that has an http endpoint that accepts a file upload (in this case, a new version of itself). The service then saves this file, calls the <code>MoveFileEx</code> API with the <code>MOVEFILE_DELAY_UNTIL_REBOOT</code> flag, then reboots the system. I also added a simple client (still written in Go) that will upload the file.</p>
-<p>With these tools, I can now update all the running service instances with a script.</p>
-<p>Full source code <a href="https://github.com/flowerinthenight/go-windows-delay-update-svc">here</a>.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2016-09-27-windows-delay-update-service-go/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2016-09-27-windows-delay-update-service-go/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[A Windows service with an http endpoint for uploading a new version of itself]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>A couple of days ago, I uploaded a generic service in GitHub that has a feature of updating itself. Check out the post <a href="http://flowerinthenight.com/blog/2016/09/27/windows-delay-update-service-go">here</a>. Today, I uploaded the actual service I&rsquo;m using in our CI environment, excluding the configuration file.</p>
-<p>Check out the source code <a href="https://github.com/flowerinthenight/holly">here</a>.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2016-10-07-cron-like-windows-service-go/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2016-10-07-cron-like-windows-service-go/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[A simple cron-like Windows service]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

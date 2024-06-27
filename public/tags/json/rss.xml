@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2017-08-31 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/json/</link>
 
@@ -92,51 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>For self reference:</p>
-<p>{% gist caa8ae4a0112f25eeabb67d0fbd837dd %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-08-31-golang-json-prettify/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2017-08-31-golang-json-prettify/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>JSON prettifier function in Go</title>
-                
-            </item>
         
     </channel>
 </rss>

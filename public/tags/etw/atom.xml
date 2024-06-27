@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,79 +99,5 @@
     <title type="html"><![CDATA[Etw · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>In Docker&rsquo;s <a href="https://docs.docker.com/engine/admin/logging/etwlogs/">ETW logging driver doc</a>, it uses the tool <code>logman</code> to view the logs. In this article, I will show you how to use <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ff685116(v=vs.85).aspx">mftrace</a> to view Docker ETW logs in real-time.</p>
-<p>First, here&rsquo;s a simple application written in Go that logs to STDERR every second.</p>
-<p>{% gist 5ebeaaa38a59f7ce314a0b96b4357d4a %}</p>
-<p>Next, let&rsquo;s create a Docker image (Windows) using the Dockerfile below.</p>
-<p>{% gist 9935cfaf68d8de5b5da2d5c4b15b8d85 %}</p>
-<p>{% highlight shell %}</p>
-<h1 id="assuming-the-code-above-is-saved-in-a-directory-called-demoapp">assuming the code above is saved in a directory called &lsquo;demoapp&rsquo;</h1>
-<p>$ docker build -t demoapp .
-{% endhighlight %}</p>
-<p>To use mftrace, we need a config file.</p>
-<p>{% gist 4bd8968cc08c14cc98e03494624030a5 %}</p>
-<p>Open a command prompt (or Powershell) and run the following command.</p>
-<p>{% highlight shell %}
-$ mftrace.exe -c config.xml
-{% endhighlight %}</p>
-<p>Then open another command prompt (or Powershell) window and run the Docker image.</p>
-<p>{% highlight shell %}
-$ docker run -d &ndash;log-driver=etwlogs &ndash;name demoapp demoapp:latest
-{% endhighlight %}</p>
-<p>You should be able to view the application logs in the mftrace window.</p>
-<p>You can use this <a href="https://github.com/flowerinthenight/20170914-tokyo-mastercloud-presentation">repo</a> instead of creating your own folder structure. Instructions are provided in the README as well as an x86 version of mftrace.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2017-09-20-docker-etwlogs/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2017-09-20-docker-etwlogs/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Using Docker&rsquo;s ETW log driver in Windows]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

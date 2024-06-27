@@ -13,15 +13,13 @@
 
 
     
-
-    
         
     
 
     
 
     
-        
+
     
 
 
@@ -85,6 +83,8 @@
         
 
         
+            <lastBuildDate>2018-09-25 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/monorepo/</link>
 
@@ -98,94 +98,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I posted an <a href="https://tech.mobingi.com/2018/09/25/ouchan-monorepo.html">article</a> for <a href="https://twitter.com/mobingi">@mobingi</a> about its Golang-based monorepo. Please check it out. Thanks.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-09-25-ouchan-monorepo/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2018-09-25-ouchan-monorepo/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Mobingi’s golang monorepo</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I uploaded an example of a golang-based monorepo in <a href="https://github.com/flowerinthenight/golang-monorepo">GitHub</a>. This is a stripped down version of what we have <a href="https://twitter.com/mobingi">@mobingi</a>. If you are planning to have a golang-based monorepo, please have a look.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-02-06-golang-monorepo/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2018-02-06-golang-monorepo/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>A golang-based monorepo example</title>
-                
-            </item>
         
     </channel>
 </rss>

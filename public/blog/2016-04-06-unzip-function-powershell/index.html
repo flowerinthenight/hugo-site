@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2016-04-06" name="description">
+
 
 
     <meta content="Code" name="keywords">
@@ -63,19 +65,17 @@
 <meta property="og:url" content="http://localhost:1313/blog/2016-04-06-unzip-function-powershell/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="A simple unzip function in Powershell">
-  <meta property="og:description" content="{% highlight powershell %} function UnzipFiles($ZipFileName, $DestDir) { Add-Type -Assembly System.IO.Compression.FileSystem [System.IO.Compression.ZipFile]::ExtractToDirectory($ZipFileName, $DestDir) } {% endhighlight %}
-To use the function:
-{% highlight powershell %} UnzipFiles -ZipFileName .\folder\file.zip -DestDir .\destination {% endhighlight %}">
+  <meta property="og:description" content="2016-04-06">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2016-04-06T00:00:00-07:00">
+    <meta property="article:modified_time" content="2016-04-06T00:00:00-07:00">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="A simple unzip function in Powershell">
-  <meta name="twitter:description" content="{% highlight powershell %} function UnzipFiles($ZipFileName, $DestDir) { Add-Type -Assembly System.IO.Compression.FileSystem [System.IO.Compression.ZipFile]::ExtractToDirectory($ZipFileName, $DestDir) } {% endhighlight %}
-To use the function:
-{% highlight powershell %} UnzipFiles -ZipFileName .\folder\file.zip -DestDir .\destination {% endhighlight %}">
+  <meta name="twitter:description" content="2016-04-06">
 
 
 
@@ -693,6 +693,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2016-04-06</p>
+    
 
     
         <div class="mb-3">
@@ -706,6 +708,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2016-04-06">April 6, 2016</time>
+                </p>
             
 
             
@@ -728,17 +734,14 @@ table {
 
 
 
-    <div class="mw-100" id="paige-content"><p>{% highlight powershell %}
-function UnzipFiles($ZipFileName, $DestDir)
-{
-Add-Type -Assembly System.IO.Compression.FileSystem
-[System.IO.Compression.ZipFile]::ExtractToDirectory($ZipFileName, $DestDir)
-}
-{% endhighlight %}</p>
-<p>To use the function:</p>
-<p>{% highlight powershell %}
-UnzipFiles -ZipFileName .\folder\file.zip -DestDir .\destination
-{% endhighlight %}</p>
+    <div class="mw-100" id="paige-content"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">UnzipFiles($ZipFileName</span><span class="p">,</span> <span class="nv">$DestDir</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Add-Type</span> <span class="n">-Assembly</span> <span class="n">System</span><span class="p">.</span><span class="py">IO</span><span class="p">.</span><span class="py">Compression</span><span class="p">.</span><span class="py">FileSystem</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="no">System.IO.Compression.ZipFile</span><span class="p">]::</span><span class="n">ExtractToDirectory</span><span class="p">(</span><span class="nv">$ZipFileName</span><span class="p">,</span> <span class="nv">$DestDir</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>To use the function:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">UnzipFiles</span> <span class="n">-ZipFileName</span> <span class="p">.\</span><span class="n">folder</span><span class="p">\</span><span class="n">file</span><span class="p">.</span><span class="py">zip</span> <span class="n">-DestDir</span> <span class="p">.\</span><span class="n">destination</span>
+</span></span></code></pre></div><br>
 </div>
 
 
@@ -818,13 +821,13 @@ UnzipFiles -ZipFileName .\folder\file.zip -DestDir .\destination
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-04-05-zip-function-powershell/">A simple zip function in Powershell</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2016-08-13-signal-handler-linux-cpp/">A simple signal handler in C/C&#43;&#43; (Linux)</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2016-04-10-trying-bash-on-windows/">Trying out Bash on Windows</a> &rarr;
                 </p>
             
         </div>

@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,65 +99,5 @@
     <title type="html"><![CDATA[Service · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>Yet another service code for Windows. This time, it&rsquo;s an ATL service. ATL services are basically the same as <a href="https://github.com/flowerinthenight/win32-base-service">traditional Windows services</a> but with some advantages.</p>
-<ul>
-<li>Can be started on-demand automatically by the first client call (via COM).</li>
-<li>Clients can call service functions with parameters and return values using COM. In traditional services, clients normally communicate using service control codes and you need some kind of IPC (named pipes, shared memory, etc.) for bi-directional data exchange.</li>
-</ul>
-<p>A client console app is provided to demonstrate service function call with return value and service-to-client notification via IDispatch.</p>
-<p>Check out the source code <a href="https://github.com/flowerinthenight/base-atlcom-svc">here</a>.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2017-01-18-base-atl-service/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2017-01-18-base-atl-service/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[ATL service base code]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

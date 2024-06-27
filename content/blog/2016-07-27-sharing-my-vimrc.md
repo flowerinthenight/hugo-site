@@ -1,14 +1,17 @@
 ---
-layout: post
 title: "Sharing my .vimrc"
-location: "Japan"
+description: "2016-07-27"
+date: "2016-07-27"
+paige:
+  feed:
+    hide_page: true
 categories: ["Code"]
-comments: true
+weight: 1
 ---
 
 Vim has always been my go to editor/IDE when I'm outside of Visual Studio. Here's my base `_vimrc` for Windows.
 
-{% highlight conf %}
+```conf
 let mapleader = " "
 
 filetype off
@@ -226,8 +229,10 @@ nnoremap <leader>hn :set nohlsearch<CR>
 " Diff all windows (should prep two windows for this)
 nnoremap <leader>dt :windo diffthis<CR>
 nnoremap <leader>do :windo diffoff!<CR>
-{% endhighlight %}
+```
 
 ### Update (2016/08/24)
 
 Updated `vimrc` can be viewed [here](https://github.com/flowerinthenight/vim).
+
+<br>

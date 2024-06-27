@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,59 +99,5 @@
     <title type="html"><![CDATA[Rust · Categories · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>I&rsquo;ve been dabbling a bit with Rust and so far, I&rsquo;m liking it. I&rsquo;ll probably use it more as replacement for my C/C++ projects. And I just uploaded a very simple ETW wrapper I&rsquo;m using in one of my side projects. You can check out the source code <a href="https://github.com/flowerinthenight/rusttrace">here</a>.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2016-12-26-rust-etw/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2016-12-26-rust-etw/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Simple ETW wrapper for Rust]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

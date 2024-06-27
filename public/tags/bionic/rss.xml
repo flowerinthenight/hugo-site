@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2018-05-06 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/bionic/</link>
 
@@ -92,58 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I just upgraded my home server from Ubuntu 16.04 LTS to 18.04 LTS without any problems so far. For context, this server runs a Samba file server using ZFS. Although after update, I had to run the following command to my pool:</p>
-<p>{% highlight shell %}</p>
-<h1 id="pool-name-is-m0">pool name is &lsquo;m0&rsquo;</h1>
-<p>$ sudo zpool upgrade m0
-{% endhighlight %}</p>
-<p>By the way, at the time of this writing, Ubuntu Server update is not yet available (I think you have to wait for 18.04.1). I used the following command to update mine:</p>
-<p>{% highlight shell %}
-$ do-release-upgrade -m server -d
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-05-06-xenial-to-bionic-lts-server-upgrade-zfs/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2018-05-06-xenial-to-bionic-lts-server-upgrade-zfs/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Ubuntu 16.04 LTS to Ubuntu 18.04 LTS</title>
-                
-            </item>
         
     </channel>
 </rss>

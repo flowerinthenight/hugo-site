@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2016-12-26 00:00:00 -0800 PST</lastBuildDate>
+        
 
         <link>http://localhost:1313/categories/etw/</link>
 
@@ -92,50 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I&rsquo;ve been dabbling a bit with Rust and so far, I&rsquo;m liking it. I&rsquo;ll probably use it more as replacement for my C/C++ projects. And I just uploaded a very simple ETW wrapper I&rsquo;m using in one of my side projects. You can check out the source code <a href="https://github.com/flowerinthenight/rusttrace">here</a>.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-12-26-rust-etw/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2016-12-26-rust-etw/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Simple ETW wrapper for Rust</title>
-                
-            </item>
         
     </channel>
 </rss>

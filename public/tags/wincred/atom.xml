@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,85 +99,5 @@
     <title type="html"><![CDATA[Wincred · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>This post is to show a simple way of using Docker&rsquo;s <a href="https://github.com/docker/docker-credential-helpers">credential helper package</a> to utilize the system&rsquo;s native credential store as storage for your Golang-based CLI applications&rsquo; login credentials. This means Keychain for OSX, <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/aa374792(v=vs.85).aspx"><code>wincred</code></a> for Windows, and <a href="https://www.passwordstore.org/"><code>pass</code></a> for Linux. We use <a href="https://www.passwordstore.org/"><code>pass</code></a> here since <a href="https://specifications.freedesktop.org/secret-service/"><code>secretservice</code></a>, although supported, doesn&rsquo;t work out of the box in headless servers.</p>
-<p>Here&rsquo;s a simple implementation of our <code>Set</code>, <code>Get</code>, and <code>Del</code> functions.</p>
-<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore.go?footer=minimal"></script>
-<p>Then we create our <code>_darwin.go</code>, <code>_linux.go</code>, and <code>_windows.go</code> files for OS specific implementations.</p>
-<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore_darwin.go?footer=minimal"></script>
-<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore_windows.go?footer=minimal"></script>
-<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore_linux.go?footer=minimal"></script>
-<p>Here&rsquo;s a quickstart guide to setup <a href="https://www.passwordstore.org/"><code>pass</code></a> in Ubuntu systems.</p>
-<p>{% highlight shell %}</p>
-<h1 id="install-pass">install pass</h1>
-<p>$ sudo apt-get install pass</p>
-<h1 id="generate-your-own-key-using-gpg2-do-not-use-a-passphrase">generate your own key using gpg2, do not use a passphrase</h1>
-<p>$ gpg2 &ndash;gen-key</p>
-<h1 id="if-the-cmd-seems-stuck-due-to-lack-of-entropy-you-can-open-another-window-and-run-the-ff-cmd">if the cmd seems stuck due to lack of entropy, you can open another window and run the ff cmd:</h1>
-<h1 id="dd-ifdevsda-ofdevzero">dd if=/dev/sda of=/dev/zero</h1>
-<h1 id="list-your-keys">list your keys</h1>
-<h2 id="homeusergnupgpubringkbx">$ gpg2 &ndash;list-keys
-/home/user/.gnupg/pubring.kbx</h2>
-<p>pub   rsa2048/5486B0F6 2017-09-22 [SC]
-uid         [ultimate] IamGroot <a href="mailto:iamgroot@domain.com">iamgroot@domain.com</a>
-sub   rsa2048/CDC4C430 2017-09-22 [E]</p>
-<h1 id="initialize-pass-use-the-pub-key-id">initialize pass (use the pub key id)</h1>
-<p>$ pass init 5486B0F6
-{% endhighlight %}</p>
-<p>Here&rsquo;s an example on how to use our nativestore functions.</p>
-<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore_test.go?footer=minimal"></script>
-<p>Finally, you can refer to the whole package <a href="https://github.com/mobingilabs/mobingi-sdk-go/tree/master/pkg/nativestore">here</a>.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2017-10-30-nativestore/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2017-10-30-nativestore/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Using OS specific stores for storing CLI credentials for golang apps]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

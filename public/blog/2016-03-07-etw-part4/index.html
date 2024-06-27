@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2016-03-07" name="description">
+
 
 
     <meta content="Code" name="keywords">
@@ -63,19 +65,17 @@
 <meta property="og:url" content="http://localhost:1313/blog/2016-03-07-etw-part4/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="[Part 4] Log collection">
-  <meta property="og:description" content="Check out the codes in GitHub.
-Getting the logs Now that I have my modules spitting out logs for me, it’s time to actually consume (or view) them. Most of the time, I use MFTrace and logman tools.
-MFTrace Although MFTrace is primarily a tool for generating logs for Media Foundation apps, it is a great tool for viewing ETW logs in general as well. It is included in the MS SDK.">
+  <meta property="og:description" content="2016-03-07">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2016-03-07T00:00:00-08:00">
+    <meta property="article:modified_time" content="2016-03-07T00:00:00-08:00">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="[Part 4] Log collection">
-  <meta name="twitter:description" content="Check out the codes in GitHub.
-Getting the logs Now that I have my modules spitting out logs for me, it’s time to actually consume (or view) them. Most of the time, I use MFTrace and logman tools.
-MFTrace Although MFTrace is primarily a tool for generating logs for Media Foundation apps, it is a great tool for viewing ETW logs in general as well. It is included in the MS SDK.">
+  <meta name="twitter:description" content="2016-03-07">
 
 
 
@@ -693,6 +693,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2016-03-07</p>
+    
 
     
         <div class="mb-3">
@@ -706,6 +708,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2016-03-07">March 7, 2016</time>
+                </p>
             
 
             
@@ -753,42 +759,29 @@ table {
 <h1 id="mftrace">MFTrace<a aria-label="Link to this section" class="paige-header-link" href="#mftrace"></a></h1>
 <p>Although <code>MFTrace</code> is primarily a tool for generating logs for Media Foundation apps, it is a great tool for viewing ETW logs in general as well. It is included in the MS SDK.</p>
 <p>To view logs in real time, I use this command in either Powershell or command line:</p>
-<p>{% highlight shell %}
-mftrace -c config.xml
-{% endhighlight %}</p>
-<p>To stop the trace collection, press <code>CTRL+C</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mftrace -c config.xml
+</span></span></code></pre></div><p>To stop the trace collection, press <code>CTRL+C</code>.</p>
 <h1 id="logman">logman<a aria-label="Link to this section" class="paige-header-link" href="#logman"></a></h1>
 <p><code>logman</code> is a very powerful builtin performance counter and event trace log tool from Microsoft. For more information, have a look at <a href="https://technet.microsoft.com/en-us/library/bb490956.aspx">here</a>.</p>
 <p>You can use <code>logman</code> as alternative to <code>MFTrace</code>.</p>
 <h2 id="start-tracing">Start tracing<a aria-label="Link to this section" class="paige-header-link" href="#start-tracing"></a></h2>
-<p>{% highlight shell %}
-logman start <name> -p &lt;provider_guid_or_name&gt; <kw> <level> -o &lt;output.etl&gt; -ets
-{% endhighlight %}</p>
-<h3 id="examples">Examples<a aria-label="Link to this section" class="paige-header-link" href="#examples"></a></h3>
-<p>{% highlight shell %}
-logman start lms -p {3A8FD7D2-CAB3-455D-A8E5-9E1741365FEB} 0x1 win:Verbose -o c:\output.etl -ets
-logman start lms -p MyProviderName 0x3 win:Informational -o c:\output.etl -ets
-logman start lms -p {277c604b-1962-47fa-9307-7ce0855dfea6} 0xffffffffffffffff 0xff -o c:\output.etl -ets
-{% endhighlight %}</p>
-<h2 id="stop-tracing">Stop tracing<a aria-label="Link to this section" class="paige-header-link" href="#stop-tracing"></a></h2>
-<p>{% highlight shell %}
-logman stop <name> -ets
-{% endhighlight %}</p>
-<h3 id="examples-1">Examples<a aria-label="Link to this section" class="paige-header-link" href="#examples-1"></a></h3>
-<p>{% highlight shell %}
-logman stop lms -ets
-{% endhighlight %}</p>
-<h1 id="collecting-etw-traces-from-testproduction-systems">Collecting ETW traces from test/production systems<a aria-label="Link to this section" class="paige-header-link" href="#collecting-etw-traces-from-testproduction-systems"></a></h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">logman start &lt;name&gt; -p &lt;provider_guid_or_name&gt; &lt;kw&gt; &lt;level&gt; -o &lt;output.etl&gt; -ets
+</span></span></code></pre></div><h3 id="examples">Examples<a aria-label="Link to this section" class="paige-header-link" href="#examples"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">logman start lms -p <span class="o">{</span>3A8FD7D2-CAB3-455D-A8E5-9E1741365FEB<span class="o">}</span> 0x1 win:Verbose -o c:<span class="se">\o</span>utput.etl -ets
+</span></span><span class="line"><span class="cl">logman start lms -p MyProviderName 0x3 win:Informational -o c:<span class="se">\o</span>utput.etl -ets
+</span></span><span class="line"><span class="cl">logman start lms -p <span class="o">{</span>277c604b-1962-47fa-9307-7ce0855dfea6<span class="o">}</span> 0xffffffffffffffff 0xff -o c:<span class="se">\o</span>utput.etl -ets
+</span></span></code></pre></div><h2 id="stop-tracing">Stop tracing<a aria-label="Link to this section" class="paige-header-link" href="#stop-tracing"></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">logman stop &lt;name&gt; -ets
+</span></span></code></pre></div><h3 id="examples-1">Examples<a aria-label="Link to this section" class="paige-header-link" href="#examples-1"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">logman stop lms -ets
+</span></span></code></pre></div><h1 id="collecting-etw-traces-from-testproduction-systems">Collecting ETW traces from test/production systems<a aria-label="Link to this section" class="paige-header-link" href="#collecting-etw-traces-from-testproduction-systems"></a></h1>
 <p>To collect ETW trace logs from test/production systems, manifest file and message/resource file need not be registered.</p>
-<p>{% highlight shell %}
-mftrace -c config.xml -o c:\output.etl
-{% endhighlight %}</p>
-<p><code>c:\output.etl</code> is just an example. You can use any location and any filename as long as the extension is .etl. The output .etl file can only be read on a system where the manifest file and the resource/message file are registered. To read the traces:</p>
-<p>{% highlight shell %}
-tracerpt -y output.etl
-{% endhighlight %}</p>
-<p>The default readable output file that contains all the trace information will be <code>dumpfile.xml</code>. A <code>summary.txt</code> file will also be generated. For more information about <code>tracerpt</code>, have a look at <a href="https://technet.microsoft.com/en-us/library/bb490959.aspx">here</a>.</p>
-<p>Check out <a href="http://flowerinthenight.com/blog/2016/03/19/etw-part5">part 5</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mftrace -c config.xml -o c:<span class="se">\o</span>utput.etl
+</span></span></code></pre></div><p><code>c:\output.etl</code> is just an example. You can use any location and any filename as long as the extension is .etl. The output .etl file can only be read on a system where the manifest file and the resource/message file are registered. To read the traces:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">tracerpt -y output.etl
+</span></span></code></pre></div><p>The default readable output file that contains all the trace information will be <code>dumpfile.xml</code>. A <code>summary.txt</code> file will also be generated. For more information about <code>tracerpt</code>, have a look at <a href="https://technet.microsoft.com/en-us/library/bb490959.aspx">here</a>.</p>
+<p>Check out <a href="/blog/2016-03-19-etw-part5/">part 5</a>.</p>
+<br>
 </div>
 
 
@@ -868,13 +861,13 @@ tracerpt -y output.etl
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-03-19-etw-part5/">[Part 5] Logging with C# applications</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2016-03-03-etw-part3/">[Part 3] Logging with C/C&#43;&#43; applications</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2016-03-19-etw-part5/">[Part 5] Logging with C# applications</a> &rarr;
                 </p>
             
         </div>

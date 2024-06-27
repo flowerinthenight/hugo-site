@@ -729,8 +729,7 @@ table {
 
     
         
-            
-            
+    
 
     
         
@@ -742,16 +741,22 @@ table {
                 
             
         
-    
+            
+                
+            
         
             
                 
             
-                
+        
             
                 
             
+        
+            
                 
+            
+        
             
                 
             
@@ -944,74 +949,11 @@ This post is a bit of a departure from my usual golang/cloud-related ramblings. 
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2017-01-18-base-atl-service/">ATL service base code</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Yet another service code for Windows. This time, it’s an ATL service. ATL services are basically the same as traditional Windows services but with some advantages.
-Can be started on-demand automatically by the first client call (via COM). Clients can call service functions with parameters and return values using COM. In traditional services, clients normally communicate using service control codes and you need some kind of IPC (named pipes, shared memory, etc.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/atl/">Atl</a> · <a class="link-secondary" href="/tags/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/tags/service/">Service</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
         <p class="mb-0 paige-title text-center"><a href="/blog/2018-04-30-camera-class-filter-driver/">Camera Class Filter Driver for Windows</a></p>
     
 
+    
+        <p class="mb-0 paige-description text-center">2018-04-30</p>
     
 
     
@@ -1029,137 +971,9 @@ Can be started on-demand automatically by the first client call (via COM). Clien
     
 
     
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2017-03-28-simple-touch-input-funcs-windows/">Simple touch/swipe input function in Windows</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">For self reference:
-Simulate a touch input down, drag, up programmatically.
-{% gist bd264001034db093413a0bb233760588 %}</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/tags/input/">Input</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-04-30">April 30, 2018</time>
         </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2017-05-31-start-process-as-system/">Start process as system using CreateProcessAsUser</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Note that this function assumes the caller to be running as SYSTEM as well (i.e. Windows service).
-For self reference:
-{% gist a5ab54fec75bbabf6dac33b917b44c9b %}</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/tags/process/">Process</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
-        </p>
-    
-
-    
-
-    
-
     
 
     
@@ -1209,14 +1023,12 @@ For self reference:
     
 
     
+        <p class="mb-0 paige-description text-center">2017-09-20</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">In Docker’s ETW logging driver doc, it uses the tool logman to view the logs. In this article, I will show you how to use mftrace to view Docker ETW logs in real-time.
-First, here’s a simple application written in Go that logs to STDERR every second.
-{% gist 5ebeaaa38a59f7ce314a0b96b4357d4a %}
-Next, let’s create a Docker image (Windows) using the Dockerfile below.
-{% gist 9935cfaf68d8de5b5da2d5c4b15b8d85 %}
-{% highlight shell %}</p>
+        <p class="fst-italic mb-0 paige-summary text-center">In Docker’s ETW logging driver doc, it uses the tool logman to view the logs. In this article, I will show you how to use mftrace to view Docker ETW logs in real-time. First, here’s a simple application written in Go that logs to STDERR every second. Next, let’s create a Docker image (Windows) using the Dockerfile below.
+assuming the code above is saved in a directory called &#39;demoapp&#39; $ docker build -t demoapp .</p>
     
 
     
@@ -1229,6 +1041,223 @@ Next, let’s create a Docker image (Windows) using the Dockerfile below.
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-09-20">September 20, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-05-31-start-process-as-system/">Start process as system using CreateProcessAsUser</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-05-31</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Note that this function assumes the caller to be running as SYSTEM as well (i.e. Windows service).
+For self reference:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/tags/process/">Process</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-05-31">May 31, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-03-28-simple-touch-input-funcs-windows/">Simple touch/swipe input function in Windows</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-03-28</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For self reference:
+Simulate a touch input down, drag, up programmatically.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/tags/input/">Input</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-03-28">March 28, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-01-18-base-atl-service/">ATL service base code</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-01-18</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Yet another service code for Windows. This time, it’s an ATL service. ATL services are basically the same as traditional Windows services but with some advantages.
+Can be started on-demand automatically by the first client call (via COM). Clients can call service functions with parameters and return values using COM. In traditional services, clients normally communicate using service control codes and you need some kind of IPC (named pipes, shared memory, etc.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/atl/">Atl</a> · <a class="link-secondary" href="/tags/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/tags/service/">Service</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-01-18">January 18, 2017</time>
+        </p>
     
 
     

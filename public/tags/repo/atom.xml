@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,59 +99,5 @@
     <title type="html"><![CDATA[Repo · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>I posted an <a href="https://tech.mobingi.com/2018/12/05/mochi-k8s-repo.html">article</a> for <a href="https://twitter.com/mobingi">@mobingi</a> about its Kubernetes clusters repo. Please check it out. Thanks.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2018-12-27-mochi-k8s-repo/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2018-12-27-mochi-k8s-repo/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Mobingi&rsquo;s Kubernetes clusters repo]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

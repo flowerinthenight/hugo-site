@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2017-06-30 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/rabbitmq/</link>
 
@@ -92,50 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I uploaded a <a href="https://github.com/flowerinthenight/rmq">simple wrapper</a> to <a href="https://github.com/streadway/amqp">streadway/amqp</a> library for RabbitMQ with support for auto reconnections. This is a simplified version of what I&rsquo;m using in production.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-06-30-amqp-wrapper/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2017-06-30-amqp-wrapper/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Wrapper for amqp library for RabbitMQ</title>
-                
-            </item>
         
     </channel>
 </rss>

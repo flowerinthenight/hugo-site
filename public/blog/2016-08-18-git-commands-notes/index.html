@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2016-08-18" name="description">
+
 
 
     <meta content="Code" name="keywords">
@@ -63,29 +65,17 @@
 <meta property="og:url" content="http://localhost:1313/blog/2016-08-18-git-commands-notes/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="My commonly used commands in GIT">
-  <meta property="og:description" content="Update 2017/03/24: Transferred to a separate repository here.
-For personal reference:
-Reset a file {% highlight shell %} git checkout HEAD – my-file.txt {% endhighlight %}
-Delete last commit {% highlight shell %} git reset –hard HEAD~1 {% endhighlight %}
-Delete local branch {% highlight shell %} git branch -d {% endhighlight %}
-or to force delete
-{% highlight shell %} git branch -D {% endhighlight %}
-Delete branch from remote repository {% highlight shell %} git push origin –delete {% endhighlight %}">
+  <meta property="og:description" content="2016-08-18">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2016-08-18T00:00:00-07:00">
+    <meta property="article:modified_time" content="2016-08-18T00:00:00-07:00">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="My commonly used commands in GIT">
-  <meta name="twitter:description" content="Update 2017/03/24: Transferred to a separate repository here.
-For personal reference:
-Reset a file {% highlight shell %} git checkout HEAD – my-file.txt {% endhighlight %}
-Delete last commit {% highlight shell %} git reset –hard HEAD~1 {% endhighlight %}
-Delete local branch {% highlight shell %} git branch -d {% endhighlight %}
-or to force delete
-{% highlight shell %} git branch -D {% endhighlight %}
-Delete branch from remote repository {% highlight shell %} git push origin –delete {% endhighlight %}">
+  <meta name="twitter:description" content="2016-08-18">
 
 
 
@@ -703,6 +693,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2016-08-18</p>
+    
 
     
         <div class="mb-3">
@@ -716,6 +708,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2016-08-18">August 18, 2016</time>
+                </p>
             
 
             
@@ -766,84 +762,53 @@ table {
     <div class="mw-100" id="paige-content"><p>Update 2017/03/24: Transferred to a separate repository <a href="https://github.com/flowerinthenight/git-cheatsheet">here</a>.</p>
 <p>For personal reference:</p>
 <h3 id="reset-a-file">Reset a file<a aria-label="Link to this section" class="paige-header-link" href="#reset-a-file"></a></h3>
-<p>{% highlight shell %}
-git checkout HEAD &ndash; my-file.txt
-{% endhighlight %}</p>
-<h3 id="delete-last-commit">Delete last commit<a aria-label="Link to this section" class="paige-header-link" href="#delete-last-commit"></a></h3>
-<p>{% highlight shell %}
-git reset &ndash;hard HEAD~1
-{% endhighlight %}</p>
-<h3 id="delete-local-branch">Delete local branch<a aria-label="Link to this section" class="paige-header-link" href="#delete-local-branch"></a></h3>
-<p>{% highlight shell %}
-git branch -d <branch-name>
-{% endhighlight %}</p>
-<p>or to force delete</p>
-<p>{% highlight shell %}
-git branch -D <branch-name>
-{% endhighlight %}</p>
-<h3 id="delete-branch-from-remote-repository">Delete branch from remote repository<a aria-label="Link to this section" class="paige-header-link" href="#delete-branch-from-remote-repository"></a></h3>
-<p>{% highlight shell %}
-git push origin &ndash;delete <remote-branch-name>
-{% endhighlight %}</p>
-<h3 id="search-for-the-merge-commit-from-a-specific-commit">Search for the merge commit from a specific commit<a aria-label="Link to this section" class="paige-header-link" href="#search-for-the-merge-commit-from-a-specific-commit"></a></h3>
-<p>{% highlight shell %}
-git log <SHA>..master &ndash;ancestry-path &ndash;merges
-{% endhighlight %}</p>
-<h3 id="search-for-a-commit-message">Search for a commit message<a aria-label="Link to this section" class="paige-header-link" href="#search-for-a-commit-message"></a></h3>
-<p>{% highlight shell %}
-git log | grep <pattern>
-{% endhighlight %}</p>
-<h3 id="list-commits-on-range-line-of-codes-for-one-file">List commits on range line of codes for one file<a aria-label="Link to this section" class="paige-header-link" href="#list-commits-on-range-line-of-codes-for-one-file"></a></h3>
-<p>{% highlight shell %}
-git blame -L&lt;line#&gt;,+<offset> &ndash; <filename>
-{% endhighlight %}</p>
-<p>For example, three lines starting from line 257 of main.cpp</p>
-<p>{% highlight shell %}
-git blame -L257,+3 &ndash; main.cpp
-{% endhighlight %}</p>
-<h3 id="history-of-a-line-or-lines-in-a-file">History of a line (or lines) in a file<a aria-label="Link to this section" class="paige-header-link" href="#history-of-a-line-or-lines-in-a-file"></a></h3>
-<p>{% highlight shell %}
-git log &ndash;topo-order &ndash;graph -u -L <line-start>,<line-end>:<file>
-{% endhighlight %}</p>
-<p>For example, history of line 155 of main.cpp</p>
-<p>{% highlight shell %}
-git log &ndash;topo-order &ndash;graph -u -L 155,155:main.cpp
-{% endhighlight %}</p>
-<h3 id="compare-diff-a-file-from-the-current-branch-to-another-branch">Compare (diff) a file from the current branch to another branch<a aria-label="Link to this section" class="paige-header-link" href="#compare-diff-a-file-from-the-current-branch-to-another-branch"></a></h3>
-<p>{% highlight shell %}
-git diff ..<target-branch> <path-to-file>
-{% endhighlight %}</p>
-<p>Or if <code>difftool</code> is configured</p>
-<p>{% highlight shell %}
-git difftool ..<target-branch> <path-to-file>
-{% endhighlight %}</p>
-<h3 id="rebasesquash-all-branch-commits">Rebase/squash all branch commits<a aria-label="Link to this section" class="paige-header-link" href="#rebasesquash-all-branch-commits"></a></h3>
-<p>{% highlight shell %}
-git checkout -b new-branch
-modify&hellip;
-commit&hellip;
-&hellip;
-git rebase -i master
-(sometimes, I branch out of master for a clean branch and do a git rebase -i clean-branch)
-git checkout master
-git rebase new-branch
-(delete clean-branch)
-{% endhighlight %}</p>
-<h3 id="combine-all-branch-commits-to-one-before-merging-to-master-sort-of-like-the-one-above">Combine all branch commits to one before merging to master (sort of like the one above)<a aria-label="Link to this section" class="paige-header-link" href="#combine-all-branch-commits-to-one-before-merging-to-master-sort-of-like-the-one-above"></a></h3>
-<p>{% highlight shell %}
-git checkout master
-git checkout -b clean
-git merge &ndash;squash branch_to_merge_to_one_commit
-git commit
-(add commit message)
-git checkout master
-git merge clean
-{% endhighlight %}</p>
-<h3 id="custom-format-for-log">Custom format for log<a aria-label="Link to this section" class="paige-header-link" href="#custom-format-for-log"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout HEAD -- my-file.txt
+</span></span></code></pre></div><h3 id="delete-last-commit">Delete last commit<a aria-label="Link to this section" class="paige-header-link" href="#delete-last-commit"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git reset --hard HEAD~1
+</span></span></code></pre></div><h3 id="delete-local-branch">Delete local branch<a aria-label="Link to this section" class="paige-header-link" href="#delete-local-branch"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -d &lt;branch-name&gt;
+</span></span></code></pre></div><p>or to force delete</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git branch -D &lt;branch-name&gt;
+</span></span></code></pre></div><h3 id="delete-branch-from-remote-repository">Delete branch from remote repository<a aria-label="Link to this section" class="paige-header-link" href="#delete-branch-from-remote-repository"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git push origin --delete &lt;remote-branch-name&gt;
+</span></span></code></pre></div><h3 id="search-for-the-merge-commit-from-a-specific-commit">Search for the merge commit from a specific commit<a aria-label="Link to this section" class="paige-header-link" href="#search-for-the-merge-commit-from-a-specific-commit"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log &lt;SHA&gt;..master --ancestry-path --merges
+</span></span></code></pre></div><h3 id="search-for-a-commit-message">Search for a commit message<a aria-label="Link to this section" class="paige-header-link" href="#search-for-a-commit-message"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log <span class="p">|</span> grep &lt;pattern&gt;
+</span></span></code></pre></div><h3 id="list-commits-on-range-line-of-codes-for-one-file">List commits on range line of codes for one file<a aria-label="Link to this section" class="paige-header-link" href="#list-commits-on-range-line-of-codes-for-one-file"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git blame -L&lt;line#&gt;,+&lt;offset&gt; -- &lt;filename&gt;
+</span></span></code></pre></div><p>For example, three lines starting from line 257 of main.cpp</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git blame -L257,+3 -- main.cpp
+</span></span></code></pre></div><h3 id="history-of-a-line-or-lines-in-a-file">History of a line (or lines) in a file<a aria-label="Link to this section" class="paige-header-link" href="#history-of-a-line-or-lines-in-a-file"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --topo-order --graph -u -L &lt;line-start&gt;,&lt;line-end&gt;:&lt;file&gt;
+</span></span></code></pre></div><p>For example, history of line 155 of main.cpp</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --topo-order --graph -u -L 155,155:main.cpp
+</span></span></code></pre></div><h3 id="compare-diff-a-file-from-the-current-branch-to-another-branch">Compare (diff) a file from the current branch to another branch<a aria-label="Link to this section" class="paige-header-link" href="#compare-diff-a-file-from-the-current-branch-to-another-branch"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git diff ..&lt;target-branch&gt; &lt;path-to-file&gt;
+</span></span></code></pre></div><p>Or if <code>difftool</code> is configured</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git difftool ..&lt;target-branch&gt; &lt;path-to-file&gt;
+</span></span></code></pre></div><h3 id="rebasesquash-all-branch-commits">Rebase/squash all branch commits<a aria-label="Link to this section" class="paige-header-link" href="#rebasesquash-all-branch-commits"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout -b new-branch
+</span></span><span class="line"><span class="cl">modify...
+</span></span><span class="line"><span class="cl">commit...
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">git rebase -i master
+</span></span><span class="line"><span class="cl"><span class="o">(</span>sometimes, I branch out of master <span class="k">for</span> a clean branch and <span class="k">do</span> a git rebase -i clean-branch<span class="o">)</span>
+</span></span><span class="line"><span class="cl">git checkout master
+</span></span><span class="line"><span class="cl">git rebase new-branch
+</span></span><span class="line"><span class="cl"><span class="o">(</span>delete clean-branch<span class="o">)</span>
+</span></span></code></pre></div><h3 id="combine-all-branch-commits-to-one-before-merging-to-master-sort-of-like-the-one-above">Combine all branch commits to one before merging to master (sort of like the one above)<a aria-label="Link to this section" class="paige-header-link" href="#combine-all-branch-commits-to-one-before-merging-to-master-sort-of-like-the-one-above"></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git checkout master
+</span></span><span class="line"><span class="cl">git checkout -b clean
+</span></span><span class="line"><span class="cl">git merge --squash branch_to_merge_to_one_commit
+</span></span><span class="line"><span class="cl">git commit
+</span></span><span class="line"><span class="cl"><span class="o">(</span>add commit message<span class="o">)</span>
+</span></span><span class="line"><span class="cl">git checkout master
+</span></span><span class="line"><span class="cl">git merge clean
+</span></span></code></pre></div><h3 id="custom-format-for-log">Custom format for log<a aria-label="Link to this section" class="paige-header-link" href="#custom-format-for-log"></a></h3>
 <p>Add to global <code>.gitconfig</code> using <code>git config --global alias.logp &quot;...&quot;</code></p>
-<p>{% highlight shell %}
-git log &ndash;pretty=format:&rsquo;%Cred%h %C(yellow)%d%Creset %s %Cgreen(%cr|%ci) %C(bold blue)[%an]%Creset'
-{% endhighlight %}</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">git log --pretty<span class="o">=</span>format:<span class="s1">&#39;%Cred%h %C(yellow)%d%Creset %s %Cgreen(%cr|%ci) %C(bold blue)[%an]%Creset&#39;</span>
+</span></span></code></pre></div><br>
 </div>
 
 
@@ -923,13 +888,13 @@ git log &ndash;pretty=format:&rsquo;%Cred%h %C(yellow)%d%Creset %s %Cgreen(%cr|%
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2017-01-04-bookshelf/">New &#39;Bookshelf&#39; page</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-08-13-signal-handler-linux-cpp/">A simple signal handler in C/C&#43;&#43; (Linux)</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2018-11-19-dynamodbstreams-lambda-sns-sqs/">Monitoring dynamodb table using dynamodbstream, lambda, SNS and SQS</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2016-08-19-dir-cleanup-tool/">Simple directory cleanup tool for Windows (golang)</a> &rarr;
                 </p>
             
         </div>

@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2016-05-06" name="description">
+
 
 
     <meta content="Code" name="keywords">
@@ -63,19 +65,17 @@
 <meta property="og:url" content="http://localhost:1313/blog/2016-05-06-import-environment-powershell/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="A simple Powershell function to import an environment">
-  <meta property="og:description" content="A couple of days ago, I was working on a powershell-based script for mstest automation and I needed to call vsdevcmd.bat from Visual Studio’s tools folder.
-{% highlight powershell %} function Invoke-Environment([Parameter(Mandatory=1)][string]$Command, [switch]$Output, [switch]$Force) { $stream = if ($Output) { ($temp = [IO.Path]::GetTempFileName()) } else { ’nul’ } $operator = if ($Force) {’&amp;’} else {’&amp;&amp;&#39;}
-foreach($_ in cmd /c &#34; $Command &gt; `&#34;$stream`&#34; 2&gt;&amp;1 $operator SET&#34;) { if ($_ -match &#39;^([^=]&#43;)=(.">
+  <meta property="og:description" content="2016-05-06">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2016-05-06T00:00:00-07:00">
+    <meta property="article:modified_time" content="2016-05-06T00:00:00-07:00">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="A simple Powershell function to import an environment">
-  <meta name="twitter:description" content="A couple of days ago, I was working on a powershell-based script for mstest automation and I needed to call vsdevcmd.bat from Visual Studio’s tools folder.
-{% highlight powershell %} function Invoke-Environment([Parameter(Mandatory=1)][string]$Command, [switch]$Output, [switch]$Force) { $stream = if ($Output) { ($temp = [IO.Path]::GetTempFileName()) } else { ’nul’ } $operator = if ($Force) {’&amp;’} else {’&amp;&amp;&#39;}
-foreach($_ in cmd /c &#34; $Command &gt; `&#34;$stream`&#34; 2&gt;&amp;1 $operator SET&#34;) { if ($_ -match &#39;^([^=]&#43;)=(.">
+  <meta name="twitter:description" content="2016-05-06">
 
 
 
@@ -693,6 +693,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2016-05-06</p>
+    
 
     
         <div class="mb-3">
@@ -706,6 +708,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2016-05-06">May 6, 2016</time>
+                </p>
             
 
             
@@ -729,31 +735,28 @@ table {
 
 
     <div class="mw-100" id="paige-content"><p>A couple of days ago, I was working on a powershell-based script for mstest automation and I needed to call <code>vsdevcmd.bat</code> from Visual Studio&rsquo;s tools folder.</p>
-<p>{% highlight powershell %}
-function Invoke-Environment([Parameter(Mandatory=1)][string]$Command, [switch]$Output, [switch]$Force)
-{
-$stream = if ($Output) { ($temp = [IO.Path]::GetTempFileName()) } else { &rsquo;nul&rsquo; }
-$operator = if ($Force) {&rsquo;&amp;&rsquo;} else {&rsquo;&amp;&amp;'}</p>
-<pre><code>foreach($_ in cmd /c &quot; $Command &gt; `&quot;$stream`&quot; 2&gt;&amp;1 $operator SET&quot;)
-{
-    if ($_ -match '^([^=]+)=(.*)')
-    {
-        [System.Environment]::SetEnvironmentVariable($matches[1], $matches[2])
-    }
-}
-
-if ($Output)
-{
-    Get-Content -LiteralPath $temp
-    Remove-Item -LiteralPath $temp
-}
-</code></pre>
-<p>}
-{% endhighlight %}</p>
-<p>To use the function:</p>
-<p>{% highlight powershell %}
-Invoke-Environment &lsquo;&ldquo;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat&rdquo;&rsquo;
-{% endhighlight %}</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Invoke-Environment([Parameter(Mandatory=1)][string]$Command</span><span class="p">,</span> <span class="p">[</span><span class="no">switch</span><span class="p">]</span><span class="nv">$Output</span><span class="p">,</span> <span class="p">[</span><span class="no">switch</span><span class="p">]</span><span class="nv">$Force</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$stream</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$Output</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="nv">$temp</span> <span class="p">=</span> <span class="p">[</span><span class="no">IO.Path</span><span class="p">]::</span><span class="n">GetTempFileName</span><span class="p">())</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="s1">&#39;nul&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$operator</span> <span class="p">=</span> <span class="k">if</span> <span class="p">(</span><span class="nv">$Force</span><span class="p">)</span> <span class="p">{</span><span class="s1">&#39;&amp;&#39;</span><span class="p">}</span> <span class="k">else</span> <span class="p">{</span><span class="s1">&#39;&amp;&amp;&#39;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">foreach</span><span class="p">(</span><span class="nv">$_</span> <span class="k">in</span> <span class="n">cmd</span> <span class="p">/</span><span class="n">c</span> <span class="s2">&#34; </span><span class="nv">$Command</span><span class="s2"> &gt; </span><span class="se">`&#34;</span><span class="nv">$stream</span><span class="se">`&#34;</span><span class="s2"> 2&gt;&amp;1 </span><span class="nv">$operator</span><span class="s2"> SET&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nv">$_</span> <span class="o">-match</span> <span class="s1">&#39;^([^=]+)=(.*)&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="p">[</span><span class="no">System.Environment</span><span class="p">]::</span><span class="n">SetEnvironmentVariable</span><span class="p">(</span><span class="nv">$matches</span><span class="p">[</span><span class="mf">1</span><span class="p">],</span> <span class="nv">$matches</span><span class="p">[</span><span class="mf">2</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$Output</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Get-Content</span> <span class="n">-LiteralPath</span> <span class="nv">$temp</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">Remove-Item</span> <span class="n">-LiteralPath</span> <span class="nv">$temp</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>To use the function:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Invoke-Environment</span> <span class="s1">&#39;&#34;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd.bat&#34;&#39;</span>
+</span></span></code></pre></div><br>
 </div>
 
 
@@ -833,7 +836,7 @@ Invoke-Environment &lsquo;&ldquo;C:\Program Files (x86)\Microsoft Visual Studio 
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-08-24-rest-client-server-c%23/">A simple REST client/server console app in C#</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 

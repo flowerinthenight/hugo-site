@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2016-07-27" name="description">
+
 
 
     <meta content="Code" name="keywords">
@@ -63,23 +65,17 @@
 <meta property="og:url" content="http://localhost:1313/blog/2016-07-27-sharing-my-vimrc/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Sharing my .vimrc">
-  <meta property="og:description" content="Vim has always been my go to editor/IDE when I’m outside of Visual Studio. Here’s my base _vimrc for Windows.
-{% highlight conf %} let mapleader = &#34; &#34;
-filetype off syntax on colorscheme darkblue
-&#34; let pc=$PC &#34; if pc == ‘HOME’ &#34; set guifont=Letter\ Gothic\ Std:h11 &#34; else &#34; set guifont=Lucida\ Sans\ Typewriter:h9 &#34; endif
-&#34; Save marks to up to 100 files, save global marks as well (f1).">
+  <meta property="og:description" content="2016-07-27">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2016-07-27T00:00:00-07:00">
+    <meta property="article:modified_time" content="2016-07-27T00:00:00-07:00">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Sharing my .vimrc">
-  <meta name="twitter:description" content="Vim has always been my go to editor/IDE when I’m outside of Visual Studio. Here’s my base _vimrc for Windows.
-{% highlight conf %} let mapleader = &#34; &#34;
-filetype off syntax on colorscheme darkblue
-&#34; let pc=$PC &#34; if pc == ‘HOME’ &#34; set guifont=Letter\ Gothic\ Std:h11 &#34; else &#34; set guifont=Lucida\ Sans\ Typewriter:h9 &#34; endif
-&#34; Save marks to up to 100 files, save global marks as well (f1).">
+  <meta name="twitter:description" content="2016-07-27">
 
 
 
@@ -697,6 +693,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2016-07-27</p>
+    
 
     
         <div class="mb-3">
@@ -710,6 +708,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2016-07-27">July 27, 2016</time>
+                </p>
             
 
             
@@ -747,25 +749,29 @@ table {
 
 
     <div class="mw-100" id="paige-content"><p>Vim has always been my go to editor/IDE when I&rsquo;m outside of Visual Studio. Here&rsquo;s my base <code>_vimrc</code> for Windows.</p>
-<p>{% highlight conf %}
-let mapleader = &quot; &quot;</p>
-<p>filetype off
+<pre tabindex="0"><code class="language-conf" data-lang="conf">let mapleader = &#34; &#34;
+
+filetype off
 syntax on
-colorscheme darkblue</p>
-<p>&quot; let pc=$PC
-&quot; if pc == &lsquo;HOME&rsquo;
-&quot;     set guifont=Letter\ Gothic\ Std:h11
-&quot; else
-&quot;     set guifont=Lucida\ Sans\ Typewriter:h9
-&quot; endif</p>
-<p>&quot; Save marks to up to 100 files, save global marks as well (f1). To disable, f0
-set viminfo=&lsquo;100,f1</p>
-<p>&quot; Folding options
+colorscheme darkblue
+
+&#34; let pc=$PC
+&#34; if pc == &#39;HOME&#39;
+&#34;     set guifont=Letter\ Gothic\ Std:h11
+&#34; else
+&#34;     set guifont=Lucida\ Sans\ Typewriter:h9
+&#34; endif
+
+&#34; Save marks to up to 100 files, save global marks as well (f1). To disable, f0
+set viminfo=&#39;100,f1
+
+&#34; Folding options
 set foldmethod=indent
 set foldnestmax=20
 set nofoldenable
-set foldlevel=0</p>
-<p>set guifont=Lucida\ Sans\ Typewriter
+set foldlevel=0
+
+set guifont=Lucida\ Sans\ Typewriter
 set lines=70 columns=160
 set ai
 set nu
@@ -788,68 +794,83 @@ set splitright
 set splitbelow
 set ruler
 set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
-call vundle#begin(&rsquo;$USERPROFILE/vimfiles/bundle/&rsquo;)
-Plugin &lsquo;VundleVim/Vundle.vim&rsquo;
-&quot; 1. Vim should be 64-bit (link in ycm site)
-&quot; 2. Python should be 64-bit
-Plugin &lsquo;Valloric/YouCompleteMe&rsquo;
-Plugin &lsquo;fatih/vim-go&rsquo;
-Plugin &lsquo;PProvost/vim-ps1&rsquo;
+call vundle#begin(&#39;$USERPROFILE/vimfiles/bundle/&#39;)
+Plugin &#39;VundleVim/Vundle.vim&#39;
+&#34; 1. Vim should be 64-bit (link in ycm site)
+&#34; 2. Python should be 64-bit
+Plugin &#39;Valloric/YouCompleteMe&#39;
+Plugin &#39;fatih/vim-go&#39;
+Plugin &#39;PProvost/vim-ps1&#39;
 call vundle#end()
 filetype plugin indent on
-&quot; To ignore plugin indent changes, instead use:
-&quot; filetype plugin on
-&quot; let g:netrw_liststyle=3</p>
-<p>let g:ycm_disable_for_files_larger_than_kb = 0
-let g:ycm_autoclose_preview_window_after_completion = 1</p>
-<p>&quot; Enable powershell syntax plug
-autocmd BufNewFile,BufReadPost *.ps1 set filetype=ps1</p>
-<p>&quot; Search for the word under cursor in the current dir (recursively)
-command CSM :execute &ldquo;vimgrep /&rdquo; . expand(&quot;<cword>&quot;) . &ldquo;/j ** <Bar> :cw&rdquo;
-nnoremap <leader>ms :CSM<CR></p>
-<p>&quot; Simple mappings for window manipulations
-nnoremap <leader>wq <C-W>q
-nnoremap <leader>ws <C-W>s
-nnoremap <leader>wv <C-W>v
-nnoremap <leader><left><left> <C-W><left>
-nnoremap <leader><right><right> <C-W><right>
-nnoremap <leader><up><up> <C-W><up>
-nnoremap <leader><down><down> <C-W><down></p>
-<p>&quot; Display buffers, then prep the colon for the next command
-nnoremap <leader>b :ls<CR>:</p>
-<p>&quot; Shortcut for save
-nnoremap <leader>s :w<CR></p>
-<p>&quot; Shortcut for netrw explorer
-nnoremap <leader>e :e.<CR></p>
-<p>&quot; JSON pretty print (all buffer)
-nnoremap <leader>pj :%!python -m json.tool<CR></p>
-<p>&quot; Diff all windows (should prep 2 windows for this)
-nnoremap <leader>dt :windo diffthis<CR>
-nnoremap <leader>do :windo diffoff!<CR>
-{% endhighlight %}</p>
-<p>And here&rsquo;s my base <code>.vimrc</code> for Linux and OSX.</p>
-<p>{% highlight conf %}
-let mapleader = &quot; &quot;</p>
-<p>filetype off
+&#34; To ignore plugin indent changes, instead use:
+&#34; filetype plugin on
+&#34; let g:netrw_liststyle=3
+
+let g:ycm_disable_for_files_larger_than_kb = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+&#34; Enable powershell syntax plug
+autocmd BufNewFile,BufReadPost *.ps1 set filetype=ps1
+
+&#34; Search for the word under cursor in the current dir (recursively)
+command CSM :execute &#34;vimgrep /&#34; . expand(&#34;&lt;cword&gt;&#34;) . &#34;/j ** &lt;Bar&gt; :cw&#34;
+nnoremap &lt;leader&gt;ms :CSM&lt;CR&gt;
+
+&#34; Simple mappings for window manipulations
+nnoremap &lt;leader&gt;wq &lt;C-W&gt;q
+nnoremap &lt;leader&gt;ws &lt;C-W&gt;s
+nnoremap &lt;leader&gt;wv &lt;C-W&gt;v
+nnoremap &lt;leader&gt;&lt;left&gt;&lt;left&gt; &lt;C-W&gt;&lt;left&gt;
+nnoremap &lt;leader&gt;&lt;right&gt;&lt;right&gt; &lt;C-W&gt;&lt;right&gt;
+nnoremap &lt;leader&gt;&lt;up&gt;&lt;up&gt; &lt;C-W&gt;&lt;up&gt;
+nnoremap &lt;leader&gt;&lt;down&gt;&lt;down&gt; &lt;C-W&gt;&lt;down&gt;
+
+&#34; Display buffers, then prep the colon for the next command
+nnoremap &lt;leader&gt;b :ls&lt;CR&gt;:
+
+&#34; Shortcut for save
+nnoremap &lt;leader&gt;s :w&lt;CR&gt;
+
+&#34; Shortcut for netrw explorer
+nnoremap &lt;leader&gt;e :e.&lt;CR&gt;
+
+&#34; JSON pretty print (all buffer)
+nnoremap &lt;leader&gt;pj :%!python -m json.tool&lt;CR&gt;
+
+&#34; Diff all windows (should prep 2 windows for this)
+nnoremap &lt;leader&gt;dt :windo diffthis&lt;CR&gt;
+nnoremap &lt;leader&gt;do :windo diffoff!&lt;CR&gt;
+{% endhighlight %}
+
+And here&#39;s my base `.vimrc` for Linux and OSX.
+
+{% highlight conf %}
+let mapleader = &#34; &#34;
+
+filetype off
 syntax on
 colorscheme elflord
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin &lsquo;VundleVim/Vundle.vim&rsquo;
-Plugin &lsquo;Valloric/YouCompleteMe&rsquo;
-Plugin &lsquo;jelera/vim-javascript-syntax&rsquo;
-Plugin &lsquo;fatih/vim-go&rsquo;
-Plugin &lsquo;majutsushi/tagbar&rsquo;
+Plugin &#39;VundleVim/Vundle.vim&#39;
+Plugin &#39;Valloric/YouCompleteMe&#39;
+Plugin &#39;jelera/vim-javascript-syntax&#39;
+Plugin &#39;fatih/vim-go&#39;
+Plugin &#39;majutsushi/tagbar&#39;
 call vundle#end()
-filetype plugin indent on</p>
-<p>&quot; Save marks to up to 100 files, save global marks as well (f1). To disable, f0
-set viminfo=&lsquo;100,f1</p>
-<p>&quot; Folding options
+filetype plugin indent on
+
+&#34; Save marks to up to 100 files, save global marks as well (f1). To disable, f0
+set viminfo=&#39;100,f1
+
+&#34; Folding options
 set foldmethod=indent
 set foldnestmax=20
 set nofoldenable
-set foldlevel=0</p>
-<p>set tabstop=4
+set foldlevel=0
+
+set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
@@ -864,78 +885,90 @@ set ignorecase
 set splitright
 set splitbelow
 set ruler
-&quot; Temporary enable/disable YouCompleteMe. Active = disable, commented = enable
-&quot; let g:loaded_youcompleteme = 1
-let g:ycm_global_ycm_extra_conf = &ldquo;~/.ycm_extra_conf.py&rdquo;
+&#34; Temporary enable/disable YouCompleteMe. Active = disable, commented = enable
+&#34; let g:loaded_youcompleteme = 1
+let g:ycm_global_ycm_extra_conf = &#34;~/.ycm_extra_conf.py&#34;
 let g:ycm_disable_for_files_larger_than_kb = 0
-let g:ycm_autoclose_preview_window_after_completion = 1</p>
-<p>&quot; Options for netrw
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+&#34; Options for netrw
 let g:netrw_liststyle = 0
-let g:netrw_altv = 1</p>
-<p>&quot; 1. :PluginInstall
-&quot; 2. :GoInstallBinaries (gotags, vim-go)
-&quot; 3. Install &lsquo;ctags&rsquo;
-&quot; 4. go get -u github.com/jstemmer/gotags
+let g:netrw_altv = 1
+
+&#34; 1. :PluginInstall
+&#34; 2. :GoInstallBinaries (gotags, vim-go)
+&#34; 3. Install &#39;ctags&#39;
+&#34; 4. go get -u github.com/jstemmer/gotags
 let g:tagbar_type_go = {
-\ &lsquo;ctagstype&rsquo; : &lsquo;go&rsquo;,
-\ &lsquo;kinds&rsquo;     : [
-\ &lsquo;p:package&rsquo;,
-\ &lsquo;i:imports:1&rsquo;,
-\ &lsquo;c:constants&rsquo;,
-\ &lsquo;v:variables&rsquo;,
-\ &rsquo;t:types&rsquo;,
-\ &rsquo;n:interfaces&rsquo;,
-\ &lsquo;w:fields&rsquo;,
-\ &rsquo;e:embedded&rsquo;,
-\ &rsquo;m:methods&rsquo;,
-\ &lsquo;r:constructor&rsquo;,
-\ &lsquo;f:functions&rsquo;
-\ ],
-\ &lsquo;sro&rsquo; : &lsquo;.&rsquo;,
-\ &lsquo;kind2scope&rsquo; : {
-\ &rsquo;t&rsquo; : &lsquo;ctype&rsquo;,
-\ &rsquo;n&rsquo; : &rsquo;ntype&rsquo;
-\ },
-\ &lsquo;scope2kind&rsquo; : {
-\ &lsquo;ctype&rsquo; : &rsquo;t&rsquo;,
-\ &rsquo;ntype&rsquo; : &rsquo;n&rsquo;
-\ },
-\ &lsquo;ctagsbin&rsquo;  : &lsquo;gotags&rsquo;,
-\ &lsquo;ctagsargs&rsquo; : &lsquo;-sort -silent&rsquo;
-\ }</p>
-<p>nnoremap <F8> :TagbarToggle<CR></p>
-<p>&quot; Search for the word under cursor in the current dir (recursively)
-command CSM execute &ldquo;:vimgrep /&rdquo; . expand(&quot;<cword>&quot;) . &ldquo;/j ** <Bar> :cw&rdquo;
-nnoremap <leader>ms :CSM<CR>
-set wildignore+=jennah</p>
-<p>&quot; Simple mappings for window manipulations
-nnoremap <leader>wq <C-W>q
-nnoremap <leader>ws <C-W>s
-nnoremap <leader>wv <C-W>v
-nnoremap <leader><left><left> <C-W><left>
-nnoremap <leader><right><right> <C-W><right>
-nnoremap <leader><up><up> <C-W><up>
-nnoremap <leader><down><down> <C-W><down></p>
-<p>&quot; Display buffers, then prep the colon for the next command
-nnoremap <leader>b :ls<CR>:</p>
-<p>&quot; Shortcut for save
-nnoremap <leader>s :w<CR></p>
-<p>&quot; Shortcut for netrw explorer
-nnoremap <leader>e :e.<CR></p>
-<p>&quot; JSON pretty print (all buffer)
-nnoremap <leader>pj :%!python -m json.tool<CR></p>
-<p>&quot; Diff all windows (should prep 2 windows for this)
-nnoremap <leader>dt :windo diffthis<CR>
-nnoremap <leader>do :windo diffoff!<CR></p>
-<p>&quot; Highlight/no highlight for search
-nnoremap <leader>hl :set hlsearch<CR>
-nnoremap <leader>hn :set nohlsearch<CR></p>
-<p>&quot; Diff all windows (should prep two windows for this)
-nnoremap <leader>dt :windo diffthis<CR>
-nnoremap <leader>do :windo diffoff!<CR>
-{% endhighlight %}</p>
-<h3 id="update-20160824">Update (2016/08/24)<a aria-label="Link to this section" class="paige-header-link" href="#update-20160824"></a></h3>
+    \ &#39;ctagstype&#39; : &#39;go&#39;,
+    \ &#39;kinds&#39;     : [
+        \ &#39;p:package&#39;,
+        \ &#39;i:imports:1&#39;,
+        \ &#39;c:constants&#39;,
+        \ &#39;v:variables&#39;,
+        \ &#39;t:types&#39;,
+        \ &#39;n:interfaces&#39;,
+        \ &#39;w:fields&#39;,
+        \ &#39;e:embedded&#39;,
+        \ &#39;m:methods&#39;,
+        \ &#39;r:constructor&#39;,
+        \ &#39;f:functions&#39;
+    \ ],
+    \ &#39;sro&#39; : &#39;.&#39;,
+    \ &#39;kind2scope&#39; : {
+        \ &#39;t&#39; : &#39;ctype&#39;,
+        \ &#39;n&#39; : &#39;ntype&#39;
+    \ },
+    \ &#39;scope2kind&#39; : {
+        \ &#39;ctype&#39; : &#39;t&#39;,
+        \ &#39;ntype&#39; : &#39;n&#39;
+    \ },
+    \ &#39;ctagsbin&#39;  : &#39;gotags&#39;,
+    \ &#39;ctagsargs&#39; : &#39;-sort -silent&#39;
+\ }
+
+nnoremap &lt;F8&gt; :TagbarToggle&lt;CR&gt;
+
+&#34; Search for the word under cursor in the current dir (recursively)
+command CSM execute &#34;:vimgrep /&#34; . expand(&#34;&lt;cword&gt;&#34;) . &#34;/j ** &lt;Bar&gt; :cw&#34;
+nnoremap &lt;leader&gt;ms :CSM&lt;CR&gt;
+set wildignore+=jennah
+
+&#34; Simple mappings for window manipulations
+nnoremap &lt;leader&gt;wq &lt;C-W&gt;q
+nnoremap &lt;leader&gt;ws &lt;C-W&gt;s
+nnoremap &lt;leader&gt;wv &lt;C-W&gt;v
+nnoremap &lt;leader&gt;&lt;left&gt;&lt;left&gt; &lt;C-W&gt;&lt;left&gt;
+nnoremap &lt;leader&gt;&lt;right&gt;&lt;right&gt; &lt;C-W&gt;&lt;right&gt;
+nnoremap &lt;leader&gt;&lt;up&gt;&lt;up&gt; &lt;C-W&gt;&lt;up&gt;
+nnoremap &lt;leader&gt;&lt;down&gt;&lt;down&gt; &lt;C-W&gt;&lt;down&gt;
+
+&#34; Display buffers, then prep the colon for the next command
+nnoremap &lt;leader&gt;b :ls&lt;CR&gt;:
+
+&#34; Shortcut for save
+nnoremap &lt;leader&gt;s :w&lt;CR&gt;
+
+&#34; Shortcut for netrw explorer
+nnoremap &lt;leader&gt;e :e.&lt;CR&gt;
+
+&#34; JSON pretty print (all buffer)
+nnoremap &lt;leader&gt;pj :%!python -m json.tool&lt;CR&gt;
+
+&#34; Diff all windows (should prep 2 windows for this)
+nnoremap &lt;leader&gt;dt :windo diffthis&lt;CR&gt;
+nnoremap &lt;leader&gt;do :windo diffoff!&lt;CR&gt;
+
+&#34; Highlight/no highlight for search
+nnoremap &lt;leader&gt;hl :set hlsearch&lt;CR&gt;
+nnoremap &lt;leader&gt;hn :set nohlsearch&lt;CR&gt;
+
+&#34; Diff all windows (should prep two windows for this)
+nnoremap &lt;leader&gt;dt :windo diffthis&lt;CR&gt;
+nnoremap &lt;leader&gt;do :windo diffoff!&lt;CR&gt;
+</code></pre><h3 id="update-20160824">Update (2016/08/24)<a aria-label="Link to this section" class="paige-header-link" href="#update-20160824"></a></h3>
 <p>Updated <code>vimrc</code> can be viewed <a href="https://github.com/flowerinthenight/vim">here</a>.</p>
+<br>
 </div>
 
 
@@ -1015,7 +1048,7 @@ nnoremap <leader>do :windo diffoff!<CR>
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-08-19-dir-cleanup-tool/">Simple directory cleanup tool for Windows (golang)</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-06-13-folder-file-watcher-powershell/">A simple folder/file watcher in Powershell</a>
                 </p>
             
 

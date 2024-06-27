@@ -1,21 +1,26 @@
 ---
-layout: post
 title: "A simple unzip function in Powershell"
-location: "Japan"
+description: "2016-04-06"
+date: "2016-04-06"
+paige:
+  feed:
+    hide_page: true
 categories: ["Code"]
-comments: true
+weight: 1
 ---
 
-{% highlight powershell %}
+```powershell
 function UnzipFiles($ZipFileName, $DestDir)
 {
     Add-Type -Assembly System.IO.Compression.FileSystem
     [System.IO.Compression.ZipFile]::ExtractToDirectory($ZipFileName, $DestDir)
 }
-{% endhighlight %}
+```
 
 To use the function:
 
-{% highlight powershell %}
+```powershell
 UnzipFiles -ZipFileName .\folder\file.zip -DestDir .\destination
-{% endhighlight %}
+```
+
+<br>

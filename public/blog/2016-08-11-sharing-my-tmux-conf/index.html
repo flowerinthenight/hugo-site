@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2016-08-11" name="description">
+
 
 
     <meta content="Code" name="keywords">
@@ -63,21 +65,17 @@
 <meta property="og:url" content="http://localhost:1313/blog/2016-08-11-sharing-my-tmux-conf/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Sharing my .tmux.conf">
-  <meta property="og:description" content="I use tmux heavily and in tandem with vim. Much more so now when it’s supported on Bash on Windows as well. I don’t have to spin up a Linux VM just for the purpose of being my tmux “server”.
-{% highlight conf %}
-Set a Ctrl-b shortcut for reloading tmux config unbind r bind r source-file ~/.tmux.conf
-Prefix is Ctrl-a unbind C-b set -g prefix C-a bind C-a send-prefix">
+  <meta property="og:description" content="2016-08-11">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2016-08-11T00:00:00-07:00">
+    <meta property="article:modified_time" content="2016-08-11T00:00:00-07:00">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Sharing my .tmux.conf">
-  <meta name="twitter:description" content="I use tmux heavily and in tandem with vim. Much more so now when it’s supported on Bash on Windows as well. I don’t have to spin up a Linux VM just for the purpose of being my tmux “server”.
-{% highlight conf %}
-Set a Ctrl-b shortcut for reloading tmux config unbind r bind r source-file ~/.tmux.conf
-Prefix is Ctrl-a unbind C-b set -g prefix C-a bind C-a send-prefix">
+  <meta name="twitter:description" content="2016-08-11">
 
 
 
@@ -695,6 +693,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2016-08-11</p>
+    
 
     
         <div class="mb-3">
@@ -708,6 +708,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2016-08-11">August 11, 2016</time>
+                </p>
             
 
             
@@ -731,38 +735,43 @@ table {
 
 
     <div class="mw-100" id="paige-content"><p>I use <code>tmux</code> heavily and in tandem with <code>vim</code>. Much more so now when it&rsquo;s supported on Bash on Windows as well. I don&rsquo;t have to spin up a Linux VM just for the purpose of being my <code>tmux</code> &ldquo;server&rdquo;.</p>
-<p>{% highlight conf %}</p>
-<h1 id="set-a-ctrl-b-shortcut-for-reloading-tmux-config">Set a Ctrl-b shortcut for reloading tmux config<a aria-label="Link to this section" class="paige-header-link" href="#set-a-ctrl-b-shortcut-for-reloading-tmux-config"></a></h1>
-<p>unbind r
-bind r source-file ~/.tmux.conf</p>
-<h1 id="prefix-is-ctrl-a">Prefix is Ctrl-a<a aria-label="Link to this section" class="paige-header-link" href="#prefix-is-ctrl-a"></a></h1>
-<p>unbind C-b
+<pre tabindex="0"><code class="language-conf" data-lang="conf"># Set a Ctrl-b shortcut for reloading tmux config
+unbind r
+bind r source-file ~/.tmux.conf
+
+# Prefix is Ctrl-a
+unbind C-b
 set -g prefix C-a
-bind C-a send-prefix</p>
-<h1 id="rename-terminals">Rename terminals<a aria-label="Link to this section" class="paige-header-link" href="#rename-terminals"></a></h1>
-<p>set -g set-titles on
-set -g set-titles-string &lsquo;#(whoami)@#h@#(curl ipecho.net/plain;echo)&rsquo;</p>
-<h1 id="status-bar-customization">Status bar customization<a aria-label="Link to this section" class="paige-header-link" href="#status-bar-customization"></a></h1>
-<p>set -g status-bg black
+bind C-a send-prefix
+
+# Rename terminals
+set -g set-titles on
+set -g set-titles-string &#39;#(whoami)@#h@#(curl ipecho.net/plain;echo)&#39;
+
+# Status bar customization
+set -g status-bg black
 set -g status-fg white
 set -g status-interval 5
 set -g status-left-length 90
 set -g status-right-length 60
-set -g status-left &ldquo;#[fg=Green]#(whoami)#[fg=white]@#[fg=red]#(hostname -s)#[fg=white]|#[fg=yellow]#(curl ipecho.net/plain;echo)#[fg=white]|#[fg=yellow]#(hostname -I)#[fg=white]&rdquo;
+set -g status-left &#34;#[fg=Green]#(whoami)#[fg=white]@#[fg=red]#(hostname -s)#[fg=white]|#[fg=yellow]#(curl ipecho.net/plain;echo)#[fg=white]|#[fg=yellow]#(hostname -I)#[fg=white]&#34;
 set -g status-justify left
-set -g status-right &lsquo;#[fg=Cyan]#S #[fg=white]%a %d %b %R&rsquo;</p>
-<h1 id="easy-to-remember-split-pane-commands">Easy to remember split pane commands<a aria-label="Link to this section" class="paige-header-link" href="#easy-to-remember-split-pane-commands"></a></h1>
-<p>bind | split-window -h
+set -g status-right &#39;#[fg=Cyan]#S #[fg=white]%a %d %b %R&#39;
+
+# Easy to remember split pane commands
+bind | split-window -h
 bind - split-window -v
-unbind &lsquo;&quot;&rsquo;
-unbind %</p>
-<h1 id="vim-friendly-settings-from-httpsgistgithubcomanonymous6bebae3eb9f7b972e6f0">Vim friendly settings (from <a href="https://gist.github.com/anonymous/6bebae3eb9f7b972e6f0">https://gist.github.com/anonymous/6bebae3eb9f7b972e6f0</a>)<a aria-label="Link to this section" class="paige-header-link" href="#vim-friendly-settings-from-httpsgistgithubcomanonymous6bebae3eb9f7b972e6f0"></a></h1>
-<p>setw -g monitor-activity on
+unbind &#39;&#34;&#39;
+unbind %
+
+# Vim friendly settings (from https://gist.github.com/anonymous/6bebae3eb9f7b972e6f0)
+setw -g monitor-activity on
 set -g visual-activity on
-set -g mode-keys vi</p>
-<h1 id="extend-history-limit">Extend history limit<a aria-label="Link to this section" class="paige-header-link" href="#extend-history-limit"></a></h1>
-<p>set -g history-limit 10000
-{% endhighlight %}</p>
+set -g mode-keys vi
+
+# Extend history limit
+set -g history-limit 10000
+</code></pre><br>
 </div>
 
 
@@ -848,7 +857,7 @@ set -g mode-keys vi</p>
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2018-01-24-k8s-kops-aws/">Running Kubernetes on AWS using kops</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2016-08-13-signal-handler-linux-cpp/">A simple signal handler in C/C&#43;&#43; (Linux)</a> &rarr;
                 </p>
             
         </div>

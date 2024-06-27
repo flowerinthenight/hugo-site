@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,59 +99,5 @@
     <title type="html"><![CDATA[Rabbitmq · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>I uploaded a <a href="https://github.com/flowerinthenight/rmq">simple wrapper</a> to <a href="https://github.com/streadway/amqp">streadway/amqp</a> library for RabbitMQ with support for auto reconnections. This is a simplified version of what I&rsquo;m using in production.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2017-06-30-amqp-wrapper/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2017-06-30-amqp-wrapper/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Wrapper for amqp library for RabbitMQ]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

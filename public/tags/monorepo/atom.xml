@@ -14,11 +14,7 @@
 
 
     
-        
-    
 
-    
-        
     
 
 
@@ -105,113 +101,5 @@
     <title type="html"><![CDATA[Monorepo · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>I posted an <a href="https://tech.mobingi.com/2018/09/25/ouchan-monorepo.html">article</a> for <a href="https://twitter.com/mobingi">@mobingi</a> about its Golang-based monorepo. Please check it out. Thanks.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2018-09-25-ouchan-monorepo/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2018-09-25-ouchan-monorepo/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Mobingi&rsquo;s golang monorepo]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>I uploaded an example of a golang-based monorepo in <a href="https://github.com/flowerinthenight/golang-monorepo">GitHub</a>. This is a stripped down version of what we have <a href="https://twitter.com/mobingi">@mobingi</a>. If you are planning to have a golang-based monorepo, please have a look.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2018-02-06-golang-monorepo/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2018-02-06-golang-monorepo/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[A golang-based monorepo example]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

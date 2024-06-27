@@ -13,27 +13,21 @@
 
 
     
-
-    
         
     
 
     
 
     
-        
+
+    
+
     
 
     
 
     
-        
-    
 
-    
-
-    
-        
     
 
 
@@ -97,6 +91,8 @@
         
 
         
+            <lastBuildDate>2016-08-22 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/categories/golang/</link>
 
@@ -110,198 +106,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>For personal reference:</p>
-<p>{% gist 29d147a50242198f082fd33f7d24677c %}</p>
-<p>To view syslog in realtime</p>
-<p>{% highlight shell %}
-tail -f /var/log/syslog
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-22-syslog-target-go/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2016-08-22-syslog-target-go/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Syslog as target in Go logs</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>For personal reference:</p>
-<p>{% gist f8114f79b6699ced9a054a595b6c991a %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-19-dir-cleanup-tool/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2016-08-19-dir-cleanup-tool/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Simple directory cleanup tool for Windows (golang)</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>For personal reference:</p>
-<p>{% gist b6e639978dc2c21042ccea526700f214 %}</p>
-<h3 id="access-root">Access root</h3>
-<p>{% highlight shell %}
-http://localhost:8000
-{% endhighlight %}</p>
-<h3 id="access-expvar-information">Access expvar information</h3>
-<p>{% highlight shell %}
-http://localhost:8000/debug/vars
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-20-expvar-gorilla-mux/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2016-08-20-expvar-gorilla-mux/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>How to serve expvar when using gorilla/mux</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>For personal reference:</p>
-<p>{% gist 8da2984e90dd4a3a26ff645e6a37f275 %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-08-21-log-prefix-fname-go/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2016-08-21-log-prefix-fname-go/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Add function name prefix to log.Println in Go</title>
-                
-            </item>
         
     </channel>
 </rss>

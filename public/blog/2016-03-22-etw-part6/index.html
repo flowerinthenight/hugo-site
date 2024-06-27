@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2016-03-22" name="description">
+
 
 
     <meta content="Code" name="keywords">
@@ -63,25 +65,17 @@
 <meta property="og:url" content="http://localhost:1313/blog/2016-03-22-etw-part6/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="[Part 6] Logging with Universal Apps">
-  <meta property="og:description" content="Check out the codes in GitHub.
-Basically, 2 steps:
-Create a C&#43;&#43; Windows Runtime Component (dll) that will use the ETW header file. Reference the WinRT DLL to C# project.
-WinRT DLL My logging class looks like this:
-{% highlight cpp %} public ref class TraceCore sealed { private: TraceCore(); ~TraceCore();
-static TraceCore^ m_Instance; public: static property TraceCore^ Instance { TraceCore^ get() { if (m_Instance == nullptr) { m_Instance = ref new TraceCore(); }">
+  <meta property="og:description" content="2016-03-22">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2016-03-22T00:00:00-07:00">
+    <meta property="article:modified_time" content="2016-03-22T00:00:00-07:00">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="[Part 6] Logging with Universal Apps">
-  <meta name="twitter:description" content="Check out the codes in GitHub.
-Basically, 2 steps:
-Create a C&#43;&#43; Windows Runtime Component (dll) that will use the ETW header file. Reference the WinRT DLL to C# project.
-WinRT DLL My logging class looks like this:
-{% highlight cpp %} public ref class TraceCore sealed { private: TraceCore(); ~TraceCore();
-static TraceCore^ m_Instance; public: static property TraceCore^ Instance { TraceCore^ get() { if (m_Instance == nullptr) { m_Instance = ref new TraceCore(); }">
+  <meta name="twitter:description" content="2016-03-22">
 
 
 
@@ -699,6 +693,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2016-03-22</p>
+    
 
     
         <div class="mb-3">
@@ -713,9 +709,13 @@ table {
             
 
             
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2016-03-22">March 22, 2016</time>
+                </p>
+            
 
             
-                <p class="mb-0 text-center text-secondary" id="paige-reading-time">2 minutes</p>
+                <p class="mb-0 text-center text-secondary" id="paige-reading-time">1 minute</p>
             
         </div>
     
@@ -728,6 +728,21 @@ table {
         
 
 
+    <div class="mw-100" id="paige-toc">
+        <div class="border mb-3 pe-3 ps-3 pt-3 rounded">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#winrt-dll">WinRT DLL</a></li>
+        <li><a href="#wrapper-class">Wrapper Class</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </div>
+
 
         
 
@@ -738,73 +753,73 @@ table {
 <p>Basically, 2 steps:</p>
 <p>Create a C++ Windows Runtime Component (dll) that will use the ETW header file.
 Reference the WinRT DLL to C# project.</p>
-<h1 id="winrt-dll">WinRT DLL<a aria-label="Link to this section" class="paige-header-link" href="#winrt-dll"></a></h1>
+<h3 id="winrt-dll">WinRT DLL<a aria-label="Link to this section" class="paige-header-link" href="#winrt-dll"></a></h3>
 <p>My logging class looks like this:</p>
-<p>{% highlight cpp %}
-public ref class TraceCore sealed
-{
-private:
-TraceCore();
-~TraceCore();</p>
-<pre><code>static TraceCore^ m_Instance;
-</code></pre>
-<p>public:
-static property TraceCore^ Instance
-{
-TraceCore^ get()
-{
-if (m_Instance == nullptr)
-{
-m_Instance = ref new TraceCore();
-}</p>
-<pre><code>        return m_Instance;
-    }
-}
-
-void Verbose(Platform::String^ mod, Platform::String^ file, Platform::String^ func, Platform::String^ m);
-</code></pre>
-<p>};
-{% endhighlight %}</p>
-<p>And heres the implementation:</p>
-<p>{% highlight cpp %}
-#include &ldquo;pch.h&rdquo;
-#include &ldquo;TraceCore.h&rdquo;</p>
-<p>using namespace LibRTWrapperETW;
-using namespace Platform;</p>
-<p>#include &ldquo;jytrace.h&rdquo;</p>
-<p>TraceCore^ TraceCore::m_Instance = nullptr;</p>
-<p>TraceCore::TraceCore()
-{
-EventRegisterJyTrace();
-}</p>
-<p>TraceCore::~TraceCore()
-{
-EventUnregisterJyTrace();
-}</p>
-<p>void TraceCore::Verbose(String^ mod, String^ file, String^ func, String^ m)
-{
-EventWriteSimple(mod-&gt;Data(), file-&gt;Data(), func-&gt;Data(), L&quot;Trace&quot;, m-&gt;Data());
-}
-{% endhighlight %}</p>
-<h1 id="wrapper-class">Wrapper Class<a aria-label="Link to this section" class="paige-header-link" href="#wrapper-class"></a></h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">public</span> <span class="n">ref</span> <span class="k">class</span> <span class="nc">TraceCore</span> <span class="n">sealed</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">private</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">TraceCore</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="o">~</span><span class="n">TraceCore</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">static</span> <span class="n">TraceCore</span><span class="o">^</span> <span class="n">m_Instance</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">static</span> <span class="n">property</span> <span class="n">TraceCore</span><span class="o">^</span> <span class="n">Instance</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">TraceCore</span><span class="o">^</span> <span class="n">get</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">m_Instance</span> <span class="o">==</span> <span class="k">nullptr</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">m_Instance</span> <span class="o">=</span> <span class="n">ref</span> <span class="k">new</span> <span class="n">TraceCore</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">m_Instance</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">void</span> <span class="nf">Verbose</span><span class="p">(</span><span class="n">Platform</span><span class="o">::</span><span class="n">String</span><span class="o">^</span> <span class="n">mod</span><span class="p">,</span> <span class="n">Platform</span><span class="o">::</span><span class="n">String</span><span class="o">^</span> <span class="n">file</span><span class="p">,</span> <span class="n">Platform</span><span class="o">::</span><span class="n">String</span><span class="o">^</span> <span class="n">func</span><span class="p">,</span> <span class="n">Platform</span><span class="o">::</span><span class="n">String</span><span class="o">^</span> <span class="n">m</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p>And heres the implementation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;pch.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;TraceCore.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">LibRTWrapperETW</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">Platform</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;jytrace.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">TraceCore</span><span class="o">^</span> <span class="n">TraceCore</span><span class="o">::</span><span class="n">m_Instance</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">TraceCore</span><span class="o">::</span><span class="n">TraceCore</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">EventRegisterJyTrace</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">TraceCore</span><span class="o">::~</span><span class="n">TraceCore</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">EventUnregisterJyTrace</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">TraceCore</span><span class="o">::</span><span class="n">Verbose</span><span class="p">(</span><span class="n">String</span><span class="o">^</span> <span class="n">mod</span><span class="p">,</span> <span class="n">String</span><span class="o">^</span> <span class="n">file</span><span class="p">,</span> <span class="n">String</span><span class="o">^</span> <span class="n">func</span><span class="p">,</span> <span class="n">String</span><span class="o">^</span> <span class="n">m</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">EventWriteSimple</span><span class="p">(</span><span class="n">mod</span><span class="o">-&gt;</span><span class="n">Data</span><span class="p">(),</span> <span class="n">file</span><span class="o">-&gt;</span><span class="n">Data</span><span class="p">(),</span> <span class="n">func</span><span class="o">-&gt;</span><span class="n">Data</span><span class="p">(),</span> <span class="sa">L</span><span class="s">&#34;Trace&#34;</span><span class="p">,</span> <span class="n">m</span><span class="o">-&gt;</span><span class="n">Data</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="wrapper-class">Wrapper Class<a aria-label="Link to this section" class="paige-header-link" href="#wrapper-class"></a></h3>
 <p>Just like in part 5, I wrapped the C++ bits to a C# class so I can use the <code>CallerMemberName</code> and <code>CallerFilePath</code> attributes:</p>
-<p>{% highlight csharp %}
-public static class TraceCoreWrapper
-{
-public static void VerboseCore(
-string m,
-[CallerMemberName] string memberName = &ldquo;?&rdquo;,
-[CallerFilePath] string srcFile = &ldquo;?&rdquo;,
-[CallerLineNumber] int srcNum = 0)
-{
-TraceCore.Instance.Verbose(&ldquo;CORE_RT [&rdquo; + Environment.CurrentManagedThreadId + &ldquo;]&rdquo;, Path.GetFileName(srcFile), memberName, m);
-}
-}
-{% endhighlight %}</p>
-<p>And finally, the actual logging in C#:</p>
-<p>{% highlight csharp %}
-TraceCoreWrapper.VerboseCore(&ldquo;Hello from UApp (CS) world!&rdquo;);
-{% endhighlight %}</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">static</span> <span class="k">class</span> <span class="nc">TraceCoreWrapper</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="k">void</span> <span class="n">VerboseCore</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">string</span> <span class="n">m</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="na">        [CallerMemberName]</span> <span class="kt">string</span> <span class="n">memberName</span> <span class="p">=</span> <span class="s">&#34;?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="na">        [CallerFilePath]</span> <span class="kt">string</span> <span class="n">srcFile</span> <span class="p">=</span> <span class="s">&#34;?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="na">        [CallerLineNumber]</span> <span class="kt">int</span> <span class="n">srcNum</span> <span class="p">=</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">TraceCore</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">Verbose</span><span class="p">(</span><span class="s">&#34;CORE_RT [&#34;</span> <span class="p">+</span> <span class="n">Environment</span><span class="p">.</span><span class="n">CurrentManagedThreadId</span> <span class="p">+</span> <span class="s">&#34;]&#34;</span><span class="p">,</span> <span class="n">Path</span><span class="p">.</span><span class="n">GetFileName</span><span class="p">(</span><span class="n">srcFile</span><span class="p">),</span> <span class="n">memberName</span><span class="p">,</span> <span class="n">m</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>And finally, the actual logging in C#:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">TraceCoreWrapper</span><span class="p">.</span><span class="n">VerboseCore</span><span class="p">(</span><span class="s">&#34;Hello from UApp (CS) world!&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><br>
 </div>
 
 
@@ -884,13 +899,13 @@ TraceCoreWrapper.VerboseCore(&ldquo;Hello from UApp (CS) world!&rdquo;);
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2018-02-06-golang-monorepo/">A golang-based monorepo example</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2016-03-19-etw-part5/">[Part 5] Logging with C# applications</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2016-03-28-setup-samba-server/">How I set up my Samba file server</a> &rarr;
                 </p>
             
         </div>

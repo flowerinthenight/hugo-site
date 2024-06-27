@@ -1,22 +1,27 @@
 ---
-layout: post
 title: "A simple zip function in Powershell"
-location: "Japan"
+description: "2016-04-05"
+date: "2016-04-05"
+paige:
+  feed:
+    hide_page: true
 categories: ["Code"]
-comments: true
+weight: 1
 ---
 
-{% highlight powershell %}
+```powershell
 function ZipFiles($ZipFileName, $SourceDir)
 {
     Add-Type -Assembly System.IO.Compression.FileSystem
     $compressionLevel = [System.IO.Compression.CompressionLevel]::Optimal
     [System.IO.Compression.ZipFile]::CreateFromDirectory($SourceDir, $ZipFileName, $compressionLevel, $false)
 }
-{% endhighlight %}
+```
 
 To use the function:
 
-{% highlight powershell %}
+```powershell
 ZipFiles -ZipFileName test.zip -SourceDir .\folder\to\zip
-{% endhighlight %}
+```
+
+<br>

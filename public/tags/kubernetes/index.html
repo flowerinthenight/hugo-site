@@ -729,8 +729,7 @@ table {
 
     
         
-            
-            
+    
 
     
         
@@ -754,18 +753,26 @@ table {
                 
             
         
-    
+            
+                
+            
         
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
+            
+        
+            
+                
+            
+        
             
                 
             
@@ -1167,19 +1174,21 @@ I recently uploaded a tool to GitHub that wraps kubectl port-forward command and
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2018-03-31-access-pods-k8s/">Accessing services in Kubernetes</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-01-31-nginx-basicauth-k8s/">Using nginx basic authentication in Kubernetes</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2019-01-31</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">At Mobingi, when we are developing services that run on Kubernetes, we generally use Minikube or Kubernetes in Docker for Mac. We also have a cluster that runs on GKE that we use for development. In this post, I will share how we access some of the services that are running on our development cluster.
-Using kubectl port-forward Using kubectl port-forward is probably the cheapest and the most straightforward. For example, if I want to access a cluster service svc1 through my localhost, I use kubectl port-forward like this:</p>
+        <p class="fst-italic mb-0 paige-summary text-center">This post is somewhat related to a previous post about accessing k8s services using nginx reverse proxy. Let’s try to add a simple basic authentication to these services at the proxy level. Now, this may come in handy in non-production environments but at the very least, make sure that you are doing this over HTTPS as basic authentication credentials are not encrypted.
+We will be using the htpasswd tool to generate our passwords.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/ingress/">Ingress</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/nginx/">Nginx</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
+            <a class="link-secondary" href="/tags/basic-auth/">Basic-Auth</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/nginx/">Nginx</a>
         </p>
     
 
@@ -1188,9 +1197,13 @@ Using kubectl port-forward Using kubectl port-forward is probably the cheapest a
     
 
     
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-01-31">January 31, 2019</time>
+        </p>
+    
 
     
-        <p class="mb-0 paige-reading-time text-center text-secondary">5 minutes</p>
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
     
 </div>
 
@@ -1232,20 +1245,20 @@ Using kubectl port-forward Using kubectl port-forward is probably the cheapest a
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2018-02-20-k8s-tls-digicert/">Creating a Kubernetes TLS secret using certificates from DigiCert</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-12-27-mochi-k8s-repo/">Mobingi’s Kubernetes clusters repo</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2018-12-27</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">It took me a while to make this work. I hope this will help someone out there who also is struggling with the same problem.
-We use DigiCert as our SSL certificate provider. The package I received contained three files:
-a keyfile, filename.key a certificate file, filename.crt an intermediate certificate file, DigiCertCA.crt I had to combine the two certificate files into a single file. I didn’t really check the order but I appended the intermediate certificate to my certificate file.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">I posted an article for @mobingi about its Kubernetes clusters repo. Please check it out. Thanks.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/digicert/">DigiCert</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/tls/">TLS</a>
+            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/mobingi/">Mobingi</a> · <a class="link-secondary" href="/tags/repo/">Repo</a>
         </p>
     
 
@@ -1253,6 +1266,10 @@ a keyfile, filename.key a certificate file, filename.crt an intermediate certifi
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-12-27">December 27, 2018</time>
+        </p>
     
 
     
@@ -1302,6 +1319,8 @@ a keyfile, filename.key a certificate file, filename.crt an intermediate certifi
     
 
     
+        <p class="mb-0 paige-description text-center">2018-07-24</p>
+    
 
     
         <p class="fst-italic mb-0 paige-summary text-center">I recently uploaded a tool to GitHub that wraps kubectl port-forward command and supports port-forwarding to multiple pods. It’s called kubepfm. I use this tool heavily in my development work. You can check out the code here. You might find this useful.</p>
@@ -1317,6 +1336,10 @@ a keyfile, filename.key a certificate file, filename.crt an intermediate certifi
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-07-24">July 24, 2018</time>
+        </p>
     
 
     
@@ -1362,18 +1385,21 @@ a keyfile, filename.key a certificate file, filename.crt an intermediate certifi
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2018-12-27-mochi-k8s-repo/">Mobingi’s Kubernetes clusters repo</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-03-31-access-pods-k8s/">Accessing services in Kubernetes</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2018-03-31</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">I posted an article for @mobingi about its Kubernetes clusters repo. Please check it out. Thanks.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">At Mobingi, when we are developing services that run on Kubernetes, we generally use Minikube or Kubernetes in Docker for Mac. We also have a cluster that runs on GKE that we use for development. In this post, I will share how we access some of the services that are running on our development cluster.
+Using kubectl port-forward Using kubectl port-forward is probably the cheapest and the most straightforward. For example, if I want to access a cluster service svc1 through my localhost, I use kubectl port-forward like this:</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/mobingi/">Mobingi</a> · <a class="link-secondary" href="/tags/repo/">Repo</a>
+            <a class="link-secondary" href="/tags/ingress/">Ingress</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/nginx/">Nginx</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
         </p>
     
 
@@ -1381,6 +1407,82 @@ a keyfile, filename.key a certificate file, filename.crt an intermediate certifi
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-03-31">March 31, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">4 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-02-20-k8s-tls-digicert/">Creating a Kubernetes TLS secret using certificates from DigiCert</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-02-20</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">It took me a while to make this work. I hope this will help someone out there who also is struggling with the same problem.
+We use DigiCert as our SSL certificate provider. The package I received contained three files:
+a keyfile, filename.key a certificate file, filename.crt an intermediate certificate file, DigiCertCA.crt I had to combine the two certificate files into a single file. I didn’t really check the order but I appended the intermediate certificate to my certificate file.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/digicert/">DigiCert</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/tls/">TLS</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-02-20">February 20, 2018</time>
+        </p>
     
 
     
@@ -1430,6 +1532,8 @@ a keyfile, filename.key a certificate file, filename.crt an intermediate certifi
     
 
     
+        <p class="mb-0 paige-description text-center">2018-01-24</p>
+    
 
     
         <p class="fst-italic mb-0 paige-summary text-center">Overview This post will walk through the steps on how we provisioned our production Kubernetes cluster @mobingi. Some of the bits here are already automated in our case but I will try to include as much details as I can.
@@ -1448,74 +1552,13 @@ Provision a Kubernetes cluster on AWS using kops. The cluster will have two auto
     
 
     
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">5 minutes</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2019-01-31-nginx-basicauth-k8s/">Using nginx basic authentication in Kubernetes</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">This post is somewhat related to a previous post about accessing k8s services using nginx reverse proxy. Let’s try to add a simple basic authentication to these services at the proxy level. Now, this may come in handy in non-production environments but at the very least, make sure that you are doing this over HTTPS as basic authentication credentials are not encrypted.
-We will be using the htpasswd tool to generate our passwords.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/basic-auth/">Basic-Auth</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/nginx/">Nginx</a>
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-01-24">January 24, 2018</time>
         </p>
     
 
     
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+        <p class="mb-0 paige-reading-time text-center text-secondary">5 minutes</p>
     
 </div>
 

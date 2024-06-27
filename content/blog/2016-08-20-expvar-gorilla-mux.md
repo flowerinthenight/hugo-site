@@ -1,24 +1,29 @@
 ---
-layout: post
 title: "How to serve expvar when using gorilla/mux"
-location: "Japan"
+description: "2016-08-20"
+date: "2016-08-20"
+paige:
+  feed:
+    hide_page: true
 categories: ["Code", "golang"]
-comments: true
+weight: 1
 ---
 
 For personal reference:
 
-{% gist b6e639978dc2c21042ccea526700f214 %}
+{{< gist flowerinthenight b6e639978dc2c21042ccea526700f214 >}}
 
 ### Access root
 
-{% highlight shell %}
+```sh
 http://localhost:8000
-{% endhighlight %}
+```
 
 
 ### Access expvar information
 
-{% highlight shell %}
+```sh
 http://localhost:8000/debug/vars
-{% endhighlight %}
+```
+
+<br>

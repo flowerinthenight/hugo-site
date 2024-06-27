@@ -1,9 +1,12 @@
 ---
-layout: post
 title: "Trying out Bash on Windows"
-location: "Japan"
+description: "2016-04-10"
+date: "2016-04-10"
+paige:
+  feed:
+    hide_page: true
 categories: ["Japan"]
-comments: true
+weight: 1
 ---
 
 Downloading...
@@ -15,3 +18,5 @@ And here we go...
 {% include image.html url="../../../../images/win10preview2.png" %}
 
 Looking good so far.
+
+<br>

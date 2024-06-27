@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,72 +99,5 @@
     <title type="html"><![CDATA[Jekyll · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>I&rsquo;ve found this <a href="https://gist-it.appspot.com/">nifty little tool</a> that can embed codes directly from your GitHub repositories without using Gist. It&rsquo;s very easy to use. For example, if you want to embed, say, <a href="https://github.com/flowerinthenight/rusttrace/blob/master/src/main.rs">this whole file</a>, you only need to add this snippet somewhere in your post.md file.</p>
-<p>{% highlight html %}</p>
-<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/flowerinthenight/rusttrace/blob/master/src/main.rs?footer=minimal"></script>
-<p>{% endhighlight %}</p>
-<p>The <code>?footer=minimal</code> part is optional. It will look something like this:</p>
-<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/flowerinthenight/rusttrace/blob/master/src/main.rs?footer=minimal"></script>
-<p>It can also embed just a section of code based on line numbers. For example, to embed line 234 to line 257 of <a href="https://github.com/flowerinthenight/rmq/blob/master/rabbitmq.go">this file</a>, this snippet will do.</p>
-<p>{% highlight html %}</p>
-<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/flowerinthenight/rmq/blob/master/rabbitmq.go?slice=233:257&footer=minimal"></script>
-<p>{% endhighlight %}</p>
-<p>It will look something like this:</p>
-<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/flowerinthenight/rmq/blob/master/rabbitmq.go?slice=233:257&footer=minimal"></script>
-<p>Just note that the <code>slice=</code> parameter is zero-based and GitHub&rsquo;s line numbering starts at 1.</p>
-<p>Finally, if you have an HTTPS blog, make sure to use <code>https://gist-it.appspot.com/...</code>, not <code>http://gist-it.appspot.com/...</code>.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2017-11-28-embed-github-code/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2017-11-28-embed-github-code/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Embed code from GitHub to GitHub Pages blog like Gist]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

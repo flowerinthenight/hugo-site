@@ -1,17 +1,22 @@
 ---
-layout: post
 title: "Syslog as target in Go logs"
-location: "Japan"
+description: "2016-08-22"
+date: "2016-08-22"
+paige:
+  feed:
+    hide_page: true
 categories: ["Code", "golang"]
-comments: true
+weight: 1
 ---
 
 For personal reference:
 
-{% gist 29d147a50242198f082fd33f7d24677c %}
+{{< gist flowerinthenight 29d147a50242198f082fd33f7d24677c >}}
 
 To view syslog in realtime
 
-{% highlight shell %}
+```sh
 tail -f /var/log/syslog
-{% endhighlight %}
+```
+
+<br>

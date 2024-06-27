@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2018-02-20 00:00:00 -0800 PST</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/tls/</link>
 
@@ -92,78 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>It took me a while to make this work. I hope this will help someone out there who also is struggling with the same problem.</p>
-<p>We use DigiCert as our SSL certificate provider. The package I received contained three files:</p>
-<ul>
-<li>a keyfile, filename.key</li>
-<li>a certificate file, filename.crt</li>
-<li>an intermediate certificate file, DigiCertCA.crt</li>
-</ul>
-<p>I had to combine the two certificate files into a single file. I didn&rsquo;t really check the order but I appended the intermediate certificate to my certificate file. Something like this:</p>
-<p>{% highlight shell %}
-$ cp filename.crt tls.crt
-$ cat DigiCertCA.crt &raquo; tls.crt
-$ cp filename.key tls.key
-$ kubectl create secret tls mytls &ndash;key tls.key &ndash;cert tls.crt
-{% endhighlight %}</p>
-<p>I was able to successfully use the secret in a GCE Ingress:</p>
-<p>{% highlight ruby %}
-apiVersion: extensions/v1beta1
-kind: Ingress
-&hellip;
-spec:
-tls:</p>
-<ul>
-<li>secretName: mytls
-backend:
-serviceName: myservice
-servicePort: 80
-&hellip;
-{% endhighlight %}</li>
-</ul>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-02-20-k8s-tls-digicert/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2018-02-20-k8s-tls-digicert/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Creating a Kubernetes TLS secret using certificates from DigiCert</title>
-                
-            </item>
         
     </channel>
 </rss>

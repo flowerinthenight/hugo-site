@@ -16,8 +16,6 @@
     
 
     
-        
-    
 
 
 
@@ -103,89 +101,5 @@
     <title type="html"><![CDATA[Glog · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>If you have been programming with golang, you&rsquo;ve probably heard of <a href="https://github.com/spf13/cobra">cobra</a>. I use it extensively at work and also in my personal projects.</p>
-<p>Recently though, I&rsquo;ve been using <a href="https://github.com/golang/glog">glog</a> more and more. And I quite like it. The thing is, it has a couple of flag definitions in its <code>init()</code> function using golang&rsquo;s builtin <code>flag</code> library. And I wanted to include those flags into cobra&rsquo;s flag definitions. This is how I did it.</p>
-<p>{% gist 221e26cea495e5adc3ae6a323b4fbdba %}</p>
-<p>Generated help information will now look something like this.</p>
-<p>{% highlight shell %}</p>
-<h1 id="run-the-help-command">run the help command</h1>
-<p>$ ./cobraglog -h
-Use glog with cobra.</p>
-<p>Usage:
-[flags]</p>
-<p>Flags:
-&ndash;alsologtostderr                  log to standard error as well as files
-&ndash;echo string                      echo string (default &ldquo;hello&rdquo;)
-&ndash;log_backtrace_at traceLocation   when logging hits line file:N, emit a stack trace (default :0)
-&ndash;log_dir string                   If non-empty, write log files in this directory
-&ndash;logtostderr                      log to standard error instead of files
-&ndash;stderrthreshold severity         logs at or above this threshold go to stderr (default 2)
--v, &ndash;v Level                          log level for V logs
-&ndash;vmodule moduleSpec               comma-separated list of pattern=N settings for file-filtered logging
--h, &ndash;help                             help for this command
-{% endhighlight %}</p>
-<p>Note that our cobra-defined flag <code>--echo</code> is also there. The rest are defined by glog internally. Finally, run the application.</p>
-<p>{% highlight shell %}</p>
-<h1 id="run-the-binary-providing-the-logtostderr-flag-defined-by-glog">run the binary, providing the logtostderr flag defined by glog</h1>
-<p>$ ./cobraglog &ndash;logtostderr
-I1129 13:49:34.166660    2138 main.go:28] echo (info): hello
-W1129 13:49:34.166718    2138 main.go:29] echo (warn): hello
-E1129 13:49:34.166722    2138 main.go:30] echo (error): hello
-{% endhighlight %}</p>
-<p>Here&rsquo;s another example using subcommands.</p>
-<p>{% gist 447f983882720d817f3b92088f98aaa3 %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2017-12-01-golang-cobra-glog/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2017-12-01-golang-cobra-glog/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Using glog together with cobra in golang]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

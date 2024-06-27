@@ -13,15 +13,13 @@
 
 
     
-
-    
         
     
 
     
 
     
-        
+
     
 
 
@@ -85,6 +83,8 @@
         
 
         
+            <lastBuildDate>2018-11-19 00:00:00 -0800 PST</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/sqs/</link>
 
@@ -98,94 +98,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I uploaded an example code on how to monitor a Dynamodb table (INSERT, MODIFY, and REMOVE) using <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">dynamodbstreams</a>, lambda, SNS, and SQS. Please have a look <a href="https://github.com/flowerinthenight/dynamodbstreams-lambda-sns-sqs">here</a>.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-11-19-dynamodbstreams-lambda-sns-sqs/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2018-11-19-dynamodbstreams-lambda-sns-sqs/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Monitoring dynamodb table using dynamodbstream, lambda, SNS and SQS</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>Before, I uploaded an example on how to handle lengthy processing of PubSub subscription messages in <a href="https://github.com/flowerinthenight/gcp-pubsub-lengthy-consume">GitHub</a>. This time, it&rsquo;s for AWS SQS. Have a look at the sample code <a href="https://github.com/flowerinthenight/sqs-lengthy-consume">here</a>.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-10-05-aws-sqs-lengthy-process/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2018-10-05-aws-sqs-lengthy-process/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>AWS SQS lengthy message processing</title>
-                
-            </item>
         
     </channel>
 </rss>

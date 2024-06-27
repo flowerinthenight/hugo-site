@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2016-03-19" name="description">
+
 
 
     <meta content="Code" name="keywords">
@@ -63,21 +65,17 @@
 <meta property="og:url" content="http://localhost:1313/blog/2016-03-19-etw-part5/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="[Part 5] Logging with C# applications">
-  <meta property="og:description" content="Check out the codes in GitHub.
-I generated a C# logging class using this command:
-{% highlight shell %} mc -css &lt;Namespace_here&gt; jytrace.man {% endhighlight %}
-So far, most of my event templates use an ANSI string data type which (I believe) is not supported by C#. As you can see in part 1, I use ANSI data type for my File and Function fields so that I can use __FILE__ and __FUNCTION__ as inputs in C&#43;&#43;.">
+  <meta property="og:description" content="2016-03-19">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2016-03-19T00:00:00-07:00">
+    <meta property="article:modified_time" content="2016-03-19T00:00:00-07:00">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="[Part 5] Logging with C# applications">
-  <meta name="twitter:description" content="Check out the codes in GitHub.
-I generated a C# logging class using this command:
-{% highlight shell %} mc -css &lt;Namespace_here&gt; jytrace.man {% endhighlight %}
-So far, most of my event templates use an ANSI string data type which (I believe) is not supported by C#. As you can see in part 1, I use ANSI data type for my File and Function fields so that I can use __FILE__ and __FUNCTION__ as inputs in C&#43;&#43;.">
+  <meta name="twitter:description" content="2016-03-19">
 
 
 
@@ -695,6 +693,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2016-03-19</p>
+    
 
     
         <div class="mb-3">
@@ -708,6 +708,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2016-03-19">March 19, 2016</time>
+                </p>
             
 
             
@@ -732,26 +736,21 @@ table {
 
     <div class="mw-100" id="paige-content"><p>Check out the codes in <a href="https://github.com/idrilsilverfoot/win32-etw-manifest">GitHub</a>.</p>
 <p>I generated a C# logging class using this command:</p>
-<p>{% highlight shell %}
-mc -css &lt;Namespace_here&gt; jytrace.man
-{% endhighlight %}</p>
-<p>So far, most of my event templates use an ANSI string data type which (I believe) is not supported by C#. As you can see in part 1, I use ANSI data type for my File and Function fields so that I can use <code>__FILE__</code> and <code>__FUNCTION__</code> as inputs in C++. Thats why I added a new event template with all fields using UNICODE data types. Again, you can refer to the whole package here for reference.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mc -css &lt;Namespace_here&gt; jytrace.man
+</span></span></code></pre></div><p>So far, most of my event templates use an ANSI string data type which (I believe) is not supported by C#. As you can see in part 1, I use ANSI data type for my File and Function fields so that I can use <code>__FILE__</code> and <code>__FUNCTION__</code> as inputs in C++. Thats why I added a new event template with all fields using UNICODE data types. Again, you can refer to the whole package here for reference.</p>
 <p>To use the logging class, I added the generated file to my project. I also added a wrapper class so I can use the <code>CallerMemberName</code> and <code>CallerFilePath</code> attributes in C#.</p>
-<p>{% highlight csharp %}
-public static bool Verbose(
-string m,
-[CallerMemberName] string memberName = &ldquo;?&rdquo;,
-[CallerFilePath] string srcFile = &ldquo;?&rdquo;,
-[CallerLineNumber] int srcNum = 0)
-{
-return JyTrace.ProviderJyTrace.EventWriteSimple(&ldquo;ETWTest&rdquo;, Path.GetFileName(srcFile), memberName, &ldquo;Trace:&rdquo;, m);
-}
-{% endhighlight %}</p>
-<p>The actual log call:</p>
-<p>{% highlight csharp %}
-TraceCore.Verbose(&ldquo;Hello from CS!&rdquo;);
-{% endhighlight %}</p>
-<p>Check out <a href="http://flowerinthenight.com/blog/2016/03/22/etw-part6">part 6</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">bool</span> <span class="n">Verbose</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">string</span> <span class="n">m</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [CallerMemberName]</span> <span class="kt">string</span> <span class="n">memberName</span> <span class="p">=</span> <span class="s">&#34;?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [CallerFilePath]</span> <span class="kt">string</span> <span class="n">srcFile</span> <span class="p">=</span> <span class="s">&#34;?&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="na">    [CallerLineNumber]</span> <span class="kt">int</span> <span class="n">srcNum</span> <span class="p">=</span> <span class="m">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">JyTrace</span><span class="p">.</span><span class="n">ProviderJyTrace</span><span class="p">.</span><span class="n">EventWriteSimple</span><span class="p">(</span><span class="s">&#34;ETWTest&#34;</span><span class="p">,</span> <span class="n">Path</span><span class="p">.</span><span class="n">GetFileName</span><span class="p">(</span><span class="n">srcFile</span><span class="p">),</span> <span class="n">memberName</span><span class="p">,</span> <span class="s">&#34;Trace:&#34;</span><span class="p">,</span> <span class="n">m</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The actual log call:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="n">TraceCore</span><span class="p">.</span><span class="n">Verbose</span><span class="p">(</span><span class="s">&#34;Hello from CS!&#34;</span><span class="p">);</span>
+</span></span></code></pre></div><p>Check out <a href="/blog/2016-03-22-etw-part6/">part 6</a>.</p>
+<br>
 </div>
 
 
@@ -831,13 +830,13 @@ TraceCore.Verbose(&ldquo;Hello from CS!&rdquo;);
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-03-22-etw-part6/">[Part 6] Logging with Universal Apps</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2016-03-07-etw-part4/">[Part 4] Log collection</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2016-03-22-etw-part6/">[Part 6] Logging with Universal Apps</a> &rarr;
                 </p>
             
         </div>

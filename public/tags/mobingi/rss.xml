@@ -13,15 +13,13 @@
 
 
     
-
-    
         
     
 
     
 
     
-        
+
     
 
 
@@ -85,6 +83,8 @@
         
 
         
+            <lastBuildDate>2018-12-27 00:00:00 -0800 PST</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/mobingi/</link>
 
@@ -98,94 +98,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I posted an <a href="https://tech.mobingi.com/2018/12/05/mochi-k8s-repo.html">article</a> for <a href="https://twitter.com/mobingi">@mobingi</a> about its Kubernetes clusters repo. Please check it out. Thanks.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-12-27-mochi-k8s-repo/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2018-12-27-mochi-k8s-repo/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Mobingi’s Kubernetes clusters repo</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I posted an <a href="https://tech.mobingi.com/2018/09/25/ouchan-monorepo.html">article</a> for <a href="https://twitter.com/mobingi">@mobingi</a> about its Golang-based monorepo. Please check it out. Thanks.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-09-25-ouchan-monorepo/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2018-09-25-ouchan-monorepo/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Mobingi’s golang monorepo</title>
-                
-            </item>
         
     </channel>
 </rss>

@@ -1,14 +1,17 @@
 ---
-layout: post
 title: "Sharing my .tmux.conf"
-location: "Japan"
+description: "2016-08-11"
+date: "2016-08-11"
+paige:
+  feed:
+    hide_page: true
 categories: ["Code"]
-comments: true
+weight: 1
 ---
 
 I use `tmux` heavily and in tandem with `vim`. Much more so now when it's supported on Bash on Windows as well. I don't have to spin up a Linux VM just for the purpose of being my `tmux` "server".
 
-{% highlight conf %}
+```conf
 # Set a Ctrl-b shortcut for reloading tmux config
 unbind r
 bind r source-file ~/.tmux.conf
@@ -45,4 +48,6 @@ set -g mode-keys vi
 
 # Extend history limit
 set -g history-limit 10000
-{% endhighlight %}
+```
+
+<br>

@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2017-07-31 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/website/</link>
 
@@ -92,51 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>As of this writing, GitHub Pages still doesn&rsquo;t support HTTPS for custom domains. Last week, I came across <a href="https://www.netlify.com/github-pages-vs-netlify/">Netlify</a> being able to serve GitHub Pages as is, with HTTPS support even with custom domains. I gave it a go. And it worked. If you&rsquo;re in the same boat as me (using GH-Pages with custom domains), give <a href="https://www.netlify.com/">Netlify</a> a go.</p>
-<p>Note: I am not affiliated with Netlify in any way, whatsoever.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2017-07-31-ghpages-netlify/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2017-07-31-ghpages-netlify/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>From GitHub Pages to Netlify</title>
-                
-            </item>
         
     </channel>
 </rss>

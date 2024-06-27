@@ -25,8 +25,6 @@
     
 
     
-        
-    
 
 
 
@@ -104,50 +102,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I recently uploaded a tool to GitHub that wraps <code>kubectl port-forward</code> command and supports port-forwarding to multiple pods. It&rsquo;s called <a href="https://github.com/flowerinthenight/kubepfm"><code>kubepfm</code></a>. I use this tool heavily in my development work. You can check out the code <a href="https://github.com/flowerinthenight/kubepfm">here</a>. You might find this useful.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2018-07-24-kubepfm/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2018-07-24-kubepfm/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>kubepfm, a kubectl port-forward wrapper for multiple pods</title>
-                
-            </item>
         
     </channel>
 </rss>

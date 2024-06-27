@@ -16,8 +16,6 @@
     
 
     
-        
-    
 
 
 
@@ -103,59 +101,5 @@
     <title type="html"><![CDATA[Wdm · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>This post is a bit of a departure from my usual golang/cloud-related ramblings. I posted an open-source <a href="https://github.com/flowerinthenight/windows-camera-class-filter-driver">camera class filter driver</a> for Windows ages ago hoping that it would help someone working on a similar project. If you are familiar with this type of driver, you probably know that it&rsquo;s not that straightforward to write mainly due to it being generally undocumented. A lot of reverse engineering has been done to write this driver. Anyway, recently, someone pointed out to me that it&rsquo;s been discussed in <a href="https://www.osronline.com/showthread.cfm?link=288736">this forum post</a>. So if you&rsquo;re working on a similar project, give it a whirl, and if you find some issues, I would appreciate it if you could submit a PR for fixes. Thanks.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2018-04-30-camera-class-filter-driver/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2018-04-30-camera-class-filter-driver/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Camera Class Filter Driver for Windows]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>
