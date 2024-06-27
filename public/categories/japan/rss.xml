@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
     
@@ -85,6 +85,8 @@
         
 
         
+            <lastBuildDate>2016-04-10 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/categories/japan/</link>
 
@@ -98,54 +100,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>Downloading&hellip;</p>
-<p>{% include image.html url=&quot;../../../../images/win10preview1.png&quot; %}</p>
-<p>And here we go&hellip;</p>
-<p>{% include image.html url=&quot;../../../../images/win10preview2.png&quot; %}</p>
-<p>Looking good so far.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-04-10-trying-bash-on-windows/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2016-04-10-trying-bash-on-windows/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Trying out Bash on Windows</title>
-                
-            </item>
         
             <item>
                 

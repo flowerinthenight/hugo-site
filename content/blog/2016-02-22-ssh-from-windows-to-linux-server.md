@@ -59,3 +59,5 @@ $ chmod -R 600 ~/.ssh
 5. Add the .ppk file to Private key file for authentication under Connection -> SSH -> Auth.
 6. Go back to Sessions, enter your servers IP address, add a session name under Saved Sessions and save.
 7. Try logging in to your server using the saved session details from #3. You should be able to now without typing your server credentials.
+
+<br>

@@ -81,8 +81,6 @@
     
 
     
-        
-    
 
 
 
@@ -160,86 +158,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I installed Samba to my Ubuntu Server (which is an old ThinkPad laptop that has been gathering dust in my closet for ages):</p>
-<p>{% highlight shell %}
-sudo apt-get install samba
-{% endhighlight %}</p>
-<p>I have three 3-TB HDDs that I planned to use as my main server storage; one main server, and the other two for backup. All of these HDDs are in ext4 format.</p>
-<p>Then I created a new directory under <code>/media</code> where I will mount my main server storage:</p>
-<p>{% highlight shell %}
-mkdir /media/myserver
-{% endhighlight %}</p>
-<p>Then I edited the samba config file <code>/etc/samba/smb.conf</code>. I just scrolled to the very bottom and added these lines (after [print$] section):</p>
-<p>{% highlight conf %}
-[MYSERVER]
-path = /media/myserver
-browsable = yes
-writable = yes
-guest ok = yes
-read only = no
-{% endhighlight %}</p>
-<p>Then I tested the config file for syntax errors using the command:</p>
-<p>{% highlight shell %}
-testparm
-{% endhighlight %}</p>
-<p>Before I added the mount entry for my server to <code>/etc/fstab</code>, I took note of my HDD&rsquo;s UUID from the following command:</p>
-<p>{% highlight shell %}
-sudo blkid
-{% endhighlight %}</p>
-<p>in which the output looked something like</p>
-<p>{% highlight shell %}
-/dev/sdb1: UUID=&ldquo;996a1b79-bf22-49fd-a3d1-33eab2708cfb&rdquo; TYPE=&ldquo;ext4&rdquo;
-{% endhighlight %}</p>
-<p>Then I edited <code>/etc/fstab</code> and added the line below:</p>
-<p>{% highlight shell %}
-UUID=996a1b79-bf22-49fd-a3d1-33eab2708cfb /media/myserver ext4 defaults 0 0
-{% endhighlight %}</p>
-<p>Lastly, I then rebooted my server.</p>
-<h1 id="accessing-my-file-server-from-windows">Accessing my file server from Windows</h1>
-<p>To access my server, I opened File Explorer and browsed to <code>\\my_server_ip\myserver</code>.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-03-28-setup-samba-server/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2016-03-28-setup-samba-server/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>How I set up my Samba file server</title>
-                
-            </item>
         
     </channel>
 </rss>

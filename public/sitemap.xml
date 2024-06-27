@@ -290,6 +290,39 @@
     <loc>http://localhost:1313/blog/2016-06-13-folder-file-watcher-powershell/</loc>
     <lastmod>2016-06-13T00:00:00-07:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog/2016-05-06-import-environment-powershell/</loc>
+    <lastmod>2016-05-06T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2016-04-10-trying-bash-on-windows/</loc>
+    <lastmod>2016-04-10T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2016-04-06-unzip-function-powershell/</loc>
+    <lastmod>2016-04-06T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2016-04-05-zip-function-powershell/</loc>
+    <lastmod>2016-04-05T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2016-03-28-setup-samba-server/</loc>
+    <lastmod>2016-03-28T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2016-03-22-etw-part6/</loc>
+    <lastmod>2016-03-22T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2016-03-19-etw-part5/</loc>
+    <lastmod>2016-03-19T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2016-03-07-etw-part4/</loc>
+    <lastmod>2016-03-07T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2016-03-03-etw-part3/</loc>
+    <lastmod>2016-03-03T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2016-03-02-etw-part2/</loc>
+    <lastmod>2016-03-02T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2016-03-01-etw-part1/</loc>
+    <lastmod>2016-03-01T00:00:00-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/</loc>
     <lastmod>2016-02-24T00:00:00-08:00</lastmod>
   </url><url>
@@ -935,6 +968,9 @@
     <loc>http://localhost:1313/categories/golang/</loc>
     <lastmod>2016-08-22T00:00:00-07:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/categories/japan/</loc>
+    <lastmod>2016-04-10T00:00:00-07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/bluehost/</loc>
     <lastmod>2016-02-24T00:00:00-08:00</lastmod>
   </url><url>
@@ -947,38 +983,14 @@
     <loc>http://localhost:1313/tags/welcome/</loc>
     <lastmod>2016-02-21T00:00:00-08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/2016-03-01-etw-part1/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2016-03-02-etw-part2/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2016-03-03-etw-part3/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2016-03-07-etw-part4/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2016-03-19-etw-part5/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2016-03-22-etw-part6/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2016-05-06-import-environment-powershell/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2016-04-06-unzip-function-powershell/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2016-04-05-zip-function-powershell/</loc>
-  </url><url>
     <loc>http://localhost:1313/bookshelf/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/2016-03-28-setup-samba-server/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2016-02-25-apply-nanaco-point-card/</loc>
-  </url><url>
-    <loc>http://localhost:1313/categories/japan/</loc>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/sections/</loc>
   </url><url>
     <loc>http://localhost:1313/series/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2016-04-10-trying-bash-on-windows/</loc>
   </url>
 </urlset>

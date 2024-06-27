@@ -1,9 +1,12 @@
 ---
-layout: post
 title: "How to apply for a Nanaco point card"
-location: "Japan"
+description: "2016-02-25"
+date: "2016-02-25"
+paige:
+  feed:
+    hide_page: true
 categories: ["Japan"]
-comments: true
+weight: 1
 ---
 
 After six or so years living in Japan, I just got mine today. Yeah, I know...
@@ -14,14 +17,16 @@ But now that I have a Seven Bank account, I noticed from their online bank acces
 
 [Nanaco official website](https://www.nanaco-net.jp/index_pc.html) is in Japanese. So Google Translate is your friend here. My Chrome browser is set to auto-translate so Im good to go. Go to this [link](https://www.nanaco-net.jp/entry/index02.html), scroll down a bit, and press the big red button. It looks like this:
 
-{% include image.html url="../../../../images/nanaco1.png" %}
+{{< figure src="/assets/nanaco1.png" width="700" >}}
 
 It will open a new window with some more Japanese instructions. Scroll down to the very bottom and click the left button.
 
-{% include image.html url="../../../../images/nanaco2.png" %}
+{{< figure src="/assets/nanaco2.png" width="700" >}}
 
 The next page will be the actual form. You will need to input personal information such as your name, birthday, address (both Japanese and Katakana), phone number, etc. I had a few attempts because the password field only accepts numbers (although Google Translation said "alphanumeric". Oh well). Then click the Next button (the only button) at the very bottom. If you got it right, you will receive a confirmation email containing a link to the document to be printed. It will look like this:
 
-{% include image.html url="../../../../images/nanaco3.png" %}
+{{< figure src="/assets/nanaco3.png" width="700" >}}
 
 Print it and submit to any 7-11 store. The card will cost you 300 yen. After payment, you will get your card right away.
+
+<br>

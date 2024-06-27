@@ -729,8 +729,7 @@ table {
 
     
         
-            
-            
+    
 
     
         
@@ -786,24 +785,38 @@ table {
                 
             
         
-    
+            
+                
+            
         
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
+        
+            
                 
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
             
                 
             
@@ -1773,416 +1786,15 @@ let mapleader = &#34; &#34; filetype off syntax on colorscheme darkblue &#34; le
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-01-etw-part1/">[Part 1] How I set up ETW for logging (native, .NET, Metro and UApp)</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
-Ive been using ETW as my go-to logging mechanism for Windows development. I will be sharing how I setup my environment here.
-Creating the manifest file (.man) I use ecmangen.exe to create my manifest file. This tool is included in the SDK. I have Visual Studio 2015 installed on a Win10 64-bit machine, and its location is C:\Program Files (x86)\Windows Kits\10\bin\x64. It looks something like this (my completed manifest):</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">3 minutes</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-02-etw-part2/">[Part 2] Manifest file compilation and setup</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
-Compiling the manifest file This is how I compiled my manifest file.
-Open Visual Studio command prompt. Compile manifest file. {% highlight shell %} mc -um &lt;manifest_file&gt;.man {% endhighlight %}
-When successful, output files are:
-{% highlight shell %} .h .rc TEMP.BIN MSG00001.bin {% endhighlight %}
-Creating the message resource DLL I like to create a separate dll just for the manifest file resource although you can also add the .</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-03-etw-part3/">[Part 3] Logging with C/C&#43;&#43; applications</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
-If you remember in part 2, we compiled our manifest file with
-{% highlight shell %} mc -um &lt;manifest_file&gt;.man {% endhighlight %}
-and we got a header file as one of the outputs. We just have to include that header file to our sources and we are good to go.
-{% highlight cpp %} #include … #include “&lt;manifest_file&gt;.h”
-int main(…) { EventRegister&lt;provider_name_in_manifest&gt;(); … CreateFile(…); // Example of using the LastError event in our manifest file EventWriteLastError(L&#34;THIS_EXE&#34;, FILE, FUNC, L&#34;CreateFile&#34;, GetLastError()); … EventUnregister&lt;provider_name_in_manifest&gt;(); } {% endhighlight %}</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-07-etw-part4/">[Part 4] Log collection</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
-Getting the logs Now that I have my modules spitting out logs for me, it’s time to actually consume (or view) them. Most of the time, I use MFTrace and logman tools.
-MFTrace Although MFTrace is primarily a tool for generating logs for Media Foundation apps, it is a great tool for viewing ETW logs in general as well. It is included in the MS SDK.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-19-etw-part5/">[Part 5] Logging with C# applications</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub. I generated a C# logging class using this command: {% highlight shell %} mc -css &lt;Namespace_here&gt; jytrace.man {% endhighlight %} So far, most of my event templates use an ANSI string data type which (I believe) is not supported by C#. As you can see in part 1, I use ANSI data type for my File and Function fields so that I can use FILE and FUNCTION as inputs in C&#43;&#43;.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-22-etw-part6/">[Part 6] Logging with Universal Apps</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
-Basically, 2 steps:
-Create a C&#43;&#43; Windows Runtime Component (dll) that will use the ETW header file. Reference the WinRT DLL to C# project.
-WinRT DLL My logging class looks like this:
-{% highlight cpp %} public ref class TraceCore sealed { private: TraceCore(); ~TraceCore();
-static TraceCore^ m_Instance; public: static property TraceCore^ Instance { TraceCore^ get() { if (m_Instance == nullptr) { m_Instance = ref new TraceCore(); }</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
         <p class="mb-0 paige-title text-center"><a href="/blog/2016-05-06-import-environment-powershell/">A simple Powershell function to import an environment</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2016-05-06</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">A couple of days ago, I was working on a powershell-based script for mstest automation and I needed to call vsdevcmd.bat from Visual Studio’s tools folder. {% highlight powershell %} function Invoke-Environment([Parameter(Mandatory=1)][string]$Command, [switch]$Output, [switch]$Force) { $stream = if ($Output) { ($temp = [IO.Path]::GetTempFileName()) } else { ’nul’ } $operator = if ($Force) {’&amp;’} else {’&amp;&amp;’} foreach($_ in cmd /c &#34; $Command &gt; &amp;quot;$stream&#34; 2&gt;&amp;1 $operator SET&#34;) { if ($_ -match ‘^([^=]&#43;)=(.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">A couple of days ago, I was working on a powershell-based script for mstest automation and I needed to call vsdevcmd.bat from Visual Studio’s tools folder. function Invoke-Environment([Parameter(Mandatory=1)][string]$Command, [switch]$Output, [switch]$Force) { $stream = if ($Output) { ($temp = [IO.Path]::GetTempFileName()) } else { &#39;nul&#39; } $operator = if ($Force) {&#39;&amp;&#39;} else {&#39;&amp;&amp;&#39;} foreach($_ in cmd /c &#34; $Command &gt; &amp;#34;$stream&#34; 2&gt;&amp;1 $operator SET&#34;) { if ($_ -match &#39;^([^=]&#43;)=(.*)&#39;) { [System.Environment]::SetEnvironmentVariable($matches[1], $matches[2]) } } if ($Output) { Get-Content -LiteralPath $temp Remove-Item -LiteralPath $temp } } To use the function:</p>
     
 
     
@@ -2195,6 +1807,10 @@ static TraceCore^ m_Instance; public: static property TraceCore^ Instance { Trac
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-05-06">May 6, 2016</time>
+        </p>
     
 
     
@@ -2244,11 +1860,12 @@ static TraceCore^ m_Instance; public: static property TraceCore^ Instance { Trac
     
 
     
+        <p class="mb-0 paige-description text-center">2016-04-06</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">{% highlight powershell %} function UnzipFiles($ZipFileName, $DestDir) { Add-Type -Assembly System.IO.Compression.FileSystem [System.IO.Compression.ZipFile]::ExtractToDirectory($ZipFileName, $DestDir) } {% endhighlight %}
-To use the function:
-{% highlight powershell %} UnzipFiles -ZipFileName .\folder\file.zip -DestDir .\destination {% endhighlight %}</p>
+        <p class="fst-italic mb-0 paige-summary text-center">function UnzipFiles($ZipFileName, $DestDir) { Add-Type -Assembly System.IO.Compression.FileSystem [System.IO.Compression.ZipFile]::ExtractToDirectory($ZipFileName, $DestDir) } To use the function:
+UnzipFiles -ZipFileName .\folder\file.zip -DestDir .\destination</p>
     
 
     
@@ -2261,6 +1878,10 @@ To use the function:
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-04-06">April 6, 2016</time>
+        </p>
     
 
     
@@ -2310,11 +1931,12 @@ To use the function:
     
 
     
+        <p class="mb-0 paige-description text-center">2016-04-05</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">{% highlight powershell %} function ZipFiles($ZipFileName, $SourceDir) { Add-Type -Assembly System.IO.Compression.FileSystem $compressionLevel = [System.IO.Compression.CompressionLevel]::Optimal [System.IO.Compression.ZipFile]::CreateFromDirectory($SourceDir, $ZipFileName, $compressionLevel, $false) } {% endhighlight %}
-To use the function:
-{% highlight powershell %} ZipFiles -ZipFileName test.zip -SourceDir .\folder\to\zip {% endhighlight %}</p>
+        <p class="fst-italic mb-0 paige-summary text-center">function ZipFiles($ZipFileName, $SourceDir) { Add-Type -Assembly System.IO.Compression.FileSystem $compressionLevel = [System.IO.Compression.CompressionLevel]::Optimal [System.IO.Compression.ZipFile]::CreateFromDirectory($SourceDir, $ZipFileName, $compressionLevel, $false) } To use the function:
+ZipFiles -ZipFileName test.zip -SourceDir .\folder\to\zip</p>
     
 
     
@@ -2328,9 +1950,444 @@ To use the function:
     
 
     
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-04-05">April 5, 2016</time>
+        </p>
+    
 
     
         <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-22-etw-part6/">[Part 6] Logging with Universal Apps</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-03-22</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
+Basically, 2 steps:
+Create a C&#43;&#43; Windows Runtime Component (dll) that will use the ETW header file. Reference the WinRT DLL to C# project.
+WinRT DLL My logging class looks like this:
+public ref class TraceCore sealed { private: TraceCore(); ~TraceCore(); static TraceCore^ m_Instance; public: static property TraceCore^ Instance { TraceCore^ get() { if (m_Instance == nullptr) { m_Instance = ref new TraceCore(); } return m_Instance; } } void Verbose(Platform::String^ mod, Platform::String^ file, Platform::String^ func, Platform::String^ m); }; And heres the implementation:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-03-22">March 22, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-19-etw-part5/">[Part 5] Logging with C# applications</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-03-19</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub. I generated a C# logging class using this command: mc -css &lt;Namespace_here&gt; jytrace.man So far, most of my event templates use an ANSI string data type which (I believe) is not supported by C#. As you can see in part 1, I use ANSI data type for my File and Function fields so that I can use FILE and FUNCTION as inputs in C&#43;&#43;. Thats why I added a new event template with all fields using UNICODE data types.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-03-19">March 19, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-07-etw-part4/">[Part 4] Log collection</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-03-07</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
+Getting the logs Now that I have my modules spitting out logs for me, it’s time to actually consume (or view) them. Most of the time, I use MFTrace and logman tools.
+MFTrace Although MFTrace is primarily a tool for generating logs for Media Foundation apps, it is a great tool for viewing ETW logs in general as well. It is included in the MS SDK.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-03-07">March 7, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-03-etw-part3/">[Part 3] Logging with C/C&#43;&#43; applications</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-03-03</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub. If you remember in part 2, we compiled our manifest file with mc -um &lt;manifest_file&gt;.man and we got a header file as one of the outputs. We just have to include that header file to our sources and we are good to go. #include … #include &#34;&lt;manifest_file&gt;.h&#34; int main(…) { EventRegister&lt;provider_name_in_manifest&gt;(); … CreateFile(…); // Example of using the LastError event in our manifest file EventWriteLastError(L&#34;THIS_EXE&#34;, FILE, FUNC, L&#34;CreateFile&#34;, GetLastError()); .</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-03-03">March 3, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-02-etw-part2/">[Part 2] Manifest file compilation and setup</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-03-02</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
+Compiling the manifest file This is how I compiled my manifest file.
+Open Visual Studio command prompt. Compile manifest file. mc -um &lt;manifest_file&gt;.man When successful, output files are:
+&lt;filename&gt;.h &lt;filename&gt;.rc &lt;filename&gt;TEMP.BIN MSG00001.bin Creating the message resource DLL I like to create a separate dll just for the manifest file resource although you can also add the .rc file to any of your existing dll or exe.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-03-02">March 2, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-01-etw-part1/">[Part 1] How I set up ETW for logging (native, .NET, Metro and UApp)</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-03-01</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
+Ive been using ETW as my go-to logging mechanism for Windows development. I will be sharing how I setup my environment here.
+Creating the manifest file (.man) I use ecmangen.exe to create my manifest file. This tool is included in the SDK. I have Visual Studio 2015 installed on a Win10 64-bit machine, and its location is C:\Program Files (x86)\Windows Kits\10\bin\x64. It looks something like this (my completed manifest):</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-03-01">March 1, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">3 minutes</p>
     
 </div>
 

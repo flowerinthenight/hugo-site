@@ -738,23 +738,32 @@ table {
 <p>Ive been using ETW as my go-to logging mechanism for Windows development. I will be sharing how I setup my environment here.</p>
 <h1 id="creating-the-manifest-file-man">Creating the manifest file (.man)<a aria-label="Link to this section" class="paige-header-link" href="#creating-the-manifest-file-man"></a></h1>
 <p>I use <code>ecmangen.exe</code> to create my manifest file. This tool is included in the SDK. I have Visual Studio 2015 installed on a Win10 64-bit machine, and its location is <code>C:\Program Files (x86)\Windows Kits\10\bin\x64\</code>. It looks something like this (my completed manifest):</p>
-<p>{% include image.html url=&quot;../../../../images/etw1.png&quot; %}</p>
+<figure><img src="/assets/etw1.png" width="700">
+</figure>
+
 <p>The red strip is the manifest file name, or my ETW provider name.</p>
 <p>I started by right-clicking Events Section -&gt; New -&gt; Provider, then gave it a name. Then prepended the string Provider to the existing name for the Symbol, auto-generated the GUID, left the other fields as blank, then Save.</p>
 <h1 id="setting-up-keywords">Setting up Keywords<a aria-label="Link to this section" class="paige-header-link" href="#setting-up-keywords"></a></h1>
-<p>{% include image.html url=&quot;../../../../images/etw2.png&quot; %}</p>
+<figure><img src="/assets/etw2.png" width="700">
+</figure>
+
 <p>Keywords basically is a mask for filtering log outputs. Mine is just a simple logging mechanism so I have only two keywords. Im not even using <code>KeywordFunctionEntryExit</code> (set to 0x1) that much nowadays so <code>KeywordGeneric</code> (set to 0x2) for me is enough. With this, I have the option later to output only the logs with the keyword <code>KeywordFunctionEntryExit</code> or <code>KeywordGeneric</code>, or both.</p>
 <h1 id="setting-up-templates">Setting up Templates<a aria-label="Link to this section" class="paige-header-link" href="#setting-up-templates"></a></h1>
-<p>{% include image.html url=&quot;../../../../images/etw3.png&quot; %}</p>
+<figure><img src="/assets/etw3.png" width="700">
+</figure>
+
 <p>Templates are, well, templates for the events (in this context, a log is basically an event). Templates will contain the fields (with data types) I want to include in my log. My goal was to have logs with a format of <code>[module_name: src_file_name:  function_name] key: value</code>, where <code>key</code> would be any label, say, variable name, and <code>value</code> as, well, any value, be it int or bool, or last error, etc. I thought that this format is generic enough for me to log any information from my code.</p>
 <p>All events require a template (whether your template or default, which I admit I have never used). Multiple events can use a single template.</p>
 <h1 id="setting-up-events">Setting up Events<a aria-label="Link to this section" class="paige-header-link" href="#setting-up-events"></a></h1>
-<p>{% include image.html url=&quot;../../../../images/etw4.png&quot; %}</p>
+<figure><img src="/assets/etw4.png" width="700">
+</figure>
+
 <p>Lastly, the events themselves. From the image above, I defined quite a number of events. If you noticed, my <code>LastError</code> event (which I use to log the <code>GetLastError()</code> API) specified the template <code>TemplateKeyValueLastError</code> and the keyword <code>KeywordGeneric</code>.</p>
 <p>When the manifest file is compiled, all the defined events by default (can be modified during compilation) will generate a logging API with the name <code>EventWrite&lt;event_name&gt;</code>, which in the case of the highlighted one, <code>EventWriteLastError()</code>.</p>
 <p>Another thing to point out is the <code>Message</code>. The <code>%[number]</code> corresponds to the fields defined in the template used. First field will be %1, second field will be %2, and so on and so on.</p>
 <p>Lastly, save your manifest file. The xml file will have a <code>.man</code> extension.</p>
-<p>Check out <a href="http://flowerinthenight.com/blog/2016/03/02/etw-part2">part 2</a>.</p>
+<p>Check out <a href="/blog/2016-03-02-etw-part2/">part 2</a>.</p>
+<br>
 </div>
 
 
@@ -834,7 +843,7 @@ table {
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-25-apply-nanaco-point-card/">How to apply for a Nanaco point card</a>
                 </p>
             
 

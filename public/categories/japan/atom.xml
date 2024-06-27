@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
     
         
@@ -105,64 +103,6 @@
     <title type="html"><![CDATA[Japan · Categories · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>Downloading&hellip;</p>
-<p>{% include image.html url=&quot;../../../../images/win10preview1.png&quot; %}</p>
-<p>And here we go&hellip;</p>
-<p>{% include image.html url=&quot;../../../../images/win10preview2.png&quot; %}</p>
-<p>Looking good so far.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2016-04-10-trying-bash-on-windows/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2016-04-10-trying-bash-on-windows/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Trying out Bash on Windows]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
         <entry>
             

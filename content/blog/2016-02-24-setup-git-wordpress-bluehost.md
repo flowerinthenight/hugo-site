@@ -102,3 +102,5 @@ I now have a working source copy in my Windows client machine!
 ## Disadvantages?
 
 One thing I can think of is that every edit goes directly to live folder. So I dont have a sort of "staging" server for me to test before putting changes to live. Both a blessing and a curse, I think. But then again, this is just a simple blog, using a free theme, so I dont think I will be doing any massive changes to the source code anyway.
+
+<br>
