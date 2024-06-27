@@ -1,8 +1,12 @@
 ---
-layout: post
 title: "Accessing services in Kubernetes"
-location: "Japan"
+description: "2018-03-31"
+date: "2018-03-31"
+paige:
+  feed:
+    hide_page: true
 tags: [kubectl, Kubernetes, ingress, port-forward, nginx]
+weight: 1
 ---
 
 At [Mobingi](https://mobingi.com), when we are developing services that run on Kubernetes, we generally use [Minikube](https://github.com/kubernetes/minikube) or [Kubernetes in Docker for Mac](https://blog.docker.com/2018/01/docker-mac-kubernetes/). We also have a cluster that runs on [GKE](https://cloud.google.com/kubernetes-engine/) that we use for development. In this post, I will share how we access some of the services that are running on our development cluster.
@@ -11,7 +15,7 @@ At [Mobingi](https://mobingi.com), when we are developing services that run on K
 
 Using [kubectl port-forward](https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/) is probably the cheapest and the most straightforward. For example, if I want to access a cluster service `svc1` through my localhost, I use `kubectl port-forward` like this:
 
-{% highlight shell %}
+```sh
 $ kubectl get pod
 NAME                            READY     STATUS    RESTARTS   AGE
 svc1-66dd787767-d6b22           2/2       Running   0          7d 
@@ -22,7 +26,7 @@ svc2-578786c554-rlw2w           2/2       Running   0          7d
 $ kubectl port-forward `kubectl get pod --no-headers=true -o \
     custom-columns=:metadata.name | grep svc1 | head -n1` 8080:8080
 Forwarding from 127.0.0.1:8080 -> 8080
-{% endhighlight %}
+```
 
 The left `8080` is my local port, the right `8080` is the pod port where svc1 is running.
 
@@ -40,7 +44,7 @@ In our quest to further minimize costs, we are currently using [nginx](https://w
 
 Here's an example of an nginx reverse proxy service:
 
-{% highlight ruby %}
+```ruby
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -140,17 +144,17 @@ spec:
     targetPort: 80
   selector:
     app: serviceproxy
-{% endhighlight %}
+```
 
 In this example, all services, mainly `svc1` and `svc2`, are running in the `default` namespace. Save this as service.yaml and deploy:
 
-{% highlight shell %}
+```sh
 $ kubectl create -f service.yaml
-{% endhighlight %}
+```
 
 A sample Ingress controller for the reverse proxy service:
 
-{% highlight ruby %}
+```ruby
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -167,20 +171,22 @@ spec:
       - backend:
           serviceName: serviceproxy
           servicePort: 80
-{% endhighlight %}
+```
 
 Save this as ingress.yaml and deploy:
 
-{% highlight shell %}
+```sh
 $ kubectl create -f ingress.yaml
-{% endhighlight %}
+```
 
 After everything is ready (Ingress provisioning takes some time), you should be able to access `svc1` through `https://development.mobingi.com/svc1/some-endpoint`, `svc2` through `https://development.mobingi.com/svc2/another-endpoint`, etc. Of course, you have to point your domain to your Ingress load balancer's IP address which you can see using the following command:
 
-{% highlight shell %}
+```sh
 $ kubectl get ingress serviceproxy-ingress
 NAME                   HOSTS                     ADDRESS          PORTS     AGE
 serviceproxy-ingress   development.mobingi.com   1.2.3.4          80, 443   91d
-{% endhighlight %}
+```
 
 If you're wondering how to setup the TLS portion, you can refer to my previous [post](https://flowerinthenight.com/blog/2018/02/20/k8s-tls-digicert) about the very subject.
+
+<br>

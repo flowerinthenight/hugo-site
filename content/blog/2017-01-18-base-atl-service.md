@@ -1,9 +1,12 @@
 ---
-layout: post
 title: "ATL service base code"
-location: "Japan"
+description: "2017-01-18"
+date: "2017-01-18"
+paige:
+  feed:
+    hide_page: true
 tags: [c++, windows, atl, service]
-comments: true
+weight: 1
 ---
 
 Yet another service code for Windows. This time, it's an ATL service. ATL services are basically the same as [traditional Windows services](https://github.com/flowerinthenight/win32-base-service) but with some advantages.
@@ -14,3 +17,5 @@ Yet another service code for Windows. This time, it's an ATL service. ATL servic
 A client console app is provided to demonstrate service function call with return value and service-to-client notification via IDispatch.
 
 Check out the source code [here](https://github.com/flowerinthenight/base-atlcom-svc).
+
+<br>

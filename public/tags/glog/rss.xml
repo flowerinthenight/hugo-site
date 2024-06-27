@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
     
@@ -84,6 +84,8 @@
             <language>en</language>
         
 
+        
+            <lastBuildDate>2020-03-18 00:00:00 -0700 PDT</lastBuildDate>
         
 
         <link>http://localhost:1313/tags/glog/</link>
@@ -170,53 +172,6 @@ E1129 13:49:34.166722    2138 main.go:30] echo (error): hello
 
                 
                     <title>Using glog together with cobra in golang</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>If you&rsquo;re using <a href="https://github.com/golang/glog">glog</a> in your Go codes, you can output those when running <code>go test ...</code> by using the <code>--args</code> parameter:</p>
-<p>{% highlight shell %}
-$ go test -v ./&hellip; -count=1 -cover -race -mod=vendor &ndash;args &ndash;logtostderr &ndash;v=1
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-03-18-glog-gotest/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2020-03-18-glog-gotest/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Output glog from go test</title>
                 
             </item>
         

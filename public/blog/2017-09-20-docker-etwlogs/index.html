@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2017-09-20" name="description">
+
 
 
     <meta content="docker, etw, go, windows" name="keywords">
@@ -63,15 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2017-09-20-docker-etwlogs/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Using Docker&#39;s ETW log driver in Windows">
-  <meta property="og:description" content="In Docker’s ETW logging driver doc, it uses the tool logman to view the logs. In this article, I will show you how to use mftrace to view Docker ETW logs in real-time.
-First, here’s a simple application written in Go that logs to STDERR every second.
-{% gist 5ebeaaa38a59f7ce314a0b96b4357d4a %}
-Next, let’s create a Docker image (Windows) using the Dockerfile below.
-{% gist 9935cfaf68d8de5b5da2d5c4b15b8d85 %}
-{% highlight shell %}">
+  <meta property="og:description" content="2017-09-20">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2017-09-20T00:00:00-07:00">
+    <meta property="article:modified_time" content="2017-09-20T00:00:00-07:00">
     <meta property="article:tag" content="Docker">
     <meta property="article:tag" content="Go">
     <meta property="article:tag" content="Windows">
@@ -80,12 +79,7 @@ Next, let’s create a Docker image (Windows) using the Dockerfile below.
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Using Docker&#39;s ETW log driver in Windows">
-  <meta name="twitter:description" content="In Docker’s ETW logging driver doc, it uses the tool logman to view the logs. In this article, I will show you how to use mftrace to view Docker ETW logs in real-time.
-First, here’s a simple application written in Go that logs to STDERR every second.
-{% gist 5ebeaaa38a59f7ce314a0b96b4357d4a %}
-Next, let’s create a Docker image (Windows) using the Dockerfile below.
-{% gist 9935cfaf68d8de5b5da2d5c4b15b8d85 %}
-{% highlight shell %}">
+  <meta name="twitter:description" content="2017-09-20">
 
 
 
@@ -703,6 +697,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2017-09-20</p>
+    
 
     
         <div class="mb-3">
@@ -716,6 +712,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2017-09-20">September 20, 2017</time>
+                </p>
             
 
             
@@ -740,25 +740,23 @@ table {
 
     <div class="mw-100" id="paige-content"><p>In Docker&rsquo;s <a href="https://docs.docker.com/engine/admin/logging/etwlogs/">ETW logging driver doc</a>, it uses the tool <code>logman</code> to view the logs. In this article, I will show you how to use <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ff685116(v=vs.85).aspx">mftrace</a> to view Docker ETW logs in real-time.</p>
 <p>First, here&rsquo;s a simple application written in Go that logs to STDERR every second.</p>
-<p>{% gist 5ebeaaa38a59f7ce314a0b96b4357d4a %}</p>
+<script src="https://gist.github.com/flowerinthenight/5ebeaaa38a59f7ce314a0b96b4357d4a.js"></script>
+
 <p>Next, let&rsquo;s create a Docker image (Windows) using the Dockerfile below.</p>
-<p>{% gist 9935cfaf68d8de5b5da2d5c4b15b8d85 %}</p>
-<p>{% highlight shell %}</p>
-<h1 id="assuming-the-code-above-is-saved-in-a-directory-called-demoapp">assuming the code above is saved in a directory called &lsquo;demoapp&rsquo;<a aria-label="Link to this section" class="paige-header-link" href="#assuming-the-code-above-is-saved-in-a-directory-called-demoapp"></a></h1>
-<p>$ docker build -t demoapp .
-{% endhighlight %}</p>
-<p>To use mftrace, we need a config file.</p>
-<p>{% gist 4bd8968cc08c14cc98e03494624030a5 %}</p>
+<script src="https://gist.github.com/flowerinthenight/9935cfaf68d8de5b5da2d5c4b15b8d85.js"></script>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># assuming the code above is saved in a directory called &#39;demoapp&#39;</span>
+</span></span><span class="line"><span class="cl">$ docker build -t demoapp .
+</span></span></code></pre></div><p>To use mftrace, we need a config file.</p>
+<script src="https://gist.github.com/flowerinthenight/4bd8968cc08c14cc98e03494624030a5.js"></script>
+
 <p>Open a command prompt (or Powershell) and run the following command.</p>
-<p>{% highlight shell %}
-$ mftrace.exe -c config.xml
-{% endhighlight %}</p>
-<p>Then open another command prompt (or Powershell) window and run the Docker image.</p>
-<p>{% highlight shell %}
-$ docker run -d &ndash;log-driver=etwlogs &ndash;name demoapp demoapp:latest
-{% endhighlight %}</p>
-<p>You should be able to view the application logs in the mftrace window.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ mftrace.exe -c config.xml
+</span></span></code></pre></div><p>Then open another command prompt (or Powershell) window and run the Docker image.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ docker run -d --log-driver<span class="o">=</span>etwlogs --name demoapp demoapp:latest
+</span></span></code></pre></div><p>You should be able to view the application logs in the mftrace window.</p>
 <p>You can use this <a href="https://github.com/flowerinthenight/20170914-tokyo-mastercloud-presentation">repo</a> instead of creating your own folder structure. Instructions are provided in the README as well as an x86 version of mftrace.</p>
+<br>
 </div>
 
 
@@ -838,13 +836,13 @@ $ docker run -d &ndash;log-driver=etwlogs &ndash;name demoapp demoapp:latest
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2017-12-01-golang-cobra-glog/">Using glog together with cobra in golang</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2017-04-20-apc-as-fifo-queue/">Using APC as FIFO queue in Windows</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2017-10-30-nativestore/">Using OS specific stores for storing CLI credentials for golang apps</a> &rarr;
                 </p>
             
         </div>

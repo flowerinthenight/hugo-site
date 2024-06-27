@@ -729,15 +729,18 @@ table {
 
     
         
-            
-            
+    
 
     
         
             
                 
             
+        
+            
                 
+            
+        
             
                 
             
@@ -791,9 +794,12 @@ table {
     
 
     
+        <p class="mb-0 paige-description text-center">2022-01-17</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">For personal reference: Download the latest GitHub Releases asset using common command line tools: {% highlight shell %} Update the url accordingly. The uname | awk subcmds will output ’linux’|‘darwin’. $ curl -s https://api.github.com/repos/alphauslabs/bluectl/releases/latest | jq -r “.assets[] | select(.name | contains(&#34;$(uname -s | awk ‘{print tolower($0)}’)&#34;)) | .browser_download_url” | wget -i - {% endhighlight %}</p>
+        <p class="fst-italic mb-0 paige-summary text-center">For personal reference: Download the latest GitHub Releases asset using common command line tools:
+Update the url accordingly. The uname | awk subcmds will output &#39;linux&#39;|&#39;darwin&#39;. $ curl -s https://api.github.com/repos/alphauslabs/bluectl/releases/latest | \ jq -r &#34;.assets[] | select(.name | contains(&amp;#34;$(uname -s | awk &#39;{print tolower($0)}&#39;)&amp;#34;)) | .browser_download_url&#34; | \ wget -i -</p>
     
 
     
@@ -807,71 +813,9 @@ table {
     
 
     
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2021-07-31-extracting-grpc-funcs-to-list/">Extract gRPC-generated functions to a list</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">This might be hacky and there might be a proper way to do this but recently, I needed to generate all the functions’ gRPC-generated full names from our protobuf definitions. This is part of our RBAC module that needs to filter gRPC function calls. I got the list from our generated Go client using the following command(s):
-{% highlight shell %}
-Main command: $ grep -o -R -i -E ‘&#34;/blueapi..*&#34;’ .</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/cmdline/">Cmdline</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/grpc/">Grpc</a> · <a class="link-secondary" href="/tags/grpc-gateway/">Grpc-Gateway</a>
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2022-01-17">January 17, 2022</time>
         </p>
-    
-
-    
-
-    
-
     
 
     
@@ -921,12 +865,12 @@ Main command: $ grep -o -R -i -E ‘&#34;/blueapi..*&#34;’ .</p>
     
 
     
+        <p class="mb-0 paige-description text-center">2021-11-08</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">This is just a quick one.
-Although I use Gnome Clocks occassionally, most of the time I set an alarm via the commandline.
-{% highlight shell %}
-OS is POP_OS!, using VLC: $ sleep 10m &amp;&amp; cvlc ~/alarm.mp3 –play-and-exit &amp;&amp; notify-send ‘alarm done’ {% endhighlight %}</p>
+        <p class="fst-italic mb-0 paige-summary text-center">This is just a quick one. Although I use Gnome Clocks occassionally, most of the time I set an alarm via the commandline.
+OS is POP_OS!, using VLC: $ sleep 10m &amp;&amp; \ cvlc ~/alarm.mp3 –play-and-exit &amp;&amp; \ notify-send &#39;alarm done&#39;</p>
     
 
     
@@ -939,6 +883,81 @@ OS is POP_OS!, using VLC: $ sleep 10m &amp;&amp; cvlc ~/alarm.mp3 –play-and-ex
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-11-08">November 8, 2021</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2021-07-31-extracting-grpc-funcs-to-list/">Extract gRPC-generated functions to a list</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2021-07-31</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">This might be hacky and there might be a proper way to do this but recently, I needed to generate all the functions’ gRPC-generated full names from our protobuf definitions. This is part of our RBAC module that needs to filter gRPC function calls. I got the list from our generated Go client using the following command(s):
+Main command: $ grep -o -R -i -E &#39;&#34;/blueapi..*&#34;&#39; . | awk -F&#39;:&#39; &#39;{gsub(/&#34;/, &#34;&#34;, $2); print &#34;-&#34;, substr($2, 2);}&#39; | sort | uniq # Actual commands; save as yaml: $ echo &#34;functions:&#34; &gt; /tmp/funcs.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/cmdline/">Cmdline</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/grpc/">Grpc</a> · <a class="link-secondary" href="/tags/grpc-gateway/">Grpc-Gateway</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-07-31">July 31, 2021</time>
+        </p>
     
 
     

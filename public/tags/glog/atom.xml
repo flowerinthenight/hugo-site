@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
     
         
@@ -187,63 +185,6 @@ E1129 13:49:34.166722    2138 main.go:30] echo (error): hello
             
 
             <title type="html"><![CDATA[Using glog together with cobra in golang]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>If you&rsquo;re using <a href="https://github.com/golang/glog">glog</a> in your Go codes, you can output those when running <code>go test ...</code> by using the <code>--args</code> parameter:</p>
-<p>{% highlight shell %}
-$ go test -v ./&hellip; -count=1 -cover -race -mod=vendor &ndash;args &ndash;logtostderr &ndash;v=1
-{% endhighlight %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2020-03-18-glog-gotest/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2020-03-18-glog-gotest/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Output glog from go test]]></title>
             <updated>0001-01-01T00:00:00Z</updated>
         </entry>
     

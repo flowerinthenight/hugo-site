@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2019-08-14 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/router/</link>
 
@@ -92,73 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>For personal reference:</p>
-<p><strong>My current setup:</strong></p>
-<ul>
-<li>Router has a static IP provided by my ISP</li>
-<li>Router web server is accessible from 192.168.1.1 (home network)</li>
-<li>SSH server box in my home network with a static IP of 192.168.1.130 (home network)</li>
-<li>Router port forwarding is setup to forward router SSH port to my SSH server box (192.168.1.130:22)</li>
-<li>SSH server box is configured to only accept public/private key authentication; password disabled</li>
-</ul>
-<p><strong>Reason for access:</strong></p>
-<p>I want to be able to access my router web server from outside to configure some settings on the fly, like VPN settings, etc.</p>
-<p><strong>How:</strong></p>
-<ul>
-<li>Run the following command:</li>
-</ul>
-<p>{% highlight shell %}</p>
-<h1 id="-l-form--l-local-porttargettarget-port">-L form: -L local-port:target:target-port</h1>
-<h1 id="user--ssh-username">&lsquo;user&rsquo; = SSH username</h1>
-<p>$ ssh -i /path/to/ssh/key -L 8080:192.168.1.1:80 user@router-static-ip
-{% endhighlight %}</p>
-<ul>
-<li>Open localhost:8080 to access the router web server.</li>
-<li>That&rsquo;s it!</li>
-</ul>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2019-08-14-ssh-tunnel-home-router/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2019-08-14-ssh-tunnel-home-router/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Using SSH tunnelling to access home router</title>
-                
-            </item>
         
     </channel>
 </rss>

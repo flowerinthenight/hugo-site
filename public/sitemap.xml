@@ -50,6 +50,117 @@
     <loc>http://localhost:1313/blog/2022-10-17-authenticate-aws-sdk-external-id/</loc>
     <lastmod>2022-10-17T00:00:00-07:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog/2022-09-27-cto-diaries-typical-day/</loc>
+    <lastmod>2022-09-27T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2022-09-21-spindle-based-distributed-computing-lib/</loc>
+    <lastmod>2022-09-21T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2022-01-17-download-latest-github-release-cmdline/</loc>
+    <lastmod>2022-01-17T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021-12-31-support-any-grpc-gateway-separate-process/</loc>
+    <lastmod>2021-12-31T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021-11-08-alarm-from-cmdline/</loc>
+    <lastmod>2021-11-08T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021-09-28-cto-diaries-intro/</loc>
+    <lastmod>2021-09-28T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021-07-31-extracting-grpc-funcs-to-list/</loc>
+    <lastmod>2021-07-31T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021-06-30-hacky-way-update-go-modules/</loc>
+    <lastmod>2021-06-30T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021-05-31-switching-different-go-versions/</loc>
+    <lastmod>2021-05-31T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021-04-30-authenticate-aws-sdk-golang-v2/</loc>
+    <lastmod>2021-04-30T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021-03-27-minimalist-conky/</loc>
+    <lastmod>2021-03-27T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021-02-21-update-spacemacs-cmdline/</loc>
+    <lastmod>2021-02-21T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2021-01-30-vim-emacs/</loc>
+    <lastmod>2021-01-30T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-12-26-spanner-distributed-lock/</loc>
+    <lastmod>2020-12-26T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-10-31-oops/</loc>
+    <lastmod>2020-10-31T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-09-11-autobackup-spanner-k8s/</loc>
+    <lastmod>2020-09-11T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-08-31-dysync/</loc>
+    <lastmod>2020-08-31T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-07-08-package-distributed-locks/</loc>
+    <lastmod>2020-07-08T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-06-17-string-split-awk/</loc>
+    <lastmod>2020-06-17T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-05-13-lsdy-dynamodb-query/</loc>
+    <lastmod>2020-05-13T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-04-22-open-manpages-vim/</loc>
+    <lastmod>2020-04-22T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-03-25-torguard-wireguard-ubuntu/</loc>
+    <lastmod>2020-03-25T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-03-25-vimgo-gocode-gopls/</loc>
+    <lastmod>2020-03-25T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-03-18-glog-gotest/</loc>
+    <lastmod>2020-03-18T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-02-27-cobra-tabwriter/</loc>
+    <lastmod>2020-02-27T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2020-01-27-kubepfm-update/</loc>
+    <lastmod>2020-01-27T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2019-11-28-gcp-backendconfig-k8s/</loc>
+    <lastmod>2019-11-28T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2019-10-29-stderr-tee/</loc>
+    <lastmod>2019-10-29T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2019-09-30-stern-grep/</loc>
+    <lastmod>2019-09-30T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2019-08-14-ssh-tunnel-home-router/</loc>
+    <lastmod>2019-08-14T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2019-07-30-homebrew-golang/</loc>
+    <lastmod>2019-07-30T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2019-06-05-master-election-using-kettle/</loc>
+    <lastmod>2019-06-05T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2019-05-26-cors-nginx-k8s/</loc>
+    <lastmod>2019-05-26T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2019-04-28-drv2605-umdf-haptic-driver/</loc>
+    <lastmod>2019-04-28T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2019-03-13-ccfltr-updates/</loc>
+    <lastmod>2019-03-13T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2019-03-09-athena2csv/</loc>
+    <lastmod>2019-03-09T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/2019-02-20-kubepfm-update/</loc>
+    <lastmod>2019-02-20T00:00:00-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/</loc>
     <lastmod>2016-02-24T00:00:00-08:00</lastmod>
   </url><url>
@@ -278,14 +389,257 @@
     <loc>http://localhost:1313/tags/v2/</loc>
     <lastmod>2023-03-01T00:00:00-08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/gcp/</loc>
+    <lastmod>2022-09-21T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/spanner/</loc>
+    <lastmod>2022-09-21T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/spindle/</loc>
+    <lastmod>2022-09-21T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cmdline/</loc>
+    <lastmod>2022-01-17T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/download/</loc>
+    <lastmod>2022-01-17T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/github/</loc>
+    <lastmod>2022-01-17T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/any/</loc>
+    <lastmod>2021-12-31T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/grpc-gateway/</loc>
+    <lastmod>2021-12-31T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/protobuf/</loc>
+    <lastmod>2021-12-31T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/alarm/</loc>
+    <lastmod>2021-11-08T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/commandline/</loc>
+    <lastmod>2021-11-08T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/gnome/</loc>
+    <lastmod>2021-11-08T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/grpc/</loc>
+    <lastmod>2021-07-31T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/modules/</loc>
+    <lastmod>2021-06-30T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/update/</loc>
+    <lastmod>2021-06-30T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/switch/</loc>
+    <lastmod>2021-05-31T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/versions/</loc>
+    <lastmod>2021-05-31T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/conky/</loc>
+    <lastmod>2021-03-27T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/minimalis/</loc>
+    <lastmod>2021-03-27T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/emacs/</loc>
+    <lastmod>2021-02-21T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/spacemacs/</loc>
+    <lastmod>2021-02-21T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/vim/</loc>
+    <lastmod>2021-01-30T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/distributed-lock/</loc>
+    <lastmod>2020-12-26T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/distributed-locking/</loc>
+    <lastmod>2020-12-26T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/api/</loc>
+    <lastmod>2020-10-31T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/testing/</loc>
+    <lastmod>2020-10-31T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/backup/</loc>
+    <lastmod>2020-09-11T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cronjob/</loc>
+    <lastmod>2020-09-11T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/dynamodb/</loc>
+    <lastmod>2020-08-31T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/sync/</loc>
+    <lastmod>2020-08-31T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/distributed-locks/</loc>
+    <lastmod>2020-07-08T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/k8slock/</loc>
+    <lastmod>2020-07-08T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/leaselock/</loc>
+    <lastmod>2020-07-08T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/redis/</loc>
+    <lastmod>2020-07-08T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/redislock/</loc>
+    <lastmod>2020-07-08T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/awk/</loc>
+    <lastmod>2020-06-17T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/split/</loc>
+    <lastmod>2020-06-17T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/string/</loc>
+    <lastmod>2020-06-17T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/query/</loc>
+    <lastmod>2020-05-13T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/man/</loc>
+    <lastmod>2020-04-22T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/manual/</loc>
+    <lastmod>2020-04-22T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/autocomplete/</loc>
+    <lastmod>2020-03-25T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/gocode/</loc>
+    <lastmod>2020-03-25T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/gopls/</loc>
+    <lastmod>2020-03-25T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/torguard/</loc>
+    <lastmod>2020-03-25T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ubuntu/</loc>
+    <lastmod>2020-03-25T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/vim-go/</loc>
+    <lastmod>2020-03-25T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/wireguard/</loc>
+    <lastmod>2020-03-25T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/glog/</loc>
+    <lastmod>2020-03-18T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/test/</loc>
+    <lastmod>2020-03-18T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cobra/</loc>
+    <lastmod>2020-02-27T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tabwriter/</loc>
+    <lastmod>2020-02-27T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/kubepfm/</loc>
+    <lastmod>2020-01-27T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/port-forward/</loc>
+    <lastmod>2020-01-27T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ingress/</loc>
+    <lastmod>2019-11-28T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/timeout/</loc>
+    <lastmod>2019-11-28T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/stderr/</loc>
+    <lastmod>2019-10-29T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/stdout/</loc>
+    <lastmod>2019-10-29T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tee/</loc>
+    <lastmod>2019-10-29T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/grep/</loc>
+    <lastmod>2019-09-30T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/logs/</loc>
+    <lastmod>2019-09-30T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/stern/</loc>
+    <lastmod>2019-09-30T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/home/</loc>
+    <lastmod>2019-08-14T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/router/</loc>
+    <lastmod>2019-08-14T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ssh/</loc>
+    <lastmod>2019-08-14T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tunnel/</loc>
+    <lastmod>2019-08-14T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/master/</loc>
+    <lastmod>2019-06-05T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/worker/</loc>
+    <lastmod>2019-06-05T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cors/</loc>
+    <lastmod>2019-05-26T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/nginx/</loc>
+    <lastmod>2019-05-26T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/proxy/</loc>
+    <lastmod>2019-05-26T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/driver/</loc>
+    <lastmod>2019-04-28T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/drv2605/</loc>
+    <lastmod>2019-04-28T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/haptic/</loc>
+    <lastmod>2019-04-28T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/umdf/</loc>
+    <lastmod>2019-04-28T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/windows/</loc>
+    <lastmod>2019-04-28T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/camera/</loc>
+    <lastmod>2019-03-13T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/filter-driver/</loc>
+    <lastmod>2019-03-13T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/wdm/</loc>
+    <lastmod>2019-03-13T00:00:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/athena/</loc>
+    <lastmod>2019-03-09T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/athena2csv/</loc>
+    <lastmod>2019-03-09T00:00:00-08:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/csv/</loc>
+    <lastmod>2019-03-09T00:00:00-08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/bluehost/</loc>
     <lastmod>2016-02-24T00:00:00-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/wordpress/</loc>
     <lastmod>2016-02-24T00:00:00-08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ssh/</loc>
-    <lastmod>2016-02-22T00:00:00-08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/general/</loc>
     <lastmod>2016-02-21T00:00:00-08:00</lastmod>
@@ -307,8 +661,6 @@
   </url><url>
     <loc>http://localhost:1313/blog/2018-02-06-golang-monorepo/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/2021-06-30-hacky-way-update-go-modules/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2016-10-07-cron-like-windows-service-go/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2016-06-13-folder-file-watcher-powershell/</loc>
@@ -323,55 +675,25 @@
   </url><url>
     <loc>http://localhost:1313/blog/2016-04-05-zip-function-powershell/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/2020-12-26-spanner-distributed-lock/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2020-05-13-lsdy-dynamodb-query/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2020-08-31-dysync/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2016-09-27-windows-delay-update-service-go/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2018-03-31-access-pods-k8s/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2016-08-21-log-prefix-fname-go/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/2019-05-26-cors-nginx-k8s/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/alarm/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/amqp/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2020-10-31-oops/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/any/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/api/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/athena/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/athena2csv/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/atl/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2017-01-18-base-atl-service/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/2021-04-30-authenticate-aws-sdk-golang-v2/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2018-06-09-google-api-client-go-auth/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/authentication/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/autocomplete/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2018-09-20-vimgo-go111-gocode/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/2020-09-11-autobackup-spanner-k8s/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/awk/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2018-10-05-aws-sqs-lengthy-process/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/backup/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/basic-auth/</loc>
   </url><url>
@@ -387,65 +709,21 @@
   </url><url>
     <loc>http://localhost:1313/categories/c&#43;&#43;/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/camera/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2018-04-30-camera-class-filter-driver/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/client/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/cmdline/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/cobra/</loc>
-  </url><url>
     <loc>http://localhost:1313/categories/code/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/commandline/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/conky/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2020-03-25-torguard-wireguard-ubuntu/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/cors/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2018-02-20-k8s-tls-digicert/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/cronjob/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/csv/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2021-09-28-cto-diaries-intro/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2022-09-27-cto-diaries-typical-day/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/devops/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/digicert/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/distributed-lock/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/distributed-locking/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/distributed-locks/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2020-07-08-package-distributed-locks/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/docker/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/download/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2019-03-09-athena2csv/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2022-01-17-download-latest-github-release-cmdline/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/driver/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/drv2605/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/dynamodb/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/dynamodbstreams/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/emacs/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2017-11-28-embed-github-code/</loc>
   </url><url>
@@ -455,55 +733,21 @@
   </url><url>
     <loc>http://localhost:1313/categories/etw/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/2019-11-28-gcp-backendconfig-k8s/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2021-07-31-extracting-grpc-funcs-to-list/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/fifo/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/filter-driver/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2020-03-25-vimgo-gocode-gopls/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2017-07-31-ghpages-netlify/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2021-01-30-vim-emacs/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/gcp/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2018-08-13-gcp-pubsub-lengthy-process/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/gist-it/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/github/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/github-pages/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/glog/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/gnome/</loc>
-  </url><url>
     <loc>http://localhost:1313/categories/go/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/gocode/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/golang/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/google/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/gopls/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/grep/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/grpc/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/grpc-gateway/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/haptic/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2022-09-21-spindle-based-distributed-computing-lib/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/home/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2016-03-28-setup-samba-server/</loc>
   </url><url>
@@ -512,8 +756,6 @@
     <loc>http://localhost:1313/blog/2016-08-20-expvar-gorilla-mux/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/https/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/ingress/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/innosetup/</loc>
   </url><url>
@@ -529,41 +771,23 @@
   </url><url>
     <loc>http://localhost:1313/blog/2017-08-31-golang-json-prettify/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/k8slock/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/keychain/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/klog/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/kops/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/kubepfm/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2018-07-24-kubepfm/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/lambda/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/leaselock/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/lengthy/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/logs/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/man/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/manual/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/master/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/minimalis/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/mobingi/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2018-09-25-ouchan-monorepo/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2018-12-27-mochi-k8s-repo/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/modules/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2018-11-19-dynamodbstreams-lambda-sns-sqs/</loc>
   </url><url>
@@ -577,29 +801,13 @@
   </url><url>
     <loc>http://localhost:1313/blog/2017-01-04-bookshelf/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/nginx/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2020-04-22-open-manpages-vim/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2020-03-18-glog-gotest/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2019-10-29-stderr-tee/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/pascal/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/pass/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/port-forward/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/prettify/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/protobuf/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/proxy/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/pubsub/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/query/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/queue/</loc>
   </url><url>
@@ -607,13 +815,7 @@
   </url><url>
     <loc>http://localhost:1313/categories/reading/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/redis/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/redislock/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/repo/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/router/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2018-01-24-k8s-kops-aws/</loc>
   </url><url>
@@ -629,8 +831,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/service-account/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/2021-11-08-alarm-from-cmdline/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2016-08-11-sharing-my-tmux-conf/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2016-07-27-sharing-my-vimrc/</loc>
@@ -641,81 +841,23 @@
   </url><url>
     <loc>http://localhost:1313/blog/2017-02-28-simple-innosetup/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/2020-06-17-string-split-awk/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2017-03-28-simple-touch-input-funcs-windows/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/sns/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/spacemacs/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/spanner/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/spindle/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/split/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/sqs/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2017-05-31-start-process-as-system/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/stderr/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/stdout/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/stern/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/string/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/subscription/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2021-12-31-support-any-grpc-gateway-separate-process/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/switch/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2021-05-31-switching-different-go-versions/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/sync/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2016-08-22-syslog-target-go/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/tabwriter/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/tee/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/test/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/testing/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/timeout/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/tls/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/torguard/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2016-04-10-trying-bash-on-windows/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/tunnel/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/ubuntu/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2018-05-06-xenial-to-bionic-lts-server-upgrade-zfs/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/umdf/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2019-04-28-drv2605-umdf-haptic-driver/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/update/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2021-02-21-update-spacemacs-cmdline/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2019-02-20-kubepfm-update/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2020-01-27-kubepfm-update/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2021-03-27-minimalist-conky/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2019-03-13-ccfltr-updates/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/upgrade/</loc>
   </url><url>
@@ -725,39 +867,15 @@
   </url><url>
     <loc>http://localhost:1313/blog/2017-12-01-golang-cobra-glog/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/2019-07-30-homebrew-golang/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/2019-02-05-golang-cobra-klog/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2019-06-05-master-election-using-kettle/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2019-01-31-nginx-basicauth-k8s/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2017-10-30-nativestore/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/2019-08-14-ssh-tunnel-home-router/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2019-09-30-stern-grep/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/2020-02-27-cobra-tabwriter/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/versions/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/vim/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/vim-go/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/wdm/</loc>
-  </url><url>
     <loc>http://localhost:1313/tags/website/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/wincred/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/windows/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/wireguard/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/worker/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/2017-06-30-amqp-wrapper/</loc>
   </url><url>

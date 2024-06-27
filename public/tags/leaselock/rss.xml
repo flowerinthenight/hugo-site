@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2020-07-08 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/leaselock/</link>
 
@@ -92,50 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I&rsquo;ve uploaded a package for distributed locks. It&rsquo;s called <a href="https://github.com/flowerinthenight/dlock">dlock</a>. At the moment, it supports using Kubernetes&rsquo; LeaseLock object and Redis. You might find it useful.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-07-08-package-distributed-locks/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2020-07-08-package-distributed-locks/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>dlock - package for distributed locks</title>
-                
-            </item>
         
     </channel>
 </rss>

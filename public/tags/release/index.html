@@ -729,16 +729,13 @@ table {
 
     
         
-            
-            
+    
 
     
         
             
                 
             
-        
-    
         
             
                 
@@ -863,9 +860,12 @@ table {
     
 
     
+        <p class="mb-0 paige-description text-center">2022-01-17</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">For personal reference: Download the latest GitHub Releases asset using common command line tools: {% highlight shell %} Update the url accordingly. The uname | awk subcmds will output ’linux’|‘darwin’. $ curl -s https://api.github.com/repos/alphauslabs/bluectl/releases/latest | jq -r “.assets[] | select(.name | contains(&#34;$(uname -s | awk ‘{print tolower($0)}’)&#34;)) | .browser_download_url” | wget -i - {% endhighlight %}</p>
+        <p class="fst-italic mb-0 paige-summary text-center">For personal reference: Download the latest GitHub Releases asset using common command line tools:
+Update the url accordingly. The uname | awk subcmds will output &#39;linux&#39;|&#39;darwin&#39;. $ curl -s https://api.github.com/repos/alphauslabs/bluectl/releases/latest | \ jq -r &#34;.assets[] | select(.name | contains(&amp;#34;$(uname -s | awk &#39;{print tolower($0)}&#39;)&amp;#34;)) | .browser_download_url&#34; | \ wget -i -</p>
     
 
     
@@ -878,6 +878,10 @@ table {
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2022-01-17">January 17, 2022</time>
+        </p>
     
 
     

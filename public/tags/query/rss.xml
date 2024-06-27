@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2020-05-13 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/query/</link>
 
@@ -92,50 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I uploaded a tool that can query DynamoDB tables. It&rsquo;s called <code>lsdy</code> and you can find the code <a href="https://github.com/flowerinthenight/lsdy/">here</a>. Maybe it will be useful to anybody out there.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-05-13-lsdy-dynamodb-query/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2020-05-13-lsdy-dynamodb-query/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>A tool for querying DynamoDB</title>
-                
-            </item>
         
     </channel>
 </rss>

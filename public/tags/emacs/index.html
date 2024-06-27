@@ -729,13 +729,14 @@ table {
 
     
         
-            
-            
+    
 
     
         
             
                 
+            
+        
             
                 
             
@@ -785,19 +786,20 @@ table {
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2021-01-30-vim-emacs/">From Vim to Emacs</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2021-02-21-update-spacemacs-cmdline/">Update Spacemacs from command line</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2021-02-21</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">It’s been a year since I’ve transitioned, sort of, from Vim to Emacs, so I thought I’d write something about it.
-Vim has been my primary editor of choice for many years. I think I started Vim around 2003 on a RedHat box writing x86 assembly. Ever since, throughout my working carrier, whether it’s on Windows, OSX, or Linux, it’s been always Vim for me. Yes, even on Windows where the experience is really not that good, I still use Vim.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">Reference: Ever since I’ve started using Spacemacs on Linux, I’ve been using this simple script as a command alias to update Spacemacs using the command line. alias upe=&#39;git -C ~/.emacs.d/ pull &amp;&amp; \ emacs –batch -l ~/.emacs.d/init.el \ –eval=&#34;(configuration-layer/update-packages t)&#34; 2&gt;&amp;1 | \ tee /tmp/emacs-update &amp;&amp; \ grep -i -E &#34;Found.*to.update.&#34; /tmp/emacs-update &amp;&amp; \ emacs&#39; I use the develop branch of Spacemacs, thus the update using git. Then it will check if there are package updates and if so, it will relaunch Spacemacs to actually install the updates.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/emacs/">Emacs</a> · <a class="link-secondary" href="/tags/spacemacs/">Spacemacs</a> · <a class="link-secondary" href="/tags/vim/">Vim</a>
+            <a class="link-secondary" href="/tags/emacs/">Emacs</a> · <a class="link-secondary" href="/tags/spacemacs/">Spacemacs</a>
         </p>
     
 
@@ -806,9 +808,13 @@ Vim has been my primary editor of choice for many years. I think I started Vim a
     
 
     
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-02-21">February 21, 2021</time>
+        </p>
+    
 
     
-        <p class="mb-0 paige-reading-time text-center text-secondary">3 minutes</p>
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
     
 </div>
 
@@ -850,21 +856,21 @@ Vim has been my primary editor of choice for many years. I think I started Vim a
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2021-02-21-update-spacemacs-cmdline/">Update Spacemacs from command line</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2021-01-30-vim-emacs/">From Vim to Emacs</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2021-01-30</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">Reference:
-Ever since I’ve started using Spacemacs on Linux, I’ve been using this simple script as a command alias to update Spacemacs using the command line.
-{% highlight shell %} alias upe=‘git -C ~/.emacs.d/ pull &amp;&amp; emacs –batch -l ~/.emacs.d/init.el –eval=&#34;(configuration-layer/update-packages t)&#34; 2&gt;&amp;1 | tee /tmp/emacs-update &amp;&amp; grep -i -E “Found.*to.update.” /tmp/emacs-update &amp;&amp; emacs’ {% endhighlight %}
-I use the develop branch of Spacemacs, thus the update using git. Then it will check if there are package updates and if so, it will relaunch Spacemacs to actually install the updates.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">It’s been a year since I’ve transitioned, sort of, from Vim to Emacs, so I thought I’d write something about it.
+Vim has been my primary editor of choice for many years. I think I started Vim around 2003 on a RedHat box writing x86 assembly. Ever since, throughout my working carrier, whether it’s on Windows, OSX, or Linux, it’s been always Vim for me. Yes, even on Windows where the experience is really not that good, I still use Vim.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/emacs/">Emacs</a> · <a class="link-secondary" href="/tags/spacemacs/">Spacemacs</a>
+            <a class="link-secondary" href="/tags/emacs/">Emacs</a> · <a class="link-secondary" href="/tags/spacemacs/">Spacemacs</a> · <a class="link-secondary" href="/tags/vim/">Vim</a>
         </p>
     
 
@@ -873,9 +879,13 @@ I use the develop branch of Spacemacs, thus the update using git. Then it will c
     
 
     
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-01-30">January 30, 2021</time>
+        </p>
+    
 
     
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+        <p class="mb-0 paige-reading-time text-center text-secondary">3 minutes</p>
     
 </div>
 

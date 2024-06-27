@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2017-10-30" name="description">
+
 
 
     <meta content="go, keychain, nativestore, pass, wincred" name="keywords">
@@ -63,11 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2017-10-30-nativestore/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Using OS specific stores for storing CLI credentials for golang apps">
-  <meta property="og:description" content="This post is to show a simple way of using Docker’s credential helper package to utilize the system’s native credential store as storage for your Golang-based CLI applications’ login credentials. This means Keychain for OSX, wincred for Windows, and pass for Linux. We use pass here since secretservice, although supported, doesn’t work out of the box in headless servers.
-Here’s a simple implementation of our Set, Get, and Del functions.">
+  <meta property="og:description" content="2017-10-30">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2017-10-30T00:00:00-07:00">
+    <meta property="article:modified_time" content="2017-10-30T00:00:00-07:00">
     <meta property="article:tag" content="Go">
     <meta property="article:tag" content="Nativestore">
     <meta property="article:tag" content="Keychain">
@@ -77,8 +80,7 @@ Here’s a simple implementation of our Set, Get, and Del functions.">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Using OS specific stores for storing CLI credentials for golang apps">
-  <meta name="twitter:description" content="This post is to show a simple way of using Docker’s credential helper package to utilize the system’s native credential store as storage for your Golang-based CLI applications’ login credentials. This means Keychain for OSX, wincred for Windows, and pass for Linux. We use pass here since secretservice, although supported, doesn’t work out of the box in headless servers.
-Here’s a simple implementation of our Set, Get, and Del functions.">
+  <meta name="twitter:description" content="2017-10-30">
 
 
 
@@ -696,6 +698,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2017-10-30</p>
+    
 
     
         <div class="mb-3">
@@ -709,6 +713,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2017-10-30">October 30, 2017</time>
+                </p>
             
 
             
@@ -725,17 +733,6 @@ table {
         
 
 
-    <div class="mw-100" id="paige-toc">
-        <div class="border mb-3 pe-3 ps-3 pt-3 rounded">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#homeusergnupgpubringkbx">$ gpg2 &ndash;list-keys
-/home/user/.gnupg/pubring.kbx</a></li>
-  </ol>
-</nav>
-        </div>
-    </div>
-
 
         
 
@@ -750,25 +747,29 @@ table {
 <script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore_windows.go?footer=minimal"></script>
 <script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore_linux.go?footer=minimal"></script>
 <p>Here&rsquo;s a quickstart guide to setup <a href="https://www.passwordstore.org/"><code>pass</code></a> in Ubuntu systems.</p>
-<p>{% highlight shell %}</p>
-<h1 id="install-pass">install pass<a aria-label="Link to this section" class="paige-header-link" href="#install-pass"></a></h1>
-<p>$ sudo apt-get install pass</p>
-<h1 id="generate-your-own-key-using-gpg2-do-not-use-a-passphrase">generate your own key using gpg2, do not use a passphrase<a aria-label="Link to this section" class="paige-header-link" href="#generate-your-own-key-using-gpg2-do-not-use-a-passphrase"></a></h1>
-<p>$ gpg2 &ndash;gen-key</p>
-<h1 id="if-the-cmd-seems-stuck-due-to-lack-of-entropy-you-can-open-another-window-and-run-the-ff-cmd">if the cmd seems stuck due to lack of entropy, you can open another window and run the ff cmd:<a aria-label="Link to this section" class="paige-header-link" href="#if-the-cmd-seems-stuck-due-to-lack-of-entropy-you-can-open-another-window-and-run-the-ff-cmd"></a></h1>
-<h1 id="dd-ifdevsda-ofdevzero">dd if=/dev/sda of=/dev/zero<a aria-label="Link to this section" class="paige-header-link" href="#dd-ifdevsda-ofdevzero"></a></h1>
-<h1 id="list-your-keys">list your keys<a aria-label="Link to this section" class="paige-header-link" href="#list-your-keys"></a></h1>
-<h2 id="homeusergnupgpubringkbx">$ gpg2 &ndash;list-keys
-/home/user/.gnupg/pubring.kbx</h2>
-<p>pub   rsa2048/5486B0F6 2017-09-22 [SC]
-uid         [ultimate] IamGroot <a href="mailto:iamgroot@domain.com">iamgroot@domain.com</a>
-sub   rsa2048/CDC4C430 2017-09-22 [E]</p>
-<h1 id="initialize-pass-use-the-pub-key-id">initialize pass (use the pub key id)<a aria-label="Link to this section" class="paige-header-link" href="#initialize-pass-use-the-pub-key-id"></a></h1>
-<p>$ pass init 5486B0F6
-{% endhighlight %}</p>
-<p>Here&rsquo;s an example on how to use our nativestore functions.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># install pass</span>
+</span></span><span class="line"><span class="cl">$ sudo apt-get install pass
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># generate your own key using gpg2, do not use a passphrase</span>
+</span></span><span class="line"><span class="cl">$ gpg2 --gen-key
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># if the cmd seems stuck due to lack of entropy, you can open another window and run the ff cmd:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># dd if=/dev/sda of=/dev/zero</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># list your keys</span>
+</span></span><span class="line"><span class="cl">$ gpg2 --list-keys
+</span></span><span class="line"><span class="cl">/home/user/.gnupg/pubring.kbx
+</span></span><span class="line"><span class="cl">------------------------------
+</span></span><span class="line"><span class="cl">pub   rsa2048/5486B0F6 2017-09-22 <span class="o">[</span>SC<span class="o">]</span>
+</span></span><span class="line"><span class="cl">uid         <span class="o">[</span>ultimate<span class="o">]</span> IamGroot &lt;iamgroot@domain.com&gt;
+</span></span><span class="line"><span class="cl">sub   rsa2048/CDC4C430 2017-09-22 <span class="o">[</span>E<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># initialize pass (use the pub key id)</span>
+</span></span><span class="line"><span class="cl">$ pass init 5486B0F6
+</span></span></code></pre></div><p>Here&rsquo;s an example on how to use our nativestore functions.</p>
 <script charset="UTF-8" src="https://gist-it.appspot.com/github.com/mobingilabs/mobingi-sdk-go/blob/master/pkg/nativestore/nativestore_test.go?footer=minimal"></script>
 <p>Finally, you can refer to the whole package <a href="https://github.com/mobingilabs/mobingi-sdk-go/tree/master/pkg/nativestore">here</a>.</p>
+<br>
 </div>
 
 
@@ -848,13 +849,13 @@ sub   rsa2048/CDC4C430 2017-09-22 [E]</p>
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2019-08-14-ssh-tunnel-home-router/">Using SSH tunnelling to access home router</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2019-01-31-nginx-basicauth-k8s/">Using nginx basic authentication in Kubernetes</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2017-11-28-embed-github-code/">Embed code from GitHub to GitHub Pages blog like Gist</a> &rarr;
                 </p>
             
         </div>

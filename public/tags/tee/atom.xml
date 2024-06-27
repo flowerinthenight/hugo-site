@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,65 +99,5 @@
     <title type="html"><![CDATA[Tee · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>Some golang-based tools I&rsquo;ve used (or even written) use the builtin <code>log</code> package that output logs to stderr by default. I also use <a href="https://en.wikipedia.org/wiki/Tee_(command)">tee</a> for piping console outputs to file for later viewing. This is the command I generally use:</p>
-<p>{% highlight shell %}</p>
-<h1 id="example-tool">Example tool:</h1>
-<p>$ sometool &ndash;flag1 &ndash;flag2 2&gt;&amp;1 | tee out.txt</p>
-<h1 id="21----redirect-stderr-to-stdout">2&gt;&amp;1 &lt;&ndash; redirect stderr to stdout</h1>
-<h1 id="tee----pipe-the-console-output-to-outtxt-while-retaining-the-actual-console-logs-during-command-execution">tee &lt;&ndash; pipe the console output to out.txt while retaining the actual console logs during command execution</h1>
-<p>{% endhighlight %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2019-10-29-stderr-tee/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2019-10-29-stderr-tee/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Output golang cmdline tools to stdout and file using tee]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

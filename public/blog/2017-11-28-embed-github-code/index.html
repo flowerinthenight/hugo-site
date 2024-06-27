@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2017-11-28" name="description">
+
 
 
     <meta content="gist-it, github-pages, jekyll" name="keywords">
@@ -63,14 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2017-11-28-embed-github-code/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Embed code from GitHub to GitHub Pages blog like Gist">
-  <meta property="og:description" content="I’ve found this nifty little tool that can embed codes directly from your GitHub repositories without using Gist. It’s very easy to use. For example, if you want to embed, say, this whole file, you only need to add this snippet somewhere in your post.md file.
-{% highlight html %}
-{% endhighlight %}
-The ?footer=minimal part is optional. It will look something like this:
-It can also embed just a section of code based on line numbers.">
+  <meta property="og:description" content="2017-11-28">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2017-11-28T00:00:00-08:00">
+    <meta property="article:modified_time" content="2017-11-28T00:00:00-08:00">
     <meta property="article:tag" content="Gist-It">
     <meta property="article:tag" content="Github-Pages">
     <meta property="article:tag" content="Jekyll">
@@ -78,11 +78,7 @@ It can also embed just a section of code based on line numbers.">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Embed code from GitHub to GitHub Pages blog like Gist">
-  <meta name="twitter:description" content="I’ve found this nifty little tool that can embed codes directly from your GitHub repositories without using Gist. It’s very easy to use. For example, if you want to embed, say, this whole file, you only need to add this snippet somewhere in your post.md file.
-{% highlight html %}
-{% endhighlight %}
-The ?footer=minimal part is optional. It will look something like this:
-It can also embed just a section of code based on line numbers.">
+  <meta name="twitter:description" content="2017-11-28">
 
 
 
@@ -700,6 +696,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2017-11-28</p>
+    
 
     
         <div class="mb-3">
@@ -713,6 +711,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2017-11-28">November 28, 2017</time>
+                </p>
             
 
             
@@ -736,19 +738,16 @@ table {
 
 
     <div class="mw-100" id="paige-content"><p>I&rsquo;ve found this <a href="https://gist-it.appspot.com/">nifty little tool</a> that can embed codes directly from your GitHub repositories without using Gist. It&rsquo;s very easy to use. For example, if you want to embed, say, <a href="https://github.com/flowerinthenight/rusttrace/blob/master/src/main.rs">this whole file</a>, you only need to add this snippet somewhere in your post.md file.</p>
-<p>{% highlight html %}</p>
-<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/flowerinthenight/rusttrace/blob/master/src/main.rs?footer=minimal"></script>
-<p>{% endhighlight %}</p>
-<p>The <code>?footer=minimal</code> part is optional. It will look something like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://gist-it.appspot.com/github.com/flowerinthenight/rusttrace/blob/master/src/main.rs?footer=minimal&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>The <code>?footer=minimal</code> part is optional. It will look something like this:</p>
 <script charset="UTF-8" src="https://gist-it.appspot.com/github.com/flowerinthenight/rusttrace/blob/master/src/main.rs?footer=minimal"></script>
 <p>It can also embed just a section of code based on line numbers. For example, to embed line 234 to line 257 of <a href="https://github.com/flowerinthenight/rmq/blob/master/rabbitmq.go">this file</a>, this snippet will do.</p>
-<p>{% highlight html %}</p>
-<script charset="UTF-8" src="https://gist-it.appspot.com/github.com/flowerinthenight/rmq/blob/master/rabbitmq.go?slice=233:257&footer=minimal"></script>
-<p>{% endhighlight %}</p>
-<p>It will look something like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://gist-it.appspot.com/github.com/flowerinthenight/rmq/blob/master/rabbitmq.go?slice=233:257&amp;footer=minimal&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>It will look something like this:</p>
 <script charset="UTF-8" src="https://gist-it.appspot.com/github.com/flowerinthenight/rmq/blob/master/rabbitmq.go?slice=233:257&footer=minimal"></script>
 <p>Just note that the <code>slice=</code> parameter is zero-based and GitHub&rsquo;s line numbering starts at 1.</p>
 <p>Finally, if you have an HTTPS blog, make sure to use <code>https://gist-it.appspot.com/...</code>, not <code>http://gist-it.appspot.com/...</code>.</p>
+<br>
 </div>
 
 
@@ -828,13 +827,13 @@ table {
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-11-28-ffmpeg-encode-h264mp4/">Encoding .NET bitmaps to H264 using FFMPEG</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2022-01-17-download-latest-github-release-cmdline/">Download the latest Github release using command line</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2017-12-01-golang-cobra-glog/">Using `glog` together with `cobra` in golang</a> &rarr;
                 </p>
             
         </div>

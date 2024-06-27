@@ -14,11 +14,7 @@
 
 
     
-        
-    
 
-    
-        
     
 
     
@@ -109,125 +105,6 @@
     <title type="html"><![CDATA[Kubepfm · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>Updated 2020/01/27:</p>
-<ul>
-<li>Support for forwarding to deployments and services</li>
-</ul>
-<p>Original post:</p>
-<p>I recently uploaded a tool to GitHub that wraps <code>kubectl port-forward</code> command and supports port-forwarding to multiple pods. It&rsquo;s called <a href="https://github.com/flowerinthenight/kubepfm"><code>kubepfm</code></a>. I use this tool heavily in my development work. You can check out the code <a href="https://github.com/flowerinthenight/kubepfm">here</a>. You might find this useful.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2020-01-27-kubepfm-update/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2020-01-27-kubepfm-update/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Update to kubepfm, a kubectl port-forward wrapper for multiple pods]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>Updated 2019/02/20:</p>
-<ul>
-<li>Support for namespaces <a href="https://github.com/flowerinthenight/kubepfm/issues/1">https://github.com/flowerinthenight/kubepfm/issues/1</a></li>
-<li>Improved handling of input patterns</li>
-</ul>
-<p>Original post:</p>
-<p>I recently uploaded a tool to GitHub that wraps <code>kubectl port-forward</code> command and supports port-forwarding to multiple pods. It&rsquo;s called <a href="https://github.com/flowerinthenight/kubepfm"><code>kubepfm</code></a>. I use this tool heavily in my development work. You can check out the code <a href="https://github.com/flowerinthenight/kubepfm">here</a>. You might find this useful.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2019-02-20-kubepfm-update/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2019-02-20-kubepfm-update/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Update to kubepfm, a kubectl port-forward wrapper for multiple pods]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
         <entry>
             

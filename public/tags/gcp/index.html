@@ -737,11 +737,21 @@ table {
             
                 
             
-                
+        
             
                 
             
+        
+            
                 
+            
+        
+            
+                
+            
+        
+    
+        
             
                 
             
@@ -793,9 +803,81 @@ table {
 
 <div class="mb-3 paige-page paige-published w-100">
     
+        <p class="mb-0 paige-title text-center"><a href="/blog/2022-09-21-spindle-based-distributed-computing-lib/">hedge - A simple distributed computing library</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2022-09-21</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">This library has been in our production for about a year already and is one of the critical components in our backend. We mainly use it for app-level orchestration between pods. It’s called hedge and you can find the code here. Maybe it will be useful to anybody out there.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/distributed-computing/">Distributed-Computing</a> · <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/spanner/">Spanner</a> · <a class="link-secondary" href="/tags/spindle/">Spindle</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2022-09-21">September 21, 2022</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
         <p class="mb-0 paige-title text-center"><a href="/blog/2020-12-26-spanner-distributed-lock/">A Spanner-based distributed locking library</a></p>
     
 
+    
+        <p class="mb-0 paige-description text-center">2020-12-26</p>
     
 
     
@@ -812,6 +894,151 @@ table {
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-12-26">December 26, 2020</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-09-11-autobackup-spanner-k8s/">Automate Spanner backup using Kubernetes CronJob</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2020-09-11</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">As of this writing, GCP doesn’t have an option to create Spanner backups automatically. This could be available when you’re reading this in the future. At the moment, however, if you’re using Kubernetes, you can utilize CronJob to do a scheduled backup.
+Here’s a sample CronJob deployment that uses gcloud to create the backups. First, you need to create a service account that has permissions to create Spanner backups. Once you have downloaded the JSON file for the service account, store it as a Kubernetes Secret.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/backup/">Backup</a> · <a class="link-secondary" href="/tags/cronjob/">Cronjob</a> · <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/spanner/">Spanner</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-09-11">September 11, 2020</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-11-28-gcp-backendconfig-k8s/">Extending the timeout of a Kubernetes service in GCP</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-11-28</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">This is related to a previous post about Kubernetes services. This time, it’s about extending the timeout of an Ingress. We had a situation where we had to download a huge file from one of our exposed services. The download takes about two minutes to complete. This didn’t really worked out since by default, GCP load balancers that are associated with k8s Ingresses have a timeout value of 30s. For a time, we just did manual updates by going to the GCP k8s Services and Ingress console, opening the backend service under the Ingress, and editing the Timeout section to the desired seconds.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/ingress/">Ingress</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/timeout/">Timeout</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-11-28">November 28, 2019</time>
+        </p>
     
 
     
@@ -923,135 +1150,6 @@ Using the GOOGLE_APPLICATION_CREDENTIALS environment variable After you have cre
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2020-09-11-autobackup-spanner-k8s/">Automate Spanner backup using Kubernetes CronJob</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">As of this writing, GCP doesn’t have an option to create Spanner backups automatically. This could be available when you’re reading this in the future. At the moment, however, if you’re using Kubernetes, you can utilize CronJob to do a scheduled backup.
-Here’s a sample CronJob deployment that uses gcloud to create the backups. First, you need to create a service account that has permissions to create Spanner backups. Once you have downloaded the JSON file for the service account, store it as a Kubernetes Secret.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/backup/">Backup</a> · <a class="link-secondary" href="/tags/cronjob/">Cronjob</a> · <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/spanner/">Spanner</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2019-11-28-gcp-backendconfig-k8s/">Extending the timeout of a Kubernetes service in GCP</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">This is related to a previous post about Kubernetes services. This time, it’s about extending the timeout of an Ingress. We had a situation where we had to download a huge file from one of our exposed services. The download takes about two minutes to complete. This didn’t really worked out since by default, GCP load balancers that are associated with k8s Ingresses have a timeout value of 30s. For a time, we just did manual updates by going to the GCP k8s Services and Ingress console, opening the backend service under the Ingress, and editing the Timeout section to the desired seconds.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/ingress/">Ingress</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/timeout/">Timeout</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
         <p class="mb-0 paige-title text-center"><a href="/blog/2018-08-13-gcp-pubsub-lengthy-process/">GCP PubSub lengthy message processing</a></p>
     
 
@@ -1064,70 +1162,6 @@ Here’s a sample CronJob deployment that uses gcloud to create the backups. Fir
     
         <p class="mb-0 paige-keywords text-center text-secondary">
             <a class="link-secondary" href="/tags/client/">Client</a> · <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/lengthy/">Lengthy</a> · <a class="link-secondary" href="/tags/pubsub/">Pubsub</a> · <a class="link-secondary" href="/tags/subscription/">Subscription</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2022-09-21-spindle-based-distributed-computing-lib/">hedge - A simple distributed computing library</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">This library has been in our production for about a year already and is one of the critical components in our backend. We mainly use it for app-level orchestration between pods. It’s called hedge and you can find the code here. Maybe it will be useful to anybody out there.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/distributed-computing/">Distributed-Computing</a> · <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/spanner/">Spanner</a> · <a class="link-secondary" href="/tags/spindle/">Spindle</a>
         </p>
     
 

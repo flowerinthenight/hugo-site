@@ -1,16 +1,19 @@
 ---
-layout: post
 title: "Using k8s.io/klog together with cobra in golang"
-location: "Japan"
+description: "2019-02-05"
+date: "2019-02-05"
+paige:
+  feed:
+    hide_page: true
 tags: [golang, klog, cobra]
-comments: true
+weight: 1
 ---
 
 This post is somehow related to a [previous article](https://flowerinthenight.com/blog/2017/12/01/golang-cobra-glog) about using [glog](https://github.com/golang/glog) together with [cobra](https://github.com/spf13/cobra). This time, we will be using [klog](https://github.com/kubernetes/klog) which is a Kubernetes fork of [glog](https://github.com/golang/glog).
 
-{% gist c1d3267a6e5cc26b9025b4eed74ce00a %}
+{{< gist flowerinthenight c1d3267a6e5cc26b9025b4eed74ce00a >}}
 
-{% highlight shell %}
+```sh
 # run the -h command
 $ ./cobraklog -h
 Usage of ./cobraklog:
@@ -32,9 +35,9 @@ Usage of ./cobraklog:
         log level for V logs
   -vmodule value
         comma-separated list of pattern=N settings for file-filtered logging
-{% endhighlight %}
+```
 
-{% highlight shell %}
+```sh
 # run cobra's `help` command
 $ ./cobraklog help
 Use klog together with cobra.
@@ -59,9 +62,9 @@ Flags:
   -h, --help                             help for cobraklog
 
 Use "cobraklog [command] --help" for more information about a command.
-{% endhighlight %}
+```
 
-{% highlight shell %}
+```sh
 # run `help` on our subcommand `run`
 $ ./cobraklog help run
 Run command.
@@ -83,13 +86,15 @@ Global Flags:
       --stderrthreshold severity         logs at or above this threshold go to stderr (default 2)
   -v, --v Level                          log level for V logs
       --vmodule moduleSpec               comma-separated list of pattern=N settings for file-filtered logging
-{% endhighlight %}
+```
 
-{% highlight shell %}
+```sh
 # run the `run` subcommand
 $ ./cobraklog run --logtostderr
 I0205 16:37:39.110849   13672 main.go:41] echo=hello world
 
 $ ./cobraklog run --logtostderr --str "hello alien world"
 I0205 16:39:37.212187   13685 main.go:41] echo=hello alien world
-{% endhighlight %}
+```
+
+<br>

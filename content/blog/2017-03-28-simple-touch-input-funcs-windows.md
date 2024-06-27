@@ -1,13 +1,18 @@
 ---
-layout: post
 title: "Simple touch/swipe input function in Windows"
-location: "Japan"
+description: "2017-03-28"
+date: "2017-03-28"
+paige:
+  feed:
+    hide_page: true
 tags: [c++, windows, input]
-comments: true
+weight: 1
 ---
 
 For self reference:
 
 Simulate a touch input down, drag, up programmatically.
 
-{% gist bd264001034db093413a0bb233760588 %}
+{{< gist flowerinthenight bd264001034db093413a0bb233760588 >}}
+
+<br>

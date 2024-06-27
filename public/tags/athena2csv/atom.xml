@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,59 +99,5 @@
     <title type="html"><![CDATA[Athena2csv · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>I recently uploaded a tool to GitHub that downloads <a href="https://aws.amazon.com/athena/">AWS Athena</a> query results as CSV. It&rsquo;s called <a href="https://github.com/flowerinthenight/athena2csv"><code>athena2csv</code></a>. You can check out the code <a href="https://github.com/flowerinthenight/athena2csv">here</a>. You might find this useful.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2019-03-09-athena2csv/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2019-03-09-athena2csv/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Download AWS Athena query results as CSV]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

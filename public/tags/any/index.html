@@ -729,8 +729,7 @@ table {
 
     
         
-            
-            
+    
 
     
         
@@ -787,13 +786,13 @@ table {
     
 
     
+        <p class="mb-0 paige-description text-center">2021-12-31</p>
+    
 
     
         <p class="fst-italic mb-0 paige-summary text-center">This is just a quick one.
 I had some trouble making the Any protobuf type work when running grpc-gateway from a separate process with the gateway throwing an unknown message type error. A quick fix for this is to import the generated pb.go file to your proxy source. Something like:
-{% highlight go %} package main
-import ( …
-_ &#34;github.com/username/pkgwithpbgo&#34; ) {% endhighlight %}</p>
+package main import ( … _ &#34;github.com/username/pkgwithpbgo&#34; )</p>
     
 
     
@@ -806,6 +805,10 @@ _ &#34;github.com/username/pkgwithpbgo&#34; ) {% endhighlight %}</p>
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-12-31">December 31, 2021</time>
+        </p>
     
 
     

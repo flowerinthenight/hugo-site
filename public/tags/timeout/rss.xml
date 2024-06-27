@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2019-11-28 00:00:00 -0800 PST</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/timeout/</link>
 
@@ -92,80 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>This is related to a <a href="https://flowerinthenight.com/blog/2018/03/31/access-pods-k8s">previous post</a> about Kubernetes services. This time, it&rsquo;s about extending the timeout of an Ingress. We had a situation where we had to download a huge file from one of our exposed services. The download takes about two minutes to complete. This didn&rsquo;t really worked out since by default, GCP load balancers that are associated with k8s Ingresses have a timeout value of 30s. For a time, we just did manual updates by going to the GCP k8s Services and Ingress console, opening the backend service under the Ingress, and editing the Timeout section to the desired seconds. But since we do have a cluster blue/green deployment, we had to do this every time we recreate our clusters.</p>
-<p>Enter <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig">BackendConfig</a> custom resource. With this, we can associate a BackendConfig resource to the service in question using GCP-specific annotations. Reusing the reverse proxy YAML from <a href="https://flowerinthenight.com/blog/2018/03/31/access-pods-k8s">this post</a>, we add a BackendConfig resource.</p>
-<p>{% highlight ruby %}
-apiVersion: cloud.google.com/v1beta1
-kind: BackendConfig
-metadata:
-name: serviceproxy-backendconfig
-spec:
-timeoutSec: 7200
-connectionDraining:
-drainingTimeoutSec: 60</p>
-<hr>
-<p>apiVersion: v1
-kind: Service
-metadata:
-name: serviceproxy
-annotations:
-beta.cloud.google.com/backend-config: &lsquo;{&ldquo;ports&rdquo;: {&ldquo;80&rdquo;:&ldquo;serviceproxy-backendconfig&rdquo;}}&rsquo;
-spec:
-type: NodePort
-ports:</p>
-<ul>
-<li>name: http
-protocol: TCP
-port: 80
-targetPort: 80
-selector:
-app: serviceproxy
-{% endhighlight %}</li>
-</ul>
-<p>Deploying this will set the timeout of the service to two hours.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2019-11-28-gcp-backendconfig-k8s/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2019-11-28-gcp-backendconfig-k8s/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Extending the timeout of a Kubernetes service in GCP</title>
-                
-            </item>
         
     </channel>
 </rss>

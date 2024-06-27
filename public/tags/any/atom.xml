@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,68 +99,5 @@
     <title type="html"><![CDATA[Any · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>This is just a quick one.</p>
-<p>I had some trouble making the <a href="https://developers.google.com/protocol-buffers/docs/proto3#any"><code>Any</code></a> protobuf type work when running <a href="https://github.com/grpc-ecosystem/grpc-gateway"><code>grpc-gateway</code></a> from a separate process with the gateway throwing an unknown message type error. A quick fix for this is to import the generated <code>pb.go</code> file to your proxy source. Something like:</p>
-<p>{% highlight go %}
-package main</p>
-<p>import (
-&hellip;</p>
-<pre><code>_ &quot;github.com/username/pkgwithpbgo&quot;
-</code></pre>
-<p>)
-{% endhighlight %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2021-12-31-support-any-grpc-gateway-separate-process/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2021-12-31-support-any-grpc-gateway-separate-process/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Support the &lsquo;Any&rsquo; protobuf type from an external grpc-gateway process]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

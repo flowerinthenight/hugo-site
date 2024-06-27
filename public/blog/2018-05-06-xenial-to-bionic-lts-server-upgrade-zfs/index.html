@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2018-05-06" name="description">
+
 
 
     <meta content="bionic, ubuntu, upgrade, xenial" name="keywords">
@@ -63,13 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2018-05-06-xenial-to-bionic-lts-server-upgrade-zfs/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Ubuntu 16.04 LTS to Ubuntu 18.04 LTS">
-  <meta property="og:description" content="I just upgraded my home server from Ubuntu 16.04 LTS to 18.04 LTS without any problems so far. For context, this server runs a Samba file server using ZFS. Although after update, I had to run the following command to my pool:
-{% highlight shell %}
-pool name is ‘m0’ $ sudo zpool upgrade m0 {% endhighlight %}
-By the way, at the time of this writing, Ubuntu Server update is not yet available (I think you have to wait for 18.">
+  <meta property="og:description" content="2018-05-06">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2018-05-06T00:00:00-07:00">
+    <meta property="article:modified_time" content="2018-05-06T00:00:00-07:00">
     <meta property="article:tag" content="Ubuntu">
     <meta property="article:tag" content="Upgrade">
     <meta property="article:tag" content="Xenial">
@@ -78,10 +79,7 @@ By the way, at the time of this writing, Ubuntu Server update is not yet availab
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ubuntu 16.04 LTS to Ubuntu 18.04 LTS">
-  <meta name="twitter:description" content="I just upgraded my home server from Ubuntu 16.04 LTS to 18.04 LTS without any problems so far. For context, this server runs a Samba file server using ZFS. Although after update, I had to run the following command to my pool:
-{% highlight shell %}
-pool name is ‘m0’ $ sudo zpool upgrade m0 {% endhighlight %}
-By the way, at the time of this writing, Ubuntu Server update is not yet available (I think you have to wait for 18.">
+  <meta name="twitter:description" content="2018-05-06">
 
 
 
@@ -699,6 +697,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2018-05-06</p>
+    
 
     
         <div class="mb-3">
@@ -712,6 +712,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2018-05-06">May 6, 2018</time>
+                </p>
             
 
             
@@ -735,14 +739,11 @@ table {
 
 
     <div class="mw-100" id="paige-content"><p>I just upgraded my home server from Ubuntu 16.04 LTS to 18.04 LTS without any problems so far. For context, this server runs a Samba file server using ZFS. Although after update, I had to run the following command to my pool:</p>
-<p>{% highlight shell %}</p>
-<h1 id="pool-name-is-m0">pool name is &lsquo;m0&rsquo;<a aria-label="Link to this section" class="paige-header-link" href="#pool-name-is-m0"></a></h1>
-<p>$ sudo zpool upgrade m0
-{% endhighlight %}</p>
-<p>By the way, at the time of this writing, Ubuntu Server update is not yet available (I think you have to wait for 18.04.1). I used the following command to update mine:</p>
-<p>{% highlight shell %}
-$ do-release-upgrade -m server -d
-{% endhighlight %}</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># pool name is &#39;m0&#39;</span>
+</span></span><span class="line"><span class="cl">$ sudo zpool upgrade m0
+</span></span></code></pre></div><p>By the way, at the time of this writing, Ubuntu Server update is not yet available (I think you have to wait for 18.04.1). I used the following command to update mine:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ <span class="k">do</span>-release-upgrade -m server -d
+</span></span></code></pre></div><br>
 </div>
 
 
@@ -822,13 +823,13 @@ $ do-release-upgrade -m server -d
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2019-04-28-drv2605-umdf-haptic-driver/">UMDF driver code for DRV2605 haptic device</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2016-04-10-trying-bash-on-windows/">Trying out Bash on Windows</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2018-06-09-google-api-client-go-auth/">Authenticating Google API Client Library for Go using Service Accounts</a> &rarr;
                 </p>
             
         </div>

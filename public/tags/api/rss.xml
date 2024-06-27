@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
     
@@ -85,6 +85,8 @@
         
 
         
+            <lastBuildDate>2020-10-31 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/api/</link>
 
@@ -151,50 +153,6 @@
 
                 
                     <title>Authenticating Google API Client Library for Go using Service Accounts</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I uploaded an automation-friendly, highly-scalable, and scriptable API/generic testing tool built to run on <a href="https://kubernetes.io/">Kubernetes</a>. It&rsquo;s called <code>oops</code> and you can find the code <a href="https://github.com/flowerinthenight/oops/">here</a>. Maybe it will be useful to anybody out there.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-10-31-oops/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2020-10-31-oops/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>An automation-friendly, highly-scalable, and scriptable testing tool</title>
                 
             </item>
         

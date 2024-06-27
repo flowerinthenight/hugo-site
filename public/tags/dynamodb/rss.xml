@@ -13,15 +13,13 @@
 
 
     
-
-    
         
     
 
     
 
     
-        
+
     
 
     
@@ -91,6 +89,8 @@
         
 
         
+            <lastBuildDate>2020-08-31 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/dynamodb/</link>
 
@@ -146,94 +146,6 @@
 
                 
                     <title>Monitoring dynamodb table using dynamodbstream, lambda, SNS and SQS</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I uploaded a tool that can sync DynamoDB tables between accounts. It&rsquo;s called <code>dysync</code> and you can find the code <a href="https://github.com/flowerinthenight/dysync/">here</a>. Maybe it will be useful to anybody out there.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-08-31-dysync/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2020-08-31-dysync/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>A tool for synching DynamoDB tables between accounts</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I uploaded a tool that can query DynamoDB tables. It&rsquo;s called <code>lsdy</code> and you can find the code <a href="https://github.com/flowerinthenight/lsdy/">here</a>. Maybe it will be useful to anybody out there.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-05-13-lsdy-dynamodb-query/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2020-05-13-lsdy-dynamodb-query/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>A tool for querying DynamoDB</title>
                 
             </item>
         

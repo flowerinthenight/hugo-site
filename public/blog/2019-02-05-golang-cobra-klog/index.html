@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2019-02-05" name="description">
+
 
 
     <meta content="cobra, golang, klog" name="keywords">
@@ -63,13 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2019-02-05-golang-cobra-klog/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Using k8s.io/klog together with cobra in golang">
-  <meta property="og:description" content="This post is somehow related to a previous article about using glog together with cobra. This time, we will be using klog which is a Kubernetes fork of glog.
-{% gist c1d3267a6e5cc26b9025b4eed74ce00a %}
-{% highlight shell %}
-run the -h command $ ./cobraklog -h Usage of ./cobraklog: -alsologtostderr log to standard error as well as files -log_backtrace_at value when logging hits line file:N, emit a stack trace -log_dir string If non-empty, write log files in this directory -log_file string If non-empty, use this log file -logtostderr log to standard error instead of files -skip_headers If true, avoid header prefixes in the log messages -stderrthreshold value logs at or above this threshold go to stderr (default 2) -v value log level for V logs -vmodule value comma-separated list of pattern=N settings for file-filtered logging {% endhighlight %}">
+  <meta property="og:description" content="2019-02-05">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2019-02-05T00:00:00-08:00">
+    <meta property="article:modified_time" content="2019-02-05T00:00:00-08:00">
     <meta property="article:tag" content="Golang">
     <meta property="article:tag" content="Klog">
     <meta property="article:tag" content="Cobra">
@@ -77,10 +78,7 @@ run the -h command $ ./cobraklog -h Usage of ./cobraklog: -alsologtostderr log t
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Using k8s.io/klog together with cobra in golang">
-  <meta name="twitter:description" content="This post is somehow related to a previous article about using glog together with cobra. This time, we will be using klog which is a Kubernetes fork of glog.
-{% gist c1d3267a6e5cc26b9025b4eed74ce00a %}
-{% highlight shell %}
-run the -h command $ ./cobraklog -h Usage of ./cobraklog: -alsologtostderr log to standard error as well as files -log_backtrace_at value when logging hits line file:N, emit a stack trace -log_dir string If non-empty, write log files in this directory -log_file string If non-empty, use this log file -logtostderr log to standard error instead of files -skip_headers If true, avoid header prefixes in the log messages -stderrthreshold value logs at or above this threshold go to stderr (default 2) -v value log level for V logs -vmodule value comma-separated list of pattern=N settings for file-filtered logging {% endhighlight %}">
+  <meta name="twitter:description" content="2019-02-05">
 
 
 
@@ -698,6 +696,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2019-02-05</p>
+    
 
     
         <div class="mb-3">
@@ -712,9 +712,13 @@ table {
             
 
             
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2019-02-05">February 5, 2019</time>
+                </p>
+            
 
             
-                <p class="mb-0 text-center text-secondary" id="paige-reading-time">3 minutes</p>
+                <p class="mb-0 text-center text-secondary" id="paige-reading-time">2 minutes</p>
             
         </div>
     
@@ -734,79 +738,81 @@ table {
 
 
     <div class="mw-100" id="paige-content"><p>This post is somehow related to a <a href="https://flowerinthenight.com/blog/2017/12/01/golang-cobra-glog">previous article</a> about using <a href="https://github.com/golang/glog">glog</a> together with <a href="https://github.com/spf13/cobra">cobra</a>. This time, we will be using <a href="https://github.com/kubernetes/klog">klog</a> which is a Kubernetes fork of <a href="https://github.com/golang/glog">glog</a>.</p>
-<p>{% gist c1d3267a6e5cc26b9025b4eed74ce00a %}</p>
-<p>{% highlight shell %}</p>
-<h1 id="run-the--h-command">run the -h command<a aria-label="Link to this section" class="paige-header-link" href="#run-the--h-command"></a></h1>
-<p>$ ./cobraklog -h
-Usage of ./cobraklog:
--alsologtostderr
-log to standard error as well as files
--log_backtrace_at value
-when logging hits line file:N, emit a stack trace
--log_dir string
-If non-empty, write log files in this directory
--log_file string
-If non-empty, use this log file
--logtostderr
-log to standard error instead of files
--skip_headers
-If true, avoid header prefixes in the log messages
--stderrthreshold value
-logs at or above this threshold go to stderr (default 2)
--v value
-log level for V logs
--vmodule value
-comma-separated list of pattern=N settings for file-filtered logging
-{% endhighlight %}</p>
-<p>{% highlight shell %}</p>
-<h1 id="run-cobras-help-command">run cobra&rsquo;s <code>help</code> command<a aria-label="Link to this section" class="paige-header-link" href="#run-cobras-help-command"></a></h1>
-<p>$ ./cobraklog help
-Use klog together with cobra.</p>
-<p>Usage:
-cobraklog [command]</p>
-<p>Available Commands:
-help        Help about any command
-run         run command</p>
-<p>Flags:
-&ndash;alsologtostderr                  log to standard error as well as files
-&ndash;log_backtrace_at traceLocation   when logging hits line file:N, emit a stack trace (default :0)
-&ndash;log_dir string                   If non-empty, write log files in this directory
-&ndash;log_file string                  If non-empty, use this log file
-&ndash;logtostderr                      log to standard error instead of files
-&ndash;skip_headers                     If true, avoid header prefixes in the log messages
-&ndash;stderrthreshold severity         logs at or above this threshold go to stderr (default 2)
--v, &ndash;v Level                          log level for V logs
-&ndash;vmodule moduleSpec               comma-separated list of pattern=N settings for file-filtered logging
--h, &ndash;help                             help for cobraklog</p>
-<p>Use &ldquo;cobraklog [command] &ndash;help&rdquo; for more information about a command.
-{% endhighlight %}</p>
-<p>{% highlight shell %}</p>
-<h1 id="run-help-on-our-subcommand-run">run <code>help</code> on our subcommand <code>run</code><a aria-label="Link to this section" class="paige-header-link" href="#run-help-on-our-subcommand-run"></a></h1>
-<p>$ ./cobraklog help run
-Run command.</p>
-<p>Usage:
-cobraklog run [flags]</p>
-<p>Flags:
-&ndash;str string   string to print (default &ldquo;hello world&rdquo;)
--h, &ndash;help         help for run</p>
-<p>Global Flags:
-&ndash;alsologtostderr                  log to standard error as well as files
-&ndash;log_backtrace_at traceLocation   when logging hits line file:N, emit a stack trace (default :0)
-&ndash;log_dir string                   If non-empty, write log files in this directory
-&ndash;log_file string                  If non-empty, use this log file
-&ndash;logtostderr                      log to standard error instead of files
-&ndash;skip_headers                     If true, avoid header prefixes in the log messages
-&ndash;stderrthreshold severity         logs at or above this threshold go to stderr (default 2)
--v, &ndash;v Level                          log level for V logs
-&ndash;vmodule moduleSpec               comma-separated list of pattern=N settings for file-filtered logging
-{% endhighlight %}</p>
-<p>{% highlight shell %}</p>
-<h1 id="run-the-run-subcommand">run the <code>run</code> subcommand<a aria-label="Link to this section" class="paige-header-link" href="#run-the-run-subcommand"></a></h1>
-<p>$ ./cobraklog run &ndash;logtostderr
-I0205 16:37:39.110849   13672 main.go:41] echo=hello world</p>
-<p>$ ./cobraklog run &ndash;logtostderr &ndash;str &ldquo;hello alien world&rdquo;
-I0205 16:39:37.212187   13685 main.go:41] echo=hello alien world
-{% endhighlight %}</p>
+<script src="https://gist.github.com/flowerinthenight/c1d3267a6e5cc26b9025b4eed74ce00a.js"></script>
+
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># run the -h command</span>
+</span></span><span class="line"><span class="cl">$ ./cobraklog -h
+</span></span><span class="line"><span class="cl">Usage of ./cobraklog:
+</span></span><span class="line"><span class="cl">  -alsologtostderr
+</span></span><span class="line"><span class="cl">        log to standard error as well as files
+</span></span><span class="line"><span class="cl">  -log_backtrace_at value
+</span></span><span class="line"><span class="cl">        when logging hits line file:N, emit a stack trace
+</span></span><span class="line"><span class="cl">  -log_dir string
+</span></span><span class="line"><span class="cl">        If non-empty, write log files in this directory
+</span></span><span class="line"><span class="cl">  -log_file string
+</span></span><span class="line"><span class="cl">        If non-empty, use this log file
+</span></span><span class="line"><span class="cl">  -logtostderr
+</span></span><span class="line"><span class="cl">        log to standard error instead of files
+</span></span><span class="line"><span class="cl">  -skip_headers
+</span></span><span class="line"><span class="cl">        If true, avoid header prefixes in the log messages
+</span></span><span class="line"><span class="cl">  -stderrthreshold value
+</span></span><span class="line"><span class="cl">        logs at or above this threshold go to stderr <span class="o">(</span>default 2<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  -v value
+</span></span><span class="line"><span class="cl">        log level <span class="k">for</span> V logs
+</span></span><span class="line"><span class="cl">  -vmodule value
+</span></span><span class="line"><span class="cl">        comma-separated list of <span class="nv">pattern</span><span class="o">=</span>N settings <span class="k">for</span> file-filtered logging
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># run cobra&#39;s `help` command</span>
+</span></span><span class="line"><span class="cl">$ ./cobraklog <span class="nb">help</span>
+</span></span><span class="line"><span class="cl">Use klog together with cobra.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Usage:
+</span></span><span class="line"><span class="cl">  cobraklog <span class="o">[</span>command<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Available Commands:
+</span></span><span class="line"><span class="cl">  <span class="nb">help</span>        Help about any <span class="nb">command</span>
+</span></span><span class="line"><span class="cl">  run         run <span class="nb">command</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Flags:
+</span></span><span class="line"><span class="cl">      --alsologtostderr                  log to standard error as well as files
+</span></span><span class="line"><span class="cl">      --log_backtrace_at traceLocation   when logging hits line file:N, emit a stack trace <span class="o">(</span>default :0<span class="o">)</span>
+</span></span><span class="line"><span class="cl">      --log_dir string                   If non-empty, write log files in this directory
+</span></span><span class="line"><span class="cl">      --log_file string                  If non-empty, use this log file
+</span></span><span class="line"><span class="cl">      --logtostderr                      log to standard error instead of files
+</span></span><span class="line"><span class="cl">      --skip_headers                     If true, avoid header prefixes in the log messages
+</span></span><span class="line"><span class="cl">      --stderrthreshold severity         logs at or above this threshold go to stderr <span class="o">(</span>default 2<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  -v, --v Level                          log level <span class="k">for</span> V logs
+</span></span><span class="line"><span class="cl">      --vmodule moduleSpec               comma-separated list of <span class="nv">pattern</span><span class="o">=</span>N settings <span class="k">for</span> file-filtered logging
+</span></span><span class="line"><span class="cl">  -h, --help                             <span class="nb">help</span> <span class="k">for</span> cobraklog
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Use <span class="s2">&#34;cobraklog [command] --help&#34;</span> <span class="k">for</span> more information about a command.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># run `help` on our subcommand `run`</span>
+</span></span><span class="line"><span class="cl">$ ./cobraklog <span class="nb">help</span> run
+</span></span><span class="line"><span class="cl">Run command.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Usage:
+</span></span><span class="line"><span class="cl">  cobraklog run <span class="o">[</span>flags<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Flags:
+</span></span><span class="line"><span class="cl">      --str string   string to print <span class="o">(</span>default <span class="s2">&#34;hello world&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">  -h, --help         <span class="nb">help</span> <span class="k">for</span> run
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Global Flags:
+</span></span><span class="line"><span class="cl">      --alsologtostderr                  log to standard error as well as files
+</span></span><span class="line"><span class="cl">      --log_backtrace_at traceLocation   when logging hits line file:N, emit a stack trace <span class="o">(</span>default :0<span class="o">)</span>
+</span></span><span class="line"><span class="cl">      --log_dir string                   If non-empty, write log files in this directory
+</span></span><span class="line"><span class="cl">      --log_file string                  If non-empty, use this log file
+</span></span><span class="line"><span class="cl">      --logtostderr                      log to standard error instead of files
+</span></span><span class="line"><span class="cl">      --skip_headers                     If true, avoid header prefixes in the log messages
+</span></span><span class="line"><span class="cl">      --stderrthreshold severity         logs at or above this threshold go to stderr <span class="o">(</span>default 2<span class="o">)</span>
+</span></span><span class="line"><span class="cl">  -v, --v Level                          log level <span class="k">for</span> V logs
+</span></span><span class="line"><span class="cl">      --vmodule moduleSpec               comma-separated list of <span class="nv">pattern</span><span class="o">=</span>N settings <span class="k">for</span> file-filtered logging
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># run the `run` subcommand</span>
+</span></span><span class="line"><span class="cl">$ ./cobraklog run --logtostderr
+</span></span><span class="line"><span class="cl">I0205 16:37:39.110849   <span class="m">13672</span> main.go:41<span class="o">]</span> <span class="nv">echo</span><span class="o">=</span>hello world
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ ./cobraklog run --logtostderr --str <span class="s2">&#34;hello alien world&#34;</span>
+</span></span><span class="line"><span class="cl">I0205 16:39:37.212187   <span class="m">13685</span> main.go:41<span class="o">]</span> <span class="nv">echo</span><span class="o">=</span>hello alien world
+</span></span></code></pre></div><br>
 </div>
 
 
@@ -886,13 +892,13 @@ I0205 16:39:37.212187   13685 main.go:41] echo=hello alien world
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2019-06-05-master-election-using-kettle/">Using kettle library for master election using distributed locking</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2019-07-30-homebrew-golang/">Using Homebrew for distributing Go (golang) apps</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2019-02-20-kubepfm-update/">Update to `kubepfm`, a `kubectl port-forward` wrapper for multiple pods</a> &rarr;
                 </p>
             
         </div>

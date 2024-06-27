@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2018-03-31" name="description">
+
 
 
     <meta content="ingress, kubectl, Kubernetes, nginx, port-forward" name="keywords">
@@ -63,11 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2018-03-31-access-pods-k8s/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Accessing services in Kubernetes">
-  <meta property="og:description" content="At Mobingi, when we are developing services that run on Kubernetes, we generally use Minikube or Kubernetes in Docker for Mac. We also have a cluster that runs on GKE that we use for development. In this post, I will share how we access some of the services that are running on our development cluster.
-Using kubectl port-forward Using kubectl port-forward is probably the cheapest and the most straightforward. For example, if I want to access a cluster service svc1 through my localhost, I use kubectl port-forward like this:">
+  <meta property="og:description" content="2018-03-31">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2018-03-31T00:00:00-07:00">
+    <meta property="article:modified_time" content="2018-03-31T00:00:00-07:00">
     <meta property="article:tag" content="Kubectl">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="Ingress">
@@ -77,8 +80,7 @@ Using kubectl port-forward Using kubectl port-forward is probably the cheapest a
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Accessing services in Kubernetes">
-  <meta name="twitter:description" content="At Mobingi, when we are developing services that run on Kubernetes, we generally use Minikube or Kubernetes in Docker for Mac. We also have a cluster that runs on GKE that we use for development. In this post, I will share how we access some of the services that are running on our development cluster.
-Using kubectl port-forward Using kubectl port-forward is probably the cheapest and the most straightforward. For example, if I want to access a cluster service svc1 through my localhost, I use kubectl port-forward like this:">
+  <meta name="twitter:description" content="2018-03-31">
 
 
 
@@ -696,6 +698,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2018-03-31</p>
+    
 
     
         <div class="mb-3">
@@ -710,9 +714,13 @@ table {
             
 
             
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2018-03-31">March 31, 2018</time>
+                </p>
+            
 
             
-                <p class="mb-0 text-center text-secondary" id="paige-reading-time">5 minutes</p>
+                <p class="mb-0 text-center text-secondary" id="paige-reading-time">4 minutes</p>
             
         </div>
     
@@ -730,9 +738,6 @@ table {
             <nav id="TableOfContents">
   <ol>
     <li><a href="#using-kubectl-port-forward">Using kubectl port-forward</a></li>
-  </ol>
-
-  <ol>
     <li><a href="#exposing-the-service-using-nodeport-or-loadbalancer">Exposing the service using NodePort or LoadBalancer</a></li>
     <li><a href="#using-nginx-as-a-reverse-proxy-to-cluster-services">Using nginx as a reverse proxy to cluster services</a></li>
   </ol>
@@ -749,17 +754,17 @@ table {
     <div class="mw-100" id="paige-content"><p>At <a href="https://mobingi.com">Mobingi</a>, when we are developing services that run on Kubernetes, we generally use <a href="https://github.com/kubernetes/minikube">Minikube</a> or <a href="https://blog.docker.com/2018/01/docker-mac-kubernetes/">Kubernetes in Docker for Mac</a>. We also have a cluster that runs on <a href="https://cloud.google.com/kubernetes-engine/">GKE</a> that we use for development. In this post, I will share how we access some of the services that are running on our development cluster.</p>
 <h2 id="using-kubectl-port-forward">Using kubectl port-forward<a aria-label="Link to this section" class="paige-header-link" href="#using-kubectl-port-forward"></a></h2>
 <p>Using <a href="https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/">kubectl port-forward</a> is probably the cheapest and the most straightforward. For example, if I want to access a cluster service <code>svc1</code> through my localhost, I use <code>kubectl port-forward</code> like this:</p>
-<p>{% highlight shell %}
-$ kubectl get pod
-NAME                            READY     STATUS    RESTARTS   AGE
-svc1-66dd787767-d6b22           2/2       Running   0          7d
-svc1-66dd787767-ks92f           2/2       Running   0          7d
-svc2-578786c554-rlw2w           2/2       Running   0          7d</p>
-<h1 id="this-will-connect-to-the-first-pod-we-have-two-available">This will connect to the first pod (we have two available):<a aria-label="Link to this section" class="paige-header-link" href="#this-will-connect-to-the-first-pod-we-have-two-available"></a></h1>
-<p>$ kubectl port-forward <code>kubectl get pod --no-headers=true -o \ custom-columns=:metadata.name | grep svc1 | head -n1</code> 8080:8080
-Forwarding from 127.0.0.1:8080 -&gt; 8080
-{% endhighlight %}</p>
-<p>The left <code>8080</code> is my local port, the right <code>8080</code> is the pod port where svc1 is running.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ kubectl get pod
+</span></span><span class="line"><span class="cl">NAME                            READY     STATUS    RESTARTS   AGE
+</span></span><span class="line"><span class="cl">svc1-66dd787767-d6b22           2/2       Running   <span class="m">0</span>          7d 
+</span></span><span class="line"><span class="cl">svc1-66dd787767-ks92f           2/2       Running   <span class="m">0</span>          7d 
+</span></span><span class="line"><span class="cl">svc2-578786c554-rlw2w           2/2       Running   <span class="m">0</span>          7d 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># This will connect to the first pod (we have two available):</span>
+</span></span><span class="line"><span class="cl">$ kubectl port-forward <span class="sb">`</span>kubectl get pod --no-headers<span class="o">=</span><span class="nb">true</span> -o <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    custom-columns<span class="o">=</span>:metadata.name <span class="p">|</span> grep svc1 <span class="p">|</span> head -n1<span class="sb">`</span> 8080:8080
+</span></span><span class="line"><span class="cl">Forwarding from 127.0.0.1:8080 -&gt; <span class="m">8080</span>
+</span></span></code></pre></div><p>The left <code>8080</code> is my local port, the right <code>8080</code> is the pod port where svc1 is running.</p>
 <p>One thing to note with <code>kubectl port-forward</code> through is that it won&rsquo;t disconnect automatically even when the pod is restarted, say for example, due to an update from CI. I have to restart the command by doing a Ctrl+C and then rerun.</p>
 <h2 id="exposing-the-service-using-nodeport-or-loadbalancer">Exposing the service using NodePort or LoadBalancer<a aria-label="Link to this section" class="paige-header-link" href="#exposing-the-service-using-nodeport-or-loadbalancer"></a></h2>
 <p>This part is probably the easiest to setup. You can check the details from the Kubernetes <a href="https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types">documentation</a>. But you have to be careful though, especially with load balancers. These are not cheap. We have gone with this route during our early Kubernetes days and we ended up with a lot of load balancers. This was when our clusters were still in AWS. In AWS, (I&rsquo;m not sure if it is still the case now) when you specify <code>LoadBalancer</code> as service type, a classic load balancer will be provisioned for your service. That means one load balancer per exposed service!</p>
@@ -767,142 +772,132 @@ Forwarding from 127.0.0.1:8080 -&gt; 8080
 <h2 id="using-nginx-as-a-reverse-proxy-to-cluster-services">Using nginx as a reverse proxy to cluster services<a aria-label="Link to this section" class="paige-header-link" href="#using-nginx-as-a-reverse-proxy-to-cluster-services"></a></h2>
 <p>In our quest to further minimize costs, we are currently using <a href="https://www.nginx.com/">nginx</a> as our way of exposing services. We provisioned a single Ingress that points to an nginx service which serves as a reverse proxy to our cluster services. This was the cheapest for us as we only have one load balancer for all services. And updating the nginx reverse proxy service takes only a few seconds. So far, this worked for us with no significant problems for the past couple of months.</p>
 <p>Here&rsquo;s an example of an nginx reverse proxy service:</p>
-<p>{% highlight ruby %}
-apiVersion: v1
-kind: ConfigMap
-metadata:
-name: serviceproxy-conf
-data:
-serviceproxy.conf: |
-server {
-listen 80;
-server_name development.mobingi.com;
-resolver kube-dns.kube-system.svc.cluster.local valid=10s;</p>
-<pre><code>    location ~ ^/svc1/(.*)$ {
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $remote_addr;
-        proxy_set_header Host $host;
-        rewrite ^/svc1/(.*)$ /$1 break;
-        proxy_pass &quot;http://svc1.default.svc.cluster.local&quot;;
-        proxy_http_version 1.1;
-    }
-
-    location ~ ^/svc2/(.*)$ {
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $remote_addr;
-        proxy_set_header Host $host;
-        rewrite ^/svc2/(.*)$ /$1 break;
-        proxy_pass &quot;http://svc2.default.svc.cluster.local&quot;;
-        proxy_http_version 1.1;
-    }
-
-    # root health check requirement in GKE ingress
-    location / {
-        return 200 'healthy\n';
-    }
-}
-</code></pre>
-<hr>
-<p>apiVersion: apps/v1
-kind: Deployment
-metadata:
-name: serviceproxy
-spec:
-replicas: 1
-revisionHistoryLimit: 3
-selector:
-matchLabels:
-app: serviceproxy
-template:
-metadata:
-labels:
-app: serviceproxy
-spec:
-containers:
-- name: nginx
-image: nginx:1.13
-ports:
-- containerPort: 80
-volumeMounts:
-- name: config-volume
-mountPath: /etc/nginx/conf.d/
-volumes:
-- name: config-volume
-configMap:
-name: serviceproxy-conf
-items:
-- key: serviceproxy.conf
-path: serviceproxy.conf</p>
-<hr>
-<p>apiVersion: autoscaling/v1
-kind: HorizontalPodAutoscaler
-metadata:
-name: serviceproxy-hpa
-namespace: default
-spec:
-scaleTargetRef:
-apiVersion: apps/v1
-kind: Deployment
-name: serviceproxy
-minReplicas: 1
-maxReplicas: 10
-targetCPUUtilizationPercentage: 80</p>
-<hr>
-<p>apiVersion: v1
-kind: Service
-metadata:
-name: serviceproxy
-spec:
-type: NodePort
-ports:</p>
-<ul>
-<li>name: http
-protocol: TCP
-port: 80
-targetPort: 80
-selector:
-app: serviceproxy
-{% endhighlight %}</li>
-</ul>
-<p>In this example, all services, mainly <code>svc1</code> and <code>svc2</code>, are running in the <code>default</code> namespace. Save this as service.yaml and deploy:</p>
-<p>{% highlight shell %}
-$ kubectl create -f service.yaml
-{% endhighlight %}</p>
-<p>A sample Ingress controller for the reverse proxy service:</p>
-<p>{% highlight ruby %}
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-name: serviceproxy-ingress
-annotations:
-kubernetes.io/ingress.class: &ldquo;gce&rdquo;
-spec:
-tls:</p>
-<ul>
-<li>secretName: mobingi-tls
-rules:</li>
-<li>host: development.mobingi.com
-http:
-paths:
-<ul>
-<li>backend:
-serviceName: serviceproxy
-servicePort: 80
-{% endhighlight %}</li>
-</ul>
-</li>
-</ul>
-<p>Save this as ingress.yaml and deploy:</p>
-<p>{% highlight shell %}
-$ kubectl create -f ingress.yaml
-{% endhighlight %}</p>
-<p>After everything is ready (Ingress provisioning takes some time), you should be able to access <code>svc1</code> through <code>https://development.mobingi.com/svc1/some-endpoint</code>, <code>svc2</code> through <code>https://development.mobingi.com/svc2/another-endpoint</code>, etc. Of course, you have to point your domain to your Ingress load balancer&rsquo;s IP address which you can see using the following command:</p>
-<p>{% highlight shell %}
-$ kubectl get ingress serviceproxy-ingress
-NAME                   HOSTS                     ADDRESS          PORTS     AGE
-serviceproxy-ingress   development.mobingi.com   1.2.3.4          80, 443   91d
-{% endhighlight %}</p>
-<p>If you&rsquo;re wondering how to setup the TLS portion, you can refer to my previous <a href="https://flowerinthenight.com/blog/2018/02/20/k8s-tls-digicert">post</a> about the very subject.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="ss">apiVersion</span><span class="p">:</span> <span class="n">v1</span>
+</span></span><span class="line"><span class="cl"><span class="ss">kind</span><span class="p">:</span> <span class="no">ConfigMap</span>
+</span></span><span class="line"><span class="cl"><span class="ss">metadata</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">name</span><span class="p">:</span> <span class="n">serviceproxy</span><span class="o">-</span><span class="n">conf</span>
+</span></span><span class="line"><span class="cl"><span class="ss">data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">serviceproxy</span><span class="o">.</span><span class="n">conf</span><span class="p">:</span> <span class="o">|</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">listen</span> <span class="mi">80</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">server_name</span> <span class="n">development</span><span class="o">.</span><span class="n">mobingi</span><span class="o">.</span><span class="n">com</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">resolver</span> <span class="n">kube</span><span class="o">-</span><span class="n">dns</span><span class="o">.</span><span class="n">kube</span><span class="o">-</span><span class="nb">system</span><span class="o">.</span><span class="n">svc</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">local</span> <span class="n">valid</span><span class="o">=</span><span class="mi">10</span><span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">location</span> <span class="o">~</span> <span class="o">^/</span><span class="n">svc1</span><span class="o">/</span><span class="p">(</span><span class="o">.</span><span class="n">*</span><span class="p">)</span><span class="err">$</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="no">Real</span><span class="o">-</span><span class="no">IP</span> <span class="vg">$remote_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="no">Forwarded</span><span class="o">-</span><span class="no">For</span> <span class="vg">$remote_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">proxy_set_header</span> <span class="no">Host</span> <span class="vg">$host</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rewrite</span> <span class="o">^/</span><span class="n">svc1</span><span class="o">/</span><span class="p">(</span><span class="o">.</span><span class="n">*</span><span class="p">)</span><span class="err">$</span> <span class="sr">/$1 break;
+</span></span></span><span class="line"><span class="cl"><span class="sr">            proxy_pass &#34;http:/</span><span class="o">/</span><span class="n">svc1</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">svc</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">local</span><span class="s2">&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            proxy_http_version 1.1;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        }
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">        location ~ ^/svc2/(.*)$ {
+</span></span></span><span class="line"><span class="cl"><span class="s2">            proxy_set_header X-Real-IP $remote_addr;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            proxy_set_header X-Forwarded-For $remote_addr;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            proxy_set_header Host $host;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            rewrite ^/svc2/(.*)$ /$1 break;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            proxy_pass &#34;</span><span class="ss">http</span><span class="p">:</span><span class="sr">//s</span><span class="n">vc2</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">svc</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">local</span><span class="s2">&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            proxy_http_version 1.1;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        }
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">        # root health check requirement in GKE ingress
+</span></span></span><span class="line"><span class="cl"><span class="s2">        location / {
+</span></span></span><span class="line"><span class="cl"><span class="s2">            return 200 &#39;healthy</span><span class="se">\n</span><span class="s2">&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        }
+</span></span></span><span class="line"><span class="cl"><span class="s2">    }
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">---
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">apiVersion: apps/v1
+</span></span></span><span class="line"><span class="cl"><span class="s2">kind: Deployment
+</span></span></span><span class="line"><span class="cl"><span class="s2">metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  name: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">spec:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  replicas: 1
+</span></span></span><span class="line"><span class="cl"><span class="s2">  revisionHistoryLimit: 3
+</span></span></span><span class="line"><span class="cl"><span class="s2">  selector:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    matchLabels:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      app: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">  template:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      labels:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        app: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">    spec:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      containers:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      - name: nginx
+</span></span></span><span class="line"><span class="cl"><span class="s2">        image: nginx:1.13
+</span></span></span><span class="line"><span class="cl"><span class="s2">        ports:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        - containerPort: 80
+</span></span></span><span class="line"><span class="cl"><span class="s2">        volumeMounts:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        - name: config-volume
+</span></span></span><span class="line"><span class="cl"><span class="s2">          mountPath: /etc/nginx/conf.d/
+</span></span></span><span class="line"><span class="cl"><span class="s2">      volumes:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      - name: config-volume
+</span></span></span><span class="line"><span class="cl"><span class="s2">        configMap:
+</span></span></span><span class="line"><span class="cl"><span class="s2">          name: serviceproxy-conf
+</span></span></span><span class="line"><span class="cl"><span class="s2">          items:
+</span></span></span><span class="line"><span class="cl"><span class="s2">          - key: serviceproxy.conf
+</span></span></span><span class="line"><span class="cl"><span class="s2">            path: serviceproxy.conf
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">---
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">apiVersion: autoscaling/v1
+</span></span></span><span class="line"><span class="cl"><span class="s2">kind: HorizontalPodAutoscaler
+</span></span></span><span class="line"><span class="cl"><span class="s2">metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  name: serviceproxy-hpa
+</span></span></span><span class="line"><span class="cl"><span class="s2">  namespace: default
+</span></span></span><span class="line"><span class="cl"><span class="s2">spec:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  scaleTargetRef:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    apiVersion: apps/v1
+</span></span></span><span class="line"><span class="cl"><span class="s2">    kind: Deployment
+</span></span></span><span class="line"><span class="cl"><span class="s2">    name: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">  minReplicas: 1
+</span></span></span><span class="line"><span class="cl"><span class="s2">  maxReplicas: 10
+</span></span></span><span class="line"><span class="cl"><span class="s2">  targetCPUUtilizationPercentage: 80
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">---
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">apiVersion: v1
+</span></span></span><span class="line"><span class="cl"><span class="s2">kind: Service
+</span></span></span><span class="line"><span class="cl"><span class="s2">metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  name: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">spec:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  type: NodePort
+</span></span></span><span class="line"><span class="cl"><span class="s2">  ports:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  - name: http
+</span></span></span><span class="line"><span class="cl"><span class="s2">    protocol: TCP
+</span></span></span><span class="line"><span class="cl"><span class="s2">    port: 80
+</span></span></span><span class="line"><span class="cl"><span class="s2">    targetPort: 80
+</span></span></span><span class="line"><span class="cl"><span class="s2">  selector:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    app: serviceproxy
+</span></span></span></code></pre></div><p>In this example, all services, mainly <code>svc1</code> and <code>svc2</code>, are running in the <code>default</code> namespace. Save this as service.yaml and deploy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ kubectl create -f service.yaml
+</span></span></code></pre></div><p>A sample Ingress controller for the reverse proxy service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="ss">apiVersion</span><span class="p">:</span> <span class="n">extensions</span><span class="o">/</span><span class="n">v1beta1</span>
+</span></span><span class="line"><span class="cl"><span class="ss">kind</span><span class="p">:</span> <span class="no">Ingress</span>
+</span></span><span class="line"><span class="cl"><span class="ss">metadata</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">name</span><span class="p">:</span> <span class="n">serviceproxy</span><span class="o">-</span><span class="n">ingress</span>
+</span></span><span class="line"><span class="cl">  <span class="ss">annotations</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">kubernetes</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ingress</span><span class="o">.</span><span class="n">class</span><span class="p">:</span> <span class="s2">&#34;gce&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="ss">spec</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="ss">tls</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="ss">secretName</span><span class="p">:</span> <span class="n">mobingi</span><span class="o">-</span><span class="n">tls</span>
+</span></span><span class="line"><span class="cl">  <span class="ss">rules</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="ss">host</span><span class="p">:</span> <span class="n">development</span><span class="o">.</span><span class="n">mobingi</span><span class="o">.</span><span class="n">com</span>
+</span></span><span class="line"><span class="cl">    <span class="ss">http</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="ss">paths</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="o">-</span> <span class="ss">backend</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">          <span class="ss">serviceName</span><span class="p">:</span> <span class="n">serviceproxy</span>
+</span></span><span class="line"><span class="cl">          <span class="ss">servicePort</span><span class="p">:</span> <span class="mi">80</span>
+</span></span></code></pre></div><p>Save this as ingress.yaml and deploy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ kubectl create -f ingress.yaml
+</span></span></code></pre></div><p>After everything is ready (Ingress provisioning takes some time), you should be able to access <code>svc1</code> through <code>https://development.mobingi.com/svc1/some-endpoint</code>, <code>svc2</code> through <code>https://development.mobingi.com/svc2/another-endpoint</code>, etc. Of course, you have to point your domain to your Ingress load balancer&rsquo;s IP address which you can see using the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ kubectl get ingress serviceproxy-ingress
+</span></span><span class="line"><span class="cl">NAME                   HOSTS                     ADDRESS          PORTS     AGE
+</span></span><span class="line"><span class="cl">serviceproxy-ingress   development.mobingi.com   1.2.3.4          80, <span class="m">443</span>   91d
+</span></span></code></pre></div><p>If you&rsquo;re wondering how to setup the TLS portion, you can refer to my previous <a href="https://flowerinthenight.com/blog/2018/02/20/k8s-tls-digicert">post</a> about the very subject.</p>
+<br>
 </div>
 
 
@@ -982,13 +977,13 @@ serviceproxy-ingress   development.mobingi.com   1.2.3.4          80, 443   91d
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-08-21-log-prefix-fname-go/">Add function name prefix to log.Println in Go</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2016-09-27-windows-delay-update-service-go/">A Windows service with an http endpoint for uploading a new version of itself</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2018-04-30-camera-class-filter-driver/">Camera Class Filter Driver for Windows</a> &rarr;
                 </p>
             
         </div>

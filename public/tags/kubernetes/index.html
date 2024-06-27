@@ -738,16 +738,24 @@ table {
                 
             
         
-    
+            
+                
+            
         
             
                 
             
-                
+        
             
                 
             
+        
+            
                 
+            
+        
+    
+        
             
                 
             
@@ -877,19 +885,20 @@ table {
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2018-03-31-access-pods-k8s/">Accessing services in Kubernetes</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-10-31-oops/">An automation-friendly, highly-scalable, and scriptable testing tool</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2020-10-31</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">At Mobingi, when we are developing services that run on Kubernetes, we generally use Minikube or Kubernetes in Docker for Mac. We also have a cluster that runs on GKE that we use for development. In this post, I will share how we access some of the services that are running on our development cluster.
-Using kubectl port-forward Using kubectl port-forward is probably the cheapest and the most straightforward. For example, if I want to access a cluster service svc1 through my localhost, I use kubectl port-forward like this:</p>
+        <p class="fst-italic mb-0 paige-summary text-center">I uploaded an automation-friendly, highly-scalable, and scriptable API/generic testing tool built to run on Kubernetes. It’s called oops and you can find the code here. Maybe it will be useful to anybody out there.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/ingress/">Ingress</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/nginx/">Nginx</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
+            <a class="link-secondary" href="/tags/api/">Api</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/testing/">Testing</a>
         </p>
     
 
@@ -898,9 +907,85 @@ Using kubectl port-forward Using kubectl port-forward is probably the cheapest a
     
 
     
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-10-31">October 31, 2020</time>
+        </p>
+    
 
     
-        <p class="mb-0 paige-reading-time text-center text-secondary">5 minutes</p>
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-01-27-kubepfm-update/">Update to kubepfm, a kubectl port-forward wrapper for multiple pods</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2020-01-27</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Updated 2020/01/27:
+Support for forwarding to deployments and services Original post:
+I recently uploaded a tool to GitHub that wraps kubectl port-forward command and supports port-forwarding to multiple pods. It’s called kubepfm. I use this tool heavily in my development work. You can check out the code here. You might find this useful.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubepfm/">Kubepfm</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-01-27">January 27, 2020</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
     
 </div>
 
@@ -946,6 +1031,8 @@ Using kubectl port-forward Using kubectl port-forward is probably the cheapest a
     
 
     
+        <p class="mb-0 paige-description text-center">2019-05-26</p>
+    
 
     
         <p class="fst-italic mb-0 paige-summary text-center">At work, for a couple of months now, we’ve been using Ambassador as our main API gateway to our k8s services. We also have our own authorization service that uses Ambassador’s AuthService mechanism. Recently, we’ve had services that needed CORS support and although Ambassador has features that support the enabling of CORS, we had to update our authorization service to handle CORS-related requests. Instead of doing this, we tried adding the CORS support at the proxy level (nginx).</p>
@@ -961,6 +1048,10 @@ Using kubectl port-forward Using kubectl port-forward is probably the cheapest a
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-05-26">May 26, 2019</time>
+        </p>
     
 
     
@@ -1006,18 +1097,89 @@ Using kubectl port-forward Using kubectl port-forward is probably the cheapest a
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2020-10-31-oops/">An automation-friendly, highly-scalable, and scriptable testing tool</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-02-20-kubepfm-update/">Update to kubepfm, a kubectl port-forward wrapper for multiple pods</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2019-02-20</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">I uploaded an automation-friendly, highly-scalable, and scriptable API/generic testing tool built to run on Kubernetes. It’s called oops and you can find the code here. Maybe it will be useful to anybody out there.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">Updated 2019/02/20: Support for namespaces https://github.com/flowerinthenight/kubepfm/issues/1 Improved handling of input patterns Original post: I recently uploaded a tool to GitHub that wraps kubectl port-forward command and supports port-forwarding to multiple pods. It’s called kubepfm. I use this tool heavily in my development work. You can check out the code here. You might find this useful.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/api/">Api</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/testing/">Testing</a>
+            <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubepfm/">Kubepfm</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-02-20">February 20, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-03-31-access-pods-k8s/">Accessing services in Kubernetes</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">At Mobingi, when we are developing services that run on Kubernetes, we generally use Minikube or Kubernetes in Docker for Mac. We also have a cluster that runs on GKE that we use for development. In this post, I will share how we access some of the services that are running on our development cluster.
+Using kubectl port-forward Using kubectl port-forward is probably the cheapest and the most straightforward. For example, if I want to access a cluster service svc1 through my localhost, I use kubectl port-forward like this:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/ingress/">Ingress</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/nginx/">Nginx</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
         </p>
     
 
@@ -1028,7 +1190,7 @@ Using kubectl port-forward Using kubectl port-forward is probably the cheapest a
     
 
     
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+        <p class="mb-0 paige-reading-time text-center text-secondary">5 minutes</p>
     
 </div>
 
@@ -1289,136 +1451,6 @@ Provision a Kubernetes cluster on AWS using kops. The cluster will have two auto
 
     
         <p class="mb-0 paige-reading-time text-center text-secondary">5 minutes</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2019-02-20-kubepfm-update/">Update to kubepfm, a kubectl port-forward wrapper for multiple pods</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Updated 2019/02/20: Support for namespaces https://github.com/flowerinthenight/kubepfm/issues/1 Improved handling of input patterns Original post: I recently uploaded a tool to GitHub that wraps kubectl port-forward command and supports port-forwarding to multiple pods. It’s called kubepfm. I use this tool heavily in my development work. You can check out the code here. You might find this useful.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubepfm/">Kubepfm</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2020-01-27-kubepfm-update/">Update to kubepfm, a kubectl port-forward wrapper for multiple pods</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Updated 2020/01/27:
-Support for forwarding to deployments and services Original post:
-I recently uploaded a tool to GitHub that wraps kubectl port-forward command and supports port-forwarding to multiple pods. It’s called kubepfm. I use this tool heavily in my development work. You can check out the code here. You might find this useful.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubepfm/">Kubepfm</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
     
 </div>
 

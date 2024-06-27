@@ -2,7 +2,7 @@ baseurl = "https://example.com"
 copyright = "© Flowerinthenight, 2016-2024. All rights reserved."
 enablerobotstxt = true
 languagecode = "en-us"
-paginate = 50
+paginate = 10000
 timezone = "America/Los_Angeles"
 titlecasestyle = "Go"
 

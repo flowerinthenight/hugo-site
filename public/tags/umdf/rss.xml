@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2019-04-28 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/umdf/</link>
 
@@ -92,50 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I uploaded an ancient prototype driver code I used ages ago in testing the <a href="http://www.ti.com/lit/ds/symlink/drv2605.pdf">DRV2605</a> haptic device from Texas Instruments. I can&rsquo;t figure out (and I also don&rsquo;t have time either) how to make this thing build using the recent versions of Visual Studio. Nonetheless, I&rsquo;m putting this out there as reference to somebody doing something similar to this project. Source code is <a href="https://github.com/flowerinthenight/tidrv2605-haptic-driver-umdf">here</a>.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2019-04-28-drv2605-umdf-haptic-driver/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2019-04-28-drv2605-umdf-haptic-driver/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>UMDF driver code for DRV2605 haptic device</title>
-                
-            </item>
         
     </channel>
 </rss>

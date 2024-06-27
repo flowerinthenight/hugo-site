@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2021-05-31 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/versions/</link>
 
@@ -92,67 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I use this handy little script to switch between different Go (golang) versions:</p>
-<p>{% highlight shell %}
-#!/bin/bash
-$1 version &amp;&gt;/dev/null
-if [ $? -eq 0 ]; then
-ln -sf $GOPATH/bin/$1 $HOME/.local/bin/go
-go version
-exit 0
-fi</p>
-<p>go get golang.org/dl/$1 &amp;&amp; $1 download
-ln -sf $GOPATH/bin/$1 $HOME/.local/bin/go
-go version
-{% endhighlight %}</p>
-<p>Saving this as an executable script <code>goset</code>, I could now switch to different versions like so:</p>
-<p>{% highlight shell %}
-$ goset go1.16.4
-go version go1.16.4 linux/amd64
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-05-31-switching-different-go-versions/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2021-05-31-switching-different-go-versions/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Switching to different Go versions</title>
-                
-            </item>
         
     </channel>
 </rss>

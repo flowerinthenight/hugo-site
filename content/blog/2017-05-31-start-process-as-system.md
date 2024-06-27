@@ -1,13 +1,18 @@
 ---
-layout: post
 title: "Start process as system using CreateProcessAsUser"
-location: "Japan"
+description: "2017-05-31"
+date: "2017-05-31"
+paige:
+  feed:
+    hide_page: true
 tags: [c++, windows, process]
-comments: true
+weight: 1
 ---
 
 Note that this function assumes the caller to be running as SYSTEM as well (i.e. Windows service).
 
 For self reference:
 
-{% gist a5ab54fec75bbabf6dac33b917b44c9b %}
+{{< gist flowerinthenight a5ab54fec75bbabf6dac33b917b44c9b >}}
+
+<br>

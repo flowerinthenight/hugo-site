@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
     
@@ -90,6 +90,8 @@
             <language>en</language>
         
 
+        
+            <lastBuildDate>2019-05-26 00:00:00 -0700 PDT</lastBuildDate>
         
 
         <link>http://localhost:1313/tags/nginx/</link>
@@ -257,104 +259,6 @@ $ curl -u user1:password <a href="https://development.mobingi.com/svc1/some-endp
 
                 
                     <title>Using nginx basic authentication in Kubernetes</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>At work, for a couple of months now, we&rsquo;ve been using <a href="https://www.getambassador.io/">Ambassador</a> as our main API gateway to our k8s services. We also have our own authorization service that uses Ambassador&rsquo;s <a href="https://www.getambassador.io/reference/services/auth-service">AuthService</a> mechanism. Recently, we&rsquo;ve had services that needed CORS support and although Ambassador has features that support the <a href="https://www.getambassador.io/reference/cors">enabling of CORS</a>, we had to update our authorization service to handle CORS-related requests. Instead of doing this, we tried adding the CORS support at the proxy level (nginx). I&rsquo;ve wrote about this topic <a href="https://flowerinthenight.com/blog/2018/03/31/access-pods-k8s">here</a> and <a href="https://flowerinthenight.com/blog/2019/01/31/nginx-basicauth-k8s">here</a>.</p>
-<p>In the example below, the CORS support is added under the location <code>/svc2/</code>.</p>
-<h2 id="-highlight-ruby-">{% highlight ruby %}</h2>
-<p>apiVersion: v1
-kind: ConfigMap
-metadata:
-name: serviceproxy-conf
-data:
-serviceproxy.conf: |
-server {
-listen 80;
-server_name development.mobingi.com;
-resolver kube-dns.kube-system.svc.cluster.local valid=10s;</p>
-<pre><code>  location ~ ^/svc1/(.*)$ {
-    auth_basic &quot;mobingi&quot;;
-    auth_basic_user_file /etc/serviceproxy/htpasswd;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $remote_addr;
-    proxy_set_header Host $host;
-    rewrite ^/svc1/(.*)$ /$1 break;
-    proxy_pass &quot;http://svc1.default.svc.cluster.local&quot;;
-    proxy_http_version 1.1;
-  }
-
-  location ~ ^/svc2/(.*)$ {
-    # Ref: https://enable-cors.org/server_nginx.html
-    if ($request_method = 'OPTIONS') {
-      add_header 'Access-Control-Allow-Origin' '*';
-      add_header 'Access-Control-Allow-Methods' 'POST, OPTIONS';
-      # Custom headers and headers various browsers *should* be OK with but aren't.
-      add_header 'Access-Control-Allow-Headers' 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization';
-      # Tell client that this pre-flight info is valid for 20 days.
-      add_header 'Access-Control-Max-Age' 1728000;
-      add_header 'Content-Type' 'text/plain; charset=utf-8';
-      add_header 'Content-Length' 0;
-      return 204;
-    }
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $remote_addr;
-    proxy_set_header Host $host;
-    rewrite ^/svc2/(.*)$ /$1 break;
-    proxy_pass &quot;http://svc2.default.svc.cluster.local&quot;;
-    proxy_http_version 1.1;
-  }
-
-  # root health check requirement in GKE ingress
-  location / {
-    return 200 'healthy\n';
-  }
-}
-
-{..redacted..}
-</code></pre>
-<p>{% endhighlight %}</p>
-<p>With that said, be aware of the <a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/">potential problems of using if in nginx</a>.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2019-05-26-cors-nginx-k8s/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2019-05-26-cors-nginx-k8s/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Adding CORS support to nginx proxy in Kubernetes</title>
                 
             </item>
         

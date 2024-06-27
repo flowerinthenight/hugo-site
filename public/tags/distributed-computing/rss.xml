@@ -21,8 +21,6 @@
     
 
     
-        
-    
 
 
 
@@ -100,50 +98,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>This library has been in our production for about a year already and is one of the critical components in our backend. We mainly use it for app-level orchestration between pods. It&rsquo;s called <code>hedge</code> and you can find the code <a href="https://github.com/flowerinthenight/hedge/">here</a>. Maybe it will be useful to anybody out there.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2022-09-21-spindle-based-distributed-computing-lib/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2022-09-21-spindle-based-distributed-computing-lib/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>hedge - A simple distributed computing library</title>
-                
-            </item>
         
     </channel>
 </rss>

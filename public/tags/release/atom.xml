@@ -16,8 +16,6 @@
     
 
     
-        
-    
 
 
 
@@ -103,66 +101,5 @@
     <title type="html"><![CDATA[Release · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p><em>For personal reference:</em></p>
-<p>Download the latest GitHub Releases asset using common command line tools:</p>
-<p>{% highlight shell %}</p>
-<h1 id="update-the-url-accordingly-the-uname--awk-subcmds-will-output-linuxdarwin">Update the url accordingly. The <code>uname | awk</code> subcmds will output &rsquo;linux&rsquo;|&lsquo;darwin&rsquo;.</h1>
-<p>$ curl -s <a href="https://api.github.com/repos/alphauslabs/bluectl/releases/latest">https://api.github.com/repos/alphauslabs/bluectl/releases/latest</a> | <br>
-jq -r &ldquo;.assets[] | select(.name | contains(&quot;$(uname -s | awk &lsquo;{print tolower($0)}&rsquo;)&quot;)) | .browser_download_url&rdquo; | <br>
-wget -i -
-{% endhighlight %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2022-01-17-download-latest-github-release-cmdline/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2022-01-17-download-latest-github-release-cmdline/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Download the latest Github release using command line]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

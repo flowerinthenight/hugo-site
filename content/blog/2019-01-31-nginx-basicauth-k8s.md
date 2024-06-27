@@ -1,32 +1,36 @@
 ---
-layout: post
 title: "Using nginx basic authentication in Kubernetes"
-location: "Japan"
+description: "2019-01-31"
+date: "2019-01-31"
+paige:
+  feed:
+    hide_page: true
 tags: [nginx, Kubernetes, basic-auth]
+weight: 1
 ---
 
 This post is somewhat related to a [previous post](https://flowerinthenight.com/blog/2018/03/31/access-pods-k8s) about accessing k8s services using nginx reverse proxy. Let's try to add a simple basic authentication to these services at the proxy level. Now, this may come in handy in non-production environments but at the very least, make sure that you are doing this over HTTPS as basic authentication credentials are not encrypted.
 
 We will be using the `htpasswd` tool to generate our passwords. In Ubuntu, you can install this using the following command:
 
-{% highlight shell %}
+```sh
 $ sudo apt-get install apache2-utils
-{% endhighlight %}
+```
 
 Let's generate our password file:
 
-{% highlight shell %}
+```sh
 $ htpasswd -c passfile user1
 New password:
 Re-type new password:
 Adding password for user user1
 $ cat passfile
 user1:$apr1$c/7lb2VS$SQ9pPJ8XfNpPH.jmnHRsE0
-{% endhighlight %}
+```
 
 Let's add a config map to our previous YAML file and enable basic authentication to `svc1` only:
 
-{% highlight ruby %}
+```ruby
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -123,12 +127,14 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: serviceproxy-hpa
   ...
-{% endhighlight %}
+```
 
 You should now be able to access `svc1` using your username:password.
 
-{% highlight shell %}
+```sh
 $ curl -u user1:password https://development.mobingi.com/svc1/some-endpoint
-{% endhighlight %}
+```
 
 That's it!
+
+<br>

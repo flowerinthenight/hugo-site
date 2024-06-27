@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2021-07-31 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/grpc/</link>
 
@@ -92,59 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>This might be hacky and there might be a proper way to do this but recently, I needed to generate all the functions&rsquo; gRPC-generated full names from our protobuf definitions. This is part of our RBAC module that needs to filter gRPC function calls. I got the list from our <a href="https://github.com/alphauslabs/blue-sdk-go">generated Go client</a> using the following command(s):</p>
-<p>{% highlight shell %}</p>
-<h1 id="main-command">Main command:</h1>
-<p>$ grep -o -R -i -E &lsquo;&quot;/blueapi..*&quot;&rsquo; . | awk -F&rsquo;:&rsquo; &lsquo;{gsub(/&quot;/, &ldquo;&rdquo;, $2); print &ldquo;-&rdquo;, substr($2, 2);}&rsquo; | sort | uniq</p>
-<h1 id="actual-commands-save-as-yaml">Actual commands; save as yaml:</h1>
-<p>$ echo &ldquo;functions:&rdquo; &gt; /tmp/funcs.yaml
-$ grep -o -R -i -E &lsquo;&quot;/blueapi..*&quot;&rsquo; . | awk -F&rsquo;:&rsquo; &lsquo;{gsub(/&quot;/, &ldquo;&rdquo;, $2); print &ldquo;-&rdquo;, substr($2, 2);}&rsquo; | <br>
-sort | uniq &raquo; /tmp/funcs.yaml
-{% endhighlight %}</p>
-<p>The final list is uploaded to this <a href="https://github.com/alphauslabs/blueapi-functions">repository</a>.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-07-31-extracting-grpc-funcs-to-list/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2021-07-31-extracting-grpc-funcs-to-list/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Extract gRPC-generated functions to a list</title>
-                
-            </item>
         
     </channel>
 </rss>

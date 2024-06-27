@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2019-01-31" name="description">
+
 
 
     <meta content="basic-auth, Kubernetes, nginx" name="keywords">
@@ -63,11 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2019-01-31-nginx-basicauth-k8s/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Using nginx basic authentication in Kubernetes">
-  <meta property="og:description" content="This post is somewhat related to a previous post about accessing k8s services using nginx reverse proxy. Let’s try to add a simple basic authentication to these services at the proxy level. Now, this may come in handy in non-production environments but at the very least, make sure that you are doing this over HTTPS as basic authentication credentials are not encrypted.
-We will be using the htpasswd tool to generate our passwords.">
+  <meta property="og:description" content="2019-01-31">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2019-01-31T00:00:00-08:00">
+    <meta property="article:modified_time" content="2019-01-31T00:00:00-08:00">
     <meta property="article:tag" content="Nginx">
     <meta property="article:tag" content="Kubernetes">
     <meta property="article:tag" content="Basic-Auth">
@@ -75,8 +78,7 @@ We will be using the htpasswd tool to generate our passwords.">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Using nginx basic authentication in Kubernetes">
-  <meta name="twitter:description" content="This post is somewhat related to a previous post about accessing k8s services using nginx reverse proxy. Let’s try to add a simple basic authentication to these services at the proxy level. Now, this may come in handy in non-production environments but at the very least, make sure that you are doing this over HTTPS as basic authentication credentials are not encrypted.
-We will be using the htpasswd tool to generate our passwords.">
+  <meta name="twitter:description" content="2019-01-31">
 
 
 
@@ -694,6 +696,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2019-01-31</p>
+    
 
     
         <div class="mb-3">
@@ -707,6 +711,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2019-01-31">January 31, 2019</time>
+                </p>
             
 
             
@@ -731,116 +739,115 @@ table {
 
     <div class="mw-100" id="paige-content"><p>This post is somewhat related to a <a href="https://flowerinthenight.com/blog/2018/03/31/access-pods-k8s">previous post</a> about accessing k8s services using nginx reverse proxy. Let&rsquo;s try to add a simple basic authentication to these services at the proxy level. Now, this may come in handy in non-production environments but at the very least, make sure that you are doing this over HTTPS as basic authentication credentials are not encrypted.</p>
 <p>We will be using the <code>htpasswd</code> tool to generate our passwords. In Ubuntu, you can install this using the following command:</p>
-<p>{% highlight shell %}
-$ sudo apt-get install apache2-utils
-{% endhighlight %}</p>
-<p>Let&rsquo;s generate our password file:</p>
-<p>{% highlight shell %}
-$ htpasswd -c passfile user1
-New password:
-Re-type new password:
-Adding password for user user1
-$ cat passfile
-user1:$apr1$c/7lb2VS$SQ9pPJ8XfNpPH.jmnHRsE0
-{% endhighlight %}</p>
-<p>Let&rsquo;s add a config map to our previous YAML file and enable basic authentication to <code>svc1</code> only:</p>
-<p>{% highlight ruby %}
-apiVersion: v1
-kind: ConfigMap
-metadata:
-name: basicauth
-data:
-htpasswd: |
-# generate: $ htpasswd -c {file} username (then input password)
-user1:$apr1$c/7lb2VS$SQ9pPJ8XfNpPH.jmnHRsE0</p>
-<hr>
-<p>apiVersion: v1
-kind: ConfigMap
-metadata:
-name: serviceproxy-conf
-data:
-serviceproxy.conf: |
-server {
-listen 80;
-server_name development.mobingi.com;
-resolver kube-dns.kube-system.svc.cluster.local valid=10s;</p>
-<pre><code>  location ~ ^/svc1/(.*)$ {
-    auth_basic &quot;mobingi&quot;;
-    auth_basic_user_file /etc/serviceproxy/htpasswd;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $remote_addr;
-    proxy_set_header Host $host;
-    rewrite ^/svc1/(.*)$ /$1 break;
-    proxy_pass &quot;http://svc1.default.svc.cluster.local&quot;;
-    proxy_http_version 1.1;
-  }
-
-  location ~ ^/svc2/(.*)$ {
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $remote_addr;
-    proxy_set_header Host $host;
-    rewrite ^/svc2/(.*)$ /$1 break;
-    proxy_pass &quot;http://svc2.default.svc.cluster.local&quot;;
-    proxy_http_version 1.1;
-  }
-
-  # root health check requirement in GKE ingress
-  location / {
-    return 200 'healthy\n';
-  }
-}
-</code></pre>
-<hr>
-<p>apiVersion: apps/v1
-kind: Deployment
-metadata:
-name: serviceproxy
-spec:
-replicas: 1
-revisionHistoryLimit: 3
-selector:
-matchLabels:
-app: serviceproxy
-template:
-metadata:
-labels:
-app: serviceproxy
-spec:
-containers:
-- name: nginx
-image: nginx:1.13
-ports:
-- containerPort: 80
-volumeMounts:
-- name: config-volume
-mountPath: /etc/nginx/conf.d/
-- name: htpasswd
-mountPath: /etc/serviceproxy/
-volumes:
-- name: config-volume
-configMap:
-name: serviceproxy-conf
-items:
-- key: serviceproxy.conf
-path: serviceproxy.conf
-- name: htpasswd
-configMap:
-name: basicauth
-items:
-- key: htpasswd
-path: htpasswd</p>
-<hr>
-<p>apiVersion: autoscaling/v1
-kind: HorizontalPodAutoscaler
-metadata:
-name: serviceproxy-hpa
-&hellip;
-{% endhighlight %}</p>
-<p>You should now be able to access <code>svc1</code> using your username:password.</p>
-<p>{% highlight shell %}
-$ curl -u user1:password <a href="https://development.mobingi.com/svc1/some-endpoint">https://development.mobingi.com/svc1/some-endpoint</a>
-{% endhighlight %}</p>
-<p>That&rsquo;s it!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ sudo apt-get install apache2-utils
+</span></span></code></pre></div><p>Let&rsquo;s generate our password file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ htpasswd -c passfile user1
+</span></span><span class="line"><span class="cl">New password:
+</span></span><span class="line"><span class="cl">Re-type new password:
+</span></span><span class="line"><span class="cl">Adding password <span class="k">for</span> user user1
+</span></span><span class="line"><span class="cl">$ cat passfile
+</span></span><span class="line"><span class="cl">user1:<span class="nv">$apr1$c</span>/7lb2VS<span class="nv">$SQ9pPJ8XfNpPH</span>.jmnHRsE0
+</span></span></code></pre></div><p>Let&rsquo;s add a config map to our previous YAML file and enable basic authentication to <code>svc1</code> only:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="ss">apiVersion</span><span class="p">:</span> <span class="n">v1</span>
+</span></span><span class="line"><span class="cl"><span class="ss">kind</span><span class="p">:</span> <span class="no">ConfigMap</span>
+</span></span><span class="line"><span class="cl"><span class="ss">metadata</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">name</span><span class="p">:</span> <span class="n">basicauth</span>
+</span></span><span class="line"><span class="cl"><span class="ss">data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="ss">htpasswd</span><span class="p">:</span> <span class="o">|</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># generate: $ htpasswd -c {file} username (then input password)</span>
+</span></span><span class="line"><span class="cl">    <span class="ss">user1</span><span class="p">:</span><span class="vg">$apr1$c</span><span class="o">/</span><span class="mi">7</span><span class="n">lb2VS</span><span class="vg">$SQ9pPJ8XfNpPH</span><span class="o">.</span><span class="n">jmnHRsE0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">---</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="ss">apiVersion</span><span class="p">:</span> <span class="n">v1</span>
+</span></span><span class="line"><span class="cl"><span class="ss">kind</span><span class="p">:</span> <span class="no">ConfigMap</span>
+</span></span><span class="line"><span class="cl"><span class="ss">metadata</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">name</span><span class="p">:</span> <span class="n">serviceproxy</span><span class="o">-</span><span class="n">conf</span>
+</span></span><span class="line"><span class="cl"><span class="ss">data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">serviceproxy</span><span class="o">.</span><span class="n">conf</span><span class="p">:</span> <span class="o">|</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">listen</span> <span class="mi">80</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">server_name</span> <span class="n">development</span><span class="o">.</span><span class="n">mobingi</span><span class="o">.</span><span class="n">com</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">resolver</span> <span class="n">kube</span><span class="o">-</span><span class="n">dns</span><span class="o">.</span><span class="n">kube</span><span class="o">-</span><span class="nb">system</span><span class="o">.</span><span class="n">svc</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">local</span> <span class="n">valid</span><span class="o">=</span><span class="mi">10</span><span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="n">location</span> <span class="o">~</span> <span class="o">^/</span><span class="n">svc1</span><span class="o">/</span><span class="p">(</span><span class="o">.</span><span class="n">*</span><span class="p">)</span><span class="err">$</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">auth_basic</span> <span class="s2">&#34;mobingi&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">auth_basic_user_file</span> <span class="sr">/etc/se</span><span class="n">rviceproxy</span><span class="o">/</span><span class="n">htpasswd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="no">Real</span><span class="o">-</span><span class="no">IP</span> <span class="vg">$remote_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="no">Forwarded</span><span class="o">-</span><span class="no">For</span> <span class="vg">$remote_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">proxy_set_header</span> <span class="no">Host</span> <span class="vg">$host</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rewrite</span> <span class="o">^/</span><span class="n">svc1</span><span class="o">/</span><span class="p">(</span><span class="o">.</span><span class="n">*</span><span class="p">)</span><span class="err">$</span> <span class="sr">/$1 break;
+</span></span></span><span class="line"><span class="cl"><span class="sr">        proxy_pass &#34;http:/</span><span class="o">/</span><span class="n">svc1</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">svc</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">local</span><span class="s2">&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        proxy_http_version 1.1;
+</span></span></span><span class="line"><span class="cl"><span class="s2">      }
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">      location ~ ^/svc2/(.*)$ {
+</span></span></span><span class="line"><span class="cl"><span class="s2">        proxy_set_header X-Real-IP $remote_addr;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        proxy_set_header X-Forwarded-For $remote_addr;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        proxy_set_header Host $host;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        rewrite ^/svc2/(.*)$ /$1 break;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        proxy_pass &#34;</span><span class="ss">http</span><span class="p">:</span><span class="sr">//s</span><span class="n">vc2</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">svc</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">local</span><span class="s2">&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        proxy_http_version 1.1;
+</span></span></span><span class="line"><span class="cl"><span class="s2">      }
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">      # root health check requirement in GKE ingress
+</span></span></span><span class="line"><span class="cl"><span class="s2">      location / {
+</span></span></span><span class="line"><span class="cl"><span class="s2">        return 200 &#39;healthy</span><span class="se">\n</span><span class="s2">&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">      }
+</span></span></span><span class="line"><span class="cl"><span class="s2">    }
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">---
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">apiVersion: apps/v1
+</span></span></span><span class="line"><span class="cl"><span class="s2">kind: Deployment
+</span></span></span><span class="line"><span class="cl"><span class="s2">metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  name: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">spec:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  replicas: 1
+</span></span></span><span class="line"><span class="cl"><span class="s2">  revisionHistoryLimit: 3
+</span></span></span><span class="line"><span class="cl"><span class="s2">  selector:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    matchLabels:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      app: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">  template:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      labels:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        app: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">    spec:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      containers:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      - name: nginx
+</span></span></span><span class="line"><span class="cl"><span class="s2">        image: nginx:1.13
+</span></span></span><span class="line"><span class="cl"><span class="s2">        ports:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        - containerPort: 80
+</span></span></span><span class="line"><span class="cl"><span class="s2">        volumeMounts:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        - name: config-volume
+</span></span></span><span class="line"><span class="cl"><span class="s2">          mountPath: /etc/nginx/conf.d/
+</span></span></span><span class="line"><span class="cl"><span class="s2">        - name: htpasswd
+</span></span></span><span class="line"><span class="cl"><span class="s2">          mountPath: /etc/serviceproxy/
+</span></span></span><span class="line"><span class="cl"><span class="s2">      volumes:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      - name: config-volume
+</span></span></span><span class="line"><span class="cl"><span class="s2">        configMap:
+</span></span></span><span class="line"><span class="cl"><span class="s2">          name: serviceproxy-conf
+</span></span></span><span class="line"><span class="cl"><span class="s2">          items:
+</span></span></span><span class="line"><span class="cl"><span class="s2">          - key: serviceproxy.conf
+</span></span></span><span class="line"><span class="cl"><span class="s2">            path: serviceproxy.conf
+</span></span></span><span class="line"><span class="cl"><span class="s2">      - name: htpasswd
+</span></span></span><span class="line"><span class="cl"><span class="s2">        configMap:
+</span></span></span><span class="line"><span class="cl"><span class="s2">          name: basicauth
+</span></span></span><span class="line"><span class="cl"><span class="s2">          items:
+</span></span></span><span class="line"><span class="cl"><span class="s2">          - key: htpasswd
+</span></span></span><span class="line"><span class="cl"><span class="s2">            path: htpasswd
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">---
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">apiVersion: autoscaling/v1
+</span></span></span><span class="line"><span class="cl"><span class="s2">kind: HorizontalPodAutoscaler
+</span></span></span><span class="line"><span class="cl"><span class="s2">metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  name: serviceproxy-hpa
+</span></span></span><span class="line"><span class="cl"><span class="s2">  ...
+</span></span></span></code></pre></div><p>You should now be able to access <code>svc1</code> using your username:password.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ curl -u user1:password https://development.mobingi.com/svc1/some-endpoint
+</span></span></code></pre></div><p>That&rsquo;s it!</p>
+<br>
 </div>
 
 
@@ -920,13 +927,13 @@ $ curl -u user1:password <a href="https://development.mobingi.com/svc1/some-endp
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2017-10-30-nativestore/">Using OS specific stores for storing CLI credentials for golang apps</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2019-06-05-master-election-using-kettle/">Using kettle library for master election using distributed locking</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2019-02-05-golang-cobra-klog/">Using k8s.io/klog together with cobra in golang</a> &rarr;
                 </p>
             
         </div>

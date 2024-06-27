@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2019-09-30 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/stern/</link>
 
@@ -92,58 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I&rsquo;ve been using <a href="https://github.com/wercker/stern"><code>stern</code></a> as my goto log viewer for Kubernetes. It supports multiple pods and other convenient functions on top of <code>kubectl logs</code>. And of course, grepping goes hand in hand with log viewing, doesn&rsquo;t it? To combine grep with stern, I use the following commands:</p>
-<p>{% highlight shell %}</p>
-<h1 id="for-osx">For OSX:</h1>
-<h1 id="stern-some-prod-prefix--grep--i---line-buffered--e-extended-regex">stern <some-prod-prefix> | grep -i &ndash;line-buffered -E &lsquo;<extended-regex>&rsquo;</h1>
-<p>$ stern user | grep -i &ndash;line-buffered -E &lsquo;failed&rsquo;</p>
-<h1 id="for-linux-ubuntu-specifically">For Linux (Ubuntu specifically):</h1>
-<h1 id="stern-some-prod-prefix--grep--i--e-extended-regex">stern <some-prod-prefix> | grep -i -E &lsquo;<extended-regex>&rsquo;</h1>
-<p>$ stern user -s 1h | grep -i -E &rsquo;error'
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2019-09-30-stern-grep/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2019-09-30-stern-grep/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Using stern together with grep</title>
-                
-            </item>
         
     </channel>
 </rss>

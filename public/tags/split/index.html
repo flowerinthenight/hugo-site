@@ -729,8 +729,7 @@ table {
 
     
         
-            
-            
+    
 
     
         
@@ -787,14 +786,12 @@ table {
     
 
     
+        <p class="mb-0 paige-description text-center">2020-06-17</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">For personal reference:
-Lately, I’ve been doing loads of CSV processing on the terminal with lots of string replacing/splitting. There are probably better (shorter) ways to do this but I’ve been leaning on awk a lot recently.
-Some examples.
-{% highlight shell %}
-One-line separator replace: $ echo “1,2,3,4,5” | awk ‘{gsub(/,/,&#34; “);print}’ 1 2 3 4 5
-Then I can use it with something like: for v in $(echo “1,2,3,4,5” | awk ‘{gsub(/,/,” “);print}’); do echo “val=$v”; done val=1 val=2 val=3 val=4 val=5</p>
+        <p class="fst-italic mb-0 paige-summary text-center">For personal reference: Lately, I’ve been doing loads of CSV processing on the terminal with lots of string replacing/splitting. There are probably better (shorter) ways to do this but I’ve been leaning on awk a lot recently. Some examples.
+One-line separator replace: $ echo &#34;1,2,3,4,5&#34; | awk &#39;{gsub(/,/,&#34; &#34;);print}&#39; 1 2 3 4 5 # Then I can use it with something like: for v in $(echo &#34;1,2,3,4,5&#34; | awk &#39;{gsub(/,/,&#34; &#34;);print}&#39;); do echo &#34;val=$v&#34;; done val=1 val=2 val=3 val=4 val=5 # Another separator: $ echo &#34;1|2|3|4|5&#34; | awk &#39;{gsub(/|/,&#34;,&#34;);print}&#39; 1,2,3,4,5 # Join multiple lines with a separator.</p>
     
 
     
@@ -807,6 +804,10 @@ Then I can use it with something like: for v in $(echo “1,2,3,4,5” | awk ‘
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-06-17">June 17, 2020</time>
+        </p>
     
 
     

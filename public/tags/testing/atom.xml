@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,59 +99,5 @@
     <title type="html"><![CDATA[Testing · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>I uploaded an automation-friendly, highly-scalable, and scriptable API/generic testing tool built to run on <a href="https://kubernetes.io/">Kubernetes</a>. It&rsquo;s called <code>oops</code> and you can find the code <a href="https://github.com/flowerinthenight/oops/">here</a>. Maybe it will be useful to anybody out there.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2020-10-31-oops/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2020-10-31-oops/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[An automation-friendly, highly-scalable, and scriptable testing tool]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

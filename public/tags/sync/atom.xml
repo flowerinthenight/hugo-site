@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,59 +99,5 @@
     <title type="html"><![CDATA[Sync · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>I uploaded a tool that can sync DynamoDB tables between accounts. It&rsquo;s called <code>dysync</code> and you can find the code <a href="https://github.com/flowerinthenight/dysync/">here</a>. Maybe it will be useful to anybody out there.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2020-08-31-dysync/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2020-08-31-dysync/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[A tool for synching DynamoDB tables between accounts]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

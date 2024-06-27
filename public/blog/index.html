@@ -930,70 +930,132 @@ table {
                 
             
         
-    
+            
+                
+            
         
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+    
+        
             
                 
             
@@ -4596,6 +4658,4069 @@ This post is a bit of a departure from my usual golang/cloud-related ramblings. 
 </div>
 
         
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-02-20-kubepfm-update/">Update to kubepfm, a kubectl port-forward wrapper for multiple pods</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-02-20</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Updated 2019/02/20: Support for namespaces https://github.com/flowerinthenight/kubepfm/issues/1 Improved handling of input patterns Original post: I recently uploaded a tool to GitHub that wraps kubectl port-forward command and supports port-forwarding to multiple pods. It’s called kubepfm. I use this tool heavily in my development work. You can check out the code here. You might find this useful.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubepfm/">Kubepfm</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-02-20">February 20, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-02-05-golang-cobra-klog/">Using k8s.io/klog together with cobra in golang</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-02-05</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">This post is somehow related to a previous article about using glog together with cobra. This time, we will be using klog which is a Kubernetes fork of glog.
+run the -h command $ ./cobraklog -h Usage of ./cobraklog: -alsologtostderr log to standard error as well as files -log_backtrace_at value when logging hits line file:N, emit a stack trace -log_dir string If non-empty, write log files in this directory -log_file string If non-empty, use this log file -logtostderr log to standard error instead of files -skip_headers If true, avoid header prefixes in the log messages -stderrthreshold value logs at or above this threshold go to stderr (default 2) -v value log level for V logs -vmodule value comma-separated list of pattern=N settings for file-filtered logging # run cobra&#39;s help command $ .</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/cobra/">Cobra</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/klog/">Klog</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-02-05">February 5, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-01-31-nginx-basicauth-k8s/">Using nginx basic authentication in Kubernetes</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-01-31</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">This post is somewhat related to a previous post about accessing k8s services using nginx reverse proxy. Let’s try to add a simple basic authentication to these services at the proxy level. Now, this may come in handy in non-production environments but at the very least, make sure that you are doing this over HTTPS as basic authentication credentials are not encrypted.
+We will be using the htpasswd tool to generate our passwords.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/basic-auth/">Basic-Auth</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/nginx/">Nginx</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-01-31">January 31, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-12-27-mochi-k8s-repo/">Mobingi’s Kubernetes clusters repo</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-12-27</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I posted an article for @mobingi about its Kubernetes clusters repo. Please check it out. Thanks.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/mobingi/">Mobingi</a> · <a class="link-secondary" href="/tags/repo/">Repo</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-12-27">December 27, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-11-19-dynamodbstreams-lambda-sns-sqs/">Monitoring dynamodb table using dynamodbstream, lambda, SNS and SQS</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-11-19</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I uploaded an example code on how to monitor a Dynamodb table (INSERT, MODIFY, and REMOVE) using dynamodbstreams, lambda, SNS, and SQS. Please have a look here.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/dynamodb/">Dynamodb</a> · <a class="link-secondary" href="/tags/dynamodbstreams/">Dynamodbstreams</a> · <a class="link-secondary" href="/tags/lambda/">Lambda</a> · <a class="link-secondary" href="/tags/sns/">Sns</a> · <a class="link-secondary" href="/tags/sqs/">Sqs</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-11-19">November 19, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-10-05-aws-sqs-lengthy-process/">AWS SQS lengthy message processing</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-10-05</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Before, I uploaded an example on how to handle lengthy processing of PubSub subscription messages in GitHub. This time, it’s for AWS SQS. Have a look at the sample code here.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/client/">Client</a> · <a class="link-secondary" href="/tags/lengthy/">Lengthy</a> · <a class="link-secondary" href="/tags/sqs/">Sqs</a> · <a class="link-secondary" href="/tags/subscription/">Subscription</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-10-05">October 5, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-09-25-ouchan-monorepo/">Mobingi’s golang monorepo</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-09-25</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I posted an article for @mobingi about its Golang-based monorepo. Please check it out. Thanks.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/mobingi/">Mobingi</a> · <a class="link-secondary" href="/tags/monorepo/">Monorepo</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-09-25">September 25, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-09-20-vimgo-go111-gocode/">Autocompletion with gocode and vim-go in Go1.11</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-09-20</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I use vim with vim-go as my main editor for Go-based projects (and for anything else, really). Recently, I’ve upgraded to Go1.11 and my autocompletion stopped working. I know vim-go uses gocode as it’s autocompletion engine but since vim-go’s :GoInstallBinaries command handled the installation for me, I didn’t really have to think about it. Fortunately, a quick update to my vimrc file did the trick for me. I just had to add Plugin ‘mdempsky/gocode’, {‘rtp’: ‘vim/’} to my vimrc (I use Vundle) and run :PluginInstall again.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/autocomplete/">Autocomplete</a> · <a class="link-secondary" href="/tags/gocode/">Gocode</a> · <a class="link-secondary" href="/tags/vim/">Vim</a> · <a class="link-secondary" href="/tags/vim-go/">Vim-Go</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-09-20">September 20, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-08-13-gcp-pubsub-lengthy-process/">GCP PubSub lengthy message processing</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-08-13</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I have uploaded an example of how to handle lengthy processing of PubSub subscription messages in GitHub. If you are using PubSub and are, at times, struggling with PubSub default deadlines, you might find this example helpful. The code can be found here.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/client/">Client</a> · <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/lengthy/">Lengthy</a> · <a class="link-secondary" href="/tags/pubsub/">Pubsub</a> · <a class="link-secondary" href="/tags/subscription/">Subscription</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-08-13">August 13, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-07-24-kubepfm/">kubepfm, a kubectl port-forward wrapper for multiple pods</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-07-24</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I recently uploaded a tool to GitHub that wraps kubectl port-forward command and supports port-forwarding to multiple pods. It’s called kubepfm. I use this tool heavily in my development work. You can check out the code here. You might find this useful.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubepfm/">Kubepfm</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-07-24">July 24, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-06-09-google-api-client-go-auth/">Authenticating Google API Client Library for Go using Service Accounts</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-06-09</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">This post is specifically for the autogenerated Google APIs Client for Go. I haven’t tried the other Google Cloud Library for Go since it didn’t have the compute library I needed.
+You can use the golang.org/x/oauth2/google library for authentication with this library. It can work with service accounts as well, which is what I am using at the moment.
+Using the GOOGLE_APPLICATION_CREDENTIALS environment variable After you have created your service account, downloaded the JSON file, and saved it in some location, you can set the GOOGLE_APPLICATION_CREDENTIALS environment variable with the path of your service account JSON file.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/api/">Api</a> · <a class="link-secondary" href="/tags/authentication/">Authentication</a> · <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/google/">Google</a> · <a class="link-secondary" href="/tags/service-account/">Service-Account</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-06-09">June 9, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-05-06-xenial-to-bionic-lts-server-upgrade-zfs/">Ubuntu 16.04 LTS to Ubuntu 18.04 LTS</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-05-06</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I just upgraded my home server from Ubuntu 16.04 LTS to 18.04 LTS without any problems so far. For context, this server runs a Samba file server using ZFS. Although after update, I had to run the following command to my pool:
+pool name is &#39;m0&#39; $ sudo zpool upgrade m0 By the way, at the time of this writing, Ubuntu Server update is not yet available (I think you have to wait for 18.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/bionic/">Bionic</a> · <a class="link-secondary" href="/tags/ubuntu/">Ubuntu</a> · <a class="link-secondary" href="/tags/upgrade/">Upgrade</a> · <a class="link-secondary" href="/tags/xenial/">Xenial</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-05-06">May 6, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-04-30-camera-class-filter-driver/">Camera Class Filter Driver for Windows</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-04-30</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">This post is a bit of a departure from my usual golang/cloud-related ramblings. I posted an open-source camera class filter driver for Windows ages ago hoping that it would help someone working on a similar project. If you are familiar with this type of driver, you probably know that it’s not that straightforward to write mainly due to it being generally undocumented. A lot of reverse engineering has been done to write this driver.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/camera/">Camera</a> · <a class="link-secondary" href="/tags/driver/">Driver</a> · <a class="link-secondary" href="/tags/filter-driver/">Filter-Driver</a> · <a class="link-secondary" href="/tags/wdm/">Wdm</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-04-30">April 30, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-03-31-access-pods-k8s/">Accessing services in Kubernetes</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-03-31</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">At Mobingi, when we are developing services that run on Kubernetes, we generally use Minikube or Kubernetes in Docker for Mac. We also have a cluster that runs on GKE that we use for development. In this post, I will share how we access some of the services that are running on our development cluster.
+Using kubectl port-forward Using kubectl port-forward is probably the cheapest and the most straightforward. For example, if I want to access a cluster service svc1 through my localhost, I use kubectl port-forward like this:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/ingress/">Ingress</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/nginx/">Nginx</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-03-31">March 31, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">4 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-02-20-k8s-tls-digicert/">Creating a Kubernetes TLS secret using certificates from DigiCert</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-02-20</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">It took me a while to make this work. I hope this will help someone out there who also is struggling with the same problem.
+We use DigiCert as our SSL certificate provider. The package I received contained three files:
+a keyfile, filename.key a certificate file, filename.crt an intermediate certificate file, DigiCertCA.crt I had to combine the two certificate files into a single file. I didn’t really check the order but I appended the intermediate certificate to my certificate file.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/digicert/">DigiCert</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/tls/">TLS</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-02-20">February 20, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-02-06-golang-monorepo/">A golang-based monorepo example</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-02-06</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I uploaded an example of a golang-based monorepo in GitHub. This is a stripped down version of what we have @mobingi. If you are planning to have a golang-based monorepo, please have a look.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/monorepo/">Monorepo</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-02-06">February 6, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-01-24-k8s-kops-aws/">Running Kubernetes on AWS using kops</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2018-01-24</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Overview This post will walk through the steps on how we provisioned our production Kubernetes cluster @mobingi. Some of the bits here are already automated in our case but I will try to include as much details as I can.
+Our goals would be the following:
+Provision a Kubernetes cluster on AWS using kops. The cluster will have two autoscaling groups: one for on-demand, one for spot instances. It’s going to be a gossip-based cluster.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/devops/">Devops</a> · <a class="link-secondary" href="/tags/kops/">Kops</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2018-01-24">January 24, 2018</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">5 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-12-01-golang-cobra-glog/">Using glog together with cobra in golang</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-12-01</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">If you have been programming with golang, you’ve probably heard of cobra. I use it extensively at work and also in my personal projects.
+Recently though, I’ve been using glog more and more. And I quite like it. The thing is, it has a couple of flag definitions in its init() function using golang’s builtin flag library. And I wanted to include those flags into cobra’s flag definitions. This is how I did it.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/cobra/">Cobra</a> · <a class="link-secondary" href="/tags/glog/">Glog</a> · <a class="link-secondary" href="/tags/golang/">Golang</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-12-01">December 1, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-11-28-embed-github-code/">Embed code from GitHub to GitHub Pages blog like Gist</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-11-28</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I’ve found this nifty little tool that can embed codes directly from your GitHub repositories without using Gist. It’s very easy to use. For example, if you want to embed, say, this whole file, you only need to add this snippet somewhere in your post.md file.
+&lt;script charset=&#34;UTF-8&#34; src=&#34;https://gist-it.appspot.com/github.com/flowerinthenight/rusttrace/blob/master/src/main.rs?footer=minimal&#34;&gt;&lt;/script&gt; The ?footer=minimal part is optional. It will look something like this:
+It can also embed just a section of code based on line numbers.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/gist-it/">Gist-It</a> · <a class="link-secondary" href="/tags/github-pages/">Github-Pages</a> · <a class="link-secondary" href="/tags/jekyll/">Jekyll</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-11-28">November 28, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-10-30-nativestore/">Using OS specific stores for storing CLI credentials for golang apps</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-10-30</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">This post is to show a simple way of using Docker’s credential helper package to utilize the system’s native credential store as storage for your Golang-based CLI applications’ login credentials. This means Keychain for OSX, wincred for Windows, and pass for Linux. We use pass here since secretservice, although supported, doesn’t work out of the box in headless servers.
+Here’s a simple implementation of our Set, Get, and Del functions.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/keychain/">Keychain</a> · <a class="link-secondary" href="/tags/nativestore/">Nativestore</a> · <a class="link-secondary" href="/tags/pass/">Pass</a> · <a class="link-secondary" href="/tags/wincred/">Wincred</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-10-30">October 30, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-09-20-docker-etwlogs/">Using Docker’s ETW log driver in Windows</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-09-20</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">In Docker’s ETW logging driver doc, it uses the tool logman to view the logs. In this article, I will show you how to use mftrace to view Docker ETW logs in real-time. First, here’s a simple application written in Go that logs to STDERR every second. Next, let’s create a Docker image (Windows) using the Dockerfile below.
+assuming the code above is saved in a directory called &#39;demoapp&#39; $ docker build -t demoapp .</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/docker/">Docker</a> · <a class="link-secondary" href="/tags/etw/">Etw</a> · <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-09-20">September 20, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-08-31-golang-json-prettify/">JSON prettifier function in Go</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-08-31</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For self reference:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/json/">Json</a> · <a class="link-secondary" href="/tags/prettify/">Prettify</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-08-31">August 31, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-07-31-ghpages-netlify/">From GitHub Pages to Netlify</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-07-31</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">As of this writing, GitHub Pages still doesn’t support HTTPS for custom domains. Last week, I came across Netlify being able to serve GitHub Pages as is, with HTTPS support even with custom domains. I gave it a go. And it worked. If you’re in the same boat as me (using GH-Pages with custom domains), give Netlify a go.
+Note: I am not affiliated with Netlify in any way, whatsoever.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/https/">Https</a> · <a class="link-secondary" href="/tags/netlify/">Netlify</a> · <a class="link-secondary" href="/tags/website/">Website</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-07-31">July 31, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-06-30-amqp-wrapper/">Wrapper for amqp library for RabbitMQ</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-06-30</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I uploaded a simple wrapper to streadway/amqp library for RabbitMQ with support for auto reconnections. This is a simplified version of what I’m using in production.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/amqp/">Amqp</a> · <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/rabbitmq/">Rabbitmq</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-06-30">June 30, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-05-31-start-process-as-system/">Start process as system using CreateProcessAsUser</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-05-31</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Note that this function assumes the caller to be running as SYSTEM as well (i.e. Windows service).
+For self reference:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/tags/process/">Process</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-05-31">May 31, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-04-20-apc-as-fifo-queue/">Using APC as FIFO queue in Windows</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-04-20</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">In this way, we can implement a FIFO queue without using explicit locking/synchronization for enqueueing/dequeueing.
+For self reference:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/tags/fifo/">Fifo</a> · <a class="link-secondary" href="/tags/queue/">Queue</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-04-20">April 20, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-03-28-simple-touch-input-funcs-windows/">Simple touch/swipe input function in Windows</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-03-28</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For self reference:
+Simulate a touch input down, drag, up programmatically.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/tags/input/">Input</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-03-28">March 28, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-02-28-simple-innosetup/">Simple Innosetup installation script</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-02-28</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">InstallShield seems ubiquitous when it comes to installer scripting, at least based on my experience with companies I’ve worked for so far. But for my side projects, I’ve always been a fan of InnoSetup. It is simple to use and Pascal is not really that bad. It is free and can do probably all the things you require for an installer.
+Here’s an example of an InnoSetup script that I have been using as baseline for creating installers for Windows.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/innosetup/">Innosetup</a> · <a class="link-secondary" href="/tags/installer/">Installer</a> · <a class="link-secondary" href="/tags/pascal/">Pascal</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-02-28">February 28, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-01-18-base-atl-service/">ATL service base code</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-01-18</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Yet another service code for Windows. This time, it’s an ATL service. ATL services are basically the same as traditional Windows services but with some advantages.
+Can be started on-demand automatically by the first client call (via COM). Clients can call service functions with parameters and return values using COM. In traditional services, clients normally communicate using service control codes and you need some kind of IPC (named pipes, shared memory, etc.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/atl/">Atl</a> · <a class="link-secondary" href="/tags/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/tags/service/">Service</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-01-18">January 18, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2017-01-04-bookshelf/">New ‘Bookshelf’ page</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2017-01-04</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Happy new year to all! To the bookworms out there, I’ve added a new page in the site called Bookshelf, a list of all the books I’ve read so far. If you have any suggestions/recommendations, please don’t hesitate to leave a comment. Thank you.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/books/">Books</a> · <a class="link-secondary" href="/categories/reading/">Reading</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2017-01-04">January 4, 2017</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-12-26-rust-etw/">Simple ETW wrapper for Rust</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-12-26</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I’ve been dabbling a bit with Rust and so far, I’m liking it. I’ll probably use it more as replacement for my C/C&#43;&#43; projects. And I just uploaded a very simple ETW wrapper I’m using in one of my side projects. You can check out the source code here.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/categories/etw/">Etw</a> · <a class="link-secondary" href="/categories/rust/">Rust</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-12-26">December 26, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup git for my WordPress installation in BlueHost</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-02-24</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I’m not sure if this is the “proper” way to do it. Well, it sort of works for me at the moment so I thought I’ll share it here. I did use FTP at first (using FileZilla) but I didnt really like the workflow.
+Host: BlueHost shared account Client: Windows 10 Prerequisites SSH/Shell Access should be enabled. I enabled this from my cPanel -&gt; SSH/Shell Access menu. Server/Host side SSH to BlueHost host.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/bluehost/">Bluehost</a> · <a class="link-secondary" href="/tags/git/">Git</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/wordpress/">Wordpress</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-02-24">February 24, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-02-22-ssh-from-windows-to-linux-server/">SSH from a Windows client to a Linux server</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-02-22</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">At the moment, I’m still in the process of setting up my home network server. I’ll be taking notes about my progress here so this might be a series of related posts.
+I’m using an Ubuntu 14.04 Server (headless). Client is a Windows 10 machine.
+The simple way Server side Install ssh. How to do this depends on what distro you are using. For Ubuntu, you can do an apt-get install ssh.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/ssh/">Ssh</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-02-22">February 22, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-02-21-welcome-to-my-blog/">Welcome to my blog!</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-02-21</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Hey, there! Welcome to my blog. I hope you enjoy reading the stuff in here. Nothing fancy, really. Just bits and bobs about tech and random topics. Enjoy!</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/blog/">Blog</a> · <a class="link-secondary" href="/categories/general/">General</a> · <a class="link-secondary" href="/tags/welcome/">Welcome</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-02-21">February 21, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-01-etw-part1/">[Part 1] How I set up ETW for logging (native, .NET, Metro and UApp)</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
+Ive been using ETW as my go-to logging mechanism for Windows development. I will be sharing how I setup my environment here.
+Creating the manifest file (.man) I use ecmangen.exe to create my manifest file. This tool is included in the SDK. I have Visual Studio 2015 installed on a Win10 64-bit machine, and its location is C:\Program Files (x86)\Windows Kits\10\bin\x64. It looks something like this (my completed manifest):</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">3 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-02-etw-part2/">[Part 2] Manifest file compilation and setup</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
+Compiling the manifest file This is how I compiled my manifest file.
+Open Visual Studio command prompt. Compile manifest file. {% highlight shell %} mc -um &lt;manifest_file&gt;.man {% endhighlight %}
+When successful, output files are:
+{% highlight shell %} .h .rc TEMP.BIN MSG00001.bin {% endhighlight %}
+Creating the message resource DLL I like to create a separate dll just for the manifest file resource although you can also add the .</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-03-etw-part3/">[Part 3] Logging with C/C&#43;&#43; applications</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
+If you remember in part 2, we compiled our manifest file with
+{% highlight shell %} mc -um &lt;manifest_file&gt;.man {% endhighlight %}
+and we got a header file as one of the outputs. We just have to include that header file to our sources and we are good to go.
+{% highlight cpp %} #include … #include “&lt;manifest_file&gt;.h”
+int main(…) { EventRegister&lt;provider_name_in_manifest&gt;(); … CreateFile(…); // Example of using the LastError event in our manifest file EventWriteLastError(L&#34;THIS_EXE&#34;, FILE, FUNC, L&#34;CreateFile&#34;, GetLastError()); … EventUnregister&lt;provider_name_in_manifest&gt;(); } {% endhighlight %}</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-07-etw-part4/">[Part 4] Log collection</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
+Getting the logs Now that I have my modules spitting out logs for me, it’s time to actually consume (or view) them. Most of the time, I use MFTrace and logman tools.
+MFTrace Although MFTrace is primarily a tool for generating logs for Media Foundation apps, it is a great tool for viewing ETW logs in general as well. It is included in the MS SDK.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-19-etw-part5/">[Part 5] Logging with C# applications</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub. I generated a C# logging class using this command: {% highlight shell %} mc -css &lt;Namespace_here&gt; jytrace.man {% endhighlight %} So far, most of my event templates use an ANSI string data type which (I believe) is not supported by C#. As you can see in part 1, I use ANSI data type for my File and Function fields so that I can use FILE and FUNCTION as inputs in C&#43;&#43;.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-22-etw-part6/">[Part 6] Logging with Universal Apps</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
+Basically, 2 steps:
+Create a C&#43;&#43; Windows Runtime Component (dll) that will use the ETW header file. Reference the WinRT DLL to C# project.
+WinRT DLL My logging class looks like this:
+{% highlight cpp %} public ref class TraceCore sealed { private: TraceCore(); ~TraceCore();
+static TraceCore^ m_Instance; public: static property TraceCore^ Instance { TraceCore^ get() { if (m_Instance == nullptr) { m_Instance = ref new TraceCore(); }</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-10-07-cron-like-windows-service-go/">A simple cron-like Windows service</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">A couple of days ago, I uploaded a generic service in GitHub that has a feature of updating itself. Check out the post here. Today, I uploaded the actual service I’m using in our CI environment, excluding the configuration file.
+Check out the source code here.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a> · <a class="link-secondary" href="/categories/go/">Go</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-06-13-folder-file-watcher-powershell/">A simple folder/file watcher in Powershell</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Personal reference:
+{% gist 66dd730db7f15d4b79b2523d8a03a468 %}</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-05-06-import-environment-powershell/">A simple Powershell function to import an environment</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">A couple of days ago, I was working on a powershell-based script for mstest automation and I needed to call vsdevcmd.bat from Visual Studio’s tools folder. {% highlight powershell %} function Invoke-Environment([Parameter(Mandatory=1)][string]$Command, [switch]$Output, [switch]$Force) { $stream = if ($Output) { ($temp = [IO.Path]::GetTempFileName()) } else { ’nul’ } $operator = if ($Force) {’&amp;’} else {’&amp;&amp;’} foreach($_ in cmd /c &#34; $Command &gt; &amp;quot;$stream&#34; 2&gt;&amp;1 $operator SET&#34;) { if ($_ -match ‘^([^=]&#43;)=(.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-08-24-rest-client-server-c%23/">A simple REST client/server console app in C#</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For personal reference:
+{% gist 8fae6c9a56df98b8ff96f117a7c9f341 %}
+Full source code here.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/c%23/">C#</a> · <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-08-13-signal-handler-linux-cpp/">A simple signal handler in C/C&#43;&#43; (Linux)</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Personal reference:
+{% gist 1ea9a6b71bc9d4a6e5a269e63028d046 %}</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-04-06-unzip-function-powershell/">A simple unzip function in Powershell</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">{% highlight powershell %} function UnzipFiles($ZipFileName, $DestDir) { Add-Type -Assembly System.IO.Compression.FileSystem [System.IO.Compression.ZipFile]::ExtractToDirectory($ZipFileName, $DestDir) } {% endhighlight %}
+To use the function:
+{% highlight powershell %} UnzipFiles -ZipFileName .\folder\file.zip -DestDir .\destination {% endhighlight %}</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-04-05-zip-function-powershell/">A simple zip function in Powershell</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">{% highlight powershell %} function ZipFiles($ZipFileName, $SourceDir) { Add-Type -Assembly System.IO.Compression.FileSystem $compressionLevel = [System.IO.Compression.CompressionLevel]::Optimal [System.IO.Compression.ZipFile]::CreateFromDirectory($SourceDir, $ZipFileName, $compressionLevel, $false) } {% endhighlight %}
+To use the function:
+{% highlight powershell %} ZipFiles -ZipFileName test.zip -SourceDir .\folder\to\zip {% endhighlight %}</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-09-27-windows-delay-update-service-go/">A Windows service with an http endpoint for uploading a new version of itself</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Recently, I’ve been working on a service that runs on a lot of VM’s across different locations. If I have a new service build, updating all of the running instances quickly became a bit of a pain. I have to log in to every VM (in some cases through a VPN) and then do a manual upgrade. Now, there are probably tools that already exist for this type of use case but since I’m still learning Go at the moment, I thought this would be a good exercise.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a> · <a class="link-secondary" href="/categories/go/">Go</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-08-21-log-prefix-fname-go/">Add function name prefix to log.Println in Go</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For personal reference:
+{% gist 8da2984e90dd4a3a26ff645e6a37f275 %}</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a> · <a class="link-secondary" href="/categories/golang/">Golang</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-11-28-ffmpeg-encode-h264mp4/">Encoding .NET bitmaps to H264 using FFMPEG</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Recently, I was working on a project that involves the encoding of .NET bitmaps using ffmpeg’s h264 encoder with mp4 as container. This video output will be used in a &lt;video&gt; tag in html5. Sample codes have been all over the place so it took me quite a while to come up with a working solution. The official sample from ffmpeg only encodes to raw h264 stream. This is just a basic sample code for reference.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/c%23/">C#</a> · <a class="link-secondary" href="/categories/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-28-setup-samba-server/">How I set up my Samba file server</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I installed Samba to my Ubuntu Server (which is an old ThinkPad laptop that has been gathering dust in my closet for ages):
+{% highlight shell %} sudo apt-get install samba {% endhighlight %}
+I have three 3-TB HDDs that I planned to use as my main server storage; one main server, and the other two for backup. All of these HDDs are in ext4 format.
+Then I created a new directory under /media where I will mount my main server storage:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-02-25-apply-nanaco-point-card/">How to apply for a Nanaco point card</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">After six or so years living in Japan, I just got mine today. Yeah, I know…
+GaijinPot has an article about point cards from three of the most common convenience stores in the country. I already have Lawsons Ponta card and Family Marts T-Point ages ago but for some reason, I actually havent heard of 7-11s Nanaco. Or maybe I did but I probably didnt bother.
+But now that I have a Seven Bank account, I noticed from their online bank access site an option to register to their point service.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/japan/">Japan</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-08-20-expvar-gorilla-mux/">How to serve expvar when using gorilla/mux</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For personal reference:
+{% gist b6e639978dc2c21042ccea526700f214 %}
+Access root {% highlight shell %} http://localhost:8000 {% endhighlight %}
+Access expvar information {% highlight shell %} http://localhost:8000/debug/vars {% endhighlight %}</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a> · <a class="link-secondary" href="/categories/golang/">Golang</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-08-18-git-commands-notes/">My commonly used commands in GIT</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Update 2017/03/24: Transferred to a separate repository here.
+For personal reference:
+Reset a file {% highlight shell %} git checkout HEAD – my-file.txt {% endhighlight %}
+Delete last commit {% highlight shell %} git reset –hard HEAD~1 {% endhighlight %}
+Delete local branch {% highlight shell %} git branch -d {% endhighlight %}
+or to force delete
+{% highlight shell %} git branch -D {% endhighlight %}
+Delete branch from remote repository {% highlight shell %} git push origin –delete {% endhighlight %}</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-08-11-sharing-my-tmux-conf/">Sharing my .tmux.conf</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I use tmux heavily and in tandem with vim. Much more so now when it’s supported on Bash on Windows as well. I don’t have to spin up a Linux VM just for the purpose of being my tmux “server”.
+{% highlight conf %}
+Set a Ctrl-b shortcut for reloading tmux config unbind r bind r source-file ~/.tmux.conf
+Prefix is Ctrl-a unbind C-b set -g prefix C-a bind C-a send-prefix</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-07-27-sharing-my-vimrc/">Sharing my .vimrc</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Vim has always been my go to editor/IDE when I’m outside of Visual Studio. Here’s my base _vimrc for Windows.
+{% highlight conf %} let mapleader = &#34; &#34;
+filetype off syntax on colorscheme darkblue
+&#34; let pc=$PC &#34; if pc == ‘HOME’ &#34; set guifont=Letter\ Gothic\ Std:h11 &#34; else &#34; set guifont=Lucida\ Sans\ Typewriter:h9 &#34; endif
+&#34; Save marks to up to 100 files, save global marks as well (f1).</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">4 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-08-19-dir-cleanup-tool/">Simple directory cleanup tool for Windows (golang)</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For personal reference:
+{% gist f8114f79b6699ced9a054a595b6c991a %}</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a> · <a class="link-secondary" href="/categories/golang/">Golang</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-08-22-syslog-target-go/">Syslog as target in Go logs</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For personal reference:
+{% gist 29d147a50242198f082fd33f7d24677c %}
+To view syslog in realtime
+{% highlight shell %} tail -f /var/log/syslog {% endhighlight %}</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/code/">Code</a> · <a class="link-secondary" href="/categories/golang/">Golang</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-04-10-trying-bash-on-windows/">Trying out Bash on Windows</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Downloading…
+{% include image.html url=&#34;../../../../images/win10preview1.png&#34; %}
+And here we go…
+{% include image.html url=&#34;../../../../images/win10preview2.png&#34; %}
+Looking good so far.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/categories/japan/">Japan</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
 
         
     
@@ -4603,32 +8728,6 @@ This post is a bit of a departure from my usual golang/cloud-related ramblings. 
     
     
 
-    
-        <div id="paige-pagination">
-            <div class="d-flex justify-content-center">
-                <nav aria-label="Page list navigation">
-                    <ul class="pagination">
-                        
-                            
-
-                            
-
-                            
-                                <li class="page-item">
-                                    <a aria-label="Next" class="page-link" href="/blog/page/2/"><span aria-hidden="true">&rarr;</span></a>
-                                </li>
-                            
-
-                            
-                                <li class="page-item">
-                                    <a aria-label="Last" class="page-link" href="/blog/page/3/"><span aria-hidden="true">&#x27A1;</span></a>
-                                </li>
-                            
-                        
-                    </ul>
-                </nav>
-            </div>
-        </div>
     
 
     </div>

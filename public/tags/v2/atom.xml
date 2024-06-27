@@ -16,8 +16,6 @@
     
 
     
-        
-    
 
 
 
@@ -103,61 +101,5 @@
     <title type="html"><![CDATA[V2 · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>For self reference:</p>
-<p>To authenticate the <a href="https://github.com/aws/aws-sdk-go-v2">Golang AWS SDK v2</a> using assume roles, refer to the following code snippets:</p>
-<p>{% gist 33f5e03e9990abcc01203acbea178a1a %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2021-04-30-authenticate-aws-sdk-golang-v2/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2021-04-30-authenticate-aws-sdk-golang-v2/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Authenticating Go AWS SDK v2 using assume roles]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

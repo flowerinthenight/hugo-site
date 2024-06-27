@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,66 +99,5 @@
     <title type="html"><![CDATA[Alarm · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>This is just a quick one.</p>
-<p>Although I use <a href="https://wiki.gnome.org/Apps/Clocks">Gnome Clocks</a> occassionally, most of the time I set an alarm via the commandline.</p>
-<p>{% highlight shell %}</p>
-<h1 id="os-is-pop_os-using-vlc">OS is POP_OS!, using VLC:</h1>
-<p>$ sleep 10m &amp;&amp; <br>
-cvlc ~/alarm.mp3 &ndash;play-and-exit &amp;&amp; <br>
-notify-send &lsquo;alarm done&rsquo;
-{% endhighlight %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2021-11-08-alarm-from-cmdline/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2021-11-08-alarm-from-cmdline/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Setting alarm from commandline]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

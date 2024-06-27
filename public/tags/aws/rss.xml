@@ -25,25 +25,17 @@
     
 
     
-        
+
+    
+
     
 
     
 
     
-        
-    
 
     
 
-    
-        
-    
-
-    
-
-    
-        
     
 
     
@@ -425,50 +417,6 @@ ip-x.x.x.x.ap-northeast-1&hellip;   Ready     node      1d    v1.8.6    1.2.3.8 
                 
 
                 
-                    <description><![CDATA[<p>I recently uploaded a tool to GitHub that downloads <a href="https://aws.amazon.com/athena/">AWS Athena</a> query results as CSV. It&rsquo;s called <a href="https://github.com/flowerinthenight/athena2csv"><code>athena2csv</code></a>. You can check out the code <a href="https://github.com/flowerinthenight/athena2csv">here</a>. You might find this useful.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2019-03-09-athena2csv/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2019-03-09-athena2csv/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Download AWS Athena query results as CSV</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
                     <description><![CDATA[<p>Before, I uploaded an example on how to handle lengthy processing of PubSub subscription messages in <a href="https://github.com/flowerinthenight/gcp-pubsub-lengthy-consume">GitHub</a>. This time, it&rsquo;s for AWS SQS. Have a look at the sample code <a href="https://github.com/flowerinthenight/sqs-lengthy-consume">here</a>.</p>
 ]]></description>
                 
@@ -485,140 +433,6 @@ ip-x.x.x.x.ap-northeast-1&hellip;   Ready     node      1d    v1.8.6    1.2.3.8 
 
                 
                     <title>AWS SQS lengthy message processing</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>For self reference:</p>
-<p>To authenticate the <a href="https://github.com/aws/aws-sdk-go-v2">Golang AWS SDK v2</a> using assume roles, refer to the following code snippets:</p>
-<p>{% gist 33f5e03e9990abcc01203acbea178a1a %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-04-30-authenticate-aws-sdk-golang-v2/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2021-04-30-authenticate-aws-sdk-golang-v2/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Authenticating Go AWS SDK v2 using assume roles</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I uploaded a tool that can sync DynamoDB tables between accounts. It&rsquo;s called <code>dysync</code> and you can find the code <a href="https://github.com/flowerinthenight/dysync/">here</a>. Maybe it will be useful to anybody out there.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-08-31-dysync/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2020-08-31-dysync/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>A tool for synching DynamoDB tables between accounts</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I uploaded a tool that can query DynamoDB tables. It&rsquo;s called <code>lsdy</code> and you can find the code <a href="https://github.com/flowerinthenight/lsdy/">here</a>. Maybe it will be useful to anybody out there.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2020-05-13-lsdy-dynamodb-query/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2020-05-13-lsdy-dynamodb-query/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>A tool for querying DynamoDB</title>
                 
             </item>
         

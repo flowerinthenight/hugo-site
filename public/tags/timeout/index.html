@@ -729,8 +729,7 @@ table {
 
     
         
-            
-            
+    
 
     
         
@@ -787,6 +786,8 @@ table {
     
 
     
+        <p class="mb-0 paige-description text-center">2019-11-28</p>
+    
 
     
         <p class="fst-italic mb-0 paige-summary text-center">This is related to a previous post about Kubernetes services. This time, it’s about extending the timeout of an Ingress. We had a situation where we had to download a huge file from one of our exposed services. The download takes about two minutes to complete. This didn’t really worked out since by default, GCP load balancers that are associated with k8s Ingresses have a timeout value of 30s. For a time, we just did manual updates by going to the GCP k8s Services and Ingress console, opening the backend service under the Ingress, and editing the Timeout section to the desired seconds.</p>
@@ -803,9 +804,13 @@ table {
     
 
     
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-11-28">November 28, 2019</time>
+        </p>
+    
 
     
-        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
     
 </div>
 

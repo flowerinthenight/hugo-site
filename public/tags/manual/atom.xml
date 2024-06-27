@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -101,69 +99,5 @@
     <title type="html"><![CDATA[Manual · Tags · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>Most of the time when I open a man page for a certain command or tool, I use Vim:</p>
-<p>{% highlight shell %}</p>
-<h1 id="open-man-page-for-the-dd-command">Open man page for the &lsquo;dd&rsquo; command:</h1>
-<p>$ man dd | col -b | vim -MR -
-{% endhighlight %}</p>
-<p>It&rsquo;s actually a handful to type but since I use <a href="https://www.zsh.org/">zsh</a> + <a href="https://github.com/junegunn/fzf">fzf</a>, it&rsquo;s not really a big deal as recalling the command is pretty straightforward.</p>
-<p>But yesterday, I came across this nifty little plugin called <a href="https://github.com/lambdalisue/vim-manpager">vim-manpager</a>. I tried adding it to my vimrc, added the environment variable below to my zshrc:</p>
-<p>{% highlight shell %}
-export MANPAGER=&ldquo;vim -c MANPAGER -&rdquo;
-{% endhighlight %}</p>
-<p>And now, I can open all man pages by calling the <code>man</code> command directly. I can also open man pages directly from within Vim. Brilliant!</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2020-04-22-open-manpages-vim/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2020-04-22-open-manpages-vim/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Open man pages in Vim]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

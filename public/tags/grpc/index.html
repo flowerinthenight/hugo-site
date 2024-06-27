@@ -729,8 +729,7 @@ table {
 
     
         
-            
-            
+    
 
     
         
@@ -787,11 +786,12 @@ table {
     
 
     
+        <p class="mb-0 paige-description text-center">2021-07-31</p>
+    
 
     
         <p class="fst-italic mb-0 paige-summary text-center">This might be hacky and there might be a proper way to do this but recently, I needed to generate all the functions’ gRPC-generated full names from our protobuf definitions. This is part of our RBAC module that needs to filter gRPC function calls. I got the list from our generated Go client using the following command(s):
-{% highlight shell %}
-Main command: $ grep -o -R -i -E ‘&#34;/blueapi..*&#34;’ .</p>
+Main command: $ grep -o -R -i -E &#39;&#34;/blueapi..*&#34;&#39; . | awk -F&#39;:&#39; &#39;{gsub(/&#34;/, &#34;&#34;, $2); print &#34;-&#34;, substr($2, 2);}&#39; | sort | uniq # Actual commands; save as yaml: $ echo &#34;functions:&#34; &gt; /tmp/funcs.</p>
     
 
     
@@ -804,6 +804,10 @@ Main command: $ grep -o -R -i -E ‘&#34;/blueapi..*&#34;’ .</p>
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-07-31">July 31, 2021</time>
+        </p>
     
 
     

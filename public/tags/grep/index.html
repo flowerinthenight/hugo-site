@@ -729,8 +729,7 @@ table {
 
     
         
-            
-            
+    
 
     
         
@@ -787,12 +786,12 @@ table {
     
 
     
+        <p class="mb-0 paige-description text-center">2019-09-30</p>
+    
 
     
         <p class="fst-italic mb-0 paige-summary text-center">I’ve been using stern as my goto log viewer for Kubernetes. It supports multiple pods and other convenient functions on top of kubectl logs. And of course, grepping goes hand in hand with log viewing, doesn’t it? To combine grep with stern, I use the following commands:
-{% highlight shell %}
-For OSX: stern | grep -i –line-buffered -E ‘’ $ stern user | grep -i –line-buffered -E ‘failed’
-For Linux (Ubuntu specifically): stern | grep -i -E ‘’ $ stern user -s 1h | grep -i -E ’error’ {% endhighlight %}</p>
+For OSX: # stern &lt;some-prod-prefix&gt; | grep -i –line-buffered -E &#39;&lt;extended-regex&gt;&#39; $ stern user | grep -i –line-buffered -E &#39;failed&#39; # For Linux (Ubuntu specifically): # stern &lt;some-prod-prefix&gt; | grep -i -E &#39;&lt;extended-regex&gt;&#39; $ stern user -s 1h | grep -i -E &#39;error&#39;</p>
     
 
     
@@ -805,6 +804,10 @@ For Linux (Ubuntu specifically): stern | grep -i -E ‘’ $ stern user -s 1h | 
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-09-30">September 30, 2019</time>
+        </p>
     
 
     
