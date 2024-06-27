@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2020-04-22" name="description">
+
 
 
     <meta content="man, manual, vim" name="keywords">
@@ -63,14 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2020-04-22-open-manpages-vim/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Open man pages in Vim">
-  <meta property="og:description" content="Most of the time when I open a man page for a certain command or tool, I use Vim:
-{% highlight shell %}
-Open man page for the ‘dd’ command: $ man dd | col -b | vim -MR - {% endhighlight %}
-It’s actually a handful to type but since I use zsh &#43; fzf, it’s not really a big deal as recalling the command is pretty straightforward.
-But yesterday, I came across this nifty little plugin called vim-manpager.">
+  <meta property="og:description" content="2020-04-22">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2020-04-22T00:00:00-07:00">
+    <meta property="article:modified_time" content="2020-04-22T00:00:00-07:00">
     <meta property="article:tag" content="Man">
     <meta property="article:tag" content="Manual">
     <meta property="article:tag" content="Vim">
@@ -78,11 +78,7 @@ But yesterday, I came across this nifty little plugin called vim-manpager.">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Open man pages in Vim">
-  <meta name="twitter:description" content="Most of the time when I open a man page for a certain command or tool, I use Vim:
-{% highlight shell %}
-Open man page for the ‘dd’ command: $ man dd | col -b | vim -MR - {% endhighlight %}
-It’s actually a handful to type but since I use zsh &#43; fzf, it’s not really a big deal as recalling the command is pretty straightforward.
-But yesterday, I came across this nifty little plugin called vim-manpager.">
+  <meta name="twitter:description" content="2020-04-22">
 
 
 
@@ -700,6 +696,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2020-04-22</p>
+    
 
     
         <div class="mb-3">
@@ -713,6 +711,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2020-04-22">April 22, 2020</time>
+                </p>
             
 
             
@@ -736,16 +738,13 @@ table {
 
 
     <div class="mw-100" id="paige-content"><p>Most of the time when I open a man page for a certain command or tool, I use Vim:</p>
-<p>{% highlight shell %}</p>
-<h1 id="open-man-page-for-the-dd-command">Open man page for the &lsquo;dd&rsquo; command:<a aria-label="Link to this section" class="paige-header-link" href="#open-man-page-for-the-dd-command"></a></h1>
-<p>$ man dd | col -b | vim -MR -
-{% endhighlight %}</p>
-<p>It&rsquo;s actually a handful to type but since I use <a href="https://www.zsh.org/">zsh</a> + <a href="https://github.com/junegunn/fzf">fzf</a>, it&rsquo;s not really a big deal as recalling the command is pretty straightforward.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Open man page for the &#39;dd&#39; command:</span>
+</span></span><span class="line"><span class="cl">$ man dd <span class="p">|</span> col -b <span class="p">|</span> vim -MR -
+</span></span></code></pre></div><p>It&rsquo;s actually a handful to type but since I use <a href="https://www.zsh.org/">zsh</a> + <a href="https://github.com/junegunn/fzf">fzf</a>, it&rsquo;s not really a big deal as recalling the command is pretty straightforward.</p>
 <p>But yesterday, I came across this nifty little plugin called <a href="https://github.com/lambdalisue/vim-manpager">vim-manpager</a>. I tried adding it to my vimrc, added the environment variable below to my zshrc:</p>
-<p>{% highlight shell %}
-export MANPAGER=&ldquo;vim -c MANPAGER -&rdquo;
-{% endhighlight %}</p>
-<p>And now, I can open all man pages by calling the <code>man</code> command directly. I can also open man pages directly from within Vim. Brilliant!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">MANPAGER</span><span class="o">=</span><span class="s2">&#34;vim -c MANPAGER -&#34;</span>
+</span></span></code></pre></div><p>And now, I can open all man pages by calling the <code>man</code> command directly. I can also open man pages directly from within Vim. Brilliant!</p>
+<br>
 </div>
 
 
@@ -825,13 +824,13 @@ export MANPAGER=&ldquo;vim -c MANPAGER -&rdquo;
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2020-03-18-glog-gotest/">Output glog from go test</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2017-01-04-bookshelf/">New &#39;Bookshelf&#39; page</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2020-05-13-lsdy-dynamodb-query/">A tool for querying DynamoDB</a> &rarr;
                 </p>
             
         </div>

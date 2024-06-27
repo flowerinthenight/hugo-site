@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2020-03-25" name="description">
+
 
 
     <meta content="linux, torguard, ubuntu, wireguard" name="keywords">
@@ -63,13 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2020-03-25-torguard-wireguard-ubuntu/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Connecting to Torguard VPN using Wireguard from Ubuntu">
-  <meta property="og:description" content="As of this writing, Torguard’s desktop app still doesn’t support Wireguard out of the box. I’m using Ubuntu 19.10 for testing.
-If you haven’t installed Wireguard yet, you can refer to the installation instructions here. In my case, it was:
-{% highlight shell %} $ sudo apt install wireguard {% endhighlight %}
-Next, you need to login to your Torguard client area, go to Tools –&gt; Enable Wireguard Access. Select a location (in my case, I chose Asia-Singapore2) then click ‘Enable Wireguard’.">
+  <meta property="og:description" content="2020-03-25">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2020-03-25T00:00:00-07:00">
+    <meta property="article:modified_time" content="2020-03-25T00:00:00-07:00">
     <meta property="article:tag" content="Torguard">
     <meta property="article:tag" content="Wireguard">
     <meta property="article:tag" content="Ubuntu">
@@ -78,10 +79,7 @@ Next, you need to login to your Torguard client area, go to Tools –&gt; Enable
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Connecting to Torguard VPN using Wireguard from Ubuntu">
-  <meta name="twitter:description" content="As of this writing, Torguard’s desktop app still doesn’t support Wireguard out of the box. I’m using Ubuntu 19.10 for testing.
-If you haven’t installed Wireguard yet, you can refer to the installation instructions here. In my case, it was:
-{% highlight shell %} $ sudo apt install wireguard {% endhighlight %}
-Next, you need to login to your Torguard client area, go to Tools –&gt; Enable Wireguard Access. Select a location (in my case, I chose Asia-Singapore2) then click ‘Enable Wireguard’.">
+  <meta name="twitter:description" content="2020-03-25">
 
 
 
@@ -699,6 +697,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2020-03-25</p>
+    
 
     
         <div class="mb-3">
@@ -712,6 +712,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2020-03-25">March 25, 2020</time>
+                </p>
             
 
             
@@ -736,25 +740,22 @@ table {
 
     <div class="mw-100" id="paige-content"><p>As of this writing, Torguard&rsquo;s desktop app still doesn&rsquo;t support Wireguard out of the box. I&rsquo;m using Ubuntu 19.10 for testing.</p>
 <p>If you haven&rsquo;t installed Wireguard yet, you can refer to the installation instructions <a href="https://www.wireguard.com/install/">here</a>. In my case, it was:</p>
-<p>{% highlight shell %}
-$ sudo apt install wireguard
-{% endhighlight %}</p>
-<p>Next, you need to login to your Torguard client area, go to Tools &ndash;&gt; Enable Wireguard Access. Select a location (in my case, I chose Asia-Singapore2) then click &lsquo;Enable Wireguard&rsquo;. You will be presented with an option to download the generated config file (in my case Asia-Singapore2.conf). Download it and save it to /etc/wireguard/.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ sudo apt install wireguard
+</span></span></code></pre></div><p>Next, you need to login to your Torguard client area, go to Tools &ndash;&gt; Enable Wireguard Access. Select a location (in my case, I chose Asia-Singapore2) then click &lsquo;Enable Wireguard&rsquo;. You will be presented with an option to download the generated config file (in my case Asia-Singapore2.conf). Download it and save it to /etc/wireguard/.</p>
 <p>To enable the VPN connection, run:</p>
-<p>{% highlight shell %}</p>
-<h1 id="the-last-bit-should-correspond-to-the-filename-of-your-config-file-without-the-conf">The last bit should correspond to the filename of your config file without the &lsquo;.conf&rsquo;,<a aria-label="Link to this section" class="paige-header-link" href="#the-last-bit-should-correspond-to-the-filename-of-your-config-file-without-the-conf"></a></h1>
-<h1 id="in-my-case-asia-singapore2">in my case &lsquo;Asia-Singapore2&rsquo;<a aria-label="Link to this section" class="paige-header-link" href="#in-my-case-asia-singapore2"></a></h1>
-<p>$ sudo wg-quick up Asia-Singapore2</p>
-<h1 id="confirm-with">Confirm with:<a aria-label="Link to this section" class="paige-header-link" href="#confirm-with"></a></h1>
-<p>$ sudo wg</p>
-<h1 id="if-no-issues-you-can-check-your-public-ip-with">If no issues, you can check your public IP with:<a aria-label="Link to this section" class="paige-header-link" href="#if-no-issues-you-can-check-your-public-ip-with"></a></h1>
-<p>$ curl ipecho.net/plain; echo
-{% endhighlight %}</p>
-<p>Finally, to disconnect, run:</p>
-<p>{% highlight shell %}
-$ sudo wg-quick down Asia-Singapore2
-{% endhighlight %}</p>
-<p>That&rsquo;s it.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># The last bit should correspond to the filename of your config file without the &#39;.conf&#39;,</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># in my case &#39;Asia-Singapore2&#39;</span>
+</span></span><span class="line"><span class="cl">$ sudo wg-quick up Asia-Singapore2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Confirm with:</span>
+</span></span><span class="line"><span class="cl">$ sudo wg
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># If no issues, you can check your public IP with:</span>
+</span></span><span class="line"><span class="cl">$ curl ipecho.net/plain<span class="p">;</span> <span class="nb">echo</span> 
+</span></span></code></pre></div><p>Finally, to disconnect, run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ sudo wg-quick down Asia-Singapore2
+</span></span></code></pre></div><p>That&rsquo;s it.</p>
+<br>
 </div>
 
 
@@ -834,13 +835,13 @@ $ sudo wg-quick down Asia-Singapore2
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2018-02-20-k8s-tls-digicert/">Creating a Kubernetes TLS secret using certificates from DigiCert</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2020-03-25-vimgo-gocode-gopls/">Follow-up on autocompletion with `gocode` and `vim-go` in Go1.11, transition to `gopls`</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2018-04-30-camera-class-filter-driver/">Camera Class Filter Driver for Windows</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2020-04-22-open-manpages-vim/">Open man pages in Vim</a> &rarr;
                 </p>
             
         </div>

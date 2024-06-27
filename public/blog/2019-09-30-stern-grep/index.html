@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2019-09-30" name="description">
+
 
 
     <meta content="grep, k8s, logs, stern" name="keywords">
@@ -62,14 +64,13 @@
 
 <meta property="og:url" content="http://localhost:1313/blog/2019-09-30-stern-grep/">
   <meta property="og:site_name" content="flowerinthenight">
-  <meta property="og:title" content="Using stern together with grep">
-  <meta property="og:description" content="I’ve been using stern as my goto log viewer for Kubernetes. It supports multiple pods and other convenient functions on top of kubectl logs. And of course, grepping goes hand in hand with log viewing, doesn’t it? To combine grep with stern, I use the following commands:
-{% highlight shell %}
-For OSX: stern | grep -i –line-buffered -E ‘’ $ stern user | grep -i –line-buffered -E ‘failed’
-For Linux (Ubuntu specifically): stern | grep -i -E ‘’ $ stern user -s 1h | grep -i -E ’error&#39; {% endhighlight %}">
+  <meta property="og:title" content="Using `stern` together with `grep`">
+  <meta property="og:description" content="2019-09-30">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2019-09-30T00:00:00-07:00">
+    <meta property="article:modified_time" content="2019-09-30T00:00:00-07:00">
     <meta property="article:tag" content="Stern">
     <meta property="article:tag" content="Grep">
     <meta property="article:tag" content="K8s">
@@ -77,11 +78,8 @@ For Linux (Ubuntu specifically): stern | grep -i -E ‘’ $ stern user -s 1h | 
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Using stern together with grep">
-  <meta name="twitter:description" content="I’ve been using stern as my goto log viewer for Kubernetes. It supports multiple pods and other convenient functions on top of kubectl logs. And of course, grepping goes hand in hand with log viewing, doesn’t it? To combine grep with stern, I use the following commands:
-{% highlight shell %}
-For OSX: stern | grep -i –line-buffered -E ‘’ $ stern user | grep -i –line-buffered -E ‘failed’
-For Linux (Ubuntu specifically): stern | grep -i -E ‘’ $ stern user -s 1h | grep -i -E ’error&#39; {% endhighlight %}">
+  <meta name="twitter:title" content="Using `stern` together with `grep`">
+  <meta name="twitter:description" content="2019-09-30">
 
 
 
@@ -695,9 +693,11 @@ table {
 
 <div class="mw-100" id="paige-metadata">
     
-        <h1 class="fw-bold text-center" id="paige-title">Using stern together with grep</h1>
+        <h1 class="fw-bold text-center" id="paige-title">Using <code>stern</code> together with <code>grep</code></h1>
     
 
+    
+        <p class="lead text-center" id="paige-description">2019-09-30</p>
     
 
     
@@ -712,6 +712,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2019-09-30">September 30, 2019</time>
+                </p>
             
 
             
@@ -735,14 +739,14 @@ table {
 
 
     <div class="mw-100" id="paige-content"><p>I&rsquo;ve been using <a href="https://github.com/wercker/stern"><code>stern</code></a> as my goto log viewer for Kubernetes. It supports multiple pods and other convenient functions on top of <code>kubectl logs</code>. And of course, grepping goes hand in hand with log viewing, doesn&rsquo;t it? To combine grep with stern, I use the following commands:</p>
-<p>{% highlight shell %}</p>
-<h1 id="for-osx">For OSX:<a aria-label="Link to this section" class="paige-header-link" href="#for-osx"></a></h1>
-<h1 id="stern-some-prod-prefix--grep--i---line-buffered--e-extended-regex">stern <some-prod-prefix> | grep -i &ndash;line-buffered -E &lsquo;<extended-regex>&rsquo;<a aria-label="Link to this section" class="paige-header-link" href="#stern-some-prod-prefix--grep--i---line-buffered--e-extended-regex"></a></h1>
-<p>$ stern user | grep -i &ndash;line-buffered -E &lsquo;failed&rsquo;</p>
-<h1 id="for-linux-ubuntu-specifically">For Linux (Ubuntu specifically):<a aria-label="Link to this section" class="paige-header-link" href="#for-linux-ubuntu-specifically"></a></h1>
-<h1 id="stern-some-prod-prefix--grep--i--e-extended-regex">stern <some-prod-prefix> | grep -i -E &lsquo;<extended-regex>&rsquo;<a aria-label="Link to this section" class="paige-header-link" href="#stern-some-prod-prefix--grep--i--e-extended-regex"></a></h1>
-<p>$ stern user -s 1h | grep -i -E &rsquo;error'
-{% endhighlight %}</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># For OSX:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># stern &lt;some-prod-prefix&gt; | grep -i --line-buffered -E &#39;&lt;extended-regex&gt;&#39;</span>
+</span></span><span class="line"><span class="cl">$ stern user <span class="p">|</span> grep -i --line-buffered -E <span class="s1">&#39;failed&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># For Linux (Ubuntu specifically):</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># stern &lt;some-prod-prefix&gt; | grep -i -E &#39;&lt;extended-regex&gt;&#39;</span>
+</span></span><span class="line"><span class="cl">$ stern user -s 1h <span class="p">|</span> grep -i -E <span class="s1">&#39;error&#39;</span>
+</span></span></code></pre></div><br>
 </div>
 
 
@@ -822,13 +826,13 @@ table {
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2020-02-27-cobra-tabwriter/">Using tabwriter to improve on cobra&#39;s help information</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2019-08-14-ssh-tunnel-home-router/">Using SSH tunnelling to access home router</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2019-10-29-stderr-tee/">Output golang cmdline tools to stdout and file using tee</a> &rarr;
                 </p>
             
         </div>

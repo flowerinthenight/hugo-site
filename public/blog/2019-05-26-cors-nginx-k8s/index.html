@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2019-05-26" name="description">
+
 
 
     <meta content="cors, Kubernetes, nginx, proxy" name="keywords">
@@ -62,11 +64,13 @@
 
 <meta property="og:url" content="http://localhost:1313/blog/2019-05-26-cors-nginx-k8s/">
   <meta property="og:site_name" content="flowerinthenight">
-  <meta property="og:title" content="Adding CORS support to nginx proxy in Kubernetes">
-  <meta property="og:description" content="At work, for a couple of months now, we’ve been using Ambassador as our main API gateway to our k8s services. We also have our own authorization service that uses Ambassador’s AuthService mechanism. Recently, we’ve had services that needed CORS support and although Ambassador has features that support the enabling of CORS, we had to update our authorization service to handle CORS-related requests. Instead of doing this, we tried adding the CORS support at the proxy level (nginx).">
+  <meta property="og:title" content="Adding `CORS` support to `nginx` proxy in Kubernetes">
+  <meta property="og:description" content="2019-05-26">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2019-05-26T00:00:00-07:00">
+    <meta property="article:modified_time" content="2019-05-26T00:00:00-07:00">
     <meta property="article:tag" content="Nginx">
     <meta property="article:tag" content="Proxy">
     <meta property="article:tag" content="Cors">
@@ -74,8 +78,8 @@
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Adding CORS support to nginx proxy in Kubernetes">
-  <meta name="twitter:description" content="At work, for a couple of months now, we’ve been using Ambassador as our main API gateway to our k8s services. We also have our own authorization service that uses Ambassador’s AuthService mechanism. Recently, we’ve had services that needed CORS support and although Ambassador has features that support the enabling of CORS, we had to update our authorization service to handle CORS-related requests. Instead of doing this, we tried adding the CORS support at the proxy level (nginx).">
+  <meta name="twitter:title" content="Adding `CORS` support to `nginx` proxy in Kubernetes">
+  <meta name="twitter:description" content="2019-05-26">
 
 
 
@@ -689,9 +693,11 @@ table {
 
 <div class="mw-100" id="paige-metadata">
     
-        <h1 class="fw-bold text-center" id="paige-title">Adding CORS support to nginx proxy in Kubernetes</h1>
+        <h1 class="fw-bold text-center" id="paige-title">Adding <code>CORS</code> support to <code>nginx</code> proxy in Kubernetes</h1>
     
 
+    
+        <p class="lead text-center" id="paige-description">2019-05-26</p>
     
 
     
@@ -706,6 +712,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2019-05-26">May 26, 2019</time>
+                </p>
             
 
             
@@ -722,16 +732,6 @@ table {
         
 
 
-    <div class="mw-100" id="paige-toc">
-        <div class="border mb-3 pe-3 ps-3 pt-3 rounded">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#-highlight-ruby-">{% highlight ruby %}</a></li>
-  </ol>
-</nav>
-        </div>
-    </div>
-
 
         
 
@@ -740,59 +740,59 @@ table {
 
     <div class="mw-100" id="paige-content"><p>At work, for a couple of months now, we&rsquo;ve been using <a href="https://www.getambassador.io/">Ambassador</a> as our main API gateway to our k8s services. We also have our own authorization service that uses Ambassador&rsquo;s <a href="https://www.getambassador.io/reference/services/auth-service">AuthService</a> mechanism. Recently, we&rsquo;ve had services that needed CORS support and although Ambassador has features that support the <a href="https://www.getambassador.io/reference/cors">enabling of CORS</a>, we had to update our authorization service to handle CORS-related requests. Instead of doing this, we tried adding the CORS support at the proxy level (nginx). I&rsquo;ve wrote about this topic <a href="https://flowerinthenight.com/blog/2018/03/31/access-pods-k8s">here</a> and <a href="https://flowerinthenight.com/blog/2019/01/31/nginx-basicauth-k8s">here</a>.</p>
 <p>In the example below, the CORS support is added under the location <code>/svc2/</code>.</p>
-<h2 id="-highlight-ruby-">{% highlight ruby %}<a aria-label="Link to this section" class="paige-header-link" href="#-highlight-ruby-"></a></h2>
-<p>apiVersion: v1
-kind: ConfigMap
-metadata:
-name: serviceproxy-conf
-data:
-serviceproxy.conf: |
-server {
-listen 80;
-server_name development.mobingi.com;
-resolver kube-dns.kube-system.svc.cluster.local valid=10s;</p>
-<pre><code>  location ~ ^/svc1/(.*)$ {
-    auth_basic &quot;mobingi&quot;;
-    auth_basic_user_file /etc/serviceproxy/htpasswd;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $remote_addr;
-    proxy_set_header Host $host;
-    rewrite ^/svc1/(.*)$ /$1 break;
-    proxy_pass &quot;http://svc1.default.svc.cluster.local&quot;;
-    proxy_http_version 1.1;
-  }
-
-  location ~ ^/svc2/(.*)$ {
-    # Ref: https://enable-cors.org/server_nginx.html
-    if ($request_method = 'OPTIONS') {
-      add_header 'Access-Control-Allow-Origin' '*';
-      add_header 'Access-Control-Allow-Methods' 'POST, OPTIONS';
-      # Custom headers and headers various browsers *should* be OK with but aren't.
-      add_header 'Access-Control-Allow-Headers' 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization';
-      # Tell client that this pre-flight info is valid for 20 days.
-      add_header 'Access-Control-Max-Age' 1728000;
-      add_header 'Content-Type' 'text/plain; charset=utf-8';
-      add_header 'Content-Length' 0;
-      return 204;
-    }
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $remote_addr;
-    proxy_set_header Host $host;
-    rewrite ^/svc2/(.*)$ /$1 break;
-    proxy_pass &quot;http://svc2.default.svc.cluster.local&quot;;
-    proxy_http_version 1.1;
-  }
-
-  # root health check requirement in GKE ingress
-  location / {
-    return 200 'healthy\n';
-  }
-}
-
-{..redacted..}
-</code></pre>
-<p>{% endhighlight %}</p>
-<p>With that said, be aware of the <a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/">potential problems of using if in nginx</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="o">---</span>
+</span></span><span class="line"><span class="cl"><span class="ss">apiVersion</span><span class="p">:</span> <span class="n">v1</span>
+</span></span><span class="line"><span class="cl"><span class="ss">kind</span><span class="p">:</span> <span class="no">ConfigMap</span>
+</span></span><span class="line"><span class="cl"><span class="ss">metadata</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">name</span><span class="p">:</span> <span class="n">serviceproxy</span><span class="o">-</span><span class="n">conf</span>
+</span></span><span class="line"><span class="cl"><span class="ss">data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">serviceproxy</span><span class="o">.</span><span class="n">conf</span><span class="p">:</span> <span class="o">|</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">listen</span> <span class="mi">80</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">server_name</span> <span class="n">development</span><span class="o">.</span><span class="n">mobingi</span><span class="o">.</span><span class="n">com</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">resolver</span> <span class="n">kube</span><span class="o">-</span><span class="n">dns</span><span class="o">.</span><span class="n">kube</span><span class="o">-</span><span class="nb">system</span><span class="o">.</span><span class="n">svc</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">local</span> <span class="n">valid</span><span class="o">=</span><span class="mi">10</span><span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="n">location</span> <span class="o">~</span> <span class="o">^/</span><span class="n">svc1</span><span class="o">/</span><span class="p">(</span><span class="o">.</span><span class="n">*</span><span class="p">)</span><span class="err">$</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">auth_basic</span> <span class="s2">&#34;mobingi&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">auth_basic_user_file</span> <span class="sr">/etc/se</span><span class="n">rviceproxy</span><span class="o">/</span><span class="n">htpasswd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="no">Real</span><span class="o">-</span><span class="no">IP</span> <span class="vg">$remote_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="no">Forwarded</span><span class="o">-</span><span class="no">For</span> <span class="vg">$remote_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">proxy_set_header</span> <span class="no">Host</span> <span class="vg">$host</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">rewrite</span> <span class="o">^/</span><span class="n">svc1</span><span class="o">/</span><span class="p">(</span><span class="o">.</span><span class="n">*</span><span class="p">)</span><span class="err">$</span> <span class="sr">/$1 break;
+</span></span></span><span class="line"><span class="cl"><span class="sr">        proxy_pass &#34;http:/</span><span class="o">/</span><span class="n">svc1</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">svc</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">local</span><span class="s2">&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        proxy_http_version 1.1;
+</span></span></span><span class="line"><span class="cl"><span class="s2">      }
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">      location ~ ^/svc2/(.*)$ {
+</span></span></span><span class="line"><span class="cl"><span class="s2">        # Ref: https://enable-cors.org/server_nginx.html
+</span></span></span><span class="line"><span class="cl"><span class="s2">        if ($request_method = &#39;OPTIONS&#39;) {
+</span></span></span><span class="line"><span class="cl"><span class="s2">          add_header &#39;Access-Control-Allow-Origin&#39; &#39;*&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">          add_header &#39;Access-Control-Allow-Methods&#39; &#39;POST, OPTIONS&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">          # Custom headers and headers various browsers *should* be OK with but aren&#39;t.
+</span></span></span><span class="line"><span class="cl"><span class="s2">          add_header &#39;Access-Control-Allow-Headers&#39; &#39;DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range,Authorization&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">          # Tell client that this pre-flight info is valid for 20 days.
+</span></span></span><span class="line"><span class="cl"><span class="s2">          add_header &#39;Access-Control-Max-Age&#39; 1728000;
+</span></span></span><span class="line"><span class="cl"><span class="s2">          add_header &#39;Content-Type&#39; &#39;text/plain; charset=utf-8&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">          add_header &#39;Content-Length&#39; 0;
+</span></span></span><span class="line"><span class="cl"><span class="s2">          return 204;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        }
+</span></span></span><span class="line"><span class="cl"><span class="s2">        proxy_set_header X-Real-IP $remote_addr;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        proxy_set_header X-Forwarded-For $remote_addr;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        proxy_set_header Host $host;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        rewrite ^/svc2/(.*)$ /$1 break;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        proxy_pass &#34;</span><span class="ss">http</span><span class="p">:</span><span class="sr">//s</span><span class="n">vc2</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">svc</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">local</span><span class="s2">&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        proxy_http_version 1.1;
+</span></span></span><span class="line"><span class="cl"><span class="s2">      }
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">      # root health check requirement in GKE ingress
+</span></span></span><span class="line"><span class="cl"><span class="s2">      location / {
+</span></span></span><span class="line"><span class="cl"><span class="s2">        return 200 &#39;healthy</span><span class="se">\n</span><span class="s2">&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">      }
+</span></span></span><span class="line"><span class="cl"><span class="s2">    }
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    {..redacted..}
+</span></span></span></code></pre></div><p>With that said, be aware of the <a href="https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/">potential problems of using if in nginx</a>.</p>
+<br>
 </div>
 
 
@@ -872,13 +872,13 @@ resolver kube-dns.kube-system.svc.cluster.local valid=10s;</p>
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2020-10-31-oops/">An automation-friendly, highly-scalable, and scriptable testing tool</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2016-08-21-log-prefix-fname-go/">Add function name prefix to log.Println in Go</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2019-06-05-master-election-using-kettle/">Using `kettle` library for master election using distributed locking</a> &rarr;
                 </p>
             
         </div>

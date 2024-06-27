@@ -1,15 +1,19 @@
 ---
-layout: post
-title: "Adding CORS support to nginx proxy in Kubernetes"
-location: "Japan"
+title: "Adding `CORS` support to `nginx` proxy in Kubernetes"
+description: "2019-05-26"
+date: "2019-05-26"
+paige:
+  feed:
+    hide_page: true
 tags: [nginx, proxy, cors, Kubernetes]
+weight: 1
 ---
 
 At work, for a couple of months now, we've been using [Ambassador](https://www.getambassador.io/) as our main API gateway to our k8s services. We also have our own authorization service that uses Ambassador's [AuthService](https://www.getambassador.io/reference/services/auth-service) mechanism. Recently, we've had services that needed CORS support and although Ambassador has features that support the [enabling of CORS](https://www.getambassador.io/reference/cors), we had to update our authorization service to handle CORS-related requests. Instead of doing this, we tried adding the CORS support at the proxy level (nginx). I've wrote about this topic [here](https://flowerinthenight.com/blog/2018/03/31/access-pods-k8s) and [here](https://flowerinthenight.com/blog/2019/01/31/nginx-basicauth-k8s).
 
 In the example below, the CORS support is added under the location `/svc2/`.
 
-{% highlight ruby %}
+```ruby
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -61,6 +65,8 @@ data:
     }
 
     {..redacted..}
-{% endhighlight %}
+```
 
 With that said, be aware of the [potential problems of using if in nginx](https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/).
+
+<br>

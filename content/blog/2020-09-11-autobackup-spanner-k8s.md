@@ -1,21 +1,25 @@
 ---
-layout: post
 title: "Automate Spanner backup using Kubernetes CronJob"
-location: "Japan"
+description: "2020-09-11"
+date: "2020-09-11"
+paige:
+  feed:
+    hide_page: true
 tags: [spanner, gcp, k8s, cronjob, backup]
+weight: 1
 ---
 
 As of this writing, GCP doesn't have an option to create [Spanner](https://cloud.google.com/spanner/) backups automatically. This could be available when you're reading this in the future. At the moment, however, if you're using Kubernetes, you can utilize [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/) to do a scheduled backup.
 
 Here's a sample CronJob deployment that uses `gcloud` to create the backups. First, you need to create a service account that has permissions to create Spanner backups. Once you have downloaded the JSON file for the service account, store it as a Kubernetes [Secret](https://kubernetes.io/docs/concepts/configuration/secret/).
 
-{% highlight shell %}
+```sh
 $ kubectl create secret generic spannerbackup-keyfile --from-file svcacct.json
-{% endhighlight %}
+```
 
 Make sure to update some of the information below as required, such as, name of the backup, instance name, database name, expiration date, etc. The example below uses the backup name `autobackup-yyyymmddthhmmssutc` format with a 3-day backup expiration.
 
-{% highlight yaml %}
+```yml
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
@@ -47,12 +51,14 @@ metadata:
             - name: keyfile
               secret:
                 secretName: spannerbackup-keyfile
-{% endhighlight %}
+```
 
 Finally, deploy to k8s.
 
-{% highlight shell %}
+```sh
 # Assuming above file is saved as `backup.yaml`
 $ kubectl create -f backup.yaml
-{% endhighlight %}
+```
+
+<br>
 

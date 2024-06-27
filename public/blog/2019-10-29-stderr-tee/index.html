@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2019-10-29" name="description">
+
 
 
     <meta content="golang, stderr, stdout, tee" name="keywords">
@@ -63,13 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2019-10-29-stderr-tee/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Output golang cmdline tools to stdout and file using tee">
-  <meta property="og:description" content="Some golang-based tools I’ve used (or even written) use the builtin log package that output logs to stderr by default. I also use tee for piping console outputs to file for later viewing. This is the command I generally use:
-{% highlight shell %}
-Example tool: $ sometool –flag1 –flag2 2&gt;&amp;1 | tee out.txt
-2&gt;&amp;1 &lt;– redirect stderr to stdout tee &lt;– pipe the console output to out.txt while retaining the actual console logs during command execution {% endhighlight %}">
+  <meta property="og:description" content="2019-10-29">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2019-10-29T00:00:00-07:00">
+    <meta property="article:modified_time" content="2019-10-29T00:00:00-07:00">
     <meta property="article:tag" content="Golang">
     <meta property="article:tag" content="Tee">
     <meta property="article:tag" content="Stderr">
@@ -78,10 +79,7 @@ Example tool: $ sometool –flag1 –flag2 2&gt;&amp;1 | tee out.txt
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Output golang cmdline tools to stdout and file using tee">
-  <meta name="twitter:description" content="Some golang-based tools I’ve used (or even written) use the builtin log package that output logs to stderr by default. I also use tee for piping console outputs to file for later viewing. This is the command I generally use:
-{% highlight shell %}
-Example tool: $ sometool –flag1 –flag2 2&gt;&amp;1 | tee out.txt
-2&gt;&amp;1 &lt;– redirect stderr to stdout tee &lt;– pipe the console output to out.txt while retaining the actual console logs during command execution {% endhighlight %}">
+  <meta name="twitter:description" content="2019-10-29">
 
 
 
@@ -699,6 +697,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2019-10-29</p>
+    
 
     
         <div class="mb-3">
@@ -712,6 +712,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2019-10-29">October 29, 2019</time>
+                </p>
             
 
             
@@ -735,12 +739,12 @@ table {
 
 
     <div class="mw-100" id="paige-content"><p>Some golang-based tools I&rsquo;ve used (or even written) use the builtin <code>log</code> package that output logs to stderr by default. I also use <a href="https://en.wikipedia.org/wiki/Tee_(command)">tee</a> for piping console outputs to file for later viewing. This is the command I generally use:</p>
-<p>{% highlight shell %}</p>
-<h1 id="example-tool">Example tool:<a aria-label="Link to this section" class="paige-header-link" href="#example-tool"></a></h1>
-<p>$ sometool &ndash;flag1 &ndash;flag2 2&gt;&amp;1 | tee out.txt</p>
-<h1 id="21----redirect-stderr-to-stdout">2&gt;&amp;1 &lt;&ndash; redirect stderr to stdout<a aria-label="Link to this section" class="paige-header-link" href="#21----redirect-stderr-to-stdout"></a></h1>
-<h1 id="tee----pipe-the-console-output-to-outtxt-while-retaining-the-actual-console-logs-during-command-execution">tee &lt;&ndash; pipe the console output to out.txt while retaining the actual console logs during command execution<a aria-label="Link to this section" class="paige-header-link" href="#tee----pipe-the-console-output-to-outtxt-while-retaining-the-actual-console-logs-during-command-execution"></a></h1>
-<p>{% endhighlight %}</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Example tool:</span>
+</span></span><span class="line"><span class="cl">$ sometool --flag1 --flag2 2&gt;<span class="p">&amp;</span><span class="m">1</span> <span class="p">|</span> tee out.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 2&gt;&amp;1 &lt;-- redirect stderr to stdout</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># tee &lt;-- pipe the console output to out.txt while retaining the actual console logs during command execution</span>
+</span></span></code></pre></div><br>
 </div>
 
 
@@ -820,13 +824,13 @@ table {
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2018-01-24-k8s-kops-aws/">Running Kubernetes on AWS using kops</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2020-03-18-glog-gotest/">Output glog from go test</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2019-11-28-gcp-backendconfig-k8s/">Extending the timeout of a Kubernetes service in GCP</a> &rarr;
                 </p>
             
         </div>

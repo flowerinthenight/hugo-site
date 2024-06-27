@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2019-06-05" name="description">
+
 
 
     <meta content="distributed-locking, master, redis, worker" name="keywords">
@@ -62,13 +64,13 @@
 
 <meta property="og:url" content="http://localhost:1313/blog/2019-06-05-master-election-using-kettle/">
   <meta property="og:site_name" content="flowerinthenight">
-  <meta property="og:title" content="Using kettle library for master election using distributed locking">
-  <meta property="og:description" content="I uploaded a simple library that abstracts the use of distributed locking to elect a master among group of workers at a specified time interval. It’s called kettle. You can find the source code here.
-We’ve been using this library mostly on these two recurring use case patterns:
-Consuming a dynamodbstreams endpoint across multiple containers running in Kubernetes. In this case, the master tracks the dynamic addition/removal of shards of a specific endpoint and distributes those shards to the other worker containers.">
+  <meta property="og:title" content="Using `kettle` library for master election using distributed locking">
+  <meta property="og:description" content="2019-06-05">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2019-06-05T00:00:00-07:00">
+    <meta property="article:modified_time" content="2019-06-05T00:00:00-07:00">
     <meta property="article:tag" content="Redis">
     <meta property="article:tag" content="Distributed-Locking">
     <meta property="article:tag" content="Master">
@@ -76,10 +78,8 @@ Consuming a dynamodbstreams endpoint across multiple containers running in Kuber
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Using kettle library for master election using distributed locking">
-  <meta name="twitter:description" content="I uploaded a simple library that abstracts the use of distributed locking to elect a master among group of workers at a specified time interval. It’s called kettle. You can find the source code here.
-We’ve been using this library mostly on these two recurring use case patterns:
-Consuming a dynamodbstreams endpoint across multiple containers running in Kubernetes. In this case, the master tracks the dynamic addition/removal of shards of a specific endpoint and distributes those shards to the other worker containers.">
+  <meta name="twitter:title" content="Using `kettle` library for master election using distributed locking">
+  <meta name="twitter:description" content="2019-06-05">
 
 
 
@@ -693,9 +693,11 @@ table {
 
 <div class="mw-100" id="paige-metadata">
     
-        <h1 class="fw-bold text-center" id="paige-title">Using kettle library for master election using distributed locking</h1>
+        <h1 class="fw-bold text-center" id="paige-title">Using <code>kettle</code> library for master election using distributed locking</h1>
     
 
+    
+        <p class="lead text-center" id="paige-description">2019-06-05</p>
     
 
     
@@ -710,6 +712,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2019-06-05">June 5, 2019</time>
+                </p>
             
 
             
@@ -738,6 +744,7 @@ table {
 <li>Consuming a <a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Streams.html">dynamodbstreams</a> endpoint across multiple containers running in Kubernetes. In this case, the master tracks the dynamic addition/removal of shards of a specific endpoint and distributes those shards to the other worker containers.</li>
 <li>Distributing processing to multiple containers from a list of work items. In this case, we have a table of items where each item needs some processing applied to it. We scale out the number of containers to something directly proportional to the number of items on the list. Instead of all containers querying the same table simultaneously, the master will do the querying, publish each item to a pubsub topic, and workers will do the processing from the pubsub items.</li>
 </ul>
+<br>
 </div>
 
 
@@ -817,13 +824,13 @@ table {
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2019-01-31-nginx-basicauth-k8s/">Using nginx basic authentication in Kubernetes</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2019-02-05-golang-cobra-klog/">Using k8s.io/klog together with cobra in golang</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2019-07-30-homebrew-golang/">Using Homebrew for distributing Go (golang) apps</a> &rarr;
                 </p>
             
         </div>

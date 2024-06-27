@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2019-08-14" name="description">
+
 
 
     <meta content="home, router, ssh, tunnel" name="keywords">
@@ -63,12 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2019-08-14-ssh-tunnel-home-router/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Using SSH tunnelling to access home router">
-  <meta property="og:description" content="For personal reference:
-My current setup:
-Router has a static IP provided by my ISP Router web server is accessible from 192.168.1.1 (home network) SSH server box in my home network with a static IP of 192.168.1.130 (home network) Router port forwarding is setup to forward router SSH port to my SSH server box (192.168.1.130:22) SSH server box is configured to only accept public/private key authentication; password disabled Reason for access:">
+  <meta property="og:description" content="2019-08-14">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2019-08-14T00:00:00-07:00">
+    <meta property="article:modified_time" content="2019-08-14T00:00:00-07:00">
     <meta property="article:tag" content="Ssh">
     <meta property="article:tag" content="Tunnel">
     <meta property="article:tag" content="Home">
@@ -77,9 +79,7 @@ Router has a static IP provided by my ISP Router web server is accessible from 1
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Using SSH tunnelling to access home router">
-  <meta name="twitter:description" content="For personal reference:
-My current setup:
-Router has a static IP provided by my ISP Router web server is accessible from 192.168.1.1 (home network) SSH server box in my home network with a static IP of 192.168.1.130 (home network) Router port forwarding is setup to forward router SSH port to my SSH server box (192.168.1.130:22) SSH server box is configured to only accept public/private key authentication; password disabled Reason for access:">
+  <meta name="twitter:description" content="2019-08-14">
 
 
 
@@ -697,6 +697,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2019-08-14</p>
+    
 
     
         <div class="mb-3">
@@ -710,6 +712,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2019-08-14">August 14, 2019</time>
+                </p>
             
 
             
@@ -747,15 +753,14 @@ table {
 <ul>
 <li>Run the following command:</li>
 </ul>
-<p>{% highlight shell %}</p>
-<h1 id="-l-form--l-local-porttargettarget-port">-L form: -L local-port:target:target-port<a aria-label="Link to this section" class="paige-header-link" href="#-l-form--l-local-porttargettarget-port"></a></h1>
-<h1 id="user--ssh-username">&lsquo;user&rsquo; = SSH username<a aria-label="Link to this section" class="paige-header-link" href="#user--ssh-username"></a></h1>
-<p>$ ssh -i /path/to/ssh/key -L 8080:192.168.1.1:80 user@router-static-ip
-{% endhighlight %}</p>
-<ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># -L form: -L local-port:target:target-port</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># &#39;user&#39; = SSH username</span>
+</span></span><span class="line"><span class="cl">$ ssh -i /path/to/ssh/key -L 8080:192.168.1.1:80 user@router-static-ip
+</span></span></code></pre></div><ul>
 <li>Open localhost:8080 to access the router web server.</li>
 <li>That&rsquo;s it!</li>
 </ul>
+<br>
 </div>
 
 
@@ -835,13 +840,13 @@ table {
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2019-09-30-stern-grep/">Using stern together with grep</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2017-10-30-nativestore/">Using OS specific stores for storing CLI credentials for golang apps</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2019-09-30-stern-grep/">Using `stern` together with `grep`</a> &rarr;
                 </p>
             
         </div>

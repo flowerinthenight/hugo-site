@@ -1,8 +1,12 @@
 ---
-layout: post
 title: "Using Homebrew for distributing Go (golang) apps"
-location: "Japan"
+description: "2019-07-30"
+date: "2019-07-30"
+paige:
+  feed:
+    hide_page: true
 tags: [homebrew, go, golang, ruby]
+weight: 1
 ---
 
 For personal reference:
@@ -11,22 +15,22 @@ For personal reference:
 
 Create a new GitHub public repository with a prefix `homebrew-`, i.e. `homebrew-tap`. This will house all the apps that you want to distribute via your tap. Users will install your apps using the following commands:
 
-{% highlight shell %}
+```sh
 # No need to include the 'homebrew-' prefix
 $ brew tap flowerinthenight/tap
 $ brew install <toolname>
-{% endhighlight %}
+```
 
 The `toolname` part will correspond to the filename inside your repository tap. If your repository has an entry with a filename of `toolx.rb`, it can be installed using the following commands:
 
-{% highlight shell %}
+```sh
 $ brew tap flowerinthenight/tap
 $ brew install toolx
-{% endhighlight %}
+```
 
 Here's an example of a formula for a golang app:
 
-{% highlight ruby %}
+```ruby
 class Kubepfm < Formula
   desc "A simple wrapper to kubectl port-forward for multiple pods."
   homepage "https://github.com/flowerinthenight/kubepfm"
@@ -50,7 +54,7 @@ class Kubepfm < Formula
     assert_match /Simple port-forward wrapper tool for multiple pods/, shell_output("#{bin}/kubepfm -h", 0)
   end
 end
-{% endhighlight %}
+```
 
 You can check out [https://github.com/flowerinthenight/homebrew-tap](https://github.com/flowerinthenight/homebrew-tap) for reference.
 
@@ -64,7 +68,7 @@ If you have a new version of your tool, first, create a new tag or release. Down
 
 Example:
 
-{% highlight shell %}
+```sh
 $ git clone https://github.com/flowerinthenight/kubepfm
 $ cd kubepfm/
 $ git tag v1.0.1 # our new tag
@@ -76,11 +80,13 @@ $ shasum -a 256 v1.0.1.tar.gz
 # Linux
 $ sha256sum v1.0.1.tar.gz
 7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207  v1.0.1.tar.gz
-{% endhighlight %}
+```
 
 Finally, update the `url` and `sha256` part of your `.rb` file. Users will now be able to update their copies:
 
-{% highlight shell %}
+```sh
 $ brew upgrade kubepfm
-{% endhighlight %}
+```
+
+<br>
 

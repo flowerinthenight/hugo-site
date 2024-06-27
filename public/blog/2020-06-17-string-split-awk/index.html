@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2020-06-17" name="description">
+
 
 
     <meta content="awk, commandline, split, string" name="keywords">
@@ -62,16 +64,13 @@
 
 <meta property="og:url" content="http://localhost:1313/blog/2020-06-17-string-split-awk/">
   <meta property="og:site_name" content="flowerinthenight">
-  <meta property="og:title" content="Simple string manipulations (splits/replaces) with awk">
-  <meta property="og:description" content="For personal reference:
-Lately, I’ve been doing loads of CSV processing on the terminal with lots of string replacing/splitting. There are probably better (shorter) ways to do this but I’ve been leaning on awk a lot recently.
-Some examples.
-{% highlight shell %}
-One-line separator replace: $ echo “1,2,3,4,5” | awk ‘{gsub(/,/,&#34; “);print}’ 1 2 3 4 5
-Then I can use it with something like: for v in $(echo “1,2,3,4,5” | awk ‘{gsub(/,/,” “);print}’); do echo “val=$v”; done val=1 val=2 val=3 val=4 val=5">
+  <meta property="og:title" content="Simple string manipulations (splits/replaces) with `awk`">
+  <meta property="og:description" content="2020-06-17">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2020-06-17T00:00:00-07:00">
+    <meta property="article:modified_time" content="2020-06-17T00:00:00-07:00">
     <meta property="article:tag" content="Awk">
     <meta property="article:tag" content="Commandline">
     <meta property="article:tag" content="String">
@@ -79,13 +78,8 @@ Then I can use it with something like: for v in $(echo “1,2,3,4,5” | awk ‘
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Simple string manipulations (splits/replaces) with awk">
-  <meta name="twitter:description" content="For personal reference:
-Lately, I’ve been doing loads of CSV processing on the terminal with lots of string replacing/splitting. There are probably better (shorter) ways to do this but I’ve been leaning on awk a lot recently.
-Some examples.
-{% highlight shell %}
-One-line separator replace: $ echo “1,2,3,4,5” | awk ‘{gsub(/,/,&#34; “);print}’ 1 2 3 4 5
-Then I can use it with something like: for v in $(echo “1,2,3,4,5” | awk ‘{gsub(/,/,” “);print}’); do echo “val=$v”; done val=1 val=2 val=3 val=4 val=5">
+  <meta name="twitter:title" content="Simple string manipulations (splits/replaces) with `awk`">
+  <meta name="twitter:description" content="2020-06-17">
 
 
 
@@ -699,9 +693,11 @@ table {
 
 <div class="mw-100" id="paige-metadata">
     
-        <h1 class="fw-bold text-center" id="paige-title">Simple string manipulations (splits/replaces) with awk</h1>
+        <h1 class="fw-bold text-center" id="paige-title">Simple string manipulations (splits/replaces) with <code>awk</code></h1>
     
 
+    
+        <p class="lead text-center" id="paige-description">2020-06-17</p>
     
 
     
@@ -716,6 +712,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2020-06-17">June 17, 2020</time>
+                </p>
             
 
             
@@ -738,36 +738,39 @@ table {
 
 
 
-    <div class="mw-100" id="paige-content"><p><em>For personal reference:</em></p>
+    <div class="mw-100" id="paige-content"><p>For personal reference:</p>
 <p>Lately, I&rsquo;ve been doing loads of CSV processing on the terminal with lots of string replacing/splitting. There are probably better (shorter) ways to do this but I&rsquo;ve been leaning on <code>awk</code> a lot recently.</p>
 <p>Some examples.</p>
-<p>{% highlight shell %}</p>
-<h1 id="one-line-separator-replace">One-line separator replace:<a aria-label="Link to this section" class="paige-header-link" href="#one-line-separator-replace"></a></h1>
-<p>$ echo &ldquo;1,2,3,4,5&rdquo; | awk &lsquo;{gsub(/,/,&quot; &ldquo;);print}&rsquo;
-1 2 3 4 5</p>
-<h1 id="then-i-can-use-it-with-something-like">Then I can use it with something like:<a aria-label="Link to this section" class="paige-header-link" href="#then-i-can-use-it-with-something-like"></a></h1>
-<p>for v in $(echo &ldquo;1,2,3,4,5&rdquo; | awk &lsquo;{gsub(/,/,&rdquo; &ldquo;);print}&rsquo;); do echo &ldquo;val=$v&rdquo;; done
-val=1
-val=2
-val=3
-val=4
-val=5</p>
-<h1 id="another-separator">Another separator:<a aria-label="Link to this section" class="paige-header-link" href="#another-separator"></a></h1>
-<p>$ echo &ldquo;1|2|3|4|5&rdquo; | awk &lsquo;{gsub(/|/,&rdquo;,&quot;);print}&rsquo;
-1,2,3,4,5</p>
-<h1 id="join-multiple-lines-with-a-separator">Join multiple lines with a separator&hellip;<a aria-label="Link to this section" class="paige-header-link" href="#join-multiple-lines-with-a-separator"></a></h1>
-<h1 id="ref-httpswwwbaeldungcomlinuxjoin-multiple-lines">Ref: <a href="https://www.baeldung.com/linux/join-multiple-lines">https://www.baeldung.com/linux/join-multiple-lines</a><a aria-label="Link to this section" class="paige-header-link" href="#ref-httpswwwbaeldungcomlinuxjoin-multiple-lines"></a></h1>
-<p>$ cat file.txt
-one
-two
-three
-four
-five
-five</p>
-<h1 id="while-removing-duplicates">&hellip;while removing duplicates:<a aria-label="Link to this section" class="paige-header-link" href="#while-removing-duplicates"></a></h1>
-<p>$ cat file.txt | uniq | awk -v d=&quot;,&quot; &lsquo;{s=(NR==1?s:s d)$0}END{print s}&rsquo;
-one,two,three,four,five
-{% endhighlight %}</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># One-line separator replace:</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;1,2,3,4,5&#34;</span> <span class="p">|</span> awk <span class="s1">&#39;{gsub(/,/,&#34; &#34;);print}&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Then I can use it with something like:</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> v in <span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;1,2,3,4,5&#34;</span> <span class="p">|</span> awk <span class="s1">&#39;{gsub(/,/,&#34; &#34;);print}&#39;</span><span class="k">)</span><span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="s2">&#34;val=</span><span class="nv">$v</span><span class="s2">&#34;</span><span class="p">;</span> <span class="k">done</span>
+</span></span><span class="line"><span class="cl"><span class="nv">val</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nv">val</span><span class="o">=</span><span class="m">2</span>
+</span></span><span class="line"><span class="cl"><span class="nv">val</span><span class="o">=</span><span class="m">3</span>
+</span></span><span class="line"><span class="cl"><span class="nv">val</span><span class="o">=</span><span class="m">4</span>
+</span></span><span class="line"><span class="cl"><span class="nv">val</span><span class="o">=</span><span class="m">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Another separator:</span>
+</span></span><span class="line"><span class="cl">$ <span class="nb">echo</span> <span class="s2">&#34;1|2|3|4|5&#34;</span> <span class="p">|</span> awk <span class="s1">&#39;{gsub(/\|/,&#34;,&#34;);print}&#39;</span>
+</span></span><span class="line"><span class="cl">1,2,3,4,5
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Join multiple lines with a separator...</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Ref: https://www.baeldung.com/linux/join-multiple-lines</span>
+</span></span><span class="line"><span class="cl">$ cat file.txt
+</span></span><span class="line"><span class="cl">one
+</span></span><span class="line"><span class="cl">two
+</span></span><span class="line"><span class="cl">three
+</span></span><span class="line"><span class="cl">four
+</span></span><span class="line"><span class="cl">five
+</span></span><span class="line"><span class="cl">five
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ...while removing duplicates:</span>
+</span></span><span class="line"><span class="cl">$ cat file.txt <span class="p">|</span> uniq <span class="p">|</span> awk -v <span class="nv">d</span><span class="o">=</span><span class="s2">&#34;,&#34;</span> <span class="s1">&#39;{s=(NR==1?s:s d)$0}END{print s}&#39;</span>
+</span></span><span class="line"><span class="cl">one,two,three,four,five
+</span></span></code></pre></div><br>
 </div>
 
 
@@ -847,13 +850,13 @@ one,two,three,four,five
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2017-03-28-simple-touch-input-funcs-windows/">Simple touch/swipe input function in Windows</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2017-02-28-simple-innosetup/">Simple Innosetup installation script</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2020-07-08-package-distributed-locks/">`dlock` - package for distributed locks</a> &rarr;
                 </p>
             
         </div>

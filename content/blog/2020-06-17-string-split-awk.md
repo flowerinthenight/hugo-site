@@ -1,17 +1,21 @@
 ---
-layout: post
-title: "Simple string manipulations (splits/replaces) with awk"
-location: "Japan"
+title: "Simple string manipulations (splits/replaces) with `awk`"
+description: "2020-06-17"
+date: "2020-06-17"
+paige:
+  feed:
+    hide_page: true
 tags: [awk, commandline, string, split]
+weight: 1
 ---
 
-_For personal reference:_
+For personal reference:
 
 Lately, I've been doing loads of CSV processing on the terminal with lots of string replacing/splitting. There are probably better (shorter) ways to do this but I've been leaning on `awk` a lot recently.
 
 Some examples.
 
-{% highlight shell %}
+```sh
 # One-line separator replace:
 $ echo "1,2,3,4,5" | awk '{gsub(/,/," ");print}'
 1 2 3 4 5
@@ -41,4 +45,6 @@ five
 # ...while removing duplicates:
 $ cat file.txt | uniq | awk -v d="," '{s=(NR==1?s:s d)$0}END{print s}'
 one,two,three,four,five
-{% endhighlight %}
+```
+
+<br>

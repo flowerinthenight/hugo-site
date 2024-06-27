@@ -1,8 +1,12 @@
 ---
-layout: post
 title: "Using SSH tunnelling to access home router"
-location: "Japan"
+description: "2019-08-14"
+date: "2019-08-14"
+paige:
+  feed:
+    hide_page: true
 tags: [ssh, tunnel, home, router]
+weight: 1
 ---
 
 For personal reference:
@@ -23,11 +27,13 @@ I want to be able to access my router web server from outside to configure some 
 
 * Run the following command:
 
-{% highlight shell %}
+```sh
 # -L form: -L local-port:target:target-port
 # 'user' = SSH username
 $ ssh -i /path/to/ssh/key -L 8080:192.168.1.1:80 user@router-static-ip
-{% endhighlight %}
+```
 
 * Open localhost:8080 to access the router web server.
 * That's it!
+
+<br>

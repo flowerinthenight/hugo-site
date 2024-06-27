@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2019-07-30" name="description">
+
 
 
     <meta content="go, golang, homebrew, ruby" name="keywords">
@@ -63,14 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2019-07-30-homebrew-golang/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Using Homebrew for distributing Go (golang) apps">
-  <meta property="og:description" content="For personal reference:
-a) Create your own homebrew tap Create a new GitHub public repository with a prefix homebrew-, i.e. homebrew-tap. This will house all the apps that you want to distribute via your tap. Users will install your apps using the following commands:
-{% highlight shell %}
-No need to include the ‘homebrew-’ prefix $ brew tap flowerinthenight/tap $ brew install {% endhighlight %}
-The toolname part will correspond to the filename inside your repository tap.">
+  <meta property="og:description" content="2019-07-30">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2019-07-30T00:00:00-07:00">
+    <meta property="article:modified_time" content="2019-07-30T00:00:00-07:00">
     <meta property="article:tag" content="Homebrew">
     <meta property="article:tag" content="Go">
     <meta property="article:tag" content="Golang">
@@ -79,11 +79,7 @@ The toolname part will correspond to the filename inside your repository tap.">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Using Homebrew for distributing Go (golang) apps">
-  <meta name="twitter:description" content="For personal reference:
-a) Create your own homebrew tap Create a new GitHub public repository with a prefix homebrew-, i.e. homebrew-tap. This will house all the apps that you want to distribute via your tap. Users will install your apps using the following commands:
-{% highlight shell %}
-No need to include the ‘homebrew-’ prefix $ brew tap flowerinthenight/tap $ brew install {% endhighlight %}
-The toolname part will correspond to the filename inside your repository tap.">
+  <meta name="twitter:description" content="2019-07-30">
 
 
 
@@ -701,6 +697,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2019-07-30</p>
+    
 
     
         <div class="mb-3">
@@ -715,9 +713,13 @@ table {
             
 
             
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2019-07-30">July 30, 2019</time>
+                </p>
+            
 
             
-                <p class="mb-0 text-center text-secondary" id="paige-reading-time">1 minute</p>
+                <p class="mb-0 text-center text-secondary" id="paige-reading-time">2 minutes</p>
             
         </div>
     
@@ -739,17 +741,6 @@ table {
         <li>
           <ol>
             <li><a href="#a-create-your-own-homebrew-tap">a) Create your own homebrew tap</a></li>
-          </ol>
-        </li>
-      </ol>
-    </li>
-  </ol>
-
-  <ol>
-    <li>
-      <ol>
-        <li>
-          <ol>
             <li><a href="#b-updating-your-formula">b) Updating your formula</a></li>
           </ol>
         </li>
@@ -769,62 +760,56 @@ table {
     <div class="mw-100" id="paige-content"><p>For personal reference:</p>
 <h4 id="a-create-your-own-homebrew-tap">a) Create your own homebrew tap<a aria-label="Link to this section" class="paige-header-link" href="#a-create-your-own-homebrew-tap"></a></h4>
 <p>Create a new GitHub public repository with a prefix <code>homebrew-</code>, i.e. <code>homebrew-tap</code>. This will house all the apps that you want to distribute via your tap. Users will install your apps using the following commands:</p>
-<p>{% highlight shell %}</p>
-<h1 id="no-need-to-include-the-homebrew--prefix">No need to include the &lsquo;homebrew-&rsquo; prefix<a aria-label="Link to this section" class="paige-header-link" href="#no-need-to-include-the-homebrew--prefix"></a></h1>
-<p>$ brew tap flowerinthenight/tap
-$ brew install <toolname>
-{% endhighlight %}</p>
-<p>The <code>toolname</code> part will correspond to the filename inside your repository tap. If your repository has an entry with a filename of <code>toolx.rb</code>, it can be installed using the following commands:</p>
-<p>{% highlight shell %}
-$ brew tap flowerinthenight/tap
-$ brew install toolx
-{% endhighlight %}</p>
-<p>Here&rsquo;s an example of a formula for a golang app:</p>
-<p>{% highlight ruby %}
-class Kubepfm &lt; Formula
-desc &ldquo;A simple wrapper to kubectl port-forward for multiple pods.&rdquo;
-homepage &ldquo;<a href="https://github.com/flowerinthenight/kubepfm"">https://github.com/flowerinthenight/kubepfm"</a>
-url &ldquo;<a href="https://github.com/flowerinthenight/kubepfm/archive/v0.0.3.tar.gz"">https://github.com/flowerinthenight/kubepfm/archive/v0.0.3.tar.gz"</a>
-sha256 &ldquo;7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207&rdquo;</p>
-<p>depends_on &ldquo;go&rdquo;</p>
-<p>def install
-ENV[&ldquo;GOPATH&rdquo;] = buildpath
-ENV[&ldquo;GO111MODULE&rdquo;] = &ldquo;on&rdquo;
-ENV[&ldquo;GOFLAGS&rdquo;] = &ldquo;-mod=vendor&rdquo;
-ENV[&ldquo;PATH&rdquo;] = &ldquo;#{ENV[&ldquo;PATH&rdquo;]}:#{buildpath}/bin&rdquo;
-(buildpath/&ldquo;src/github.com/flowerinthenight/kubepfm&rdquo;).install buildpath.children
-cd &ldquo;src/github.com/flowerinthenight/kubepfm&rdquo; do
-system &ldquo;go&rdquo;, &ldquo;build&rdquo;, &ldquo;-o&rdquo;, bin/&ldquo;kubepfm&rdquo;, &ldquo;.&rdquo;
-end
-end</p>
-<p>test do
-assert_match /Simple port-forward wrapper tool for multiple pods/, shell_output(&rdquo;#{bin}/kubepfm -h&rdquo;, 0)
-end
-end
-{% endhighlight %}</p>
-<p>You can check out <a href="https://github.com/flowerinthenight/homebrew-tap">https://github.com/flowerinthenight/homebrew-tap</a> for reference.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># No need to include the &#39;homebrew-&#39; prefix</span>
+</span></span><span class="line"><span class="cl">$ brew tap flowerinthenight/tap
+</span></span><span class="line"><span class="cl">$ brew install &lt;toolname&gt;
+</span></span></code></pre></div><p>The <code>toolname</code> part will correspond to the filename inside your repository tap. If your repository has an entry with a filename of <code>toolx.rb</code>, it can be installed using the following commands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ brew tap flowerinthenight/tap
+</span></span><span class="line"><span class="cl">$ brew install toolx
+</span></span></code></pre></div><p>Here&rsquo;s an example of a formula for a golang app:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Kubepfm</span> <span class="o">&lt;</span> <span class="no">Formula</span>
+</span></span><span class="line"><span class="cl">  <span class="n">desc</span> <span class="s2">&#34;A simple wrapper to kubectl port-forward for multiple pods.&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">homepage</span> <span class="s2">&#34;https://github.com/flowerinthenight/kubepfm&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">url</span> <span class="s2">&#34;https://github.com/flowerinthenight/kubepfm/archive/v0.0.3.tar.gz&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">sha256</span> <span class="s2">&#34;7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">depends_on</span> <span class="s2">&#34;go&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">install</span>
+</span></span><span class="line"><span class="cl">    <span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;GOPATH&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="n">buildpath</span>
+</span></span><span class="line"><span class="cl">    <span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;GO111MODULE&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;on&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;GOFLAGS&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;-mod=vendor&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;PATH&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="si">#{</span><span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;PATH&#34;</span><span class="o">]</span><span class="si">}</span><span class="s2">:</span><span class="si">#{</span><span class="n">buildpath</span><span class="si">}</span><span class="s2">/bin&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="n">buildpath</span><span class="o">/</span><span class="s2">&#34;src/github.com/flowerinthenight/kubepfm&#34;</span><span class="p">)</span><span class="o">.</span><span class="n">install</span> <span class="n">buildpath</span><span class="o">.</span><span class="n">children</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cd</span> <span class="s2">&#34;src/github.com/flowerinthenight/kubepfm&#34;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">system</span> <span class="s2">&#34;go&#34;</span><span class="p">,</span> <span class="s2">&#34;build&#34;</span><span class="p">,</span> <span class="s2">&#34;-o&#34;</span><span class="p">,</span> <span class="n">bin</span><span class="o">/</span><span class="s2">&#34;kubepfm&#34;</span><span class="p">,</span> <span class="s2">&#34;.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nb">test</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="n">assert_match</span> <span class="sr">/Simple port-forward wrapper tool for multiple pods/</span><span class="p">,</span> <span class="n">shell_output</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">#{</span><span class="n">bin</span><span class="si">}</span><span class="s2">/kubepfm -h&#34;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></div><p>You can check out <a href="https://github.com/flowerinthenight/homebrew-tap">https://github.com/flowerinthenight/homebrew-tap</a> for reference.</p>
 <p>The <code>url</code> part is the path of the source <code>tar.gz</code> of your source files. You can create this by using <a href="https://help.github.com/en/enterprise/2.16/user/articles/about-releases">tagged releases</a> in GitHub.</p>
 <p>You can generate the <code>sha256</code> part by running the <code>shasum</code> (OSX) or <code>sha256sum</code> (Linux) tool against your <code>tar.gz</code> file.</p>
 <h4 id="b-updating-your-formula">b) Updating your formula<a aria-label="Link to this section" class="paige-header-link" href="#b-updating-your-formula"></a></h4>
 <p>If you have a new version of your tool, first, create a new tag or release. Download the new <code>tar.gz</code> file of the new release, run the <code>sha256sum/shasum</code> tool against it, and update the <code>.rb</code> file in your tap repository.</p>
 <p>Example:</p>
-<p>{% highlight shell %}
-$ git clone <a href="https://github.com/flowerinthenight/kubepfm">https://github.com/flowerinthenight/kubepfm</a>
-$ cd kubepfm/
-$ git tag v1.0.1 # our new tag
-$ git push &ndash;tags # push tags to remote
-$ wget <a href="https://github.com/flowerinthenight/kubepfm/archive/v1.0.1.tar.gz">https://github.com/flowerinthenight/kubepfm/archive/v1.0.1.tar.gz</a></p>
-<h1 id="osx">OSX<a aria-label="Link to this section" class="paige-header-link" href="#osx"></a></h1>
-<p>$ shasum -a 256 v1.0.1.tar.gz
-7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207  v1.0.1.tar.gz</p>
-<h1 id="linux">Linux<a aria-label="Link to this section" class="paige-header-link" href="#linux"></a></h1>
-<p>$ sha256sum v1.0.1.tar.gz
-7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207  v1.0.1.tar.gz
-{% endhighlight %}</p>
-<p>Finally, update the <code>url</code> and <code>sha256</code> part of your <code>.rb</code> file. Users will now be able to update their copies:</p>
-<p>{% highlight shell %}
-$ brew upgrade kubepfm
-{% endhighlight %}</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ git clone https://github.com/flowerinthenight/kubepfm
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> kubepfm/
+</span></span><span class="line"><span class="cl">$ git tag v1.0.1 <span class="c1"># our new tag</span>
+</span></span><span class="line"><span class="cl">$ git push --tags <span class="c1"># push tags to remote</span>
+</span></span><span class="line"><span class="cl">$ wget https://github.com/flowerinthenight/kubepfm/archive/v1.0.1.tar.gz
+</span></span><span class="line"><span class="cl"><span class="c1"># OSX</span>
+</span></span><span class="line"><span class="cl">$ shasum -a <span class="m">256</span> v1.0.1.tar.gz
+</span></span><span class="line"><span class="cl">7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207  v1.0.1.tar.gz
+</span></span><span class="line"><span class="cl"><span class="c1"># Linux</span>
+</span></span><span class="line"><span class="cl">$ sha256sum v1.0.1.tar.gz
+</span></span><span class="line"><span class="cl">7852a5500f3e35a47b57d138c756de5641bc3c48bf7e329d2724c1107ccb1207  v1.0.1.tar.gz
+</span></span></code></pre></div><p>Finally, update the <code>url</code> and <code>sha256</code> part of your <code>.rb</code> file. Users will now be able to update their copies:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ brew upgrade kubepfm
+</span></span></code></pre></div><br>
 </div>
 
 
@@ -904,13 +889,13 @@ $ brew upgrade kubepfm
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2019-02-05-golang-cobra-klog/">Using k8s.io/klog together with cobra in golang</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2017-12-01-golang-cobra-glog/">Using glog together with cobra in golang</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2019-08-14-ssh-tunnel-home-router/">Using SSH tunnelling to access home router</a> &rarr;
                 </p>
             
         </div>

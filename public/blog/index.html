@@ -844,52 +844,94 @@ table {
                 
             
         
-    
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
         
             
                 
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+    
+        
             
                 
             
@@ -3028,21 +3070,20 @@ Vim has been my primary editor of choice for many years. I think I started Vim a
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup git for my WordPress installation in BlueHost</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-10-31-oops/">An automation-friendly, highly-scalable, and scriptable testing tool</a></p>
     
 
     
-        <p class="mb-0 paige-description text-center">2016-02-24</p>
+        <p class="mb-0 paige-description text-center">2020-10-31</p>
     
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">I’m not sure if this is the “proper” way to do it. Well, it sort of works for me at the moment so I thought I’ll share it here. I did use FTP at first (using FileZilla) but I didnt really like the workflow.
-Host: BlueHost shared account Client: Windows 10 Prerequisites SSH/Shell Access should be enabled. I enabled this from my cPanel -&gt; SSH/Shell Access menu. Server/Host side SSH to BlueHost host.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">I uploaded an automation-friendly, highly-scalable, and scriptable API/generic testing tool built to run on Kubernetes. It’s called oops and you can find the code here. Maybe it will be useful to anybody out there.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/bluehost/">Bluehost</a> · <a class="link-secondary" href="/tags/git/">Git</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/wordpress/">Wordpress</a>
+            <a class="link-secondary" href="/tags/api/">Api</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/testing/">Testing</a>
         </p>
     
 
@@ -3052,12 +3093,12 @@ Host: BlueHost shared account Client: Windows 10 Prerequisites SSH/Shell Access 
 
     
         <p class="mb-0 paige-date text-center text-secondary">
-            <time datetime="2016-02-24">February 24, 2016</time>
+            <time datetime="2020-10-31">October 31, 2020</time>
         </p>
     
 
     
-        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
     
 </div>
 
@@ -3099,22 +3140,21 @@ Host: BlueHost shared account Client: Windows 10 Prerequisites SSH/Shell Access 
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-02-22-ssh-from-windows-to-linux-server/">SSH from a Windows client to a Linux server</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-09-11-autobackup-spanner-k8s/">Automate Spanner backup using Kubernetes CronJob</a></p>
     
 
     
-        <p class="mb-0 paige-description text-center">2016-02-22</p>
+        <p class="mb-0 paige-description text-center">2020-09-11</p>
     
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">At the moment, I’m still in the process of setting up my home network server. I’ll be taking notes about my progress here so this might be a series of related posts.
-I’m using an Ubuntu 14.04 Server (headless). Client is a Windows 10 machine.
-The simple way Server side Install ssh. How to do this depends on what distro you are using. For Ubuntu, you can do an apt-get install ssh.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">As of this writing, GCP doesn’t have an option to create Spanner backups automatically. This could be available when you’re reading this in the future. At the moment, however, if you’re using Kubernetes, you can utilize CronJob to do a scheduled backup.
+Here’s a sample CronJob deployment that uses gcloud to create the backups. First, you need to create a service account that has permissions to create Spanner backups. Once you have downloaded the JSON file for the service account, store it as a Kubernetes Secret.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/ssh/">Ssh</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+            <a class="link-secondary" href="/tags/backup/">Backup</a> · <a class="link-secondary" href="/tags/cronjob/">Cronjob</a> · <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/spanner/">Spanner</a>
         </p>
     
 
@@ -3124,7 +3164,7 @@ The simple way Server side Install ssh. How to do this depends on what distro yo
 
     
         <p class="mb-0 paige-date text-center text-secondary">
-            <time datetime="2016-02-22">February 22, 2016</time>
+            <time datetime="2020-09-11">September 11, 2020</time>
         </p>
     
 
@@ -3171,20 +3211,20 @@ The simple way Server side Install ssh. How to do this depends on what distro yo
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-02-21-welcome-to-my-blog/">Welcome to my blog!</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-08-31-dysync/">A tool for synching DynamoDB tables between accounts</a></p>
     
 
     
-        <p class="mb-0 paige-description text-center">2016-02-21</p>
+        <p class="mb-0 paige-description text-center">2020-08-31</p>
     
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">Hey, there! Welcome to my blog. I hope you enjoy reading the stuff in here. Nothing fancy, really. Just bits and bobs about tech and random topics. Enjoy!</p>
+        <p class="fst-italic mb-0 paige-summary text-center">I uploaded a tool that can sync DynamoDB tables between accounts. It’s called dysync and you can find the code here. Maybe it will be useful to anybody out there.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/blog/">Blog</a> · <a class="link-secondary" href="/categories/general/">General</a> · <a class="link-secondary" href="/tags/welcome/">Welcome</a>
+            <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/dynamodb/">Dynamodb</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/sync/">Sync</a>
         </p>
     
 
@@ -3194,7 +3234,7 @@ The simple way Server side Install ssh. How to do this depends on what distro yo
 
     
         <p class="mb-0 paige-date text-center text-secondary">
-            <time datetime="2016-02-21">February 21, 2016</time>
+            <time datetime="2020-08-31">August 31, 2020</time>
         </p>
     
 
@@ -3241,20 +3281,20 @@ The simple way Server side Install ssh. How to do this depends on what distro yo
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-01-etw-part1/">[Part 1] How I set up ETW for logging (native, .NET, Metro and UApp)</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-07-08-package-distributed-locks/">dlock - package for distributed locks</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2020-07-08</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
-Ive been using ETW as my go-to logging mechanism for Windows development. I will be sharing how I setup my environment here.
-Creating the manifest file (.man) I use ecmangen.exe to create my manifest file. This tool is included in the SDK. I have Visual Studio 2015 installed on a Win10 64-bit machine, and its location is C:\Program Files (x86)\Windows Kits\10\bin\x64. It looks something like this (my completed manifest):</p>
+        <p class="fst-italic mb-0 paige-summary text-center">I’ve uploaded a package for distributed locks. It’s called dlock. At the moment, it supports using Kubernetes’ LeaseLock object and Redis. You might find it useful.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
+            <a class="link-secondary" href="/tags/distributed-locks/">Distributed-Locks</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/k8slock/">K8slock</a> · <a class="link-secondary" href="/tags/leaselock/">Leaselock</a> · <a class="link-secondary" href="/tags/redis/">Redis</a> · <a class="link-secondary" href="/tags/redislock/">Redislock</a>
         </p>
     
 
@@ -3263,74 +3303,9 @@ Creating the manifest file (.man) I use ecmangen.exe to create my manifest file.
     
 
     
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">3 minutes</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-02-etw-part2/">[Part 2] Manifest file compilation and setup</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
-Compiling the manifest file This is how I compiled my manifest file.
-Open Visual Studio command prompt. Compile manifest file. {% highlight shell %} mc -um &lt;manifest_file&gt;.man {% endhighlight %}
-When successful, output files are:
-{% highlight shell %} .h .rc TEMP.BIN MSG00001.bin {% endhighlight %}
-Creating the message resource DLL I like to create a separate dll just for the manifest file resource although you can also add the .</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-07-08">July 8, 2020</time>
         </p>
-    
-
-    
-
-    
-
     
 
     
@@ -3376,23 +3351,21 @@ Creating the message resource DLL I like to create a separate dll just for the m
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-03-etw-part3/">[Part 3] Logging with C/C&#43;&#43; applications</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-06-17-string-split-awk/">Simple string manipulations (splits/replaces) with awk</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2020-06-17</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
-If you remember in part 2, we compiled our manifest file with
-{% highlight shell %} mc -um &lt;manifest_file&gt;.man {% endhighlight %}
-and we got a header file as one of the outputs. We just have to include that header file to our sources and we are good to go.
-{% highlight cpp %} #include … #include “&lt;manifest_file&gt;.h”
-int main(…) { EventRegister&lt;provider_name_in_manifest&gt;(); … CreateFile(…); // Example of using the LastError event in our manifest file EventWriteLastError(L&#34;THIS_EXE&#34;, FILE, FUNC, L&#34;CreateFile&#34;, GetLastError()); … EventUnregister&lt;provider_name_in_manifest&gt;(); } {% endhighlight %}</p>
+        <p class="fst-italic mb-0 paige-summary text-center">For personal reference: Lately, I’ve been doing loads of CSV processing on the terminal with lots of string replacing/splitting. There are probably better (shorter) ways to do this but I’ve been leaning on awk a lot recently. Some examples.
+One-line separator replace: $ echo &#34;1,2,3,4,5&#34; | awk &#39;{gsub(/,/,&#34; &#34;);print}&#39; 1 2 3 4 5 # Then I can use it with something like: for v in $(echo &#34;1,2,3,4,5&#34; | awk &#39;{gsub(/,/,&#34; &#34;);print}&#39;); do echo &#34;val=$v&#34;; done val=1 val=2 val=3 val=4 val=5 # Another separator: $ echo &#34;1|2|3|4|5&#34; | awk &#39;{gsub(/|/,&#34;,&#34;);print}&#39; 1,2,3,4,5 # Join multiple lines with a separator.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
+            <a class="link-secondary" href="/tags/awk/">Awk</a> · <a class="link-secondary" href="/tags/commandline/">Commandline</a> · <a class="link-secondary" href="/tags/split/">Split</a> · <a class="link-secondary" href="/tags/string/">String</a>
         </p>
     
 
@@ -3401,725 +3374,9 @@ int main(…) { EventRegister&lt;provider_name_in_manifest&gt;(); … CreateFile
     
 
     
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-07-etw-part4/">[Part 4] Log collection</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
-Getting the logs Now that I have my modules spitting out logs for me, it’s time to actually consume (or view) them. Most of the time, I use MFTrace and logman tools.
-MFTrace Although MFTrace is primarily a tool for generating logs for Media Foundation apps, it is a great tool for viewing ETW logs in general as well. It is included in the MS SDK.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-06-17">June 17, 2020</time>
         </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-19-etw-part5/">[Part 5] Logging with C# applications</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub. I generated a C# logging class using this command: {% highlight shell %} mc -css &lt;Namespace_here&gt; jytrace.man {% endhighlight %} So far, most of my event templates use an ANSI string data type which (I believe) is not supported by C#. As you can see in part 1, I use ANSI data type for my File and Function fields so that I can use FILE and FUNCTION as inputs in C&#43;&#43;.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-22-etw-part6/">[Part 6] Logging with Universal Apps</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Check out the codes in GitHub.
-Basically, 2 steps:
-Create a C&#43;&#43; Windows Runtime Component (dll) that will use the ETW header file. Reference the WinRT DLL to C# project.
-WinRT DLL My logging class looks like this:
-{% highlight cpp %} public ref class TraceCore sealed { private: TraceCore(); ~TraceCore();
-static TraceCore^ m_Instance; public: static property TraceCore^ Instance { TraceCore^ get() { if (m_Instance == nullptr) { m_Instance = ref new TraceCore(); }</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2018-02-06-golang-monorepo/">A golang-based monorepo example</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">I uploaded an example of a golang-based monorepo in GitHub. This is a stripped down version of what we have @mobingi. If you are planning to have a golang-based monorepo, please have a look.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/monorepo/">Monorepo</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-10-07-cron-like-windows-service-go/">A simple cron-like Windows service</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">A couple of days ago, I uploaded a generic service in GitHub that has a feature of updating itself. Check out the post here. Today, I uploaded the actual service I’m using in our CI environment, excluding the configuration file.
-Check out the source code here.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a> · <a class="link-secondary" href="/categories/go/">Go</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-06-13-folder-file-watcher-powershell/">A simple folder/file watcher in Powershell</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Personal reference:
-{% gist 66dd730db7f15d4b79b2523d8a03a468 %}</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-05-06-import-environment-powershell/">A simple Powershell function to import an environment</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">A couple of days ago, I was working on a powershell-based script for mstest automation and I needed to call vsdevcmd.bat from Visual Studio’s tools folder. {% highlight powershell %} function Invoke-Environment([Parameter(Mandatory=1)][string]$Command, [switch]$Output, [switch]$Force) { $stream = if ($Output) { ($temp = [IO.Path]::GetTempFileName()) } else { ’nul’ } $operator = if ($Force) {’&amp;’} else {’&amp;&amp;’} foreach($_ in cmd /c &#34; $Command &gt; &amp;quot;$stream&#34; 2&gt;&amp;1 $operator SET&#34;) { if ($_ -match ‘^([^=]&#43;)=(.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-08-24-rest-client-server-c%23/">A simple REST client/server console app in C#</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">For personal reference:
-{% gist 8fae6c9a56df98b8ff96f117a7c9f341 %}
-Full source code here.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/c%23/">C#</a> · <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-08-13-signal-handler-linux-cpp/">A simple signal handler in C/C&#43;&#43; (Linux)</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">Personal reference:
-{% gist 1ea9a6b71bc9d4a6e5a269e63028d046 %}</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-04-06-unzip-function-powershell/">A simple unzip function in Powershell</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">{% highlight powershell %} function UnzipFiles($ZipFileName, $DestDir) { Add-Type -Assembly System.IO.Compression.FileSystem [System.IO.Compression.ZipFile]::ExtractToDirectory($ZipFileName, $DestDir) } {% endhighlight %}
-To use the function:
-{% highlight powershell %} UnzipFiles -ZipFileName .\folder\file.zip -DestDir .\destination {% endhighlight %}</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-04-05-zip-function-powershell/">A simple zip function in Powershell</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">{% highlight powershell %} function ZipFiles($ZipFileName, $SourceDir) { Add-Type -Assembly System.IO.Compression.FileSystem $compressionLevel = [System.IO.Compression.CompressionLevel]::Optimal [System.IO.Compression.ZipFile]::CreateFromDirectory($SourceDir, $ZipFileName, $compressionLevel, $false) } {% endhighlight %}
-To use the function:
-{% highlight powershell %} ZipFiles -ZipFileName test.zip -SourceDir .\folder\to\zip {% endhighlight %}</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a>
-        </p>
-    
-
-    
-
-    
-
     
 
     
@@ -4169,6 +3426,8 @@ To use the function:
     
 
     
+        <p class="mb-0 paige-description text-center">2020-05-13</p>
+    
 
     
         <p class="fst-italic mb-0 paige-summary text-center">I uploaded a tool that can query DynamoDB tables. It’s called lsdy and you can find the code here. Maybe it will be useful to anybody out there.</p>
@@ -4185,69 +3444,9 @@ To use the function:
     
 
     
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2020-08-31-dysync/">A tool for synching DynamoDB tables between accounts</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">I uploaded a tool that can sync DynamoDB tables between accounts. It’s called dysync and you can find the code here. Maybe it will be useful to anybody out there.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/dynamodb/">Dynamodb</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/sync/">Sync</a>
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-05-13">May 13, 2020</time>
         </p>
-    
-
-    
-
-    
-
     
 
     
@@ -4293,18 +3492,22 @@ To use the function:
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-09-27-windows-delay-update-service-go/">A Windows service with an http endpoint for uploading a new version of itself</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-04-22-open-manpages-vim/">Open man pages in Vim</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2020-04-22</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">Recently, I’ve been working on a service that runs on a lot of VM’s across different locations. If I have a new service build, updating all of the running instances quickly became a bit of a pain. I have to log in to every VM (in some cases through a VPN) and then do a manual upgrade. Now, there are probably tools that already exist for this type of use case but since I’m still learning Go at the moment, I thought this would be a good exercise.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">Most of the time when I open a man page for a certain command or tool, I use Vim:
+Open man page for the &#39;dd&#39; command: $ man dd | col -b | vim -MR - It’s actually a handful to type but since I use zsh &#43; fzf, it’s not really a big deal as recalling the command is pretty straightforward. But yesterday, I came across this nifty little plugin called vim-manpager.
+</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a> · <a class="link-secondary" href="/categories/go/">Go</a>
+            <a class="link-secondary" href="/tags/man/">Man</a> · <a class="link-secondary" href="/tags/manual/">Manual</a> · <a class="link-secondary" href="/tags/vim/">Vim</a>
         </p>
     
 
@@ -4312,6 +3515,10 @@ To use the function:
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-04-22">April 22, 2020</time>
+        </p>
     
 
     
@@ -4357,19 +3564,22 @@ To use the function:
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2018-03-31-access-pods-k8s/">Accessing services in Kubernetes</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-03-25-torguard-wireguard-ubuntu/">Connecting to Torguard VPN using Wireguard from Ubuntu</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2020-03-25</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">At Mobingi, when we are developing services that run on Kubernetes, we generally use Minikube or Kubernetes in Docker for Mac. We also have a cluster that runs on GKE that we use for development. In this post, I will share how we access some of the services that are running on our development cluster.
-Using kubectl port-forward Using kubectl port-forward is probably the cheapest and the most straightforward. For example, if I want to access a cluster service svc1 through my localhost, I use kubectl port-forward like this:</p>
+        <p class="fst-italic mb-0 paige-summary text-center">As of this writing, Torguard’s desktop app still doesn’t support Wireguard out of the box. I’m using Ubuntu 19.10 for testing.
+If you haven’t installed Wireguard yet, you can refer to the installation instructions here. In my case, it was:
+$ sudo apt install wireguard Next, you need to login to your Torguard client area, go to Tools –&gt; Enable Wireguard Access. Select a location (in my case, I chose Asia-Singapore2) then click ‘Enable Wireguard’.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/ingress/">Ingress</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/nginx/">Nginx</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
+            <a class="link-secondary" href="/tags/linux/">Linux</a> · <a class="link-secondary" href="/tags/torguard/">Torguard</a> · <a class="link-secondary" href="/tags/ubuntu/">Ubuntu</a> · <a class="link-secondary" href="/tags/wireguard/">Wireguard</a>
         </p>
     
 
@@ -4378,9 +3588,13 @@ Using kubectl port-forward Using kubectl port-forward is probably the cheapest a
     
 
     
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-03-25">March 25, 2020</time>
+        </p>
+    
 
     
-        <p class="mb-0 paige-reading-time text-center text-secondary">5 minutes</p>
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
     
 </div>
 
@@ -4422,19 +3636,521 @@ Using kubectl port-forward Using kubectl port-forward is probably the cheapest a
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-08-21-log-prefix-fname-go/">Add function name prefix to log.Println in Go</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-03-25-vimgo-gocode-gopls/">Follow-up on autocompletion with gocode and vim-go in Go1.11, transition to gopls</a></p>
     
 
+    
+        <p class="mb-0 paige-description text-center">2020-03-25</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Update vim-go has already transitioned to gopls as its default completion engine. I just noticed that my Vim is still using gocode even though I updated to the latest version of vim-go. Commenting/removing the line Plugin ‘stamblerre/gocode’, {‘rtp’: ‘vim/’} from my .vimrc did the trick for me. Hope this helps.
+Original post here.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/autocomplete/">Autocomplete</a> · <a class="link-secondary" href="/tags/gocode/">Gocode</a> · <a class="link-secondary" href="/tags/gopls/">Gopls</a> · <a class="link-secondary" href="/tags/vim/">Vim</a> · <a class="link-secondary" href="/tags/vim-go/">Vim-Go</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-03-25">March 25, 2020</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-03-18-glog-gotest/">Output glog from go test</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2020-03-18</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">If you’re using glog in your Go codes, you can output those when running go test … by using the –args parameter:
+$ go test -v ./… -count=1 -cover -race -mod=vendor –args –logtostderr –v=1</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/glog/">Glog</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/test/">Test</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-03-18">March 18, 2020</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-02-27-cobra-tabwriter/">Using tabwriter to improve on cobra’s help information</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2020-02-27</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">If you’ve been following the blog, you know that I’m a fan of cobra as a CLI library. Let me share how I use tabwriter to compliment cobra’s autogenerated help information. For reference, you can check this post as well.
+The following code is a copy (not an exact copy) of one of the tools that I use at work.
+It will look something like this.
+Trigger a manual run, among other tools.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/cobra/">Cobra</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/tabwriter/">Tabwriter</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-02-27">February 27, 2020</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-01-27-kubepfm-update/">Update to kubepfm, a kubectl port-forward wrapper for multiple pods</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2020-01-27</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Updated 2020/01/27:
+Support for forwarding to deployments and services Original post:
+I recently uploaded a tool to GitHub that wraps kubectl port-forward command and supports port-forwarding to multiple pods. It’s called kubepfm. I use this tool heavily in my development work. You can check out the code here. You might find this useful.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubepfm/">Kubepfm</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-01-27">January 27, 2020</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-11-28-gcp-backendconfig-k8s/">Extending the timeout of a Kubernetes service in GCP</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-11-28</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">This is related to a previous post about Kubernetes services. This time, it’s about extending the timeout of an Ingress. We had a situation where we had to download a huge file from one of our exposed services. The download takes about two minutes to complete. This didn’t really worked out since by default, GCP load balancers that are associated with k8s Ingresses have a timeout value of 30s. For a time, we just did manual updates by going to the GCP k8s Services and Ingress console, opening the backend service under the Ingress, and editing the Timeout section to the desired seconds.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/ingress/">Ingress</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/timeout/">Timeout</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-11-28">November 28, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-10-29-stderr-tee/">Output golang cmdline tools to stdout and file using tee</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-10-29</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Some golang-based tools I’ve used (or even written) use the builtin log package that output logs to stderr by default. I also use tee for piping console outputs to file for later viewing. This is the command I generally use:
+Example tool: $ sometool –flag1 –flag2 2&gt;&amp;1 | tee out.txt # 2&gt;&amp;1 &lt;– redirect stderr to stdout # tee &lt;– pipe the console output to out.txt while retaining the actual console logs during command execution</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/stderr/">Stderr</a> · <a class="link-secondary" href="/tags/stdout/">Stdout</a> · <a class="link-secondary" href="/tags/tee/">Tee</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-10-29">October 29, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-09-30-stern-grep/">Using stern together with grep</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-09-30</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I’ve been using stern as my goto log viewer for Kubernetes. It supports multiple pods and other convenient functions on top of kubectl logs. And of course, grepping goes hand in hand with log viewing, doesn’t it? To combine grep with stern, I use the following commands:
+For OSX: # stern &lt;some-prod-prefix&gt; | grep -i –line-buffered -E &#39;&lt;extended-regex&gt;&#39; $ stern user | grep -i –line-buffered -E &#39;failed&#39; # For Linux (Ubuntu specifically): # stern &lt;some-prod-prefix&gt; | grep -i -E &#39;&lt;extended-regex&gt;&#39; $ stern user -s 1h | grep -i -E &#39;error&#39;</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/grep/">Grep</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/logs/">Logs</a> · <a class="link-secondary" href="/tags/stern/">Stern</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-09-30">September 30, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-08-14-ssh-tunnel-home-router/">Using SSH tunnelling to access home router</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-08-14</p>
     
 
     
         <p class="fst-italic mb-0 paige-summary text-center">For personal reference:
-{% gist 8da2984e90dd4a3a26ff645e6a37f275 %}</p>
+My current setup:
+Router has a static IP provided by my ISP Router web server is accessible from 192.168.1.1 (home network) SSH server box in my home network with a static IP of 192.168.1.130 (home network) Router port forwarding is setup to forward router SSH port to my SSH server box (192.168.1.130:22) SSH server box is configured to only accept public/private key authentication; password disabled Reason for access:</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/code/">Code</a> · <a class="link-secondary" href="/categories/golang/">Golang</a>
+            <a class="link-secondary" href="/tags/home/">Home</a> · <a class="link-secondary" href="/tags/router/">Router</a> · <a class="link-secondary" href="/tags/ssh/">Ssh</a> · <a class="link-secondary" href="/tags/tunnel/">Tunnel</a>
         </p>
     
 
@@ -4442,6 +4158,436 @@ Using kubectl port-forward Using kubectl port-forward is probably the cheapest a
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-08-14">August 14, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-07-30-homebrew-golang/">Using Homebrew for distributing Go (golang) apps</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-07-30</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For personal reference: a) Create your own homebrew tap Create a new GitHub public repository with a prefix homebrew-, i.e. homebrew-tap. This will house all the apps that you want to distribute via your tap. Users will install your apps using the following commands:
+No need to include the &#39;homebrew-&#39; prefix $ brew tap flowerinthenight/tap $ brew install &lt;toolname&gt; The toolname part will correspond to the filename inside your repository tap.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/homebrew/">Homebrew</a> · <a class="link-secondary" href="/tags/ruby/">Ruby</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-07-30">July 30, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-06-05-master-election-using-kettle/">Using kettle library for master election using distributed locking</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-06-05</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I uploaded a simple library that abstracts the use of distributed locking to elect a master among group of workers at a specified time interval. It’s called kettle. You can find the source code here.
+We’ve been using this library mostly on these two recurring use case patterns:
+Consuming a dynamodbstreams endpoint across multiple containers running in Kubernetes. In this case, the master tracks the dynamic addition/removal of shards of a specific endpoint and distributes those shards to the other worker containers.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/distributed-locking/">Distributed-Locking</a> · <a class="link-secondary" href="/tags/master/">Master</a> · <a class="link-secondary" href="/tags/redis/">Redis</a> · <a class="link-secondary" href="/tags/worker/">Worker</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-06-05">June 5, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-05-26-cors-nginx-k8s/">Adding CORS support to nginx proxy in Kubernetes</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-05-26</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">At work, for a couple of months now, we’ve been using Ambassador as our main API gateway to our k8s services. We also have our own authorization service that uses Ambassador’s AuthService mechanism. Recently, we’ve had services that needed CORS support and although Ambassador has features that support the enabling of CORS, we had to update our authorization service to handle CORS-related requests. Instead of doing this, we tried adding the CORS support at the proxy level (nginx).</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/cors/">Cors</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/nginx/">Nginx</a> · <a class="link-secondary" href="/tags/proxy/">Proxy</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-05-26">May 26, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-04-28-drv2605-umdf-haptic-driver/">UMDF driver code for DRV2605 haptic device</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-04-28</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I uploaded an ancient prototype driver code I used ages ago in testing the DRV2605 haptic device from Texas Instruments. I can’t figure out (and I also don’t have time either) how to make this thing build using the recent versions of Visual Studio. Nonetheless, I’m putting this out there as reference to somebody doing something similar to this project. Source code is here.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/driver/">Driver</a> · <a class="link-secondary" href="/tags/drv2605/">Drv2605</a> · <a class="link-secondary" href="/tags/haptic/">Haptic</a> · <a class="link-secondary" href="/tags/umdf/">Umdf</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-04-28">April 28, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-03-13-ccfltr-updates/">Updates to Camera Class Filter Driver for Windows</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-03-13</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Updated 2019/03/13:
+A pretty good writeup that explains the internals of writing a camera filter driver in Windows can be found here. I’m putting this information out as this repo is one of the references used in the writeup.
+Original post:
+This post is a bit of a departure from my usual golang/cloud-related ramblings. I posted an open-source camera class filter driver for Windows ages ago hoping that it would help someone working on a similar project.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/camera/">Camera</a> · <a class="link-secondary" href="/tags/driver/">Driver</a> · <a class="link-secondary" href="/tags/filter-driver/">Filter-Driver</a> · <a class="link-secondary" href="/tags/wdm/">Wdm</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-03-13">March 13, 2019</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2019-03-09-athena2csv/">Download AWS Athena query results as CSV</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2019-03-09</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I recently uploaded a tool to GitHub that downloads AWS Athena query results as CSV. It’s called athena2csv. You can check out the code here. You might find this useful.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/athena/">Athena</a> · <a class="link-secondary" href="/tags/athena2csv/">Athena2csv</a> · <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/csv/">Csv</a> · <a class="link-secondary" href="/tags/golang/">Golang</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2019-03-09">March 9, 2019</time>
+        </p>
     
 
     
