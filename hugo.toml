@@ -91,11 +91,11 @@ taxonomy = ["atom", "html", "rss"]
 term = ["atom", "html", "rss"]
 
 [params.paige]
-style = "#paige-content > * { margin-left: auto; margin-right: auto; max-width: 60rem; }"
-file_edit_url = "https://github.com/willfaught/paige/edit/master/exampleSite/content/%s"
-file_history_url = "https://github.com/willfaught/paige/commits/master/exampleSite/content/%s"
-site_description = ""
 site_title = "f/t"
+site_description = ""
+style = "#paige-content > * { margin-left: auto; margin-right: auto; max-width: 60rem; }"
+# file_edit_url = "https://github.com/willfaught/paige/edit/master/exampleSite/content/%s"
+# file_history_url = "https://github.com/willfaught/paige/commits/master/exampleSite/content/%s"
 
 [[params.paige.feed.atom.authors]]
 email = "example@example.com"
