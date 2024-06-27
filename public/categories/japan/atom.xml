@@ -16,8 +16,6 @@
     
 
     
-        
-    
 
 
 
@@ -103,68 +101,5 @@
     <title type="html"><![CDATA[Japan · Categories · About]]></title>
     <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>After six or so years living in Japan, I just got mine today. Yeah, I know&hellip;</p>
-<p><a href="https://gaijinpot.com/">GaijinPot</a> has an <a href="https://blog.gaijinpot.com/convenience-store-point-cards/">article</a> about point cards from three of the most common convenience stores in the country. I already have Lawsons Ponta card and Family Marts T-Point ages ago but for some reason, I actually havent heard of 7-11s <a href="https://en.wikipedia.org/wiki/Nanaco">Nanaco</a>. Or maybe I did but I probably didnt bother.</p>
-<p>But now that I have a Seven Bank account, I noticed from their online bank access site an option to register to their point service. Unsurprisingly, they offer Nanaco points to almost all of my bank transactions (deposits, withdrawals, fund transfers, etc.) which I think is brilliant. But I have to have a Nanaco point card in the first place before I can register. It also said that I can get the card from any 7-11 store. I just have to fill up some application form (surely in Japanese). Or, I can also fill up the application form online, print it and submit to any 7-11 store. I went for the later.</p>
-<p><a href="https://www.nanaco-net.jp/index_pc.html">Nanaco official website</a> is in Japanese. So Google Translate is your friend here. My Chrome browser is set to auto-translate so Im good to go. Go to this <a href="https://www.nanaco-net.jp/entry/index02.html">link</a>, scroll down a bit, and press the big red button. It looks like this:</p>
-<p>{% include image.html url=&quot;../../../../images/nanaco1.png&quot; %}</p>
-<p>It will open a new window with some more Japanese instructions. Scroll down to the very bottom and click the left button.</p>
-<p>{% include image.html url=&quot;../../../../images/nanaco2.png&quot; %}</p>
-<p>The next page will be the actual form. You will need to input personal information such as your name, birthday, address (both Japanese and Katakana), phone number, etc. I had a few attempts because the password field only accepts numbers (although Google Translation said &ldquo;alphanumeric&rdquo;. Oh well). Then click the Next button (the only button) at the very bottom. If you got it right, you will receive a confirmation email containing a link to the document to be printed. It will look like this:</p>
-<p>{% include image.html url=&quot;../../../../images/nanaco3.png&quot; %}</p>
-<p>Print it and submit to any 7-11 store. The card will cost you 300 yen. After payment, you will get your card right away.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2016-02-25-apply-nanaco-point-card/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2016-02-25-apply-nanaco-point-card/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[How to apply for a Nanaco point card]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>
