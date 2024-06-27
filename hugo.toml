@@ -1,3 +1,7 @@
+[services]
+  [services.googleAnalytics]
+    ID = 'G-333404550'
+
 baseurl = "https://example.com"
 copyright = "© Flowerinthenight, 2016-2024. All rights reserved."
 enablerobotstxt = true

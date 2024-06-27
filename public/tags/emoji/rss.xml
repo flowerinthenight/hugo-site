@@ -46,7 +46,7 @@
             
 
             
-                <link href="http://localhost:1313/tags/emoji/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="//localhost:1313/tags/emoji/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -56,7 +56,7 @@
             
 
             
-                <link href="http://localhost:1313/tags/emoji/" rel="alternate" type="text/html"/>
+                <link href="//localhost:1313/tags/emoji/" rel="alternate" type="text/html"/>
             
         
             
@@ -64,14 +64,12 @@
             
 
             
-                <link href="http://localhost:1313/tags/emoji/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="//localhost:1313/tags/emoji/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
-        
-            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -84,7 +82,7 @@
             <lastBuildDate>2023-09-18 21:32:40 -0700 -0700</lastBuildDate>
         
 
-        <link>http://localhost:1313/tags/emoji/</link>
+        <link>//localhost:1313/tags/emoji/</link>
 
         
             <managingEditor>example@example.com (John Doe)</managingEditor>
@@ -165,7 +163,7 @@ SOFTWARE.
                 <guid isPermaLink="false">tag:localhost:1313,2023-09-18:/tmp/emoji-support/</guid>
 
                 
-                    <link>http://localhost:1313/tmp/emoji-support/</link>
+                    <link>//localhost:1313/tmp/emoji-support/</link>
                 
 
                 

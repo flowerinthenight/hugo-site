@@ -44,7 +44,7 @@
             
 
             
-                <link href="http://localhost:1313/tags/wireguard/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="//localhost:1313/tags/wireguard/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -54,7 +54,7 @@
             
 
             
-                <link href="http://localhost:1313/tags/wireguard/" rel="alternate" type="text/html"/>
+                <link href="//localhost:1313/tags/wireguard/" rel="alternate" type="text/html"/>
             
         
             
@@ -62,14 +62,12 @@
             
 
             
-                <link href="http://localhost:1313/tags/wireguard/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="//localhost:1313/tags/wireguard/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
-        
-            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -79,10 +77,10 @@
         
 
         
-            <lastBuildDate>2020-03-25 00:00:00 -0700 PDT</lastBuildDate>
+            <lastBuildDate>2020-03-25 00:00:00 +0000 UTC</lastBuildDate>
         
 
-        <link>http://localhost:1313/tags/wireguard/</link>
+        <link>//localhost:1313/tags/wireguard/</link>
 
         
             <managingEditor>example@example.com (John Doe)</managingEditor>

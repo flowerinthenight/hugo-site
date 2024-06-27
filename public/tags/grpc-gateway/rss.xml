@@ -48,7 +48,7 @@
             
 
             
-                <link href="http://localhost:1313/tags/grpc-gateway/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="//localhost:1313/tags/grpc-gateway/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -58,7 +58,7 @@
             
 
             
-                <link href="http://localhost:1313/tags/grpc-gateway/" rel="alternate" type="text/html"/>
+                <link href="//localhost:1313/tags/grpc-gateway/" rel="alternate" type="text/html"/>
             
         
             
@@ -66,14 +66,12 @@
             
 
             
-                <link href="http://localhost:1313/tags/grpc-gateway/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="//localhost:1313/tags/grpc-gateway/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
-        
-            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -83,10 +81,10 @@
         
 
         
-            <lastBuildDate>2021-12-31 00:00:00 -0800 PST</lastBuildDate>
+            <lastBuildDate>2021-12-31 00:00:00 +0000 UTC</lastBuildDate>
         
 
-        <link>http://localhost:1313/tags/grpc-gateway/</link>
+        <link>//localhost:1313/tags/grpc-gateway/</link>
 
         
             <managingEditor>example@example.com (John Doe)</managingEditor>

@@ -65,7 +65,7 @@
     
 
     
-        <icon>http://localhost:1313/</icon>
+        <icon>//localhost:1313/</icon>
     
 
     <id>tag:localhost:1313,0001-01-01:/tags/go/atom.xml</id>
@@ -78,7 +78,7 @@
         
 
         
-            <link href="http://localhost:1313/tags/go/atom.xml" rel="self" type="application/atom+xml"/>
+            <link href="//localhost:1313/tags/go/atom.xml" rel="self" type="application/atom+xml"/>
         
     
         
@@ -88,7 +88,7 @@
         
 
         
-            <link href="http://localhost:1313/tags/go/" rel="alternate" type="text/html"/>
+            <link href="//localhost:1313/tags/go/" rel="alternate" type="text/html"/>
         
     
         
@@ -96,24 +96,22 @@
         
 
         
-            <link href="http://localhost:1313/tags/go/rss.xml" rel="alternate" type="application/rss+xml"/>
+            <link href="//localhost:1313/tags/go/rss.xml" rel="alternate" type="application/rss+xml"/>
         
     
 
     
 
     
-        <logo>http://localhost:1313/</logo>
+        <logo>//localhost:1313/</logo>
     
 
-    
-        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
     
 
     
 
     <title type="html"><![CDATA[Go · Tags · About]]></title>
-    <updated>2024-05-30T00:00:00-07:00</updated>
+    <updated>2024-05-30T00:00:00Z</updated>
 
     
 </feed>

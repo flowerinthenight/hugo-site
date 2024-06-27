@@ -52,7 +52,7 @@
 <meta content="#0d6efd" name="theme-color">
 <meta content="width=device-width, initial-scale=1" name="viewport">
 
-<meta property="og:url" content="http://localhost:1313/blog/">
+<meta property="og:url" content="//localhost:1313/blog/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="flowerinthenight">
   <meta property="og:locale" content="en">
@@ -178,9 +178,9 @@
 
 
 
-    <link href="http://localhost:1313/blog/atom.xml" rel="alternate" type="application/atom+xml">
+    <link href="//localhost:1313/blog/atom.xml" rel="alternate" type="application/atom+xml">
 
-    <link href="http://localhost:1313/blog/rss.xml" rel="alternate" type="application/rss+xml">
+    <link href="//localhost:1313/blog/rss.xml" rel="alternate" type="application/rss+xml">
 
 
     
@@ -240,6 +240,10 @@
     border-right: 0;
     margin-bottom: 0;
     padding: 0;
+}
+
+#paige-content > * {
+    margin-bottom: 1rem;
 }
 
 blockquote {
@@ -476,6 +480,8 @@ table {
 }
 
 
+    #paige-content > * { margin-left: auto; margin-right: auto; max-width: 60rem; }
+
 
 
 </style>
@@ -500,7 +506,7 @@ table {
         
 
 
-    <p class="display-1 fw-bold mb-2 text-center">f/t</p>
+    <p class="display-1 fw-bold mb-2 text-center" id="paige-site-title">f/t</p>
 
 
 
@@ -715,8 +721,7 @@ table {
 
     
         
-            
-            
+    
 
     
         
@@ -934,116 +939,222 @@ table {
                 
             
         
-    
+            
+                
+            
         
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
             
+        
+            
                 
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
             
                 
             
@@ -1093,22 +1204,21 @@ table {
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-04-10-trying-bash-on-windows/">Trying out Bash on Windows</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2021-07-31-extracting-grpc-funcs-to-list/">Extract gRPC-generated functions to a list</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2021-07-31</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">Downloading…
-{% include image.html url=&#34;../../../../images/win10preview1.png&#34; %}
-And here we go…
-{% include image.html url=&#34;../../../../images/win10preview2.png&#34; %}
-Looking good so far.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">This might be hacky and there might be a proper way to do this but recently, I needed to generate all the functions’ gRPC-generated full names from our protobuf definitions. This is part of our RBAC module that needs to filter gRPC function calls. I got the list from our generated Go client using the following command(s):
+Main command: $ grep -o -R -i -E &#39;&#34;/blueapi..*&#34;&#39; . | awk -F&#39;:&#39; &#39;{gsub(/&#34;/, &#34;&#34;, $2); print &#34;-&#34;, substr($2, 2);}&#39; | sort | uniq # Actual commands; save as yaml: $ echo &#34;functions:&#34; &gt; /tmp/funcs.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/japan/">Japan</a>
+            <a class="link-secondary" href="/tags/cmdline/">Cmdline</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/grpc/">Grpc</a> · <a class="link-secondary" href="/tags/grpc-gateway/">Grpc-Gateway</a>
         </p>
     
 
@@ -1116,6 +1226,10 @@ Looking good so far.</p>
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-07-31">July 31, 2021</time>
+        </p>
     
 
     
@@ -1161,21 +1275,21 @@ Looking good so far.</p>
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2018-05-06-xenial-to-bionic-lts-server-upgrade-zfs/">Ubuntu 16.04 LTS to Ubuntu 18.04 LTS</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2021-06-30-hacky-way-update-go-modules/">A hacky way to update problematic Go modules</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2021-06-30</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">I just upgraded my home server from Ubuntu 16.04 LTS to 18.04 LTS without any problems so far. For context, this server runs a Samba file server using ZFS. Although after update, I had to run the following command to my pool:
-{% highlight shell %}
-pool name is ‘m0’ $ sudo zpool upgrade m0 {% endhighlight %}
-By the way, at the time of this writing, Ubuntu Server update is not yet available (I think you have to wait for 18.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">The only options for updating modules that I’m aware so far are a) go get -u all, and b) specific modules, i.e. go get -u domain.com/module[@v1.2.3]. For problematic ones, my only option is b), which is a bit time consuming. There must be some other way out there that I’m not aware of but at the moment, I use this simple command:
+$ cat go.mod | grep -i &#39;github&#39; | grep -i -v &#39;indirect&#39; | awk &#39;{print $1}&#39; &gt; update; \ while read -r v; do go get -u $v; done &lt; update; rm update</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/bionic/">Bionic</a> · <a class="link-secondary" href="/tags/ubuntu/">Ubuntu</a> · <a class="link-secondary" href="/tags/upgrade/">Upgrade</a> · <a class="link-secondary" href="/tags/xenial/">Xenial</a>
+            <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/modules/">Modules</a> · <a class="link-secondary" href="/tags/update/">Update</a>
         </p>
     
 
@@ -1183,6 +1297,10 @@ By the way, at the time of this writing, Ubuntu Server update is not yet availab
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-06-30">June 30, 2021</time>
+        </p>
     
 
     
@@ -1228,20 +1346,22 @@ By the way, at the time of this writing, Ubuntu Server update is not yet availab
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2017-04-20-apc-as-fifo-queue/">Using APC as FIFO queue in Windows</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2021-05-31-switching-different-go-versions/">Switching to different Go versions</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2021-05-31</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">In this way, we can implement a FIFO queue without using explicit locking/synchronization for enqueueing/dequeueing.
-For self reference:
-{% gist 48d81f079d64dabbad7fa80928159461 %}</p>
+        <p class="fst-italic mb-0 paige-summary text-center">I use this handy little script to switch between different Go (golang) versions:
+#!/bin/bash $1 version &amp;&gt;/dev/null if [ $? -eq 0 ]; then ln -sf $GOPATH/bin/$1 $HOME/.local/bin/go go version exit 0 fi go get golang.org/dl/$1 &amp;&amp; $1 download ln -sf $GOPATH/bin/$1 $HOME/.local/bin/go go version Saving this as an executable script goset, I could now switch to different versions like so:
+$ goset go1.16.4 go version go1.16.4 linux/amd64</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/c&#43;&#43;/">C&#43;&#43;</a> · <a class="link-secondary" href="/tags/fifo/">Fifo</a> · <a class="link-secondary" href="/tags/queue/">Queue</a>
+            <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/switch/">Switch</a> · <a class="link-secondary" href="/tags/versions/">Versions</a>
         </p>
     
 
@@ -1249,6 +1369,10 @@ For self reference:
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-05-31">May 31, 2021</time>
+        </p>
     
 
     
@@ -1294,23 +1418,21 @@ For self reference:
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2017-09-20-docker-etwlogs/">Using Docker’s ETW log driver in Windows</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2021-04-30-authenticate-aws-sdk-golang-v2/">Authenticating Go AWS SDK v2 using assume roles</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2021-04-30</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">In Docker’s ETW logging driver doc, it uses the tool logman to view the logs. In this article, I will show you how to use mftrace to view Docker ETW logs in real-time.
-First, here’s a simple application written in Go that logs to STDERR every second.
-{% gist 5ebeaaa38a59f7ce314a0b96b4357d4a %}
-Next, let’s create a Docker image (Windows) using the Dockerfile below.
-{% gist 9935cfaf68d8de5b5da2d5c4b15b8d85 %}
-{% highlight shell %}</p>
+        <p class="fst-italic mb-0 paige-summary text-center">For self reference:
+To authenticate the Golang AWS SDK v2 using assume roles, refer to the following code snippets:</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/docker/">Docker</a> · <a class="link-secondary" href="/tags/etw/">Etw</a> · <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/windows/">Windows</a>
+            <a class="link-secondary" href="/tags/assume/">Assume</a> · <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/roles/">Roles</a> · <a class="link-secondary" href="/tags/sdk/">Sdk</a> · <a class="link-secondary" href="/tags/v2/">V2</a>
         </p>
     
 
@@ -1318,6 +1440,10 @@ Next, let’s create a Docker image (Windows) using the Dockerfile below.
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-04-30">April 30, 2021</time>
+        </p>
     
 
     
@@ -1363,19 +1489,21 @@ Next, let’s create a Docker image (Windows) using the Dockerfile below.
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2017-12-01-golang-cobra-glog/">Using glog together with cobra in golang</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2021-03-27-minimalist-conky/">Updated config for Minimalis conky</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2021-03-27</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">If you have been programming with golang, you’ve probably heard of cobra. I use it extensively at work and also in my personal projects.
-Recently though, I’ve been using glog more and more. And I quite like it. The thing is, it has a couple of flag definitions in its init() function using golang’s builtin flag library. And I wanted to include those flags into cobra’s flag definitions. This is how I did it.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">I am a fan of the Minimalis conky config for quite some time now. I’ve tweaked it a little bit due to the original config not displaying some of the information. Mind you, my system is Linux-based (Pop!_OS) using wired connection only, no WIFI, so I’ve removed the WIFI section and replaced it with the wired one. Here’s a screenshot of it from my desktop.
+The full configuration can be found here, in case you’re interested.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/cobra/">Cobra</a> · <a class="link-secondary" href="/tags/glog/">Glog</a> · <a class="link-secondary" href="/tags/golang/">Golang</a>
+            <a class="link-secondary" href="/tags/conky/">Conky</a> · <a class="link-secondary" href="/tags/minimalis/">Minimalis</a>
         </p>
     
 
@@ -1384,9 +1512,13 @@ Recently though, I’ve been using glog more and more. And I quite like it. The 
     
 
     
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-03-27">March 27, 2021</time>
+        </p>
+    
 
     
-        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
     
 </div>
 
@@ -1428,21 +1560,20 @@ Recently though, I’ve been using glog more and more. And I quite like it. The 
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2019-02-05-golang-cobra-klog/">Using k8s.io/klog together with cobra in golang</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2021-02-21-update-spacemacs-cmdline/">Update Spacemacs from command line</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2021-02-21</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">This post is somehow related to a previous article about using glog together with cobra. This time, we will be using klog which is a Kubernetes fork of glog.
-{% gist c1d3267a6e5cc26b9025b4eed74ce00a %}
-{% highlight shell %}
-run the -h command $ ./cobraklog -h Usage of ./cobraklog: -alsologtostderr log to standard error as well as files -log_backtrace_at value when logging hits line file:N, emit a stack trace -log_dir string If non-empty, write log files in this directory -log_file string If non-empty, use this log file -logtostderr log to standard error instead of files -skip_headers If true, avoid header prefixes in the log messages -stderrthreshold value logs at or above this threshold go to stderr (default 2) -v value log level for V logs -vmodule value comma-separated list of pattern=N settings for file-filtered logging {% endhighlight %}</p>
+        <p class="fst-italic mb-0 paige-summary text-center">Reference: Ever since I’ve started using Spacemacs on Linux, I’ve been using this simple script as a command alias to update Spacemacs using the command line. alias upe=&#39;git -C ~/.emacs.d/ pull &amp;&amp; \ emacs –batch -l ~/.emacs.d/init.el \ –eval=&#34;(configuration-layer/update-packages t)&#34; 2&gt;&amp;1 | \ tee /tmp/emacs-update &amp;&amp; \ grep -i -E &#34;Found.*to.update.&#34; /tmp/emacs-update &amp;&amp; \ emacs&#39; I use the develop branch of Spacemacs, thus the update using git. Then it will check if there are package updates and if so, it will relaunch Spacemacs to actually install the updates.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/cobra/">Cobra</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/klog/">Klog</a>
+            <a class="link-secondary" href="/tags/emacs/">Emacs</a> · <a class="link-secondary" href="/tags/spacemacs/">Spacemacs</a>
         </p>
     
 
@@ -1450,6 +1581,81 @@ run the -h command $ ./cobraklog -h Usage of ./cobraklog: -alsologtostderr log t
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-02-21">February 21, 2021</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2021-01-30-vim-emacs/">From Vim to Emacs</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2021-01-30</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">It’s been a year since I’ve transitioned, sort of, from Vim to Emacs, so I thought I’d write something about it.
+Vim has been my primary editor of choice for many years. I think I started Vim around 2003 on a RedHat box writing x86 assembly. Ever since, throughout my working carrier, whether it’s on Windows, OSX, or Linux, it’s been always Vim for me. Yes, even on Windows where the experience is really not that good, I still use Vim.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/emacs/">Emacs</a> · <a class="link-secondary" href="/tags/spacemacs/">Spacemacs</a> · <a class="link-secondary" href="/tags/vim/">Vim</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2021-01-30">January 30, 2021</time>
+        </p>
     
 
     
@@ -1495,19 +1701,20 @@ run the -h command $ ./cobraklog -h Usage of ./cobraklog: -alsologtostderr log t
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2019-01-31-nginx-basicauth-k8s/">Using nginx basic authentication in Kubernetes</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-12-26-spanner-distributed-lock/">A Spanner-based distributed locking library</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2020-12-26</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">This post is somewhat related to a previous post about accessing k8s services using nginx reverse proxy. Let’s try to add a simple basic authentication to these services at the proxy level. Now, this may come in handy in non-production environments but at the very least, make sure that you are doing this over HTTPS as basic authentication credentials are not encrypted.
-We will be using the htpasswd tool to generate our passwords.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">I uploaded a yet another distributed locking library, this time, based on Cloud Spanner and TrueTime technology. It’s called spindle and you can find the code here. Maybe it will be useful to anybody out there.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/basic-auth/">Basic-Auth</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/nginx/">Nginx</a>
+            <a class="link-secondary" href="/tags/distributed-lock/">Distributed-Lock</a> · <a class="link-secondary" href="/tags/distributed-locking/">Distributed-Locking</a> · <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/spanner/">Spanner</a>
         </p>
     
 
@@ -1515,139 +1722,155 @@ We will be using the htpasswd tool to generate our passwords.</p>
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-12-26">December 26, 2020</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-10-31-oops/">An automation-friendly, highly-scalable, and scriptable testing tool</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2020-10-31</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I uploaded an automation-friendly, highly-scalable, and scriptable API/generic testing tool built to run on Kubernetes. It’s called oops and you can find the code here. Maybe it will be useful to anybody out there.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/api/">Api</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/testing/">Testing</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-10-31">October 31, 2020</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2020-09-11-autobackup-spanner-k8s/">Automate Spanner backup using Kubernetes CronJob</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2020-09-11</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">As of this writing, GCP doesn’t have an option to create Spanner backups automatically. This could be available when you’re reading this in the future. At the moment, however, if you’re using Kubernetes, you can utilize CronJob to do a scheduled backup.
+Here’s a sample CronJob deployment that uses gcloud to create the backups. First, you need to create a service account that has permissions to create Spanner backups. Once you have downloaded the JSON file for the service account, store it as a Kubernetes Secret.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/backup/">Backup</a> · <a class="link-secondary" href="/tags/cronjob/">Cronjob</a> · <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/spanner/">Spanner</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2020-09-11">September 11, 2020</time>
+        </p>
     
 
     
         <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2017-10-30-nativestore/">Using OS specific stores for storing CLI credentials for golang apps</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">This post is to show a simple way of using Docker’s credential helper package to utilize the system’s native credential store as storage for your Golang-based CLI applications’ login credentials. This means Keychain for OSX, wincred for Windows, and pass for Linux. We use pass here since secretservice, although supported, doesn’t work out of the box in headless servers.
-Here’s a simple implementation of our Set, Get, and Del functions.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/keychain/">Keychain</a> · <a class="link-secondary" href="/tags/nativestore/">Nativestore</a> · <a class="link-secondary" href="/tags/pass/">Pass</a> · <a class="link-secondary" href="/tags/wincred/">Wincred</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2017-06-30-amqp-wrapper/">Wrapper for amqp library for RabbitMQ</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">I uploaded a simple wrapper to streadway/amqp library for RabbitMQ with support for auto reconnections. This is a simplified version of what I’m using in production.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/amqp/">Amqp</a> · <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/rabbitmq/">Rabbitmq</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
     
 </div>
 
@@ -1665,21 +1888,25 @@ Here’s a simple implementation of our Set, Get, and Del functions.</p>
                 <nav aria-label="Page list navigation">
                     <ul class="pagination">
                         
-                            
-                                <li class="page-item">
-                                    <a aria-label="First" class="page-link" href="/blog/"><span aria-hidden="true">&#x2B05;</span></a>
-                                </li>
-                            
+                            <li class="page-item ">
+                                <a aria-label="First" class="page-link" href="/blog/"><span aria-hidden="true">&laquo;</span></a>
+                            </li>
 
-                            
-                                <li class="page-item">
-                                    <a aria-label="Previous" class="page-link" href="/blog/page/2/"><span aria-hidden="true">&larr;</span></a>
-                                </li>
-                            
+                            <li class="page-item ">
+                                <a  aria-label="Previous"  class="page-link"  href="/blog/page/2/" >
+                                    <span aria-hidden="true">&lsaquo;</span>
+                                </a>
+                            </li>
 
-                            
+                            <li class="page-item ">
+                                <a  aria-label="Next"  class="page-link"  href="/blog/page/4/" >
+                                    <span aria-hidden="true">&rsaquo;</span>
+                                </a>
+                            </li>
 
-                            
+                            <li class="page-item ">
+                                <a aria-label="Last" class="page-link" href="/blog/page/11/"><span aria-hidden="true">&raquo;</span></a>
+                            </li>
                         
                     </ul>
                 </nav>
@@ -1706,11 +1933,7 @@ Here’s a simple implementation of our Set, Get, and Del functions.</p>
 
 
     
-        
-    
 
-    
-        
     
 
 
@@ -1720,23 +1943,7 @@ Here’s a simple implementation of our Set, Get, and Del functions.</p>
     
 
     
-    <div class="mb-3" id="paige-file">
-        
-            <p class="mb-0 text-center" id="paige-file-edit">
-                <a class="link-secondary" href="https://github.com/willfaught/paige/edit/master/exampleSite/content/blog/_index.md">Edit this page</a>
-            </p>
-        
 
-        
-            <p class="mb-0 text-center" id="paige-file-history">
-                <a class="link-secondary" href="https://github.com/willfaught/paige/commits/master/exampleSite/content/blog/_index.md">Edit history</a>
-            </p>
-        
-    </div>
-    
-
-    
-        <p class="mb-0 text-center text-secondary" id="paige-copyright">© Flowerinthenight, 2016-2024. All rights reserved.</p>
     
 
     <p class="mb-0 text-center" id="paige-credit">
@@ -1808,6 +2015,28 @@ Here’s a simple implementation of our Set, Get, and Del functions.</p>
 
 
     
+
+
+    
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-333404550"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-333404550');
+        }
+      </script>
+    
+  
+
 
 
 

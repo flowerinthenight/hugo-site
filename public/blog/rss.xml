@@ -474,7 +474,7 @@
             
 
             
-                <link href="http://localhost:1313/blog/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="//localhost:1313/blog/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -484,7 +484,7 @@
             
 
             
-                <link href="http://localhost:1313/blog/" rel="alternate" type="text/html"/>
+                <link href="//localhost:1313/blog/" rel="alternate" type="text/html"/>
             
         
             
@@ -492,14 +492,12 @@
             
 
             
-                <link href="http://localhost:1313/blog/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="//localhost:1313/blog/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
-        
-            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -509,10 +507,10 @@
         
 
         
-            <lastBuildDate>2024-05-30 00:00:00 -0700 PDT</lastBuildDate>
+            <lastBuildDate>2024-05-30 00:00:00 +0000 UTC</lastBuildDate>
         
 
-        <link>http://localhost:1313/blog/</link>
+        <link>//localhost:1313/blog/</link>
 
         
             <managingEditor>example@example.com (John Doe)</managingEditor>

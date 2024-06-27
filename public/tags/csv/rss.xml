@@ -44,7 +44,7 @@
             
 
             
-                <link href="http://localhost:1313/tags/csv/atom.xml" rel="self" type="application/atom+xml"/>
+                <link href="//localhost:1313/tags/csv/atom.xml" rel="self" type="application/atom+xml"/>
             
         
             
@@ -54,7 +54,7 @@
             
 
             
-                <link href="http://localhost:1313/tags/csv/" rel="alternate" type="text/html"/>
+                <link href="//localhost:1313/tags/csv/" rel="alternate" type="text/html"/>
             
         
             
@@ -62,14 +62,12 @@
             
 
             
-                <link href="http://localhost:1313/tags/csv/rss.xml" rel="alternate" type="application/rss+xml"/>
+                <link href="//localhost:1313/tags/csv/rss.xml" rel="alternate" type="application/rss+xml"/>
             
         
 
         
 
-        
-            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
         
 
         <description>Recent content</description>
@@ -79,10 +77,10 @@
         
 
         
-            <lastBuildDate>2019-03-09 00:00:00 -0800 PST</lastBuildDate>
+            <lastBuildDate>2019-03-09 00:00:00 +0000 UTC</lastBuildDate>
         
 
-        <link>http://localhost:1313/tags/csv/</link>
+        <link>//localhost:1313/tags/csv/</link>
 
         
             <managingEditor>example@example.com (John Doe)</managingEditor>
