@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2021-06-30" name="description">
+
 
 
     <meta content="golang, modules, update" name="keywords">
@@ -63,11 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2021-06-30-hacky-way-update-go-modules/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="A hacky way to update problematic Go modules">
-  <meta property="og:description" content="The only options for updating modules that I’m aware so far are a) go get -u all, and b) specific modules, i.e. go get -u domain.com/module[@v1.2.3]. For problematic ones, my only option is b), which is a bit time consuming. There must be some other way out there that I’m not aware of but at the moment, I use this simple command:
-{% highlight shell %} $ cat go.mod | grep -i ‘github’ | grep -i -v ‘indirect’ | awk ‘{print $1}’ &gt; update; while read -r v; do go get -u $v; done &lt; update; rm update {% endhighlight %}">
+  <meta property="og:description" content="2021-06-30">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2021-06-30T00:00:00-07:00">
+    <meta property="article:modified_time" content="2021-06-30T00:00:00-07:00">
     <meta property="article:tag" content="Golang">
     <meta property="article:tag" content="Modules">
     <meta property="article:tag" content="Update">
@@ -75,8 +78,7 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="A hacky way to update problematic Go modules">
-  <meta name="twitter:description" content="The only options for updating modules that I’m aware so far are a) go get -u all, and b) specific modules, i.e. go get -u domain.com/module[@v1.2.3]. For problematic ones, my only option is b), which is a bit time consuming. There must be some other way out there that I’m not aware of but at the moment, I use this simple command:
-{% highlight shell %} $ cat go.mod | grep -i ‘github’ | grep -i -v ‘indirect’ | awk ‘{print $1}’ &gt; update; while read -r v; do go get -u $v; done &lt; update; rm update {% endhighlight %}">
+  <meta name="twitter:description" content="2021-06-30">
 
 
 
@@ -694,6 +696,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2021-06-30</p>
+    
 
     
         <div class="mb-3">
@@ -707,6 +711,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2021-06-30">June 30, 2021</time>
+                </p>
             
 
             
@@ -730,10 +738,9 @@ table {
 
 
     <div class="mw-100" id="paige-content"><p>The only options for updating modules that I&rsquo;m aware so far are a) <code>go get -u all</code>, and b) specific modules, i.e. <code>go get -u domain.com/module[@v1.2.3]</code>. For problematic ones, my only option is b), which is a bit time consuming. There must be some other way out there that I&rsquo;m not aware of but at the moment, I use this simple command:</p>
-<p>{% highlight shell %}
-$ cat go.mod | grep -i &lsquo;github&rsquo; | grep -i -v &lsquo;indirect&rsquo; | awk &lsquo;{print $1}&rsquo; &gt; update; <br>
-while read -r v; do go get -u $v; done &lt; update; rm update
-{% endhighlight %}</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ cat go.mod <span class="p">|</span> grep -i <span class="s1">&#39;github&#39;</span> <span class="p">|</span> grep -i -v <span class="s1">&#39;indirect&#39;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span> &gt; update<span class="p">;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  <span class="k">while</span> <span class="nb">read</span> -r v<span class="p">;</span> <span class="k">do</span> go get -u <span class="nv">$v</span><span class="p">;</span> <span class="k">done</span> &lt; update<span class="p">;</span> rm update
+</span></span></code></pre></div><br>
 </div>
 
 
@@ -813,13 +820,13 @@ while read -r v; do go get -u $v; done &lt; update; rm update
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-10-07-cron-like-windows-service-go/">A simple cron-like Windows service</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2018-02-06-golang-monorepo/">A golang-based monorepo example</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2021-07-31-extracting-grpc-funcs-to-list/">Extract gRPC-generated functions to a list</a> &rarr;
                 </p>
             
         </div>

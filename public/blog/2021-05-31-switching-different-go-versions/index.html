@@ -45,6 +45,8 @@
 
 
 
+    <meta content="2021-05-31" name="description">
+
 
 
     <meta content="golang, switch, versions" name="keywords">
@@ -63,14 +65,12 @@
 <meta property="og:url" content="http://localhost:1313/blog/2021-05-31-switching-different-go-versions/">
   <meta property="og:site_name" content="flowerinthenight">
   <meta property="og:title" content="Switching to different Go versions">
-  <meta property="og:description" content="I use this handy little script to switch between different Go (golang) versions:
-{% highlight shell %} #!/bin/bash $1 version &amp;&gt;/dev/null if [ $? -eq 0 ]; then ln -sf $GOPATH/bin/$1 $HOME/.local/bin/go go version exit 0 fi
-go get golang.org/dl/$1 &amp;&amp; $1 download ln -sf $GOPATH/bin/$1 $HOME/.local/bin/go go version {% endhighlight %}
-Saving this as an executable script goset, I could now switch to different versions like so:
-{% highlight shell %} $ goset go1.">
+  <meta property="og:description" content="2021-05-31">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2021-05-31T00:00:00-07:00">
+    <meta property="article:modified_time" content="2021-05-31T00:00:00-07:00">
     <meta property="article:tag" content="Golang">
     <meta property="article:tag" content="Versions">
     <meta property="article:tag" content="Switch">
@@ -78,11 +78,7 @@ Saving this as an executable script goset, I could now switch to different versi
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Switching to different Go versions">
-  <meta name="twitter:description" content="I use this handy little script to switch between different Go (golang) versions:
-{% highlight shell %} #!/bin/bash $1 version &amp;&gt;/dev/null if [ $? -eq 0 ]; then ln -sf $GOPATH/bin/$1 $HOME/.local/bin/go go version exit 0 fi
-go get golang.org/dl/$1 &amp;&amp; $1 download ln -sf $GOPATH/bin/$1 $HOME/.local/bin/go go version {% endhighlight %}
-Saving this as an executable script goset, I could now switch to different versions like so:
-{% highlight shell %} $ goset go1.">
+  <meta name="twitter:description" content="2021-05-31">
 
 
 
@@ -700,6 +696,8 @@ table {
     
 
     
+        <p class="lead text-center" id="paige-description">2021-05-31</p>
+    
 
     
         <div class="mb-3">
@@ -713,6 +711,10 @@ table {
 
             
 
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2021-05-31">May 31, 2021</time>
+                </p>
             
 
             
@@ -736,23 +738,21 @@ table {
 
 
     <div class="mw-100" id="paige-content"><p>I use this handy little script to switch between different Go (golang) versions:</p>
-<p>{% highlight shell %}
-#!/bin/bash
-$1 version &amp;&gt;/dev/null
-if [ $? -eq 0 ]; then
-ln -sf $GOPATH/bin/$1 $HOME/.local/bin/go
-go version
-exit 0
-fi</p>
-<p>go get golang.org/dl/$1 &amp;&amp; $1 download
-ln -sf $GOPATH/bin/$1 $HOME/.local/bin/go
-go version
-{% endhighlight %}</p>
-<p>Saving this as an executable script <code>goset</code>, I could now switch to different versions like so:</p>
-<p>{% highlight shell %}
-$ goset go1.16.4
-go version go1.16.4 linux/amd64
-{% endhighlight %}</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="nv">$1</span> version <span class="p">&amp;</span>&gt;/dev/null
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> -eq <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    ln -sf <span class="nv">$GOPATH</span>/bin/<span class="nv">$1</span> <span class="nv">$HOME</span>/.local/bin/go
+</span></span><span class="line"><span class="cl">    go version
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">go get golang.org/dl/<span class="nv">$1</span> <span class="o">&amp;&amp;</span> <span class="nv">$1</span> download
+</span></span><span class="line"><span class="cl">ln -sf <span class="nv">$GOPATH</span>/bin/<span class="nv">$1</span> <span class="nv">$HOME</span>/.local/bin/go
+</span></span><span class="line"><span class="cl">go version
+</span></span></code></pre></div><p>Saving this as an executable script <code>goset</code>, I could now switch to different versions like so:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ goset go1.16.4
+</span></span><span class="line"><span class="cl">go version go1.16.4 linux/amd64
+</span></span></code></pre></div><br>
 </div>
 
 
@@ -832,13 +832,13 @@ go version go1.16.4 linux/amd64
         <div class="mb-3" id="paige-prev-next">
             
                 <p class="mb-0 text-center text-secondary" id="paige-prev">
-                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-08-22-syslog-target-go/">Syslog as target in Go logs</a>
+                    &larr; <a class="link-secondary" href="http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup `git` for my WordPress installation in BlueHost</a>
                 </p>
             
 
             
                 <p class="mb-0 text-center text-secondary" id="paige-next">
-                    <a class="link-secondary" href="http://localhost:1313/blog/2021-12-31-support-any-grpc-gateway-separate-process/">Support the &#39;Any&#39; protobuf type from an external grpc-gateway process</a> &rarr;
+                    <a class="link-secondary" href="http://localhost:1313/blog/2021-06-30-hacky-way-update-go-modules/">A hacky way to update problematic Go modules</a> &rarr;
                 </p>
             
         </div>

@@ -1,17 +1,23 @@
 ---
-layout: post
 title: "Download the latest Github release using command line"
-location: "Japan"
+description: "2022-01-17"
+date: "2022-01-17"
+paige:
+  feed:
+    hide_page: true
 tags: [cmdline, download, github, release]
+weight: 1
 ---
 
-_For personal reference:_
+For personal reference:
 
 Download the latest GitHub Releases asset using common command line tools:
 
-{% highlight shell %}
+```sh
 # Update the url accordingly. The `uname | awk` subcmds will output 'linux'|'darwin'.
 $ curl -s https://api.github.com/repos/alphauslabs/bluectl/releases/latest | \
   jq -r ".assets[] | select(.name | contains(\"$(uname -s | awk '{print tolower($0)}')\")) | .browser_download_url" | \
   wget -i -
-{% endhighlight %}
+```
+
+<br>

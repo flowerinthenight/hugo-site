@@ -137,194 +137,30 @@
     
 
     
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
 
     
 
     
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
 
     
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
-
-    
-        
-    
-
-    
 
-    
-        
     
 
     
 
     
-        
-    
 
     
 
-    
-        
     
 
     
 
     
-        
-    
 
     
 
     
-        
-    
 
     
 
@@ -332,8 +168,6 @@
 
     
 
-    
-        
     
 
     
@@ -518,6 +352,154 @@
 
     
         
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+
     
 
     
@@ -2361,52 +2343,6 @@ $ docker run -d &ndash;log-driver=etwlogs &ndash;name demoapp demoapp:latest
                 
 
                 
-                    <description><![CDATA[<p>I am a fan of the <a href="https://www.gnome-look.org/p/1112273/">Minimalis</a> <a href="https://github.com/brndnmtthws/conky">conky</a> config for quite some time now. I&rsquo;ve tweaked it a little bit due to the original config not displaying some of the information. Mind you, my system is Linux-based (Pop!_OS) using wired connection only, no WIFI, so I&rsquo;ve removed the WIFI section and replaced it with the wired one. Here&rsquo;s a screenshot of it from my desktop.</p>
-<p><img alt="conky" src="https://bn1302files.storage.live.com/y4m2kfcOnlwKVRH5Gp1n5-ws20iU6M-O0BFHpBQ07D901QSt5XWZg5QTFFm6VBEyW7zYdeQnlYISyjFNQVRXPWP21yQKi8xQW8wBQE3Wbh0IXoQ_1AgJ4fVH0_rpxU09pCWdhqvfYjoxkmfe0iRVAOb88NWGZio78XO9Xt235l0D2sL6Nh8h-ebBb0OTbOB3yrc?width=826&height=1087&cropmode=none"></p>
-<p>The full configuration can be found <a href="https://github.com/flowerinthenight/.files/blob/master/conky.conf">here</a>, in case you&rsquo;re interested. Changes as far as I can remember are the addition of additional CPU cores, both CPU and GPU temperatures, processes, and network.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-03-27-minimalist-conky/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2021-03-27-minimalist-conky/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Updated config for Minimalis conky</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
                     <description><![CDATA[<p>Updated 2020/01/27:</p>
 <ul>
 <li>Support for forwarding to deployments and services</li>
@@ -2725,120 +2661,6 @@ tail -f /var/log/syslog
 
                 
                     <title>Syslog as target in Go logs</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I use this handy little script to switch between different Go (golang) versions:</p>
-<p>{% highlight shell %}
-#!/bin/bash
-$1 version &amp;&gt;/dev/null
-if [ $? -eq 0 ]; then
-ln -sf $GOPATH/bin/$1 $HOME/.local/bin/go
-go version
-exit 0
-fi</p>
-<p>go get golang.org/dl/$1 &amp;&amp; $1 download
-ln -sf $GOPATH/bin/$1 $HOME/.local/bin/go
-go version
-{% endhighlight %}</p>
-<p>Saving this as an executable script <code>goset</code>, I could now switch to different versions like so:</p>
-<p>{% highlight shell %}
-$ goset go1.16.4
-go version go1.16.4 linux/amd64
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-05-31-switching-different-go-versions/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2021-05-31-switching-different-go-versions/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Switching to different Go versions</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>This is just a quick one.</p>
-<p>I had some trouble making the <a href="https://developers.google.com/protocol-buffers/docs/proto3#any"><code>Any</code></a> protobuf type work when running <a href="https://github.com/grpc-ecosystem/grpc-gateway"><code>grpc-gateway</code></a> from a separate process with the gateway throwing an unknown message type error. A quick fix for this is to import the generated <code>pb.go</code> file to your proxy source. Something like:</p>
-<p>{% highlight go %}
-package main</p>
-<p>import (
-&hellip;</p>
-<pre><code>_ &quot;github.com/username/pkgwithpbgo&quot;
-</code></pre>
-<p>)
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-12-31-support-any-grpc-gateway-separate-process/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2021-12-31-support-any-grpc-gateway-separate-process/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Support the ‘Any’ protobuf type from an external grpc-gateway process</title>
                 
             </item>
         
@@ -3448,57 +3270,6 @@ set -g mode-keys vi</p>
 
                 
                     <title>Sharing my .tmux.conf</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>This is just a quick one.</p>
-<p>Although I use <a href="https://wiki.gnome.org/Apps/Clocks">Gnome Clocks</a> occassionally, most of the time I set an alarm via the commandline.</p>
-<p>{% highlight shell %}</p>
-<h1 id="os-is-pop_os-using-vlc">OS is POP_OS!, using VLC:</h1>
-<p>$ sleep 10m &amp;&amp; <br>
-cvlc ~/alarm.mp3 &ndash;play-and-exit &amp;&amp; <br>
-notify-send &lsquo;alarm done&rsquo;
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-11-08-alarm-from-cmdline/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2021-11-08-alarm-from-cmdline/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Setting alarm from commandline</title>
                 
             </item>
         
@@ -4653,59 +4424,6 @@ UUID=996a1b79-bf22-49fd-a3d1-33eab2708cfb /media/myserver ext4 defaults 0 0
                 
 
                 
-                    <description><![CDATA[<p>This might be hacky and there might be a proper way to do this but recently, I needed to generate all the functions&rsquo; gRPC-generated full names from our protobuf definitions. This is part of our RBAC module that needs to filter gRPC function calls. I got the list from our <a href="https://github.com/alphauslabs/blue-sdk-go">generated Go client</a> using the following command(s):</p>
-<p>{% highlight shell %}</p>
-<h1 id="main-command">Main command:</h1>
-<p>$ grep -o -R -i -E &lsquo;&quot;/blueapi..*&quot;&rsquo; . | awk -F&rsquo;:&rsquo; &lsquo;{gsub(/&quot;/, &ldquo;&rdquo;, $2); print &ldquo;-&rdquo;, substr($2, 2);}&rsquo; | sort | uniq</p>
-<h1 id="actual-commands-save-as-yaml">Actual commands; save as yaml:</h1>
-<p>$ echo &ldquo;functions:&rdquo; &gt; /tmp/funcs.yaml
-$ grep -o -R -i -E &lsquo;&quot;/blueapi..*&quot;&rsquo; . | awk -F&rsquo;:&rsquo; &lsquo;{gsub(/&quot;/, &ldquo;&rdquo;, $2); print &ldquo;-&rdquo;, substr($2, 2);}&rsquo; | <br>
-sort | uniq &raquo; /tmp/funcs.yaml
-{% endhighlight %}</p>
-<p>The final list is uploaded to this <a href="https://github.com/alphauslabs/blueapi-functions">repository</a>.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-07-31-extracting-grpc-funcs-to-list/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2021-07-31-extracting-grpc-funcs-to-list/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Extract gRPC-generated functions to a list</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
                     <description><![CDATA[<p>This is related to a <a href="https://flowerinthenight.com/blog/2018/03/31/access-pods-k8s">previous post</a> about Kubernetes services. This time, it&rsquo;s about extending the timeout of an Ingress. We had a situation where we had to download a huge file from one of our exposed services. The download takes about two minutes to complete. This didn&rsquo;t really worked out since by default, GCP load balancers that are associated with k8s Ingresses have a timeout value of 30s. For a time, we just did manual updates by going to the GCP k8s Services and Ingress console, opening the backend service under the Ingress, and editing the Timeout section to the desired seconds. But since we do have a cluster blue/green deployment, we had to do this every time we recreate our clusters.</p>
 <p>Enter <a href="https://cloud.google.com/kubernetes-engine/docs/concepts/backendconfig">BackendConfig</a> custom resource. With this, we can associate a BackendConfig resource to the service in question using GCP-specific annotations. Reusing the reverse proxy YAML from <a href="https://flowerinthenight.com/blog/2018/03/31/access-pods-k8s">this post</a>, we add a BackendConfig resource.</p>
 <p>{% highlight ruby %}
@@ -4888,57 +4606,6 @@ app: serviceproxy
                 
 
                 
-                    <description><![CDATA[<p><em>For personal reference:</em></p>
-<p>Download the latest GitHub Releases asset using common command line tools:</p>
-<p>{% highlight shell %}</p>
-<h1 id="update-the-url-accordingly-the-uname--awk-subcmds-will-output-linuxdarwin">Update the url accordingly. The <code>uname | awk</code> subcmds will output &rsquo;linux&rsquo;|&lsquo;darwin&rsquo;.</h1>
-<p>$ curl -s <a href="https://api.github.com/repos/alphauslabs/bluectl/releases/latest">https://api.github.com/repos/alphauslabs/bluectl/releases/latest</a> | <br>
-jq -r &ldquo;.assets[] | select(.name | contains(&quot;$(uname -s | awk &lsquo;{print tolower($0)}&rsquo;)&quot;)) | .browser_download_url&rdquo; | <br>
-wget -i -
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2022-01-17-download-latest-github-release-cmdline/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2022-01-17-download-latest-github-release-cmdline/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Download the latest Github release using command line</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
                     <description><![CDATA[<p>I recently uploaded a tool to GitHub that downloads <a href="https://aws.amazon.com/athena/">AWS Athena</a> query results as CSV. It&rsquo;s called <a href="https://github.com/flowerinthenight/athena2csv"><code>athena2csv</code></a>. You can check out the code <a href="https://github.com/flowerinthenight/athena2csv">here</a>. You might find this useful.</p>
 ]]></description>
                 
@@ -4999,53 +4666,6 @@ wget -i -
 
                 
                     <title>dlock - package for distributed locks</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>So far, I&rsquo;ve been posting some techy stuff here and there but being a CTO of a relatively small, Japan-based startup for about three years now, I thought I&rsquo;d share some of my experiences along the way. But first off, a little bit of context: the company I work for, <a href="https://alphaus.cloud/">Alphaus Cloud</a> is fairly small; about 10 engineers scattered across three countries, although at one point, we hit at around 35. It started around 2015, did three product pivots, three rounds of funding under two CEOs. At the moment, we operate within the Cloud FinOps (financial operations) segment of the market. As for myself, I am what you would consider an &lsquo;accidental CTO&rsquo;, a term I came across from <a href="https://cto.academy/diary-of-an-accidental-cto-part-1/">CTO Academy</a>, and a term I quite like: i.e. &ldquo;someone who arrived in the CTO role ahead of schedule and is grappling with new challenges and very steep learning curve&rdquo;. You can call it luck, although that would be relative, depending on one&rsquo;s interpretation. Also, Japanese is not my native tongue, although I think I can hold my own in day-to-day conversations, nor is English, but I think I&rsquo;m fairly proficient at it. And even though the company is trying to expand its operations outside of Japan, it is still inherently Japanese as far as business operations are concerned: the CEO/COO, sales, customer success teams are Japanese, investors are Japanese, and majority of our clients are also Japanese companies.</p>
-<p>The CTO role in such a setup is quite unclear. Even though I had some experience leading tech teams in the past, nothing could have prepared me for this role. For one, my blunders are now more costly. My decisions now affect multiple teams, not just the engineering team. I have to undestand the business side of the company. I need to understand company financials. My &lsquo;soft skills&rsquo; now matter more than ever; people, relationships, empathy, politics, the lot: they&rsquo;re probably more difficult, and exhausting, than the technology part of my role. With that said though, overall, I&rsquo;m enjoying it so far. There&rsquo;s a certain charm to it that I can&rsquo;t really explain; I thought I wouldn&rsquo;t like it at first, me being an introvert and all, but the challenges are instructional and character-building enough that I welcome, sort of, the stress associated with it.</p>
-<p>My goal in this series is to share some of my experiences from this side of the world in the hopes that it will help others gain some perspective. Mind you, this is the internet, and these are just my opinions, take them with a pinch of salt. And finally, I&rsquo;m still not sure how to make this series more accessible from the blog. The &rsquo;tags&rsquo; section is probably the faster way to search for it for now. Maybe I&rsquo;ll provide a dedicated page in the future, who knows, we&rsquo;ll see.</p>
-<p>Alright, that&rsquo;s it. See you in the next one.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-09-28-cto-diaries-intro/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2021-09-28-cto-diaries-intro/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>CTO Diaries #1: Introduction</title>
                 
             </item>
         
@@ -5456,52 +5076,6 @@ secretName: spannerbackup-keyfile
 
                 
                     <title>Authenticating Google API Client Library for Go using Service Accounts</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>For self reference:</p>
-<p>To authenticate the <a href="https://github.com/aws/aws-sdk-go-v2">Golang AWS SDK v2</a> using assume roles, refer to the following code snippets:</p>
-<p>{% gist 33f5e03e9990abcc01203acbea178a1a %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-04-30-authenticate-aws-sdk-golang-v2/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2021-04-30-authenticate-aws-sdk-golang-v2/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Authenticating Go AWS SDK v2 using assume roles</title>
                 
             </item>
         
@@ -6477,54 +6051,6 @@ Invoke-Environment &lsquo;&ldquo;C:\Program Files (x86)\Microsoft Visual Studio 
 
                 
                     <title>A simple cron-like Windows service</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>The only options for updating modules that I&rsquo;m aware so far are a) <code>go get -u all</code>, and b) specific modules, i.e. <code>go get -u domain.com/module[@v1.2.3]</code>. For problematic ones, my only option is b), which is a bit time consuming. There must be some other way out there that I&rsquo;m not aware of but at the moment, I use this simple command:</p>
-<p>{% highlight shell %}
-$ cat go.mod | grep -i &lsquo;github&rsquo; | grep -i -v &lsquo;indirect&rsquo; | awk &lsquo;{print $1}&rsquo; &gt; update; <br>
-while read -r v; do go get -u $v; done &lt; update; rm update
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2021-06-30-hacky-way-update-go-modules/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2021-06-30-hacky-way-update-go-modules/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>A hacky way to update problematic Go modules</title>
                 
             </item>
         
