@@ -13,15 +13,13 @@
 
 
     
-
-    
         
     
 
     
 
     
-        
+
     
 
     
@@ -91,6 +89,8 @@
         
 
         
+            <lastBuildDate>2024-05-30 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/process/</link>
 
@@ -104,50 +104,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I posted a <a href="https://labs.alphaus.cloud/blog/2024/05/13/the-divs-model/">blog</a> introducing the DIVS model, the process we use at <a href="https://www.alphaus.cloud/">Alphaus</a>, the startup I work for. Check it out <a href="https://labs.alphaus.cloud/blog/2024/05/13/the-divs-model/">here</a>.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2024-05-13-the-divs-model/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2024-05-13-the-divs-model/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>The DIVS model</title>
-                
-            </item>
         
             <item>
                 
@@ -192,50 +148,6 @@
 
                 
                     <title>Start process as system using CreateProcessAsUser</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I shared a simple piece of code for getting a process&rsquo; memory usage in Linux. It&rsquo;s called <a href="https://github.com/flowerinthenight/memx"><code>memx</code></a>. It&rsquo;s Linux-specific only as it reads the <a href="https://en.wikipedia.org/wiki/Proportional_set_size">proportional set size (PSS)</a> data from either <code>/proc/{pid}/smaps_rollup</code> (if present) or <code>/proc/{pid}/smaps</code> file. I&rsquo;ve used this piece of code many times at work. We use memory-mapped files extensively in some of our services and this is how we get more accurate results. Very useful in debugging <code>OOMKilled</code> events in k8s.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2024-05-30-memx-memory-usage-linux/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2024-05-30-memx-memory-usage-linux/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>memx - Get process’ memory usage (Linux)</title>
                 
             </item>
         

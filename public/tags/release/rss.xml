@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
     
@@ -85,6 +85,8 @@
         
 
         
+            <lastBuildDate>2023-05-29 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/release/</link>
 
@@ -147,50 +149,6 @@ wget -i -
 
                 
                     <title>Download the latest Github release using command line</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>We just recently announced the public beta of our new product, <a href="https://lp.alphaus.cloud/">OCTO</a>. If you&rsquo;re interested, you can join our waiting list at <a href="https://lp.alphaus.cloud/waitlist">https://lp.alphaus.cloud/waitlist</a>.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2023-05-29-announcing-octo/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2023-05-29-announcing-octo/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Announcing our new product, OCTO</title>
                 
             </item>
         

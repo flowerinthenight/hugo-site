@@ -123,7 +123,7 @@
     
 
     <title type="html"><![CDATA[Author-Demo · Authors · About]]></title>
-    <updated>2024-01-18T21:32:52-07:00</updated>
+    <updated>2024-05-30T00:00:00-07:00</updated>
 
     
         <entry>
@@ -321,7 +321,7 @@ SOFTWARE.
 </div>]]></content>
             
 
-            <id>tag:localhost:1313,2024-01-18:/blog/markdown-syntax/</id>
+            <id>tag:localhost:1313,2024-01-18:/tmp/markdown-syntax/</id>
 
             
                 
@@ -329,7 +329,7 @@ SOFTWARE.
                 
                     
 
-                    <link href="http://localhost:1313/blog/markdown-syntax/" rel="alternate" type="text/html"/>
+                    <link href="http://localhost:1313/tmp/markdown-syntax/" rel="alternate" type="text/html"/>
                 
             
 
@@ -475,7 +475,7 @@ SOFTWARE.
 ]]></content>
             
 
-            <id>tag:localhost:1313,2023-09-24:/blog/video/</id>
+            <id>tag:localhost:1313,2023-09-24:/tmp/video/</id>
 
             
                 
@@ -483,7 +483,7 @@ SOFTWARE.
                 
                     
 
-                    <link href="http://localhost:1313/blog/video/" rel="alternate" type="text/html"/>
+                    <link href="http://localhost:1313/tmp/video/" rel="alternate" type="text/html"/>
                 
             
 
@@ -543,10 +543,10 @@ SOFTWARE.
 
             
                 <content type="html"><![CDATA[<p>It takes you to the home page.</p>
-<p><a href="http://localhost:1313/blog/link/" title="Link">⏎</a></p>]]></content>
+<p><a href="http://localhost:1313/tmp/link/" title="Link">⏎</a></p>]]></content>
             
 
-            <id>tag:localhost:1313,2023-09-24:/blog/link/</id>
+            <id>tag:localhost:1313,2023-09-24:/tmp/link/</id>
 
             
                 
@@ -653,7 +653,7 @@ $$
 $$</p>]]></content>
             
 
-            <id>tag:localhost:1313,2023-09-18:/blog/math-typesetting/</id>
+            <id>tag:localhost:1313,2023-09-18:/tmp/math-typesetting/</id>
 
             
                 
@@ -661,7 +661,7 @@ $$</p>]]></content>
                 
                     
 
-                    <link href="http://localhost:1313/blog/math-typesetting/" rel="alternate" type="text/html"/>
+                    <link href="http://localhost:1313/tmp/math-typesetting/" rel="alternate" type="text/html"/>
                 
             
 
@@ -751,7 +751,7 @@ SOFTWARE.
 </span></span><span class="line"><span class="cl">}</span></span></code></pre></div>]]></content>
             
 
-            <id>tag:localhost:1313,2023-09-18:/blog/emoji-support/</id>
+            <id>tag:localhost:1313,2023-09-18:/tmp/emoji-support/</id>
 
             
                 
@@ -759,7 +759,7 @@ SOFTWARE.
                 
                     
 
-                    <link href="http://localhost:1313/blog/emoji-support/" rel="alternate" type="text/html"/>
+                    <link href="http://localhost:1313/tmp/emoji-support/" rel="alternate" type="text/html"/>
                 
             
 
@@ -821,7 +821,7 @@ SOFTWARE.
 </span></span></span></code></pre></div>]]></content>
             
 
-            <id>tag:localhost:1313,2023-09-18:/blog/alert/</id>
+            <id>tag:localhost:1313,2023-09-18:/tmp/alert/</id>
 
             
                 
@@ -829,7 +829,7 @@ SOFTWARE.
                 
                     
 
-                    <link href="http://localhost:1313/blog/alert/" rel="alternate" type="text/html"/>
+                    <link href="http://localhost:1313/tmp/alert/" rel="alternate" type="text/html"/>
                 
             
 

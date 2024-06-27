@@ -1,8 +1,12 @@
 ---
-layout: post
 title: "CTO Diaries #2: Typical day"
-location: "Japan"
+description: "2022-09-27"
+date: "2022-09-27"
+paige:
+  feed:
+    hide_page: true
 tags: [cto-diaries, cto, diaries, startup]
+weight: 1
 ---
 
 Hi. It’s been a year since my last「CTO diaries」post. Never mind the excuses, there’s a lot.
@@ -22,3 +26,5 @@ Last is coding, which I usually do during the wee hours of the night. Not core c
 I’ll probably write about the other bits like participating in investor meetings, sync-ups with other executives, etc. on a separate post.
 
 Alright, that's it. See you in the next one.
+
+<br>

@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
 
 
@@ -99,61 +97,7 @@
     
 
     <title type="html"><![CDATA[Product · Tags · About]]></title>
-    <updated>2024-01-18T21:32:52-07:00</updated>
+    <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>We just recently announced the public beta of our new product, <a href="https://lp.alphaus.cloud/">OCTO</a>. If you&rsquo;re interested, you can join our waiting list at <a href="https://lp.alphaus.cloud/waitlist">https://lp.alphaus.cloud/waitlist</a>.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-05-29-announcing-octo/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-05-29-announcing-octo/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Announcing our new product, OCTO]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
 </feed>

@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
     
@@ -85,6 +85,8 @@
         
 
         
+            <lastBuildDate>2023-04-13 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/homebrew/</link>
 
@@ -98,73 +100,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>For personal reference:</p>
-<p>This is a followup on a <a href="https://flowerinthenight.com/blog/2019/07/30/homebrew-golang">previous post</a> that is a bit more manual. This is a little bit easier.</p>
-<h4 id="a-create-your-own-homebrew-tap">a) Create your own Homebrew tap</h4>
-<p>Create a new GitHub public repository with a prefix <code>homebrew-</code>, i.e. <code>homebrew-tap</code>. This will host all the apps that you want to distribute via your tap. Users will install your apps using the following commands:</p>
-<p>{% highlight shell %}</p>
-<h1 id="no-need-to-include-the-homebrew--prefix">No need to include the &lsquo;homebrew-&rsquo; prefix</h1>
-<p>$ brew tap flowerinthenight/tap
-$ brew install <toolname></p>
-<h1 id="or-one-liner">Or one-liner</h1>
-<p>$ brew install flowerinthenight/tap/<toolname>
-{% endhighlight %}</p>
-<h4 id="b-lets-use-github-actions-to-setup-goreleaserhttpsgithubcomgoreleasergoreleaser">b) Let&rsquo;s use Github Actions to setup <a href="https://github.com/goreleaser/goreleaser">goreleaser</a></h4>
-<p>First, add a <code>.goreleaser.yml</code> config file to your Go repo. Here&rsquo;s an example:</p>
-<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fflowerinthenight%2Fkubepfm%2Fblob%2Fmaster%2F.goreleaser.yml&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-<p>The section of note here is the <code>brews:</code> part. You can check goreleaser&rsquo;s <a href="https://goreleaser.com/quick-start/">Quickstart</a> guide for more information.</p>
-<p>Here&rsquo;s an example of a GitHub Action config on how to setup <a href="https://github.com/goreleaser/goreleaser">goreleaser</a> to do the release for our tags.</p>
-<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fflowerinthenight%2Fkubepfm%2Fblob%2Fmaster%2F.github%2Fworkflows%2Fmain.yml&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-<p>See the <code>name: Run goreleaser</code> section. You need to add a personal access token with <code>repo, workflow, write:packages</code> permissions to your repository&rsquo;s secrets. In this example, the name used is <code>GH_PAT</code> but you can use other names as well.</p>
-<h4 id="c-do-a-tagged-release">c) Do a tagged release</h4>
-<p>Tagged releases should now do a deployment to your tap.</p>
-<p>{% highlight shell %}
-$ git tag v1.0.0
-$ git push &ndash;tags
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2023-04-13-homebrew-golang-p2/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2023-04-13-homebrew-golang-p2/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Using Homebrew for distributing Go apps (part 2)</title>
-                
-            </item>
         
             <item>
                 

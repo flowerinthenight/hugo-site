@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
     
         
@@ -103,64 +101,8 @@
     
 
     <title type="html"><![CDATA[V2 · Tags · About]]></title>
-    <updated>2024-01-18T21:32:52-07:00</updated>
+    <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>For self reference:</p>
-<p>Sample code as to how to authenticate <a href="https://github.com/aws/aws-sdk-go-v2">aws-sdk-go-v2</a> using <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">external ids</a>:</p>
-<p>{% gist 0b745685a95888084ceb7e47f56827f4 %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-03-01-authenticate-aws-sdk-v2-external-id/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-03-01-authenticate-aws-sdk-v2-external-id/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Authenticating Go AWS SDK v2 using external id]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
         <entry>
             

@@ -14,8 +14,6 @@
 
 
     
-        
-    
 
     
         
@@ -107,7 +105,7 @@
     
 
     <title type="html"><![CDATA[Linux · Tags · About]]></title>
-    <updated>2024-01-18T21:32:52-07:00</updated>
+    <updated>2024-05-30T00:00:00-07:00</updated>
 
     
         <entry>
@@ -168,60 +166,6 @@ notify-send &lsquo;alarm done&rsquo;
             
 
             <title type="html"><![CDATA[Setting alarm from commandline]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>I shared a simple piece of code for getting a process&rsquo; memory usage in Linux. It&rsquo;s called <a href="https://github.com/flowerinthenight/memx"><code>memx</code></a>. It&rsquo;s Linux-specific only as it reads the <a href="https://en.wikipedia.org/wiki/Proportional_set_size">proportional set size (PSS)</a> data from either <code>/proc/{pid}/smaps_rollup</code> (if present) or <code>/proc/{pid}/smaps</code> file. I&rsquo;ve used this piece of code many times at work. We use memory-mapped files extensively in some of our services and this is how we get more accurate results. Very useful in debugging <code>OOMKilled</code> events in k8s.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2024-05-30-memx-memory-usage-linux/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2024-05-30-memx-memory-usage-linux/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[memx - Get process&rsquo; memory usage (Linux)]]></title>
             <updated>0001-01-01T00:00:00Z</updated>
         </entry>
     

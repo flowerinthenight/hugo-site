@@ -132,10 +132,10 @@
 
                 
                     <description><![CDATA[<p>It takes you to the home page.</p>
-<p><a href="http://localhost:1313/blog/link/" title="Link">⏎</a></p>]]></description>
+<p><a href="http://localhost:1313/tmp/link/" title="Link">⏎</a></p>]]></description>
                 
 
-                <guid isPermaLink="false">tag:localhost:1313,2023-09-24:/blog/link/</guid>
+                <guid isPermaLink="false">tag:localhost:1313,2023-09-24:/tmp/link/</guid>
 
                 
                     <link>https://willfaught.com/paige</link>

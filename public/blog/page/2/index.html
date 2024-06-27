@@ -788,12 +788,16 @@ table {
                 
             
         
-    
+            
+                
+            
         
             
                 
             
-                
+        
+    
+        
             
                 
             
@@ -1021,14 +1025,79 @@ table {
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2022-09-27-cto-diaries-typical-day/">CTO Diaries #2: Typical day</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2018-02-20-k8s-tls-digicert/">Creating a Kubernetes TLS secret using certificates from DigiCert</a></p>
     
 
     
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">Hi. It’s been a year since my last「CTO diaries」post. Never mind the excuses, there’s a lot.
-Anyway, so what does my typical, or normal day, look like? Well, I usually start the day with checking the overall health of our systems. We don’t really have very sophisticated monitoring and alerting systems at this point so this means checking on several areas such as our Kubernetes clusters, databases, and critical services. On top of my head, I think the most common service crashes I noticed so far are OOM-related.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">It took me a while to make this work. I hope this will help someone out there who also is struggling with the same problem.
+We use DigiCert as our SSL certificate provider. The package I received contained three files:
+a keyfile, filename.key a certificate file, filename.crt an intermediate certificate file, DigiCertCA.crt I had to combine the two certificate files into a single file. I didn’t really check the order but I appended the intermediate certificate to my certificate file.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/digicert/">DigiCert</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/tls/">TLS</a>
+        </p>
+    
+
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2021-09-28-cto-diaries-intro/">CTO Diaries #1: Introduction</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">So far, I’ve been posting some techy stuff here and there but being a CTO of a relatively small, Japan-based startup for about three years now, I thought I’d share some of my experiences along the way. But first off, a little bit of context: the company I work for, Alphaus Cloud is fairly small; about 10 engineers scattered across three countries, although at one point, we hit at around 35.</p>
     
 
     
@@ -1747,70 +1816,6 @@ Vim has been my primary editor of choice for many years. I think I started Vim a
     
         <p class="mb-0 paige-keywords text-center text-secondary">
             <a class="link-secondary" href="/tags/client/">Client</a> · <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/lengthy/">Lengthy</a> · <a class="link-secondary" href="/tags/pubsub/">Pubsub</a> · <a class="link-secondary" href="/tags/subscription/">Subscription</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2022-09-21-spindle-based-distributed-computing-lib/">hedge - A simple distributed computing library</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">This library has been in our production for about a year already and is one of the critical components in our backend. We mainly use it for app-level orchestration between pods. It’s called hedge and you can find the code here. Maybe it will be useful to anybody out there.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/distributed-computing/">Distributed-Computing</a> · <a class="link-secondary" href="/tags/gcp/">Gcp</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/spanner/">Spanner</a> · <a class="link-secondary" href="/tags/spindle/">Spindle</a>
         </p>
     
 

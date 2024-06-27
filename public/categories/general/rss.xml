@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2016-02-21 00:00:00 -0800 PST</lastBuildDate>
+        
 
         <link>http://localhost:1313/categories/general/</link>
 
@@ -92,51 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>Hey, there! Welcome to my blog. I hope you enjoy reading the stuff in here. Nothing fancy, really. Just bits and bobs about tech and random topics.<br/><br/>
-Enjoy!</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-02-21-welcome-to-my-blog/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2016-02-21-welcome-to-my-blog/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Welcome to my blog</title>
-                
-            </item>
         
     </channel>
 </rss>

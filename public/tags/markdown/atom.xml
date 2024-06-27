@@ -101,7 +101,7 @@
     
 
     <title type="html"><![CDATA[Markdown · Tags · About]]></title>
-    <updated>2024-01-18T21:32:52-07:00</updated>
+    <updated>2024-05-30T00:00:00-07:00</updated>
 
     
         <entry>
@@ -299,7 +299,7 @@ SOFTWARE.
 </div>]]></content>
             
 
-            <id>tag:localhost:1313,2024-01-18:/blog/markdown-syntax/</id>
+            <id>tag:localhost:1313,2024-01-18:/tmp/markdown-syntax/</id>
 
             
                 
@@ -307,7 +307,7 @@ SOFTWARE.
                 
                     
 
-                    <link href="http://localhost:1313/blog/markdown-syntax/" rel="alternate" type="text/html"/>
+                    <link href="http://localhost:1313/tmp/markdown-syntax/" rel="alternate" type="text/html"/>
                 
             
 

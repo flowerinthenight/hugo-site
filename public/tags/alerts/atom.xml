@@ -99,7 +99,7 @@
     
 
     <title type="html"><![CDATA[Alerts · Tags · About]]></title>
-    <updated>2024-01-18T21:32:52-07:00</updated>
+    <updated>2024-05-30T00:00:00-07:00</updated>
 
     
         <entry>
@@ -142,7 +142,7 @@
 </span></span></span></code></pre></div>]]></content>
             
 
-            <id>tag:localhost:1313,2023-09-18:/blog/alert/</id>
+            <id>tag:localhost:1313,2023-09-18:/tmp/alert/</id>
 
             
                 
@@ -150,7 +150,7 @@
                 
                     
 
-                    <link href="http://localhost:1313/blog/alert/" rel="alternate" type="text/html"/>
+                    <link href="http://localhost:1313/tmp/alert/" rel="alternate" type="text/html"/>
                 
             
 

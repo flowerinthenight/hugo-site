@@ -13,15 +13,69 @@
 
 
     
-
-    
         
     
 
     
 
     
-        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -91,6 +145,8 @@
         
 
         
+            <lastBuildDate>2024-05-30 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/categories/tech/</link>
 
@@ -104,223 +160,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>At the moment, Im still in the process of setting up my home network server. Ill be taking notes about my progress here so this might be a series of related posts.</p>
-<p>Im using an Ubuntu 14.04 Server (headless). Client is a Windows 10 machine.</p>
-<h2 id="the-simple-way">The simple way</h2>
-<h3 id="server-side">Server side</h3>
-<ol>
-<li>Install <code>ssh</code>. How to do this depends on what distro you are using. For Ubuntu, you can do an <code>apt-get install ssh</code>. I didnt have to do this however as I installed it during the server setup.</li>
-</ol>
-<h3 id="client-side">Client side</h3>
-<ol>
-<li>Install Putty. I suggest you download the installer.</li>
-<li>Open Putty, input your server IP under Host Name (or IP address), and click Open.</li>
-<li>Enter your server login name and password.</li>
-</ol>
-<p>But entering server credentials every time you login is really a bit of a hassle, isnt it? Enter public/private keys.</p>
-<h2 id="the-simple-and-convenient-way">The simple and convenient way</h2>
-<h3 id="server-side-1">Server side</h3>
-<ol>
-<li>Create a <code>.ssh</code> folder in you home folder if you havent got one. Then <code>cd</code> to your <code>.ssh</code> folder.</li>
-<li>Generate a public/private key pair inside <code>.ssh</code> folder.</li>
-</ol>
-<p>{% highlight shell %}
-ssh-keygen -t rsa -b 4096 -f <filename>
-{% endhighlight %}</p>
-<p>You can choose to add a passphrase, but I didnt since the point here really is to not type anything during login (you still have to enter the passphrase every time you login if you provide one). This will generate two files: the private key with the name <code>&lt;filename&gt;</code> and the public key <code>&lt;filename&gt;.pub</code>.</p>
-<ol start="3">
-<li>Append the public key (<code>&lt;filename&gt;.pub</code>) to <code>~/.ssh/authorized_keys</code>.</li>
-</ol>
-<p>{% highlight shell %}
-cat <filename>.pub &raquo; authorized_keys
-chmod -R 600 ~/.ssh
-{% endhighlight %}</p>
-<ol start="4">
-<li>Copy the private key to your Windows client.</li>
-</ol>
-<h3 id="client-side-1">Client side</h3>
-<ol>
-<li>Install Putty. I suggest you download the installer.</li>
-<li>Generate a .ppk file from the private key using PuttyGen. Load the copied private key then click Save private key.</li>
-<li>Setup Putty to use the .ppk file.</li>
-<li>Add auto-login username under Connection -&gt; Data.</li>
-<li>Add the .ppk file to Private key file for authentication under Connection -&gt; SSH -&gt; Auth.</li>
-<li>Go back to Sessions, enter your servers IP address, add a session name under Saved Sessions and save.</li>
-<li>Try logging in to your server using the saved session details from #3. You should be able to now without typing your server credentials.</li>
-</ol>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-02-22-ssh-from-windows-to-linux-server/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2016-02-22-ssh-from-windows-to-linux-server/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>SSH from a Windows client to a Linux server</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>Im not sure if this is the &ldquo;proper&rdquo; way to do it. Well, it sort of works for me at the moment so I thought I&rsquo;ll share it here. I did use FTP at first (using FileZilla) but I didnt really like the workflow.</p>
-<ul>
-<li>Host: BlueHost shared account</li>
-<li>Client: Windows 10</li>
-</ul>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
-<li>SSH/Shell Access should be enabled. I enabled this from my cPanel -&gt; SSH/Shell Access menu.</li>
-</ul>
-<h2 id="serverhost-side">Server/Host side</h2>
-<ul>
-<li>SSH to BlueHost host. By default, my website was installed inside <code>~/public_html</code> folder. I created a new folder named <code>~/www-checkout</code>. This will be my new &ldquo;live&rdquo; website.</li>
-<li>I copied everything from <code>~/public_html</code> to <code>~/www-checkout</code>.</li>
-</ul>
-<p>{% highlight shell %}
-cp -rv ~/public_html/ ~/www-checkout/
-{% endhighlight %}</p>
-<ul>
-<li>I renamed my <code>~/public_html</code> to <code>~/public_html_original</code>. Just for backup.</li>
-</ul>
-<p>{% highlight shell %}
-mv ~/public_html ~/public_html_original
-{% endhighlight %}</p>
-<ul>
-<li>Then I created a symbolic link named <code>~/public_html</code> that points to <code>~/www-checkout</code>.</li>
-</ul>
-<p>{% highlight shell %}
-ln -s ~/www-checkout ~/public_html
-{% endhighlight %}</p>
-<ul>
-<li>Then I created my main git repository folder named <code>~/www.git</code>.</li>
-</ul>
-<p>{% highlight shell %}
-mkdir www.git
-cd www.git
-git &ndash;bare init
-{% endhighlight %}</p>
-<ul>
-<li>Then I added a <code>post-receive</code> script inside hooks folder that will do a checkout to <code>~/www-checkout</code> every time the repository is updated.</li>
-</ul>
-<p>{% highlight shell %}
-cd hooks
-touch post-receive
-chmod 755 post-receive
-{% endhighlight %}</p>
-<h3 id="contents-of-post-receive-edited-using-vim">Contents of post-receive (edited using vim)</h3>
-<p>{% highlight shell %}
-#!/bin/sh
-GIT_WORK_TREE=~/www-checkout git checkout -f
-{% endhighlight %}</p>
-<ul>
-<li>Then I created a new &ldquo;work&rdquo; folder named <code>~/www-work</code> for my initial commit, cloned the still empty git repository, then copied the contents of <code>~/www-checkout</code>.</li>
-</ul>
-<p>{% highlight shell %}
-cd &amp;&amp; mkdir www-work
-cd www-work
-git clone ~/www.git
-{% endhighlight %}</p>
-<ul>
-<li>Before the commit, I deleted the files that I thought should not be included in the source.
-<ul>
-<li>wp-content/plugins</li>
-<li>wp-content/upgrade</li>
-<li>wp-content/uploads</li>
-</ul>
-</li>
-<li>(Optional) Edit source files.</li>
-<li>Commit source files.</li>
-</ul>
-<p>{% highlight shell %}
-git add &ndash;all
-git commit -a -m &ldquo;Initial commit.&rdquo;
-git push -u origin master
-{% endhighlight %}</p>
-<p>Thats it. Now to the client side.</p>
-<h2 id="client-side">Client side</h2>
-<ul>
-<li>I installed Git for Windows from here.</li>
-<li>The I created a working folder, right-click -&gt; Git Bash Here menu (I checked the context menu during installation, which by default, was already checked anyway).</li>
-<li>Clone the repository.</li>
-</ul>
-<p>{% highlight shell %}
-git clone <username>@<domain>:~/www.git
-{% endhighlight %}</p>
-<p>I now have a working source copy in my Windows client machine!</p>
-<h2 id="disadvantages">Disadvantages?</h2>
-<p>One thing I can think of is that every edit goes directly to live folder. So I dont have a sort of &ldquo;staging&rdquo; server for me to test before putting changes to live. Both a blessing and a curse, I think. But then again, this is just a simple blog, using a free theme, so I dont think I will be doing any massive changes to the source code anyway.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2016-02-24-setup-git-wordpress-bluehost/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2016-02-24-setup-git-wordpress-bluehost/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>How I setup git for my WordPress installation in BlueHost</title>
-                
-            </item>
         
             <item>
                 

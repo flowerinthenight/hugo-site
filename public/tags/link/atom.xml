@@ -99,7 +99,7 @@
     
 
     <title type="html"><![CDATA[Link · Tags · About]]></title>
-    <updated>2024-01-18T21:32:52-07:00</updated>
+    <updated>2024-05-30T00:00:00-07:00</updated>
 
     
         <entry>
@@ -140,10 +140,10 @@
 
             
                 <content type="html"><![CDATA[<p>It takes you to the home page.</p>
-<p><a href="http://localhost:1313/blog/link/" title="Link">⏎</a></p>]]></content>
+<p><a href="http://localhost:1313/tmp/link/" title="Link">⏎</a></p>]]></content>
             
 
-            <id>tag:localhost:1313,2023-09-24:/blog/link/</id>
+            <id>tag:localhost:1313,2023-09-24:/tmp/link/</id>
 
             
                 

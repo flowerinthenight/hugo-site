@@ -13,15 +13,13 @@
 
 
     
-
-    
         
     
 
     
 
     
-        
+
     
 
     
@@ -91,6 +89,8 @@
         
 
         
+            <lastBuildDate>2023-03-01 00:00:00 -0800 PST</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/sdk/</link>
 
@@ -104,52 +104,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>For self reference:</p>
-<p>Sample code as to how to authenticate <a href="https://github.com/aws/aws-sdk-go-v2">aws-sdk-go-v2</a> using <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">external ids</a>:</p>
-<p>{% gist 0b745685a95888084ceb7e47f56827f4 %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2023-03-01-authenticate-aws-sdk-v2-external-id/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2023-03-01-authenticate-aws-sdk-v2-external-id/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Authenticating Go AWS SDK v2 using external id</title>
-                
-            </item>
         
             <item>
                 
@@ -194,52 +148,6 @@
 
                 
                     <title>Authenticating Go AWS SDK v2 using assume roles</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>For self reference:</p>
-<p>Sample code as to how to authenticate <a href="https://github.com/aws/aws-sdk-go">aws-sdk-go</a> using <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">external ids</a>:</p>
-<p>{% gist 5980424a19f6fe58e613f6c9c9392c3e %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2022-10-17-authenticate-aws-sdk-external-id/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2022-10-17-authenticate-aws-sdk-external-id/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Authenticating Go AWS SDK using external id</title>
                 
             </item>
         

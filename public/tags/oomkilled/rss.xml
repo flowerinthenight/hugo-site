@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2024-05-03 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/oomkilled/</link>
 
@@ -92,50 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>I recently uploaded a tool to GitHub that wraps the <code>kubectl get events -w</code> command for watching <code>OOMKilled</code> events in Kubernetes. It&rsquo;s called <a href="https://github.com/flowerinthenight/oomkill-watch"><code>oomkill-watch</code></a>. You can check out the code <a href="https://github.com/flowerinthenight/oomkill-watch">here</a>. You might find this useful.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2024-05-03-oomkill-watch/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2024-05-03-oomkill-watch/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>oomkill-watch - A tool to watch OOMKilled events in k8s</title>
-                
-            </item>
         
     </channel>
 </rss>

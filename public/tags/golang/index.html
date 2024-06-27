@@ -737,13 +737,25 @@ table {
             
                 
             
-                
+        
             
                 
             
-                
+        
             
                 
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+    
+        
             
                 
             
@@ -786,6 +798,359 @@ table {
         
 
         
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2024-05-30-memx-memory-usage-linux/">memx - Get process’ memory usage (Linux)</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2024-05-30</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I shared a simple piece of code for getting a process’ memory usage in Linux. It’s called memx. It’s Linux-specific only as it reads the proportional set size (PSS) data from either /proc/{pid}/smaps_rollup (if present) or /proc/{pid}/smaps file. I’ve used this piece of code many times at work. We use memory-mapped files extensively in some of our services and this is how we get more accurate results. Very useful in debugging OOMKilled events in k8s.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/linux/">Linux</a> · <a class="link-secondary" href="/tags/memory/">Memory</a> · <a class="link-secondary" href="/tags/process/">Process</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/usage/">Usage</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2024-05-30">May 30, 2024</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2024-05-03-oomkill-watch/">oomkill-watch - A tool to watch OOMKilled events in k8s</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2024-05-03</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I recently uploaded a tool to GitHub that wraps the kubectl get events -w command for watching OOMKilled events in Kubernetes. It’s called oomkill-watch. You can check out the code here. You might find this useful.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/events/">Events</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/oomkilled/">Oomkilled</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/watch/">Watch</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2024-05-03">May 3, 2024</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-04-13-homebrew-golang-p2/">Using Homebrew for distributing Go apps (part 2)</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-04-13</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For personal reference: This is a followup on a previous post that is a bit more manual. This is a little bit easier. a) Create your own Homebrew tap Create a new GitHub public repository with a prefix homebrew-, i.e. homebrew-tap. This will host all the apps that you want to distribute via your tap. Users will install your apps using the following commands:
+No need to include the &#39;homebrew-&#39; prefix $ brew tap flowerinthenight/tap $ brew install &lt;toolname&gt; # Or one-liner $ brew install flowerinthenight/tap/&lt;toolname&gt; b) Let’s use Github Actions to setup goreleaser First, add a .</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/goreleaser/">Goreleaser</a> · <a class="link-secondary" href="/tags/homebrew/">Homebrew</a> · <a class="link-secondary" href="/tags/ruby/">Ruby</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-04-13">April 13, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-03-01-authenticate-aws-sdk-v2-external-id/">Authenticating Go AWS SDK v2 using external id</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-03-01</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For self reference:
+Sample code as to how to authenticate aws-sdk-go-v2 using external ids:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/assume/">Assume</a> · <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/external-id/">External-Id</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/roles/">Roles</a> · <a class="link-secondary" href="/tags/sdk/">Sdk</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/v2/">V2</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-03-01">March 1, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2022-10-17-authenticate-aws-sdk-external-id/">Authenticating Go AWS SDK using external id</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2022-10-17</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For self reference:
+Sample code as to how to authenticate aws-sdk-go using external ids:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/assume/">Assume</a> · <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/external-id/">External-Id</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/roles/">Roles</a> · <a class="link-secondary" href="/tags/sdk/">Sdk</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2022-10-17">October 17, 2022</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
 
         
             
@@ -1146,72 +1511,6 @@ table {
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2022-10-17-authenticate-aws-sdk-external-id/">Authenticating Go AWS SDK using external id</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">For self reference:
-Sample code as to how to authenticate aws-sdk-go using external ids:
-{% gist 5980424a19f6fe58e613f6c9c9392c3e %}</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/assume/">Assume</a> · <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/external-id/">External-Id</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/roles/">Roles</a> · <a class="link-secondary" href="/tags/sdk/">Sdk</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
         <p class="mb-0 paige-title text-center"><a href="/blog/2021-04-30-authenticate-aws-sdk-golang-v2/">Authenticating Go AWS SDK v2 using assume roles</a></p>
     
 
@@ -1226,72 +1525,6 @@ To authenticate the Golang AWS SDK v2 using assume roles, refer to the following
     
         <p class="mb-0 paige-keywords text-center text-secondary">
             <a class="link-secondary" href="/tags/assume/">Assume</a> · <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/roles/">Roles</a> · <a class="link-secondary" href="/tags/sdk/">Sdk</a> · <a class="link-secondary" href="/tags/v2/">V2</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2023-03-01-authenticate-aws-sdk-v2-external-id/">Authenticating Go AWS SDK v2 using external id</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">For self reference:
-Sample code as to how to authenticate aws-sdk-go-v2 using external ids:
-{% gist 0b745685a95888084ceb7e47f56827f4 %}</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/assume/">Assume</a> · <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/external-id/">External-Id</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/roles/">Roles</a> · <a class="link-secondary" href="/tags/sdk/">Sdk</a> · <a class="link-secondary" href="/tags/v2/">V2</a>
         </p>
     
 
@@ -1538,70 +1771,6 @@ Main command: $ grep -o -R -i -E ‘&#34;/blueapi..*&#34;’ .</p>
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2024-05-30-memx-memory-usage-linux/">memx - Get process’ memory usage (Linux)</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">I shared a simple piece of code for getting a process’ memory usage in Linux. It’s called memx. It’s Linux-specific only as it reads the proportional set size (PSS) data from either /proc/{pid}/smaps_rollup (if present) or /proc/{pid}/smaps file. I’ve used this piece of code many times at work. We use memory-mapped files extensively in some of our services and this is how we get more accurate results. Very useful in debugging OOMKilled events in k8s.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/linux/">Linux</a> · <a class="link-secondary" href="/tags/memory/">Memory</a> · <a class="link-secondary" href="/tags/process/">Process</a> · <a class="link-secondary" href="/tags/usage/">Usage</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
         <p class="mb-0 paige-title text-center"><a href="/blog/2018-09-25-ouchan-monorepo/">Mobingi’s golang monorepo</a></p>
     
 
@@ -1614,70 +1783,6 @@ Main command: $ grep -o -R -i -E ‘&#34;/blueapi..*&#34;’ .</p>
     
         <p class="mb-0 paige-keywords text-center text-secondary">
             <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/mobingi/">Mobingi</a> · <a class="link-secondary" href="/tags/monorepo/">Monorepo</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2024-05-03-oomkill-watch/">oomkill-watch - A tool to watch OOMKilled events in k8s</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">I recently uploaded a tool to GitHub that wraps the kubectl get events -w command for watching OOMKilled events in Kubernetes. It’s called oomkill-watch. You can check out the code here. You might find this useful.</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/events/">Events</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/oomkilled/">Oomkilled</a> · <a class="link-secondary" href="/tags/watch/">Watch</a>
         </p>
     
 
@@ -2022,74 +2127,6 @@ The toolname part will correspond to the filename inside your repository tap.</p
 
     
         <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
-    
-</div>
-
-        
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-<div class="mb-3 paige-page paige-published w-100">
-    
-        <p class="mb-0 paige-title text-center"><a href="/blog/2023-04-13-homebrew-golang-p2/">Using Homebrew for distributing Go apps (part 2)</a></p>
-    
-
-    
-
-    
-        <p class="fst-italic mb-0 paige-summary text-center">For personal reference:
-This is a followup on a previous post that is a bit more manual. This is a little bit easier.
-a) Create your own Homebrew tap Create a new GitHub public repository with a prefix homebrew-, i.e. homebrew-tap. This will host all the apps that you want to distribute via your tap. Users will install your apps using the following commands:
-{% highlight shell %}
-No need to include the ‘homebrew-’ prefix $ brew tap flowerinthenight/tap $ brew install Or one-liner $ brew install flowerinthenight/tap/ {% endhighlight %}</p>
-    
-
-    
-        <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/goreleaser/">Goreleaser</a> · <a class="link-secondary" href="/tags/homebrew/">Homebrew</a> · <a class="link-secondary" href="/tags/ruby/">Ruby</a>
-        </p>
-    
-
-    
-
-    
-
-    
-
-    
-        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
     
 </div>
 

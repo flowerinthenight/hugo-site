@@ -737,7 +737,69 @@ table {
             
                 
             
+        
+            
                 
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+            
+                
+            
+        
+    
+        
             
                 
             
@@ -787,21 +849,20 @@ table {
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-28-setup-samba-server/">How I set up my Samba file server</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2024-05-30-memx-memory-usage-linux/">memx - Get process’ memory usage (Linux)</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2024-05-30</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">I installed Samba to my Ubuntu Server (which is an old ThinkPad laptop that has been gathering dust in my closet for ages):
-{% highlight shell %} sudo apt-get install samba {% endhighlight %}
-I have three 3-TB HDDs that I planned to use as my main server storage; one main server, and the other two for backup. All of these HDDs are in ext4 format.
-Then I created a new directory under /media where I will mount my main server storage:</p>
+        <p class="fst-italic mb-0 paige-summary text-center">I shared a simple piece of code for getting a process’ memory usage in Linux. It’s called memx. It’s Linux-specific only as it reads the proportional set size (PSS) data from either /proc/{pid}/smaps_rollup (if present) or /proc/{pid}/smaps file. I’ve used this piece of code many times at work. We use memory-mapped files extensively in some of our services and this is how we get more accurate results. Very useful in debugging OOMKilled events in k8s.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/tech/">Tech</a>
+            <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/linux/">Linux</a> · <a class="link-secondary" href="/tags/memory/">Memory</a> · <a class="link-secondary" href="/tags/process/">Process</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/usage/">Usage</a>
         </p>
     
 
@@ -810,9 +871,13 @@ Then I created a new directory under /media where I will mount my main server st
     
 
     
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2024-05-30">May 30, 2024</time>
+        </p>
+    
 
     
-        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
     
 </div>
 
@@ -854,19 +919,20 @@ Then I created a new directory under /media where I will mount my main server st
 
 <div class="mb-3 paige-page paige-published w-100">
     
-        <p class="mb-0 paige-title text-center"><a href="/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup git for my WordPress installation in BlueHost</a></p>
+        <p class="mb-0 paige-title text-center"><a href="/blog/2024-05-13-the-divs-model/">The DIVS model</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2024-05-13</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">Im not sure if this is the “proper” way to do it. Well, it sort of works for me at the moment so I thought I’ll share it here. I did use FTP at first (using FileZilla) but I didnt really like the workflow.
-Host: BlueHost shared account Client: Windows 10 Prerequisites SSH/Shell Access should be enabled. I enabled this from my cPanel -&gt; SSH/Shell Access menu. Server/Host side SSH to BlueHost host.</p>
+        <p class="fst-italic mb-0 paige-summary text-center">I posted a blog introducing the DIVS model, the process we use at Alphaus, the startup I work for. Check it out here.</p>
     
 
     
         <p class="mb-0 paige-keywords text-center text-secondary">
-            <a class="link-secondary" href="/categories/tech/">Tech</a>
+            <a class="link-secondary" href="/tags/agile/">Agile</a> · <a class="link-secondary" href="/tags/development/">Development</a> · <a class="link-secondary" href="/tags/process/">Process</a> · <a class="link-secondary" href="/tags/startup/">Startup</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
         </p>
     
 
@@ -874,6 +940,150 @@ Host: BlueHost shared account Client: Windows 10 Prerequisites SSH/Shell Access 
 
     
 
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2024-05-13">May 13, 2024</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2024-05-03-oomkill-watch/">oomkill-watch - A tool to watch OOMKilled events in k8s</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2024-05-03</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I recently uploaded a tool to GitHub that wraps the kubectl get events -w command for watching OOMKilled events in Kubernetes. It’s called oomkill-watch. You can check out the code here. You might find this useful.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/events/">Events</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/oomkilled/">Oomkilled</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/watch/">Watch</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2024-05-03">May 3, 2024</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-08-09-cto-diaries-on-not-shipping-your-org-chart/">CTO Diaries #4: On not shipping your org chart</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-08-09</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">You’ve probably heard of the warning “Don’t ship the org chart” common among product development circles. I always thought of this as synonymous to Conway’s Law which states that organizations design systems that mirror their own communication structure. In my experience, I’ve come to believe that this is true. Whether you like it or not, it is an eventuality. At some point I thought that to be an effective solutions architect, you have to be an “org architect”.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/conways-law/">Conways-Law</a> · <a class="link-secondary" href="/tags/cto/">Cto</a> · <a class="link-secondary" href="/tags/cto-diaries/">Cto-Diaries</a> · <a class="link-secondary" href="/tags/diaries/">Diaries</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-08-09">August 9, 2023</time>
+        </p>
     
 
     
@@ -919,15 +1129,866 @@ Host: BlueHost shared account Client: Windows 10 Prerequisites SSH/Shell Access 
 
 <div class="mb-3 paige-page paige-published w-100">
     
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-05-29-announcing-octo/">Announcing our new product, OCTO</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-05-29</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">We just recently announced the public beta of our new product, OCTO. If you’re interested, you can join our waiting list at https://lp.alphaus.cloud/waitlist.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/alphaus/">Alphaus</a> · <a class="link-secondary" href="/tags/octo/">Octo</a> · <a class="link-secondary" href="/tags/product/">Product</a> · <a class="link-secondary" href="/tags/release/">Release</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-05-29">May 29, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-05-11-retries-backoff/">Retries with backoff in distributed systems</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-05-11</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">In a distributed system, where multiple processes communicate with each other over a network, failures are inevitable. Network partitions, hardware failures, and software bugs can all cause a request to fail. Retries with backoff are a critical technique to help mitigate these failures.
+Retries refer to the act of retrying a failed request. When a request fails, the client can retry the request, hoping that it will succeed the next time around.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/backoff/">Backoff</a> · <a class="link-secondary" href="/tags/distributed-systems/">Distributed-Systems</a> · <a class="link-secondary" href="/tags/retries/">Retries</a> · <a class="link-secondary" href="/tags/retry/">Retry</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-05-11">May 11, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">3 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-05-03-alphaus-blue-api/">Alphaus Blue API</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-05-03</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Hey there,
+I just posted a blog about gRPC here. If gRPC and grpc-gateway is right up your alley, you might find it interesting.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/alphaus/">Alphaus</a> · <a class="link-secondary" href="/tags/blog/">Blog</a> · <a class="link-secondary" href="/tags/engineering/">Engineering</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/technical/">Technical</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-05-03">May 3, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-04-28-hedge-memberlist/">Attempt to replace hedge’s member tracking with hashicorp/memberlist</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-04-28</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I recently came across the hashicorp/memberlist library while browsing GitHub and I thought it would be a good replacement for hedge’s internal member tracking logic. It seems to be widely used (thus more battle-tested) as well. I was quite excited as I always thought that hedge’s equivalent logic is too barebones and untested outside of our use cases. It works just fine for its current intended purpose but I’ve been hesitating to build on top of it until I can really say that it’s stable enough.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/distributed-computing/">Distributed-Computing</a> · <a class="link-secondary" href="/tags/hedge/">Hedge</a> · <a class="link-secondary" href="/tags/k8s/">K8s</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/memberlist/">Memberlist</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-04-28">April 28, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-04-20-alphaus-eng-blog/">Alphaus engineering blog launched</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-04-20</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Hey there, I wanted to let you know that Alphaus, the startup I work for, has recently launched a new engineering blog. If you’re interested in checking it out, please go to https://labs.alphaus.cloud/blog/. We will be posting updates about our products and sharing some insights and experiences from a technical point of view. So if that sounds like something you’d be interested in, feel free to take a look. Thanks for your support!</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/alphaus/">Alphaus</a> · <a class="link-secondary" href="/tags/blog/">Blog</a> · <a class="link-secondary" href="/tags/engineering/">Engineering</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/technical/">Technical</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-04-20">April 20, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-04-13-homebrew-golang-p2/">Using Homebrew for distributing Go apps (part 2)</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-04-13</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For personal reference: This is a followup on a previous post that is a bit more manual. This is a little bit easier. a) Create your own Homebrew tap Create a new GitHub public repository with a prefix homebrew-, i.e. homebrew-tap. This will host all the apps that you want to distribute via your tap. Users will install your apps using the following commands:
+No need to include the &#39;homebrew-&#39; prefix $ brew tap flowerinthenight/tap $ brew install &lt;toolname&gt; # Or one-liner $ brew install flowerinthenight/tap/&lt;toolname&gt; b) Let’s use Github Actions to setup goreleaser First, add a .</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/go/">Go</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/goreleaser/">Goreleaser</a> · <a class="link-secondary" href="/tags/homebrew/">Homebrew</a> · <a class="link-secondary" href="/tags/ruby/">Ruby</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-04-13">April 13, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-04-06-restore-default-branch-from-tag/">Restore default branch from tag while preserving history</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-04-06</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">Fore self reference:
+To restore default branch from a tag while preserving history, do:
+$ git checkout tags/v1.2.3 -b v1.2.3 $ git diff main &gt; /tmp/diff.patch $ git checkout main $ cat /tmp/diff.patch | git apply $ git commit -am &#34;Rolled back to v1.2.3&#34; $ git push origin main</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/git/">Git</a> · <a class="link-secondary" href="/tags/history/">History</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-04-06">April 6, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-04-01-cto-diaries-on-choosing-tech-stack/">CTO Diaries #3: On choosing technology stacks</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-04-01</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">When it comes to tech stack selection, in general, I always approach it in terms of tradeoffs. And when it comes to understanding tradeoffs; what you gain vs what you lose, I think experience plays a big part. In my 18&#43; years of experience building systems, I’ve been bitten enough times that I view most of them with a fair bit of cynicism. I wouldn’t really say that experience definitely makes me better at it; I still have my own biases and experience doesn’t really ‘fix’ the illogical side of me being a human being with emotions.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/cto/">Cto</a> · <a class="link-secondary" href="/tags/cto-diaries/">Cto-Diaries</a> · <a class="link-secondary" href="/tags/diaries/">Diaries</a> · <a class="link-secondary" href="/tags/startup/">Startup</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-04-01">April 1, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">5 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2023-03-01-authenticate-aws-sdk-v2-external-id/">Authenticating Go AWS SDK v2 using external id</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2023-03-01</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For self reference:
+Sample code as to how to authenticate aws-sdk-go-v2 using external ids:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/assume/">Assume</a> · <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/external-id/">External-Id</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/roles/">Roles</a> · <a class="link-secondary" href="/tags/sdk/">Sdk</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/v2/">V2</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2023-03-01">March 1, 2023</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2022-10-17-authenticate-aws-sdk-external-id/">Authenticating Go AWS SDK using external id</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2022-10-17</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">For self reference:
+Sample code as to how to authenticate aws-sdk-go using external ids:</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/assume/">Assume</a> · <a class="link-secondary" href="/tags/aws/">Aws</a> · <a class="link-secondary" href="/tags/external-id/">External-Id</a> · <a class="link-secondary" href="/tags/golang/">Golang</a> · <a class="link-secondary" href="/tags/roles/">Roles</a> · <a class="link-secondary" href="/tags/sdk/">Sdk</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2022-10-17">October 17, 2022</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">1 minute</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-02-24-setup-git-wordpress-bluehost/">How I setup git for my WordPress installation in BlueHost</a></p>
+    
+
+    
+        <p class="mb-0 paige-description text-center">2016-02-24</p>
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I’m not sure if this is the “proper” way to do it. Well, it sort of works for me at the moment so I thought I’ll share it here. I did use FTP at first (using FileZilla) but I didnt really like the workflow.
+Host: BlueHost shared account Client: Windows 10 Prerequisites SSH/Shell Access should be enabled. I enabled this from my cPanel -&gt; SSH/Shell Access menu. Server/Host side SSH to BlueHost host.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/bluehost/">Bluehost</a> · <a class="link-secondary" href="/tags/git/">Git</a> · <a class="link-secondary" href="/categories/tech/">Tech</a> · <a class="link-secondary" href="/tags/wordpress/">Wordpress</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-02-24">February 24, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
         <p class="mb-0 paige-title text-center"><a href="/blog/2016-02-22-ssh-from-windows-to-linux-server/">SSH from a Windows client to a Linux server</a></p>
     
 
     
+        <p class="mb-0 paige-description text-center">2016-02-22</p>
+    
 
     
-        <p class="fst-italic mb-0 paige-summary text-center">At the moment, Im still in the process of setting up my home network server. Ill be taking notes about my progress here so this might be a series of related posts.
-Im using an Ubuntu 14.04 Server (headless). Client is a Windows 10 machine.
+        <p class="fst-italic mb-0 paige-summary text-center">At the moment, I’m still in the process of setting up my home network server. I’ll be taking notes about my progress here so this might be a series of related posts.
+I’m using an Ubuntu 14.04 Server (headless). Client is a Windows 10 machine.
 The simple way Server side Install ssh. How to do this depends on what distro you are using. For Ubuntu, you can do an apt-get install ssh.</p>
+    
+
+    
+        <p class="mb-0 paige-keywords text-center text-secondary">
+            <a class="link-secondary" href="/tags/ssh/">Ssh</a> · <a class="link-secondary" href="/categories/tech/">Tech</a>
+        </p>
+    
+
+    
+
+    
+
+    
+        <p class="mb-0 paige-date text-center text-secondary">
+            <time datetime="2016-02-22">February 22, 2016</time>
+        </p>
+    
+
+    
+        <p class="mb-0 paige-reading-time text-center text-secondary">2 minutes</p>
+    
+</div>
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<div class="mb-3 paige-page paige-published w-100">
+    
+        <p class="mb-0 paige-title text-center"><a href="/blog/2016-03-28-setup-samba-server/">How I set up my Samba file server</a></p>
+    
+
+    
+
+    
+        <p class="fst-italic mb-0 paige-summary text-center">I installed Samba to my Ubuntu Server (which is an old ThinkPad laptop that has been gathering dust in my closet for ages):
+{% highlight shell %} sudo apt-get install samba {% endhighlight %}
+I have three 3-TB HDDs that I planned to use as my main server storage; one main server, and the other two for backup. All of these HDDs are in ext4 format.
+Then I created a new directory under /media where I will mount my main server storage:</p>
     
 
     

@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2023-05-11 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/distributed-systems/</link>
 
@@ -92,60 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>In a distributed system, where multiple processes communicate with each other over a network, failures are inevitable. Network partitions, hardware failures, and software bugs can all cause a request to fail. Retries with backoff are a critical technique to help mitigate these failures.</p>
-<p>Retries refer to the act of retrying a failed request. When a request fails, the client can retry the request, hoping that it will succeed the next time around. However, simply retrying the request immediately after a failure can be problematic. If the failure was caused by a temporary network issue, for example, retrying immediately will likely result in another failure. This is where backoff comes in.</p>
-<p>Backoff refers to the practice of waiting a certain amount of time before retrying a failed request. The idea is to wait long enough for any temporary issues to resolve themselves before retrying. The amount of time to wait is typically increased with each retry, hence the term &ldquo;backoff.&rdquo; The idea is that if the request fails multiple times, the client will eventually back off enough to give the system a chance to recover.</p>
-<p>There are several benefits to using retries with backoff in a distributed system. First, it can help reduce the impact of temporary failures. By waiting before retrying a request, the client can avoid bombarding the target with requests, which can exacerbate the problem. Second, it can help improve overall system availability. By retrying failed requests, the client can work around transient issues that might otherwise cause the entire system to fail.</p>
-<p>There are several strategies for implementing retries with backoff. One common approach is exponential backoff, where the client waits an increasing amount of time between each retry. Another approach is jittered backoff, where the client adds a random amount of time to the wait period to avoid the so-called &ldquo;thundering herd&rdquo; problem, where multiple clients all retry at the same time.</p>
-<p>Example 1:</p>
-<p>{% gist ec8a4a833e039bed8b13552dbad5f9b5 %}</p>
-<p>Example 2 (my preference):</p>
-<p>{% gist 33bbe6d25e7794db471c105cc40e63dd %}</p>
-<p>In conclusion, retries with backoff are an important technique for improving the robustness and availability of distributed systems. By waiting before retrying failed requests, the client can help reduce the impact of temporary failures and improve overall system availability. There are several strategies for implementing retries with backoff, and choosing the right approach will depend on the specific requirements of the system.</p>
-<p>Additional reading: <a href="https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/">https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/</a></p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2023-05-11-retries-backoff/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2023-05-11-retries-backoff/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Retries with backoff in distributed systems</title>
-                
-            </item>
         
     </channel>
 </rss>

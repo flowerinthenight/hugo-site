@@ -13,15 +13,13 @@
 
 
     
-
-    
         
     
 
     
 
     
-        
+
     
 
 
@@ -85,6 +83,8 @@
         
 
         
+            <lastBuildDate>2023-05-03 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/engineering/</link>
 
@@ -98,96 +98,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>Hey there,</p>
-<p>I wanted to let you know that Alphaus, the startup I work for, has recently launched a new engineering blog. If you&rsquo;re interested in checking it out, please go to <a href="https://labs.alphaus.cloud/blog/">https://labs.alphaus.cloud/blog/</a>. We will be posting updates about our products and sharing some insights and experiences from a technical point of view. So if that sounds like something you&rsquo;d be interested in, feel free to take a look. Thanks for your support!</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2023-04-20-alphaus-eng-blog/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2023-04-20-alphaus-eng-blog/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Alphaus engineering blog launched</title>
-                
-            </item>
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>Hey there,</p>
-<p>I just posted a blog about gRPC <a href="https://labs.alphaus.cloud/blog/2023/05/03/blue-api/">here</a>. If gRPC and grpc-gateway is right up your alley, you might find it interesting.</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2023-05-03-alphaus-blue-api/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2023-05-03-alphaus-blue-api/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Alphaus Blue API</title>
-                
-            </item>
         
     </channel>
 </rss>

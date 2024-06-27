@@ -14,23 +14,13 @@
 
 
     
-        
+
     
 
     
-        
-    
 
     
-        
-    
 
-    
-        
-    
-
-    
-        
     
 
     
@@ -183,7 +173,7 @@
     
 
     <title type="html"><![CDATA[Golang · Tags · About]]></title>
-    <updated>2024-01-18T21:32:52-07:00</updated>
+    <updated>2024-05-30T00:00:00-07:00</updated>
 
     
         <entry>
@@ -389,83 +379,6 @@ I0205 16:39:37.212187   13685 main.go:41] echo=hello alien world
             
 
             <title type="html"><![CDATA[Using k8s.io/klog together with cobra in golang]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>For personal reference:</p>
-<p>This is a followup on a <a href="https://flowerinthenight.com/blog/2019/07/30/homebrew-golang">previous post</a> that is a bit more manual. This is a little bit easier.</p>
-<h4 id="a-create-your-own-homebrew-tap">a) Create your own Homebrew tap</h4>
-<p>Create a new GitHub public repository with a prefix <code>homebrew-</code>, i.e. <code>homebrew-tap</code>. This will host all the apps that you want to distribute via your tap. Users will install your apps using the following commands:</p>
-<p>{% highlight shell %}</p>
-<h1 id="no-need-to-include-the-homebrew--prefix">No need to include the &lsquo;homebrew-&rsquo; prefix</h1>
-<p>$ brew tap flowerinthenight/tap
-$ brew install <toolname></p>
-<h1 id="or-one-liner">Or one-liner</h1>
-<p>$ brew install flowerinthenight/tap/<toolname>
-{% endhighlight %}</p>
-<h4 id="b-lets-use-github-actions-to-setup-goreleaserhttpsgithubcomgoreleasergoreleaser">b) Let&rsquo;s use Github Actions to setup <a href="https://github.com/goreleaser/goreleaser">goreleaser</a></h4>
-<p>First, add a <code>.goreleaser.yml</code> config file to your Go repo. Here&rsquo;s an example:</p>
-<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fflowerinthenight%2Fkubepfm%2Fblob%2Fmaster%2F.goreleaser.yml&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-<p>The section of note here is the <code>brews:</code> part. You can check goreleaser&rsquo;s <a href="https://goreleaser.com/quick-start/">Quickstart</a> guide for more information.</p>
-<p>Here&rsquo;s an example of a GitHub Action config on how to setup <a href="https://github.com/goreleaser/goreleaser">goreleaser</a> to do the release for our tags.</p>
-<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fflowerinthenight%2Fkubepfm%2Fblob%2Fmaster%2F.github%2Fworkflows%2Fmain.yml&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-<p>See the <code>name: Run goreleaser</code> section. You need to add a personal access token with <code>repo, workflow, write:packages</code> permissions to your repository&rsquo;s secrets. In this example, the name used is <code>GH_PAT</code> but you can use other names as well.</p>
-<h4 id="c-do-a-tagged-release">c) Do a tagged release</h4>
-<p>Tagged releases should now do a deployment to your tap.</p>
-<p>{% highlight shell %}
-$ git tag v1.0.0
-$ git push &ndash;tags
-{% endhighlight %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-04-13-homebrew-golang-p2/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-04-13-homebrew-golang-p2/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Using Homebrew for distributing Go apps (part 2)]]></title>
             <updated>0001-01-01T00:00:00Z</updated>
         </entry>
     
@@ -877,60 +790,6 @@ $ go test -v ./&hellip; -count=1 -cover -race -mod=vendor &ndash;args &ndash;log
             
 
             
-                <content type="html"><![CDATA[<p>I recently uploaded a tool to GitHub that wraps the <code>kubectl get events -w</code> command for watching <code>OOMKilled</code> events in Kubernetes. It&rsquo;s called <a href="https://github.com/flowerinthenight/oomkill-watch"><code>oomkill-watch</code></a>. You can check out the code <a href="https://github.com/flowerinthenight/oomkill-watch">here</a>. You might find this useful.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2024-05-03-oomkill-watch/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2024-05-03-oomkill-watch/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[oomkill-watch - A tool to watch OOMKilled events in k8s]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
                 <content type="html"><![CDATA[<p>I posted an <a href="https://tech.mobingi.com/2018/09/25/ouchan-monorepo.html">article</a> for <a href="https://twitter.com/mobingi">@mobingi</a> about its Golang-based monorepo. Please check it out. Thanks.</p>
 ]]></content>
             
@@ -958,60 +817,6 @@ $ go test -v ./&hellip; -count=1 -cover -race -mod=vendor &ndash;args &ndash;log
             
 
             <title type="html"><![CDATA[Mobingi&rsquo;s golang monorepo]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>I shared a simple piece of code for getting a process&rsquo; memory usage in Linux. It&rsquo;s called <a href="https://github.com/flowerinthenight/memx"><code>memx</code></a>. It&rsquo;s Linux-specific only as it reads the <a href="https://en.wikipedia.org/wiki/Proportional_set_size">proportional set size (PSS)</a> data from either <code>/proc/{pid}/smaps_rollup</code> (if present) or <code>/proc/{pid}/smaps</code> file. I&rsquo;ve used this piece of code many times at work. We use memory-mapped files extensively in some of our services and this is how we get more accurate results. Very useful in debugging <code>OOMKilled</code> events in k8s.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2024-05-30-memx-memory-usage-linux/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2024-05-30-memx-memory-usage-linux/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[memx - Get process&rsquo; memory usage (Linux)]]></title>
             <updated>0001-01-01T00:00:00Z</updated>
         </entry>
     
@@ -1211,62 +1016,6 @@ sort | uniq &raquo; /tmp/funcs.yaml
 
             
                 <content type="html"><![CDATA[<p>For self reference:</p>
-<p>Sample code as to how to authenticate <a href="https://github.com/aws/aws-sdk-go-v2">aws-sdk-go-v2</a> using <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">external ids</a>:</p>
-<p>{% gist 0b745685a95888084ceb7e47f56827f4 %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-03-01-authenticate-aws-sdk-v2-external-id/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-03-01-authenticate-aws-sdk-v2-external-id/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Authenticating Go AWS SDK v2 using external id]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>For self reference:</p>
 <p>To authenticate the <a href="https://github.com/aws/aws-sdk-go-v2">Golang AWS SDK v2</a> using assume roles, refer to the following code snippets:</p>
 <p>{% gist 33f5e03e9990abcc01203acbea178a1a %}</p>
 ]]></content>
@@ -1295,62 +1044,6 @@ sort | uniq &raquo; /tmp/funcs.yaml
             
 
             <title type="html"><![CDATA[Authenticating Go AWS SDK v2 using assume roles]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>For self reference:</p>
-<p>Sample code as to how to authenticate <a href="https://github.com/aws/aws-sdk-go">aws-sdk-go</a> using <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html">external ids</a>:</p>
-<p>{% gist 5980424a19f6fe58e613f6c9c9392c3e %}</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2022-10-17-authenticate-aws-sdk-external-id/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2022-10-17-authenticate-aws-sdk-external-id/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[Authenticating Go AWS SDK using external id]]></title>
             <updated>0001-01-01T00:00:00Z</updated>
         </entry>
     

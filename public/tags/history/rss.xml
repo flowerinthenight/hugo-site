@@ -13,9 +13,9 @@
 
 
     
-
-    
         
+    
+
     
 
 
@@ -79,6 +79,8 @@
         
 
         
+            <lastBuildDate>2023-04-06 00:00:00 -0700 PDT</lastBuildDate>
+        
 
         <link>http://localhost:1313/tags/history/</link>
 
@@ -92,59 +94,6 @@
             <webMaster>example@example.com (John Doe)</webMaster>
         
 
-        
-            <item>
-                
-                
-                
-                
-                
-                
-                
-
-                
-
-                
-
-                
-
-                
-
-                
-                
-
-                
-
-                
-
-                
-                    <description><![CDATA[<p>Fore self reference:</p>
-<p>To restore default branch from a tag while preserving history, do:</p>
-<p>{% highlight shell %}
-$ git checkout tags/v1.2.3 -b v1.2.3
-$ git diff main &gt; /tmp/diff.patch
-$ git checkout main
-$ cat /tmp/diff.patch | git apply
-$ git commit -am &ldquo;Rolled back to v1.2.3&rdquo;
-$ git push origin main
-{% endhighlight %}</p>
-]]></description>
-                
-
-                <guid isPermaLink="false">tag:localhost:1313,0001-01-01:/blog/2023-04-06-restore-default-branch-from-tag/</guid>
-
-                
-                    <link>http://localhost:1313/blog/2023-04-06-restore-default-branch-from-tag/</link>
-                
-
-                
-                    <pubDate>Mon, 01 Jan 0001 00:00:00 UTC</pubDate>
-                
-
-                
-                    <title>Restore default branch from tag while preserving history</title>
-                
-            </item>
         
     </channel>
 </rss>

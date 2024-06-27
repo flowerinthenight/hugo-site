@@ -14,11 +14,7 @@
 
 
     
-        
-    
 
-    
-        
     
 
     
@@ -111,128 +107,8 @@
     
 
     <title type="html"><![CDATA[Cto-Diaries · Tags · About]]></title>
-    <updated>2024-01-18T21:32:52-07:00</updated>
+    <updated>2024-05-30T00:00:00-07:00</updated>
 
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>You&rsquo;ve probably heard of the warning &ldquo;Don&rsquo;t ship the org chart&rdquo; common among product development circles. I always thought of this as synonymous to <a href="https://en.wikipedia.org/wiki/Conway%27s_law">Conway&rsquo;s Law</a> which states that organizations design systems that mirror their own communication structure. In my experience, I&rsquo;ve come to believe that this is true. Whether you like it or not, it is an eventuality. At some point I thought that to be an effective solutions architect, you have to be an &ldquo;org architect&rdquo;. Or in order to achieve a certain system architecture, you&rsquo;re better off rearranging your org structure than influence cross-functional architects or senior engineering leadership to agree with you. It may work for a time, especially during the start, but eventually, as engineers come and go, the org-mirrored design will out. But I think there&rsquo;s more nuance to this than what&rsquo;s obvious.</p>
-<p>There are several types of org structures but I will cover only what&rsquo;s relevant to my situation which is startups. This might be anecdotal but between peers, the most common types fall under these two broad classifications: less boundaries or bigger teams, and smaller, often siloed teams. Teams with less boundaries tend to move slower because more people need to communicate for alignment but will produce a more coherent product. Smaller teams on the other hand, move faster but their outputs are more difficult to integrate together, resulting in an inconsistent product experience. Personally, I don&rsquo;t really have a strong opinion on which is better. I think there are phases in a startup where one works better than the other. But this requires you to understand what you want to build in the first place and then build your org chart around that.</p>
-<p>There&rsquo;s also the case of building your org structure based on product lines if you have multiple products as opposed to functional teams covering multiple products. Product-based org structures might promote autonomy and quicker response to industry changes but could easily lead to system duplication (wasted resources). Functional structure however, encourages specialization and focus but inhibits multi-boundary communications.</p>
-<p>You may argue that, &ldquo;Does it really matter? Customers don&rsquo;t really care about how your org is structured as long as your product is usable and has great UX.&rdquo; I would actually agree that this is a good baseline for structuring your org. You will have several vertical teams per product but an overlapping horizontal team that ensures UX coherence, usability, and branding. I think this is what the <a href="https://www.hbs.edu/ris/Publication%20Files/16-124_7ae90679-0ce6-4d72-9e9d-828872c7af49.pdf">Mirroring Hypothesis</a> study (confirms Conway&rsquo;s Law) refers to as partial mirroring; in which technological knowledge are invested, shared, and acquired beyond operational boundaries. &ldquo;API-first&rdquo; companies come to mind as in partial mirroring, building contractual relationships (APIs) that support technical interdependency across boundaries seems to work. And more often than not, your org structure will undergo changes multiple times during your product&rsquo;s lifetime, which will result into subsequent changes to your system&rsquo;s design that will then mirror the new org, and so on and so forth, so you might as well embrace this dynamism instead of fighting against it.</p>
-<p>Finally, the study also highlights collaboration patterns in the open source sphere that do not support the mirroring hypothesis (and thus, Conway&rsquo;s Law). My experience with OSS collaboration is mostly outside work so I&rsquo;m interested to know if there is a case for adopting OSS-style structure within the organization. I think that&rsquo;s a good topic for another day.</p>
-<p>To conclude, instead of going with the warning &ldquo;don&rsquo;t ship the org chart&rdquo;, since you will ship your org chart anyway, be aware of it, understand it, and make sure it works on your favor.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-08-09-cto-diaries-on-not-shipping-your-org-chart/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-08-09-cto-diaries-on-not-shipping-your-org-chart/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[CTO Diaries #4: On not shipping your org chart]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
-    
-        <entry>
-            
-            
-            
-            
-            
-            
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-                
-            
-
-            
-
-            
-                <content type="html"><![CDATA[<p>When it comes to tech stack selection, in general, I always approach it in terms of tradeoffs. And when it comes to understanding tradeoffs; what you gain vs what you lose, I think experience plays a big part. In my 18+ years of experience building systems, I&rsquo;ve been bitten enough times that I view most of them with a fair bit of cynicism. I wouldn&rsquo;t really say that experience definitely makes me better at it; I still have my own biases and experience doesn&rsquo;t really &lsquo;fix&rsquo; the illogical side of me being a human being with emotions. It gets in the way at times. Then there&rsquo;s the business side of it as well. An example would be to maintain business relations, or to honor partnership agreements, I would need to use (or integrate into) some tech stacks that I wouldn&rsquo;t normally choose in the first place. And to add to all of these, I also work in a startup with limited resources so there are other criteria that have a bigger influence on my approach to balancing tradeoffs. And at our phase right now, probably the biggest one is cost. Not just monetary but engineering costs as well: cost of operating and managing these systems. And I must admit that cost considerations is at times so pervasive to me that I would choose a technology purely because I got a significant discount for it even though at the back of my head, I know it&rsquo;s going to come back to me later on. So much for experience, huh.</p>
-<p>The other criteria would be expertise. With our current budget, there is a certain ceiling to the level of engineering expertise I can afford to hire. And so far, ICs or principal level engineers who could handle such decisions for me are still out of my reach. So I still end up making the decisions most of the time. The one or two engineers I have who are fairly knowledgeable about systems and infrastructure are also doing development and technical support at the same time that there&rsquo;s just not enough time to do validations. They will have opinions of course based on their readings and experience but at the end of the day, I know that they didn&rsquo;t have enough time to validate so I roughly know the level of confidence they have on their opinions. And speaking of opinions, I am more interested in roughly knowing about the caveats, horror stories, real user feedback, etc., that means checking Reddit, Mastodon, Twitter to some extent, engineering blog posts, GitHub issues, HackerNews, etc. I would say that this is almost always a requirement of mine to myself as part of my due diligence.</p>
-<p>One thing that I enjoy in all of these however is the part where I do a small prototype of the tech in question. It&rsquo;s not all the time but when I do, it&rsquo;s always a good feeling. It gives me a sense of what the tech is about, what it can do, how it works (sort of), etc. For the core parts of our systems, I think this is pretty much already an imposed personal requirement.</p>
-<p>With all these requirements in mind, one might say that I will just end up choosing boring, mature, proven, old school tech all the way. For the most part, yes, but I&rsquo;m also aware that tech is also part of the hiring strategy. New tech being exciting for most engineers is probably a safe assumption to make so there is also that consideration. With that said though, I&rsquo;m very careful with this criteria. Over the years, I&rsquo;ve come to accept that building systems is engineering/programming over time. Engineers come and go. And tech is evolving at a rapid pace. And so does expertise and opinions evolve with it. Systems are dynamic; they are reshaped and redesigned by the people working on them over time so you will eventually end up with an amalgamation of all sorts of things, even beliefs and convictions. And when all is said and done, the systems running in the company is ultimately my responsibility; I can&rsquo;t just put the blame on somebody when things go wrong just because it was their choice and not mine. This leads me to another thing in my criteria: migration. For long-running systems, migrations are a matter of when, not if. I will try to imagine how it&rsquo;s going to look like, how painful it will be, and roughly how expensive it will be when the time comes. Then balance it out with us being a startup where the possibility of throwing away code, tech, product(s) even, at any time, along with the engineering behind it, is pretty high.</p>
-<p>Expanding on the migration bit, this is probably my first time dealing with systems with colossal amounts of data so the considerations for migration is significantly important. This covers our choices of data lakes, high traffic messaging systems, databases, and migrations between these systems. Based on experience, migrations of data-related systems or systems revolving around data are the most protracted and the most painful. Much more so than, say, compute.</p>
-<p>What about hype, or in GitHub for example, the number of stars a project have? Or in Twitter/Reddit, the chatter? In a way, they are an important consideration as well. Hype results to more early users, which means more feedback, which means more bugs reported, which means more bug fixes. The hype bit though; I&rsquo;ve been through several hype cycles of tech already that in a way, I can filter them out easily and see through the marketing PR. And I think I&rsquo;m not really alone in this. Most of the colleagues I talk to with long-ish experiences under their belt, it&rsquo;s true to them as well.</p>
-<p>So, how do I keep track with all of these information around criteria? Journaling. I take notes on all of them. I&rsquo;m still working on the organization part of it though. It was and is a need so I&rsquo;m sort of forced into it. But overtime, I think I&rsquo;ve improved a lot on my documentations (and writing them) and it has grown on me so I don&rsquo;t mind it now.</p>
-<p>Alright, that&rsquo;s it for now. See you in the next one.</p>
-]]></content>
-            
-
-            <id>tag:localhost:1313,0001-01-01:/blog/2023-04-01-cto-diaries-on-choosing-tech-stack/</id>
-
-            
-                
-
-                
-                    
-
-                    <link href="http://localhost:1313/blog/2023-04-01-cto-diaries-on-choosing-tech-stack/" rel="alternate" type="text/html"/>
-                
-            
-
-            
-
-            
-
-            
-                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
-            
-
-            
-
-            <title type="html"><![CDATA[CTO Diaries #3: On choosing technology stacks]]></title>
-            <updated>0001-01-01T00:00:00Z</updated>
-        </entry>
     
         <entry>
             
