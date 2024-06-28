@@ -42,7 +42,7 @@ paige:
                 <ul>
                     <li>Device driver development (WDM, KMDF, UMDF, Linux, Android)</li>
                     <li>BIOS development (C, x86 ASM)</li>
-                    <li>Video, audio related development (DirectShow, Media Foundation, OpenCV, DirectX, Intel IPP)</li>
+                    <li>Video, audio development (DirectShow, Media Foundation, OpenCV, DirectX, Intel IPP)</li>
                     <li>Windows development (Win32, MFC, COM, .NET, UWP)</li>
                     <li>Android development (framework level, JNI, C++)</li>
                     <li>Embedded systems</li>
