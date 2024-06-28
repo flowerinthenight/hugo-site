@@ -32,36 +32,6 @@ name = "Bookshelf"
 url = "/bookshelf/"
 weight = 30
 
-# [[languages.en.menu.main]]
-# identifier = "shortcodes"
-# name = "Shortcodes"
-# url = "/shortcodes/"
-# weight = 40
-
-# [[languages.en.menu.main]]
-# identifier = "customization"
-# name = "Customization"
-# url = "/customization/"
-# weight = 50
-
-# [[languages.en.menu.main]]
-# identifier = "authors"
-# name = "Authors"
-# url = "/authors/"
-# weight = 60
-
-# [[languages.en.menu.main]]
-# identifier = "series"
-# name = "Series"
-# url = "/series/"
-# weight = 70
-
-# [[languages.en.menu.main]]
-# identifier = "categories"
-# name = "Categories"
-# url = "/categories/"
-# weight = 80
-
 [[languages.en.menu.main]]
 identifier = "tags"
 name = "Tags"
@@ -93,6 +63,9 @@ home = ["atom", "html", "paige-search", "rss"]
 section = ["atom", "html", "rss"]
 taxonomy = ["atom", "html", "rss"]
 term = ["atom", "html", "rss"]
+
+[paige.analytics]
+disable = false
 
 [params.paige]
 site_title = "f14t"
