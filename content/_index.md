@@ -65,9 +65,4 @@ paige:
     {{< paige/icon class="bi bi-github" title="GitHub" url="https://github.com/flowerinthenight/" >}}
     {{< paige/icon class="bi bi-linkedin" title="LinkedIn" url="https://www.linkedin.com/in/chew-esmero-b0613289/" >}}
 </div>
-
-<br>
-
-<p class="text-center">
-    This work is licensed under <a class="lead" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
 </p>
