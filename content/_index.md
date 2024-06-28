@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "f14t"
 paige:
   search:
     hide_page: true
