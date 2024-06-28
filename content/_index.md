@@ -49,17 +49,10 @@ paige:
             </ul>
             </p>
             <p>
-            <b>Spoken languages</b>
-            <ul>
-                <li>English - proficient</li>
-                <li>Japanese - conversational</li>
-            </ul>
-            </p>
-            <p>
             <b>Others</b>
             <ul>
-                <li>Alphaus Engineering <a href="https://labs.alphaus.cloud/blog/">blog</a> that I maintain</li>
-                <li>Mobingi's old tech <a href="https://tech.mobingi.com/">blog</a> that I maintain (archived)</li>
+                <li>Alphaus engineering <a href="https://labs.alphaus.cloud/blog/">blog</a> that I maintain, and</li>
+                <li>Mobingi's old tech <a href="https://tech.mobingi.com/">blog</a> that I maintain (archived).</li>
             </ul>
             </p>
         </div>
