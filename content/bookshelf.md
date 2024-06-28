@@ -12,7 +12,7 @@ paige:
     <div class="justify-content-center row">
         <div class="col col-auto col-lg-7 px-0">
             <p class="text-left">
-            These are the books I've read so far. At least the ones I've remembered. I'll be updating this list from time to time.
+            These are the books I've read so far. At least the ones I remembered. I'll be updating this list from time to time.
             </p>
             <p class="text-left">Current: <b>Toll the Hounds</b></p>
             <p class="text-left">
