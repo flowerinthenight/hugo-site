@@ -18,31 +18,31 @@ weight = 10
 identifier = "home"
 name = "Home"
 url = "/"
-weight = 10
+weight = 1
 
 [[languages.en.menu.main]]
 identifier = "content"
 name = "Blog"
 url = "/blog/"
-weight = 20
+weight = 2
 
 [[languages.en.menu.main]]
 identifier = "bookshelf"
 name = "Bookshelf"
 url = "/bookshelf/"
-weight = 30
+weight = 3
 
 [[languages.en.menu.main]]
 identifier = "tags"
 name = "Tags"
 url = "/tags/"
-weight = 90
+weight = 4
 
 [[languages.en.menu.main]]
 identifier = "search"
 name = "Search"
 url = "/search/"
-weight = 100
+weight = 5
 
 [markup.goldmark.renderer]
 unsafe = true

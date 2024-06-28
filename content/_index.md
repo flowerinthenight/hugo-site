@@ -15,6 +15,8 @@ paige:
 <div class="container-fluid">
     <div class="justify-content-center row">
         <div class="col col-auto col-lg-7 px-0">
+            <p>Latest blog entry: <a href="/blog/2024-06-27-new-look/">New look</a></p>
+            <br>
             <p class="text-left">
             Hi, my name is <b>Chew</b> and welcome to my blog. At the moment, I work as a CTO at a startup called <a href="https://alphaus.cloud/">Alphaus</a>. I live in Japan with my wife. I love <a href="/bookshelf/">reading</a>, especially <a href="https://en.wikipedia.org/wiki/High_fantasy">high fantasy</a> with very interesting magic systems. I also like music. I play a couple of instruments (bass, guitar, piano, and drums) although I'm not very good at any of them.
             </p>
