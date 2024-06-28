@@ -1,1 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xml:lang="en" xmlns:atom="http://www.w3.org/2005/Atom"><channel><link href="https://flowerinthenight.com/tags/logs/atom.xml" rel="self" type="application/atom+xml"/><link href="https://flowerinthenight.com/tags/logs/" rel="alternate" type="text/html"/><link href="https://flowerinthenight.com/tags/logs/rss.xml" rel="alternate" type="application/rss+xml"/><copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright><description>Recent content</description><language>en</language><lastBuildDate>2019-09-30 00:00:00 -0700 PDT</lastBuildDate><link>https://flowerinthenight.com/tags/logs/</link><managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor><title>Logs · Tags · About</title><webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster></channel></rss>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/logs/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/logs/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/logs/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+            <lastBuildDate>2019-09-30 00:00:00 -0700 PDT</lastBuildDate>
+        
+
+        <link>http://localhost:1313/tags/logs/</link>
+
+        
+            <managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor>
+        
+
+        <title>Logs · Tags · About</title>
+
+        
+            <webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster>
+        
+
+        
+    </channel>
+</rss>

@@ -1,132 +1,1151 @@
-<!doctype html><html data-paige="Paige theme from https://github.com/willfaught/paige" lang=en><head><meta charset=utf-8><meta content="2018-03-31" name=description><meta content="ingress,kubectl,Kubernetes,nginx,port-forward" name=keywords><meta content="#0d6efd" name=msapplication-TileColor><meta content="/browserconfig.xml" name=msapplication-config><meta content="https://github.com/willfaught/paige" name=theme><meta content="#0d6efd" name=theme-color><meta content="width=device-width,initial-scale=1" name=viewport><meta property="og:url" content="https://flowerinthenight.com/blog/2018-03-31-access-pods-k8s/"><meta property="og:site_name" content="flowerinthenight"><meta property="og:title" content="Accessing services in Kubernetes"><meta property="og:description" content="2018-03-31"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="blog"><meta property="article:published_time" content="2018-03-31T00:00:00-07:00"><meta property="article:modified_time" content="2018-03-31T00:00:00-07:00"><meta property="article:tag" content="Kubectl"><meta property="article:tag" content="Kubernetes"><meta property="article:tag" content="Ingress"><meta property="article:tag" content="Port-Forward"><meta property="article:tag" content="Nginx"><meta name=twitter:card content="summary"><meta name=twitter:title content="Accessing services in Kubernetes"><meta name=twitter:description content="2018-03-31"><title>Accessing services in Kubernetes · · About</title>
-<link href=/apple-touch-icon.png rel=apple-touch-icon sizes=180x180><link href=/favicon.ico rel="shortcut icon"><link href=/favicon.png rel=icon type=image/png><link href=/favicon.svg rel=icon type=image/svg+xml><link href=/favicon-16x16.png rel=icon sizes=16x16 type=image/png><link href=/favicon-32x32.png rel=icon sizes=32x32 type=image/png><link color=#0d6efd href=/safari-pinned-tab.svg rel=mask-icon><link href=/site.webmanifest rel=manifest><link crossorigin=anonymous href=/css/paige/bootstrap/6186ad141d391e4c0c10d2e9cb4eaeaadf75e809-paige.min.1c5bb4860fb7f3809f4195b145668aade87f2e92cf701992599678b1d166f0f0.css integrity="sha256-HFu0hg+384CfQZWxRWaKreh/LpLPcBmSWZZ4sdFm8PA=" referrerpolicy=no-referrer rel=stylesheet><link crossorigin=anonymous href=/css/paige/bootstrap-icons/bootstrap-icons.min.540116b7267d4b2410c74086ae6497566928c6d5715900be7ce7279ad45addcd.css integrity="sha256-VAEWtyZ9SyQQx0CGrmSXVmkoxtVxWQC+fOcnmtRa3c0=" referrerpolicy=no-referrer rel=stylesheet><style>#paige-authors,#paige-breadcrumbs,#paige-credit,#paige-date,#paige-file,#paige-keywords,#paige-prev-next,#paige-reading-time,#paige-series,#paige-toc,.paige-authors,.paige-date,.paige-keywords,.paige-reading-time,.paige-series,.paige-summary{display:none}.paige-figure-numbered{counter-increment:paige-figure-numbered}.paige-figure-numbered>div>figure>figcaption::before{content:"Figure " counter(paige-figure-numbered)": "}.paige-figure-numbered>div>figure>figcaption:empty::before{content:"Figure " counter(paige-figure-numbered)}.paige-header-link{opacity:0;margin-left:.5rem;position:absolute;transition:color .15s ease-in-out,opacity .15s ease-in-out}.paige-header-link::after{content:"#"}.paige-quote .blockquote-footer{margin-top:0}.paige-quote blockquote{border-left:0;border-right:0;margin-bottom:0;padding:0}#paige-content>*{margin-bottom:1rem}blockquote{padding:.5rem 1rem;border-left:.25rem solid var(--bs-border-color);border-right:.25rem solid var(--bs-body-bg)}td,th{padding:.25rem}.highlight .chroma .hl,.highlight .chroma .lnt{display:flex}.paige-figure .paige-quote,.paige-figure .paige-video,.paige-figure .highlight pre.chroma,.paige-figure .highlight .chroma pre,.paige-figure .paige-quote blockquote,.paige-figure figure>div>:last-child,.paige-gallery .paige-figure,.paige-gallery .paige-image,blockquote>p:last-of-type{margin-bottom:0}.paige-figure,.paige-gallery,.paige-image,.paige-quote,.paige-video,table{margin-bottom:1rem}.paige-header-link:focus,.paige-header-link:hover,:hover>.paige-header-link,:target>.paige-header-link{opacity:1}@media(prefers-color-scheme:dark){.bg{color:#c9d1d9;background-color:var(--bs-body-bg)}.chroma{color:#c9d1d9;background-color:var(--bs-body-bg)}.chroma .x{}.chroma .err{color:#f85149}.chroma .cl{}.chroma .lnlinks{outline:none;text-decoration:none;color:inherit}.chroma .lntd{vertical-align:top;padding:0;margin:0;border:0}.chroma .lntable{border-spacing:0;padding:0;margin:0;border:0}.chroma .hl{background-color:#4f4f4d}.chroma .lnt{white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#64686c}.chroma .ln{white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#6e7681}.chroma .line{display:flex}.chroma .k{color:#ff7b72}.chroma .kc{color:#79c0ff}.chroma .kd{color:#ff7b72}.chroma .kn{color:#ff7b72}.chroma .kp{color:#79c0ff}.chroma .kr{color:#ff7b72}.chroma .kt{color:#ff7b72}.chroma .n{}.chroma .na{}.chroma .nb{}.chroma .bp{}.chroma .nc{color:#f0883e;font-weight:700}.chroma .no{color:#79c0ff;font-weight:700}.chroma .nd{color:#d2a8ff;font-weight:700}.chroma .ni{color:#ffa657}.chroma .ne{color:#f0883e;font-weight:700}.chroma .nf{color:#d2a8ff;font-weight:700}.chroma .fm{}.chroma .nl{color:#79c0ff;font-weight:700}.chroma .nn{color:#ff7b72}.chroma .nx{}.chroma .py{color:#79c0ff}.chroma .nt{color:#7ee787}.chroma .nv{color:#79c0ff}.chroma .vc{}.chroma .vg{}.chroma .vi{}.chroma .vm{}.chroma .l{color:#a5d6ff}.chroma .ld{color:#79c0ff}.chroma .s{color:#a5d6ff}.chroma .sa{color:#79c0ff}.chroma .sb{color:#a5d6ff}.chroma .sc{color:#a5d6ff}.chroma .dl{color:#79c0ff}.chroma .sd{color:#a5d6ff}.chroma .s2{color:#a5d6ff}.chroma .se{color:#79c0ff}.chroma .sh{color:#79c0ff}.chroma .si{color:#a5d6ff}.chroma .sx{color:#a5d6ff}.chroma .sr{color:#79c0ff}.chroma .s1{color:#a5d6ff}.chroma .ss{color:#a5d6ff}.chroma .m{color:#a5d6ff}.chroma .mb{color:#a5d6ff}.chroma .mf{color:#a5d6ff}.chroma .mh{color:#a5d6ff}.chroma .mi{color:#a5d6ff}.chroma .il{color:#a5d6ff}.chroma .mo{color:#a5d6ff}.chroma .o{color:#ff7b72;font-weight:700}.chroma .ow{color:#ff7b72;font-weight:700}.chroma .p{}.chroma .c{color:#8b949e;font-style:italic}.chroma .ch{color:#8b949e;font-style:italic}.chroma .cm{color:#8b949e;font-style:italic}.chroma .c1{color:#8b949e;font-style:italic}.chroma .cs{color:#8b949e;font-weight:700;font-style:italic}.chroma .cp{color:#8b949e;font-weight:700;font-style:italic}.chroma .cpf{color:#8b949e;font-weight:700;font-style:italic}.chroma .g{}.chroma .gd{color:#ffa198;background-color:#490202}.chroma .ge{font-style:italic}.chroma .gr{color:#ffa198}.chroma .gh{color:#79c0ff;font-weight:700}.chroma .gi{color:#56d364;background-color:#0f5323}.chroma .go{color:#8b949e}.chroma .gp{color:#8b949e}.chroma .gs{font-weight:700}.chroma .gu{color:#79c0ff}.chroma .gt{color:#ff7b72}.chroma .gl{text-decoration:underline}.chroma .w{color:#6e7681}}@media(prefers-color-scheme:light){.bg{background-color:#fff}.chroma{background-color:#fff}.chroma .x{}.chroma .err{color:#a61717;background-color:#e3d2d2}.chroma .cl{}.chroma .lnlinks{outline:none;text-decoration:none;color:inherit}.chroma .lntd{vertical-align:top;padding:0;margin:0;border:0}.chroma .lntable{border-spacing:0;padding:0;margin:0;border:0}.chroma .hl{background-color:#ffc}.chroma .lnt{white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f}.chroma .ln{white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f}.chroma .line{display:flex}.chroma .k{color:#000;font-weight:700}.chroma .kc{color:#000;font-weight:700}.chroma .kd{color:#000;font-weight:700}.chroma .kn{color:#000;font-weight:700}.chroma .kp{color:#000;font-weight:700}.chroma .kr{color:#000;font-weight:700}.chroma .kt{color:#458;font-weight:700}.chroma .n{}.chroma .na{color:teal}.chroma .nb{color:#0086b3}.chroma .bp{color:#999}.chroma .nc{color:#458;font-weight:700}.chroma .no{color:teal}.chroma .nd{color:#3c5d5d;font-weight:700}.chroma .ni{color:purple}.chroma .ne{color:#900;font-weight:700}.chroma .nf{color:#900;font-weight:700}.chroma .fm{}.chroma .nl{color:#900;font-weight:700}.chroma .nn{color:#555}.chroma .nx{}.chroma .py{}.chroma .nt{color:navy}.chroma .nv{color:teal}.chroma .vc{color:teal}.chroma .vg{color:teal}.chroma .vi{color:teal}.chroma .vm{}.chroma .l{}.chroma .ld{}.chroma .s{color:#d14}.chroma .sa{color:#d14}.chroma .sb{color:#d14}.chroma .sc{color:#d14}.chroma .dl{color:#d14}.chroma .sd{color:#d14}.chroma .s2{color:#d14}.chroma .se{color:#d14}.chroma .sh{color:#d14}.chroma .si{color:#d14}.chroma .sx{color:#d14}.chroma .sr{color:#009926}.chroma .s1{color:#d14}.chroma .ss{color:#990073}.chroma .m{color:#099}.chroma .mb{color:#099}.chroma .mf{color:#099}.chroma .mh{color:#099}.chroma .mi{color:#099}.chroma .il{color:#099}.chroma .mo{color:#099}.chroma .o{color:#000;font-weight:700}.chroma .ow{color:#000;font-weight:700}.chroma .p{}.chroma .c{color:#998;font-style:italic}.chroma .ch{color:#998;font-style:italic}.chroma .cm{color:#998;font-style:italic}.chroma .c1{color:#998;font-style:italic}.chroma .cs{color:#999;font-weight:700;font-style:italic}.chroma .cp{color:#999;font-weight:700;font-style:italic}.chroma .cpf{color:#999;font-weight:700;font-style:italic}.chroma .g{}.chroma .gd{color:#000;background-color:#fdd}.chroma .ge{color:#000;font-style:italic}.chroma .gr{color:#a00}.chroma .gh{color:#999}.chroma .gi{color:#000;background-color:#dfd}.chroma .go{color:#888}.chroma .gp{color:#555}.chroma .gs{font-weight:700}.chroma .gu{color:#aaa}.chroma .gt{color:#a00}.chroma .gl{text-decoration:underline}.chroma .w{color:#bbb}}@media(prefers-reduced-motion:reduce){.paige-header-link{transition:none}}#paige-content>*{margin-left:auto;margin-right:auto;max-width:60rem}</style></head><body class="d-flex flex-column"><div class="container flex-fill" id=paige-root><div class=row><div class=col><header class=my-3 id=paige-header><p class="display-1 fw-bold mb-2 text-center" id=paige-site-title>f/t</p><nav><ul class="align-items-center justify-content-center nav"><li class=nav-item><a class="nav-link text-decoration-underline" href=/>Home</a></li><li class=nav-item><a aria-current=page class="active text-body-emphasis nav-link text-decoration-underline" href=/blog/>Blog</a></li><li class=nav-item><a class="nav-link text-decoration-underline" href=/bookshelf/>Bookshelf</a></li><li class=nav-item><a class="nav-link text-decoration-underline" href=/tags/>Tags</a></li><li class=nav-item><a class="nav-link text-decoration-underline" href=/search/>Search</a></li></ul></nav><nav aria-label=Breadcrumbs class=mt-3 id=paige-breadcrumbs><div class="d-flex justify-content-center"><ol class="breadcrumb mb-0"><li class=breadcrumb-item><a href=/>About</a></li><li class=breadcrumb-item><a href=/blog/>f/t</a></li></ol></div></nav><script async src="https://www.googletagmanager.com/gtag/js?id=G-EZWHM5C9YT"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-EZWHM5C9YT")}</script></header><main class=mt-3 id=paige-main><article class="paige-published paige-single" id=paige-article><div class="align-items-center d-flex flex-column mb-0"><div class=mw-100 id=paige-metadata><h1 class="fw-bold text-center" id=paige-title>Accessing services in Kubernetes</h1><p class="lead text-center" id=paige-description>2018-03-31</p><div class=mb-3><p class="mb-0 text-center text-secondary" id=paige-keywords><a class=link-secondary href=/tags/ingress/>Ingress</a> · <a class=link-secondary href=/tags/kubectl/>Kubectl</a> · <a class=link-secondary href=/tags/kubernetes/>Kubernetes</a> · <a class=link-secondary href=/tags/nginx/>Nginx</a> · <a class=link-secondary href=/tags/port-forward/>Port-Forward</a></p><p class="mb-0 text-center text-secondary" id=paige-date><time datetime=2018-03-31>March 31, 2018</time></p><p class="mb-0 text-center text-secondary" id=paige-reading-time>4 minutes</p></div></div><div class=mw-100 id=paige-toc><div class="border mb-3 pe-3 ps-3 pt-3 rounded"><nav id=TableOfContents><ol><li><a href=#using-kubectl-port-forward>Using kubectl port-forward</a></li><li><a href=#exposing-the-service-using-nodeport-or-loadbalancer>Exposing the service using NodePort or LoadBalancer</a></li><li><a href=#using-nginx-as-a-reverse-proxy-to-cluster-services>Using nginx as a reverse proxy to cluster services</a></li></ol></nav></div></div><div class=mw-100 id=paige-content><p>At <a href=https://mobingi.com>Mobingi</a>, when we are developing services that run on Kubernetes, we generally use <a href=https://github.com/kubernetes/minikube>Minikube</a> or <a href=https://blog.docker.com/2018/01/docker-mac-kubernetes/>Kubernetes in Docker for Mac</a>. We also have a cluster that runs on <a href=https://cloud.google.com/kubernetes-engine/>GKE</a> that we use for development. In this post, I will share how we access some of the services that are running on our development cluster.</p><h2 id=using-kubectl-port-forward>Using kubectl port-forward<a aria-label="Link to this section" class=paige-header-link href=#using-kubectl-port-forward></a></h2><p>Using <a href=https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/>kubectl port-forward</a> is probably the cheapest and the most straightforward. For example, if I want to access a cluster service <code>svc1</code> through my localhost, I use <code>kubectl port-forward</code> like this:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl>$ kubectl get pod
-</span></span><span class=line><span class=cl>NAME                            READY     STATUS    RESTARTS   AGE
-</span></span><span class=line><span class=cl>svc1-66dd787767-d6b22           2/2       Running   <span class=m>0</span>          7d 
-</span></span><span class=line><span class=cl>svc1-66dd787767-ks92f           2/2       Running   <span class=m>0</span>          7d 
-</span></span><span class=line><span class=cl>svc2-578786c554-rlw2w           2/2       Running   <span class=m>0</span>          7d 
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># This will connect to the first pod (we have two available):</span>
-</span></span><span class=line><span class=cl>$ kubectl port-forward <span class=sb>`</span>kubectl get pod --no-headers<span class=o>=</span><span class=nb>true</span> -o <span class=se>\
-</span></span></span><span class=line><span class=cl><span class=se></span>    custom-columns<span class=o>=</span>:metadata.name <span class=p>|</span> grep svc1 <span class=p>|</span> head -n1<span class=sb>`</span> 8080:8080
-</span></span><span class=line><span class=cl>Forwarding from 127.0.0.1:8080 -&gt; <span class=m>8080</span>
-</span></span></code></pre></div><p>The left <code>8080</code> is my local port, the right <code>8080</code> is the pod port where svc1 is running.</p><p>One thing to note with <code>kubectl port-forward</code> through is that it won&rsquo;t disconnect automatically even when the pod is restarted, say for example, due to an update from CI. I have to restart the command by doing a Ctrl+C and then rerun.</p><h2 id=exposing-the-service-using-nodeport-or-loadbalancer>Exposing the service using NodePort or LoadBalancer<a aria-label="Link to this section" class=paige-header-link href=#exposing-the-service-using-nodeport-or-loadbalancer></a></h2><p>This part is probably the easiest to setup. You can check the details from the Kubernetes <a href=https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types>documentation</a>. But you have to be careful though, especially with load balancers. These are not cheap. We have gone with this route during our early Kubernetes days and we ended up with a lot of load balancers. This was when our clusters were still in AWS. In AWS, (I&rsquo;m not sure if it is still the case now) when you specify <code>LoadBalancer</code> as service type, a classic load balancer will be provisioned for your service. That means one load balancer per exposed service!</p><p>When we moved to GKE, we started using <a href=https://github.com/kubernetes/ingress-gce>GLBC</a> which uses an L7 load balancer via the Ingress API. This improved our costs a little bit since GLBC can support up to five backend services per load balancer using paths. The slight downside was that Ingress updates were a bit slow. It&rsquo;s not a big deal though since it&rsquo;s only in the development cluster and we use blue/green deployment in production. But still, some updates can take up to ten minutes.</p><h2 id=using-nginx-as-a-reverse-proxy-to-cluster-services>Using nginx as a reverse proxy to cluster services<a aria-label="Link to this section" class=paige-header-link href=#using-nginx-as-a-reverse-proxy-to-cluster-services></a></h2><p>In our quest to further minimize costs, we are currently using <a href=https://www.nginx.com/>nginx</a> as our way of exposing services. We provisioned a single Ingress that points to an nginx service which serves as a reverse proxy to our cluster services. This was the cheapest for us as we only have one load balancer for all services. And updating the nginx reverse proxy service takes only a few seconds. So far, this worked for us with no significant problems for the past couple of months.</p><p>Here&rsquo;s an example of an nginx reverse proxy service:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=ss>apiVersion</span><span class=p>:</span> <span class=n>v1</span>
-</span></span><span class=line><span class=cl><span class=ss>kind</span><span class=p>:</span> <span class=no>ConfigMap</span>
-</span></span><span class=line><span class=cl><span class=ss>metadata</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>  <span class=nb>name</span><span class=p>:</span> <span class=n>serviceproxy</span><span class=o>-</span><span class=n>conf</span>
-</span></span><span class=line><span class=cl><span class=ss>data</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>  <span class=n>serviceproxy</span><span class=o>.</span><span class=n>conf</span><span class=p>:</span> <span class=o>|</span>
-</span></span><span class=line><span class=cl>    <span class=n>server</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=n>listen</span> <span class=mi>80</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>server_name</span> <span class=n>development</span><span class=o>.</span><span class=n>mobingi</span><span class=o>.</span><span class=n>com</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>resolver</span> <span class=n>kube</span><span class=o>-</span><span class=n>dns</span><span class=o>.</span><span class=n>kube</span><span class=o>-</span><span class=nb>system</span><span class=o>.</span><span class=n>svc</span><span class=o>.</span><span class=n>cluster</span><span class=o>.</span><span class=n>local</span> <span class=n>valid</span><span class=o>=</span><span class=mi>10</span><span class=n>s</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=n>location</span> <span class=o>~</span> <span class=o>^/</span><span class=n>svc1</span><span class=o>/</span><span class=p>(</span><span class=o>.</span><span class=n>*</span><span class=p>)</span><span class=err>$</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>            <span class=n>proxy_set_header</span> <span class=n>X</span><span class=o>-</span><span class=no>Real</span><span class=o>-</span><span class=no>IP</span> <span class=vg>$remote_addr</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>            <span class=n>proxy_set_header</span> <span class=n>X</span><span class=o>-</span><span class=no>Forwarded</span><span class=o>-</span><span class=no>For</span> <span class=vg>$remote_addr</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>            <span class=n>proxy_set_header</span> <span class=no>Host</span> <span class=vg>$host</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>            <span class=n>rewrite</span> <span class=o>^/</span><span class=n>svc1</span><span class=o>/</span><span class=p>(</span><span class=o>.</span><span class=n>*</span><span class=p>)</span><span class=err>$</span> <span class=sr>/$1 break;
-</span></span></span><span class=line><span class=cl><span class=sr>            proxy_pass &#34;http:/</span><span class=o>/</span><span class=n>svc1</span><span class=o>.</span><span class=n>default</span><span class=o>.</span><span class=n>svc</span><span class=o>.</span><span class=n>cluster</span><span class=o>.</span><span class=n>local</span><span class=s2>&#34;;
-</span></span></span><span class=line><span class=cl><span class=s2>            proxy_http_version 1.1;
-</span></span></span><span class=line><span class=cl><span class=s2>        }
-</span></span></span><span class=line><span class=cl><span class=s2>
-</span></span></span><span class=line><span class=cl><span class=s2>        location ~ ^/svc2/(.*)$ {
-</span></span></span><span class=line><span class=cl><span class=s2>            proxy_set_header X-Real-IP $remote_addr;
-</span></span></span><span class=line><span class=cl><span class=s2>            proxy_set_header X-Forwarded-For $remote_addr;
-</span></span></span><span class=line><span class=cl><span class=s2>            proxy_set_header Host $host;
-</span></span></span><span class=line><span class=cl><span class=s2>            rewrite ^/svc2/(.*)$ /$1 break;
-</span></span></span><span class=line><span class=cl><span class=s2>            proxy_pass &#34;</span><span class=ss>http</span><span class=p>:</span><span class=sr>//s</span><span class=n>vc2</span><span class=o>.</span><span class=n>default</span><span class=o>.</span><span class=n>svc</span><span class=o>.</span><span class=n>cluster</span><span class=o>.</span><span class=n>local</span><span class=s2>&#34;;
-</span></span></span><span class=line><span class=cl><span class=s2>            proxy_http_version 1.1;
-</span></span></span><span class=line><span class=cl><span class=s2>        }
-</span></span></span><span class=line><span class=cl><span class=s2>
-</span></span></span><span class=line><span class=cl><span class=s2>        # root health check requirement in GKE ingress
-</span></span></span><span class=line><span class=cl><span class=s2>        location / {
-</span></span></span><span class=line><span class=cl><span class=s2>            return 200 &#39;healthy</span><span class=se>\n</span><span class=s2>&#39;;
-</span></span></span><span class=line><span class=cl><span class=s2>        }
-</span></span></span><span class=line><span class=cl><span class=s2>    }
-</span></span></span><span class=line><span class=cl><span class=s2>
-</span></span></span><span class=line><span class=cl><span class=s2>---
-</span></span></span><span class=line><span class=cl><span class=s2>
-</span></span></span><span class=line><span class=cl><span class=s2>apiVersion: apps/v1
-</span></span></span><span class=line><span class=cl><span class=s2>kind: Deployment
-</span></span></span><span class=line><span class=cl><span class=s2>metadata:
-</span></span></span><span class=line><span class=cl><span class=s2>  name: serviceproxy
-</span></span></span><span class=line><span class=cl><span class=s2>spec:
-</span></span></span><span class=line><span class=cl><span class=s2>  replicas: 1
-</span></span></span><span class=line><span class=cl><span class=s2>  revisionHistoryLimit: 3
-</span></span></span><span class=line><span class=cl><span class=s2>  selector:
-</span></span></span><span class=line><span class=cl><span class=s2>    matchLabels:
-</span></span></span><span class=line><span class=cl><span class=s2>      app: serviceproxy
-</span></span></span><span class=line><span class=cl><span class=s2>  template:
-</span></span></span><span class=line><span class=cl><span class=s2>    metadata:
-</span></span></span><span class=line><span class=cl><span class=s2>      labels:
-</span></span></span><span class=line><span class=cl><span class=s2>        app: serviceproxy
-</span></span></span><span class=line><span class=cl><span class=s2>    spec:
-</span></span></span><span class=line><span class=cl><span class=s2>      containers:
-</span></span></span><span class=line><span class=cl><span class=s2>      - name: nginx
-</span></span></span><span class=line><span class=cl><span class=s2>        image: nginx:1.13
-</span></span></span><span class=line><span class=cl><span class=s2>        ports:
-</span></span></span><span class=line><span class=cl><span class=s2>        - containerPort: 80
-</span></span></span><span class=line><span class=cl><span class=s2>        volumeMounts:
-</span></span></span><span class=line><span class=cl><span class=s2>        - name: config-volume
-</span></span></span><span class=line><span class=cl><span class=s2>          mountPath: /etc/nginx/conf.d/
-</span></span></span><span class=line><span class=cl><span class=s2>      volumes:
-</span></span></span><span class=line><span class=cl><span class=s2>      - name: config-volume
-</span></span></span><span class=line><span class=cl><span class=s2>        configMap:
-</span></span></span><span class=line><span class=cl><span class=s2>          name: serviceproxy-conf
-</span></span></span><span class=line><span class=cl><span class=s2>          items:
-</span></span></span><span class=line><span class=cl><span class=s2>          - key: serviceproxy.conf
-</span></span></span><span class=line><span class=cl><span class=s2>            path: serviceproxy.conf
-</span></span></span><span class=line><span class=cl><span class=s2>
-</span></span></span><span class=line><span class=cl><span class=s2>---
-</span></span></span><span class=line><span class=cl><span class=s2>
-</span></span></span><span class=line><span class=cl><span class=s2>apiVersion: autoscaling/v1
-</span></span></span><span class=line><span class=cl><span class=s2>kind: HorizontalPodAutoscaler
-</span></span></span><span class=line><span class=cl><span class=s2>metadata:
-</span></span></span><span class=line><span class=cl><span class=s2>  name: serviceproxy-hpa
-</span></span></span><span class=line><span class=cl><span class=s2>  namespace: default
-</span></span></span><span class=line><span class=cl><span class=s2>spec:
-</span></span></span><span class=line><span class=cl><span class=s2>  scaleTargetRef:
-</span></span></span><span class=line><span class=cl><span class=s2>    apiVersion: apps/v1
-</span></span></span><span class=line><span class=cl><span class=s2>    kind: Deployment
-</span></span></span><span class=line><span class=cl><span class=s2>    name: serviceproxy
-</span></span></span><span class=line><span class=cl><span class=s2>  minReplicas: 1
-</span></span></span><span class=line><span class=cl><span class=s2>  maxReplicas: 10
-</span></span></span><span class=line><span class=cl><span class=s2>  targetCPUUtilizationPercentage: 80
-</span></span></span><span class=line><span class=cl><span class=s2>
-</span></span></span><span class=line><span class=cl><span class=s2>---
-</span></span></span><span class=line><span class=cl><span class=s2>
-</span></span></span><span class=line><span class=cl><span class=s2>apiVersion: v1
-</span></span></span><span class=line><span class=cl><span class=s2>kind: Service
-</span></span></span><span class=line><span class=cl><span class=s2>metadata:
-</span></span></span><span class=line><span class=cl><span class=s2>  name: serviceproxy
-</span></span></span><span class=line><span class=cl><span class=s2>spec:
-</span></span></span><span class=line><span class=cl><span class=s2>  type: NodePort
-</span></span></span><span class=line><span class=cl><span class=s2>  ports:
-</span></span></span><span class=line><span class=cl><span class=s2>  - name: http
-</span></span></span><span class=line><span class=cl><span class=s2>    protocol: TCP
-</span></span></span><span class=line><span class=cl><span class=s2>    port: 80
-</span></span></span><span class=line><span class=cl><span class=s2>    targetPort: 80
-</span></span></span><span class=line><span class=cl><span class=s2>  selector:
-</span></span></span><span class=line><span class=cl><span class=s2>    app: serviceproxy
-</span></span></span></code></pre></div><p>In this example, all services, mainly <code>svc1</code> and <code>svc2</code>, are running in the <code>default</code> namespace. Save this as service.yaml and deploy:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl>$ kubectl create -f service.yaml
-</span></span></code></pre></div><p>A sample Ingress controller for the reverse proxy service:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-ruby data-lang=ruby><span class=line><span class=cl><span class=ss>apiVersion</span><span class=p>:</span> <span class=n>extensions</span><span class=o>/</span><span class=n>v1beta1</span>
-</span></span><span class=line><span class=cl><span class=ss>kind</span><span class=p>:</span> <span class=no>Ingress</span>
-</span></span><span class=line><span class=cl><span class=ss>metadata</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>  <span class=nb>name</span><span class=p>:</span> <span class=n>serviceproxy</span><span class=o>-</span><span class=n>ingress</span>
-</span></span><span class=line><span class=cl>  <span class=ss>annotations</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>    <span class=n>kubernetes</span><span class=o>.</span><span class=n>io</span><span class=o>/</span><span class=n>ingress</span><span class=o>.</span><span class=n>class</span><span class=p>:</span> <span class=s2>&#34;gce&#34;</span>
-</span></span><span class=line><span class=cl><span class=ss>spec</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>  <span class=ss>tls</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>  <span class=o>-</span> <span class=ss>secretName</span><span class=p>:</span> <span class=n>mobingi</span><span class=o>-</span><span class=n>tls</span>
-</span></span><span class=line><span class=cl>  <span class=ss>rules</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>  <span class=o>-</span> <span class=ss>host</span><span class=p>:</span> <span class=n>development</span><span class=o>.</span><span class=n>mobingi</span><span class=o>.</span><span class=n>com</span>
-</span></span><span class=line><span class=cl>    <span class=ss>http</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>      <span class=ss>paths</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>      <span class=o>-</span> <span class=ss>backend</span><span class=p>:</span>
-</span></span><span class=line><span class=cl>          <span class=ss>serviceName</span><span class=p>:</span> <span class=n>serviceproxy</span>
-</span></span><span class=line><span class=cl>          <span class=ss>servicePort</span><span class=p>:</span> <span class=mi>80</span>
-</span></span></code></pre></div><p>Save this as ingress.yaml and deploy:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl>$ kubectl create -f ingress.yaml
-</span></span></code></pre></div><p>After everything is ready (Ingress provisioning takes some time), you should be able to access <code>svc1</code> through <code>https://development.mobingi.com/svc1/some-endpoint</code>, <code>svc2</code> through <code>https://development.mobingi.com/svc2/another-endpoint</code>, etc. Of course, you have to point your domain to your Ingress load balancer&rsquo;s IP address which you can see using the following command:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh><span class=line><span class=cl>$ kubectl get ingress serviceproxy-ingress
-</span></span><span class=line><span class=cl>NAME                   HOSTS                     ADDRESS          PORTS     AGE
-</span></span><span class=line><span class=cl>serviceproxy-ingress   development.mobingi.com   1.2.3.4          80, <span class=m>443</span>   91d
-</span></span></code></pre></div><p>If you&rsquo;re wondering how to setup the TLS portion, you can refer to my previous <a href=https://flowerinthenight.com/blog/2018/02/20/k8s-tls-digicert>post</a> about the very subject.</p><br></div></div></article></main><footer class=mb-3 id=paige-footer><div class=mb-3 id=paige-prev-next><p class="mb-0 text-center text-secondary" id=paige-next><a class=link-secondary href=https://flowerinthenight.com/blog/2018-02-20-k8s-tls-digicert/>Creating a Kubernetes TLS secret using certificates from DigiCert</a> &#8250;</p><p class="mb-0 text-center text-secondary" id=paige-prev>&#8249; <a class=link-secondary href=https://flowerinthenight.com/blog/2018-04-30-camera-class-filter-driver/>Camera Class Filter Driver for Windows</a></p></div><p class="mb-0 text-center text-secondary" id=paige-copyright>© Flowerinthenight, 2016-2024. All rights reserved.</p><p class="mb-0 text-center" id=paige-credit><a class="link-secondary text-decoration-none" href=https://github.com/willfaught/paige>Paige Theme</a></p></footer></div></div></div><script crossorigin=anonymous defer integrity="sha256-gfPiYYSP+RNtNeRBt45mJombFJmNf0V0Ipu785Obi0M=" referrerpolicy=no-referrer src=/js/paige/bootstrap/bootstrap.bundle.min.81f3e261848ff9136d35e441b78e6626899b14998d7f4574229bbbf3939b8b43.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-EZWHM5C9YT"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-EZWHM5C9YT")}</script><noscript>JavaScript is required</noscript></body></html>
+
+
+<!doctype html>
+
+
+
+
+
+
+<html  data-paige="Paige theme from https://github.com/willfaught/paige"   lang="en" >
+
+    
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+    
+
+<meta charset="utf-8">
+
+
+
+
+    <meta content="2018-03-31" name="description">
+
+
+
+    <meta content="ingress, kubectl, Kubernetes, nginx, port-forward" name="keywords">
+
+
+<meta content="#0d6efd" name="msapplication-TileColor">
+
+
+    <meta content="/browserconfig.xml" name="msapplication-config">
+
+
+<meta content="https://github.com/willfaught/paige" name="theme">
+<meta content="#0d6efd" name="theme-color">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+
+<meta property="og:url" content="http://localhost:1313/blog/2018-03-31-access-pods-k8s/">
+  <meta property="og:site_name" content="flowerinthenight">
+  <meta property="og:title" content="Accessing services in Kubernetes">
+  <meta property="og:description" content="2018-03-31">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2018-03-31T00:00:00-07:00">
+    <meta property="article:modified_time" content="2018-03-31T00:00:00-07:00">
+    <meta property="article:tag" content="Kubectl">
+    <meta property="article:tag" content="Kubernetes">
+    <meta property="article:tag" content="Ingress">
+    <meta property="article:tag" content="Port-Forward">
+    <meta property="article:tag" content="Nginx">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Accessing services in Kubernetes">
+  <meta name="twitter:description" content="2018-03-31">
+
+
+
+    
+        <title>Accessing services in Kubernetes ·  · About</title>
+    
+
+    
+
+
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+
+
+
+    <link href="/favicon.ico" rel="shortcut icon">
+
+
+
+    <link href="/favicon.png" rel="icon" type="image/png">
+
+
+
+    <link href="/favicon.svg" rel="icon" type="image/svg+xml">
+
+
+
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+
+
+
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+
+
+
+    <link color="#0d6efd" href="/safari-pinned-tab.svg" rel="mask-icon">
+
+
+
+    <link href="/site.webmanifest" rel="manifest">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+        
+        
+        
+    
+
+    
+        
+    
+
+    
+    
+    
+
+
+<link  crossorigin="anonymous"  href="/css/paige/bootstrap/6186ad141d391e4c0c10d2e9cb4eaeaadf75e809-paige.min.5a695f13e40d00e33dc2ef3b080efa570bbcc6991647824214ff6d7f4b20527e.css"  integrity="sha256-WmlfE&#43;QNAOM9wu87CA76Vwu8xpkWR4JCFP9tf0sgUn4="   referrerpolicy="no-referrer"  rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+    
+    
+
+
+<link  crossorigin="anonymous"  href="/css/paige/bootstrap-icons/bootstrap-icons.min.540116b7267d4b2410c74086ae6497566928c6d5715900be7ce7279ad45addcd.css"  integrity="sha256-VAEWtyZ9SyQQx0CGrmSXVmkoxtVxWQC&#43;fOcnmtRa3c0="   referrerpolicy="no-referrer"  rel="stylesheet">
+
+
+
+
+
+
+    
+
+<style>
+
+    #paige-authors,
+#paige-breadcrumbs,
+#paige-credit,
+#paige-date,
+#paige-file,
+#paige-keywords,
+#paige-prev-next,
+#paige-reading-time,
+#paige-series,
+#paige-toc,
+.paige-authors,
+.paige-date,
+.paige-keywords,
+.paige-reading-time,
+.paige-series,
+.paige-summary {
+    display: none;
+}
+
+
+
+.paige-figure-numbered {
+    counter-increment: paige-figure-numbered;
+}
+
+.paige-figure-numbered > div > figure > figcaption::before {
+    content: "Figure " counter(paige-figure-numbered) ": ";
+}
+
+.paige-figure-numbered > div > figure > figcaption:empty::before {
+    content: "Figure " counter(paige-figure-numbered);
+}
+
+.paige-header-link {
+    opacity: 0;
+    margin-left: 0.5rem;
+    position: absolute;
+    transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+.paige-header-link::after {
+    content: "#";
+}
+
+.paige-quote .blockquote-footer {
+    margin-top: 0;
+}
+
+.paige-quote blockquote {
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#paige-content > * {
+    margin-bottom: 1rem;
+}
+
+blockquote {
+    padding: 0.5rem 1rem;
+    border-left: 0.25rem solid var(--bs-border-color);
+    border-right: 0.25rem solid var(--bs-body-bg);
+}
+
+td, th {
+    padding: 0.25rem;
+}
+
+.highlight .chroma .hl,
+.highlight .chroma .lnt {
+    display: flex;
+}
+
+.paige-figure .paige-quote,
+.paige-figure .paige-video,
+.paige-figure .highlight pre.chroma,
+.paige-figure .highlight .chroma pre,
+.paige-figure .paige-quote blockquote,
+.paige-figure figure > div > :last-child,
+.paige-gallery .paige-figure,
+.paige-gallery .paige-image,
+blockquote > p:last-of-type {
+    margin-bottom: 0;
+}
+
+.paige-figure,
+.paige-gallery,
+.paige-image,
+.paige-quote,
+.paige-video,
+table {
+    margin-bottom: 1rem;
+}
+
+.paige-header-link:focus,
+.paige-header-link:hover,
+:hover > .paige-header-link,
+:target > .paige-header-link {
+    opacity: 1;
+}
+
+
+
+
+    @media (prefers-color-scheme: dark) {
+        /* Background */ .bg { color: #c9d1d9; background-color: var(--bs-body-bg); }
+/* PreWrapper */ .chroma { color: #c9d1d9; background-color: var(--bs-body-bg); }
+/* Other */ .chroma .x {  }
+/* Error */ .chroma .err { color: #f85149 }
+/* CodeLine */ .chroma .cl {  }
+/* LineLink */ .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
+/* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+/* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
+/* LineHighlight */ .chroma .hl { background-color: #4f4f4d }
+/* LineNumbersTable */ .chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #64686c }
+/* LineNumbers */ .chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #6e7681 }
+/* Line */ .chroma .line { display: flex; }
+/* Keyword */ .chroma .k { color: #ff7b72 }
+/* KeywordConstant */ .chroma .kc { color: #79c0ff }
+/* KeywordDeclaration */ .chroma .kd { color: #ff7b72 }
+/* KeywordNamespace */ .chroma .kn { color: #ff7b72 }
+/* KeywordPseudo */ .chroma .kp { color: #79c0ff }
+/* KeywordReserved */ .chroma .kr { color: #ff7b72 }
+/* KeywordType */ .chroma .kt { color: #ff7b72 }
+/* Name */ .chroma .n {  }
+/* NameAttribute */ .chroma .na {  }
+/* NameBuiltin */ .chroma .nb {  }
+/* NameBuiltinPseudo */ .chroma .bp {  }
+/* NameClass */ .chroma .nc { color: #f0883e; font-weight: bold }
+/* NameConstant */ .chroma .no { color: #79c0ff; font-weight: bold }
+/* NameDecorator */ .chroma .nd { color: #d2a8ff; font-weight: bold }
+/* NameEntity */ .chroma .ni { color: #ffa657 }
+/* NameException */ .chroma .ne { color: #f0883e; font-weight: bold }
+/* NameFunction */ .chroma .nf { color: #d2a8ff; font-weight: bold }
+/* NameFunctionMagic */ .chroma .fm {  }
+/* NameLabel */ .chroma .nl { color: #79c0ff; font-weight: bold }
+/* NameNamespace */ .chroma .nn { color: #ff7b72 }
+/* NameOther */ .chroma .nx {  }
+/* NameProperty */ .chroma .py { color: #79c0ff }
+/* NameTag */ .chroma .nt { color: #7ee787 }
+/* NameVariable */ .chroma .nv { color: #79c0ff }
+/* NameVariableClass */ .chroma .vc {  }
+/* NameVariableGlobal */ .chroma .vg {  }
+/* NameVariableInstance */ .chroma .vi {  }
+/* NameVariableMagic */ .chroma .vm {  }
+/* Literal */ .chroma .l { color: #a5d6ff }
+/* LiteralDate */ .chroma .ld { color: #79c0ff }
+/* LiteralString */ .chroma .s { color: #a5d6ff }
+/* LiteralStringAffix */ .chroma .sa { color: #79c0ff }
+/* LiteralStringBacktick */ .chroma .sb { color: #a5d6ff }
+/* LiteralStringChar */ .chroma .sc { color: #a5d6ff }
+/* LiteralStringDelimiter */ .chroma .dl { color: #79c0ff }
+/* LiteralStringDoc */ .chroma .sd { color: #a5d6ff }
+/* LiteralStringDouble */ .chroma .s2 { color: #a5d6ff }
+/* LiteralStringEscape */ .chroma .se { color: #79c0ff }
+/* LiteralStringHeredoc */ .chroma .sh { color: #79c0ff }
+/* LiteralStringInterpol */ .chroma .si { color: #a5d6ff }
+/* LiteralStringOther */ .chroma .sx { color: #a5d6ff }
+/* LiteralStringRegex */ .chroma .sr { color: #79c0ff }
+/* LiteralStringSingle */ .chroma .s1 { color: #a5d6ff }
+/* LiteralStringSymbol */ .chroma .ss { color: #a5d6ff }
+/* LiteralNumber */ .chroma .m { color: #a5d6ff }
+/* LiteralNumberBin */ .chroma .mb { color: #a5d6ff }
+/* LiteralNumberFloat */ .chroma .mf { color: #a5d6ff }
+/* LiteralNumberHex */ .chroma .mh { color: #a5d6ff }
+/* LiteralNumberInteger */ .chroma .mi { color: #a5d6ff }
+/* LiteralNumberIntegerLong */ .chroma .il { color: #a5d6ff }
+/* LiteralNumberOct */ .chroma .mo { color: #a5d6ff }
+/* Operator */ .chroma .o { color: #ff7b72; font-weight: bold }
+/* OperatorWord */ .chroma .ow { color: #ff7b72; font-weight: bold }
+/* Punctuation */ .chroma .p {  }
+/* Comment */ .chroma .c { color: #8b949e; font-style: italic }
+/* CommentHashbang */ .chroma .ch { color: #8b949e; font-style: italic }
+/* CommentMultiline */ .chroma .cm { color: #8b949e; font-style: italic }
+/* CommentSingle */ .chroma .c1 { color: #8b949e; font-style: italic }
+/* CommentSpecial */ .chroma .cs { color: #8b949e; font-weight: bold; font-style: italic }
+/* CommentPreproc */ .chroma .cp { color: #8b949e; font-weight: bold; font-style: italic }
+/* CommentPreprocFile */ .chroma .cpf { color: #8b949e; font-weight: bold; font-style: italic }
+/* Generic */ .chroma .g {  }
+/* GenericDeleted */ .chroma .gd { color: #ffa198; background-color: #490202 }
+/* GenericEmph */ .chroma .ge { font-style: italic }
+/* GenericError */ .chroma .gr { color: #ffa198 }
+/* GenericHeading */ .chroma .gh { color: #79c0ff; font-weight: bold }
+/* GenericInserted */ .chroma .gi { color: #56d364; background-color: #0f5323 }
+/* GenericOutput */ .chroma .go { color: #8b949e }
+/* GenericPrompt */ .chroma .gp { color: #8b949e }
+/* GenericStrong */ .chroma .gs { font-weight: bold }
+/* GenericSubheading */ .chroma .gu { color: #79c0ff }
+/* GenericTraceback */ .chroma .gt { color: #ff7b72 }
+/* GenericUnderline */ .chroma .gl { text-decoration: underline }
+/* TextWhitespace */ .chroma .w { color: #6e7681 }
+
+    }
+
+    @media (prefers-color-scheme: light) {
+        /* Background */ .bg { background-color: #ffffff; }
+/* PreWrapper */ .chroma { background-color: #ffffff; }
+/* Other */ .chroma .x {  }
+/* Error */ .chroma .err { color: #a61717; background-color: #e3d2d2 }
+/* CodeLine */ .chroma .cl {  }
+/* LineLink */ .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
+/* LineTableTD */ .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+/* LineTable */ .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
+/* LineHighlight */ .chroma .hl { background-color: #ffffcc }
+/* LineNumbersTable */ .chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+/* LineNumbers */ .chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+/* Line */ .chroma .line { display: flex; }
+/* Keyword */ .chroma .k { color: #000000; font-weight: bold }
+/* KeywordConstant */ .chroma .kc { color: #000000; font-weight: bold }
+/* KeywordDeclaration */ .chroma .kd { color: #000000; font-weight: bold }
+/* KeywordNamespace */ .chroma .kn { color: #000000; font-weight: bold }
+/* KeywordPseudo */ .chroma .kp { color: #000000; font-weight: bold }
+/* KeywordReserved */ .chroma .kr { color: #000000; font-weight: bold }
+/* KeywordType */ .chroma .kt { color: #445588; font-weight: bold }
+/* Name */ .chroma .n {  }
+/* NameAttribute */ .chroma .na { color: #008080 }
+/* NameBuiltin */ .chroma .nb { color: #0086b3 }
+/* NameBuiltinPseudo */ .chroma .bp { color: #999999 }
+/* NameClass */ .chroma .nc { color: #445588; font-weight: bold }
+/* NameConstant */ .chroma .no { color: #008080 }
+/* NameDecorator */ .chroma .nd { color: #3c5d5d; font-weight: bold }
+/* NameEntity */ .chroma .ni { color: #800080 }
+/* NameException */ .chroma .ne { color: #990000; font-weight: bold }
+/* NameFunction */ .chroma .nf { color: #990000; font-weight: bold }
+/* NameFunctionMagic */ .chroma .fm {  }
+/* NameLabel */ .chroma .nl { color: #990000; font-weight: bold }
+/* NameNamespace */ .chroma .nn { color: #555555 }
+/* NameOther */ .chroma .nx {  }
+/* NameProperty */ .chroma .py {  }
+/* NameTag */ .chroma .nt { color: #000080 }
+/* NameVariable */ .chroma .nv { color: #008080 }
+/* NameVariableClass */ .chroma .vc { color: #008080 }
+/* NameVariableGlobal */ .chroma .vg { color: #008080 }
+/* NameVariableInstance */ .chroma .vi { color: #008080 }
+/* NameVariableMagic */ .chroma .vm {  }
+/* Literal */ .chroma .l {  }
+/* LiteralDate */ .chroma .ld {  }
+/* LiteralString */ .chroma .s { color: #dd1144 }
+/* LiteralStringAffix */ .chroma .sa { color: #dd1144 }
+/* LiteralStringBacktick */ .chroma .sb { color: #dd1144 }
+/* LiteralStringChar */ .chroma .sc { color: #dd1144 }
+/* LiteralStringDelimiter */ .chroma .dl { color: #dd1144 }
+/* LiteralStringDoc */ .chroma .sd { color: #dd1144 }
+/* LiteralStringDouble */ .chroma .s2 { color: #dd1144 }
+/* LiteralStringEscape */ .chroma .se { color: #dd1144 }
+/* LiteralStringHeredoc */ .chroma .sh { color: #dd1144 }
+/* LiteralStringInterpol */ .chroma .si { color: #dd1144 }
+/* LiteralStringOther */ .chroma .sx { color: #dd1144 }
+/* LiteralStringRegex */ .chroma .sr { color: #009926 }
+/* LiteralStringSingle */ .chroma .s1 { color: #dd1144 }
+/* LiteralStringSymbol */ .chroma .ss { color: #990073 }
+/* LiteralNumber */ .chroma .m { color: #009999 }
+/* LiteralNumberBin */ .chroma .mb { color: #009999 }
+/* LiteralNumberFloat */ .chroma .mf { color: #009999 }
+/* LiteralNumberHex */ .chroma .mh { color: #009999 }
+/* LiteralNumberInteger */ .chroma .mi { color: #009999 }
+/* LiteralNumberIntegerLong */ .chroma .il { color: #009999 }
+/* LiteralNumberOct */ .chroma .mo { color: #009999 }
+/* Operator */ .chroma .o { color: #000000; font-weight: bold }
+/* OperatorWord */ .chroma .ow { color: #000000; font-weight: bold }
+/* Punctuation */ .chroma .p {  }
+/* Comment */ .chroma .c { color: #999988; font-style: italic }
+/* CommentHashbang */ .chroma .ch { color: #999988; font-style: italic }
+/* CommentMultiline */ .chroma .cm { color: #999988; font-style: italic }
+/* CommentSingle */ .chroma .c1 { color: #999988; font-style: italic }
+/* CommentSpecial */ .chroma .cs { color: #999999; font-weight: bold; font-style: italic }
+/* CommentPreproc */ .chroma .cp { color: #999999; font-weight: bold; font-style: italic }
+/* CommentPreprocFile */ .chroma .cpf { color: #999999; font-weight: bold; font-style: italic }
+/* Generic */ .chroma .g {  }
+/* GenericDeleted */ .chroma .gd { color: #000000; background-color: #ffdddd }
+/* GenericEmph */ .chroma .ge { color: #000000; font-style: italic }
+/* GenericError */ .chroma .gr { color: #aa0000 }
+/* GenericHeading */ .chroma .gh { color: #999999 }
+/* GenericInserted */ .chroma .gi { color: #000000; background-color: #ddffdd }
+/* GenericOutput */ .chroma .go { color: #888888 }
+/* GenericPrompt */ .chroma .gp { color: #555555 }
+/* GenericStrong */ .chroma .gs { font-weight: bold }
+/* GenericSubheading */ .chroma .gu { color: #aaaaaa }
+/* GenericTraceback */ .chroma .gt { color: #aa0000 }
+/* GenericUnderline */ .chroma .gl { text-decoration: underline }
+/* TextWhitespace */ .chroma .w { color: #bbbbbb }
+
+    }
+
+
+@media (prefers-reduced-motion: reduce) {
+    .paige-header-link {
+        transition: none;
+    }
+}
+
+
+    #paige-content > * { margin-left: auto; margin-right: auto; max-width: 60rem; }
+
+
+
+</style>
+
+
+    
+</head>
+
+    <body class="d-flex flex-column">
+
+        
+
+        <div class="container flex-fill" id="paige-root">
+            <div class="row">
+                <div class="col">
+                    
+
+
+    <header class="my-3" id="paige-header">
+        
+
+        
+
+
+    <p class="display-1 fw-bold mb-2 text-center" id="paige-site-title">f/t</p>
+
+
+
+        
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+    
+
+
+
+    <nav>
+        <ul class="align-items-center justify-content-center nav ">
+            
+                
+                
+                
+                
+                
+
+                <li class="nav-item ">
+                    <a   class="  nav-link   text-decoration-underline "  href="/"    >Home</a>
+
+                    
+                </li>
+            
+                
+                
+                
+                
+                
+
+                <li class="nav-item ">
+                    <a  aria-current="page"   class=" active  text-body-emphasis    nav-link   text-decoration-underline "  href="/blog/"    >Blog</a>
+
+                    
+                </li>
+            
+                
+                
+                
+                
+                
+
+                <li class="nav-item ">
+                    <a   class="  nav-link   text-decoration-underline "  href="/bookshelf/"    >Bookshelf</a>
+
+                    
+                </li>
+            
+                
+                
+                
+                
+                
+
+                <li class="nav-item ">
+                    <a   class="  nav-link   text-decoration-underline "  href="/tags/"    >Tags</a>
+
+                    
+                </li>
+            
+                
+                
+                
+                
+                
+
+                <li class="nav-item ">
+                    <a   class="  nav-link   text-decoration-underline "  href="/search/"    >Search</a>
+
+                    
+                </li>
+            
+        </ul>
+    </nav>
+
+
+        
+
+
+    <nav aria-label="Breadcrumbs" class="mt-3" id="paige-breadcrumbs">
+        <div class="d-flex justify-content-center">
+            <ol class="breadcrumb mb-0">
+                
+
+                
+
+                
+                    
+
+                    
+
+                    <li class="breadcrumb-item"><a href="/">About</a></li>
+                
+                    
+
+                    
+                        
+                    
+
+                    <li class="breadcrumb-item"><a href="/blog/">f/t</a></li>
+                
+            </ol>
+        </div>
+    </nav>
+
+
+
+        
+            
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZWHM5C9YT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EZWHM5C9YT');
+        }
+      </script>
+    
+  
+
+
+        
+    </header>
+
+
+
+                    <main class="mt-3" id="paige-main">
+                        
+
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+        
+    
+
+
+
+
+<article  class="paige-published paige-single"  id="paige-article">
+    <div class="align-items-center d-flex flex-column mb-0">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mw-100" id="paige-metadata">
+    
+        <h1 class="fw-bold text-center" id="paige-title">Accessing services in Kubernetes</h1>
+    
+
+    
+        <p class="lead text-center" id="paige-description">2018-03-31</p>
+    
+
+    
+        <div class="mb-3">
+            
+                <p class=" mb-0  text-center  text-secondary " id="paige-keywords">
+                    <a class="link-secondary" href="/tags/ingress/">Ingress</a> · <a class="link-secondary" href="/tags/kubectl/">Kubectl</a> · <a class="link-secondary" href="/tags/kubernetes/">Kubernetes</a> · <a class="link-secondary" href="/tags/nginx/">Nginx</a> · <a class="link-secondary" href="/tags/port-forward/">Port-Forward</a>
+                </p>
+            
+
+            
+
+            
+
+            
+                <p class="mb-0 text-center text-secondary" id="paige-date">
+                    <time datetime="2018-03-31">March 31, 2018</time>
+                </p>
+            
+
+            
+                <p class="mb-0 text-center text-secondary" id="paige-reading-time">4 minutes</p>
+            
+        </div>
+    
+</div>
+
+        
+
+
+
+        
+
+
+    <div class="mw-100" id="paige-toc">
+        <div class="border mb-3 pe-3 ps-3 pt-3 rounded">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#using-kubectl-port-forward">Using kubectl port-forward</a></li>
+    <li><a href="#exposing-the-service-using-nodeport-or-loadbalancer">Exposing the service using NodePort or LoadBalancer</a></li>
+    <li><a href="#using-nginx-as-a-reverse-proxy-to-cluster-services">Using nginx as a reverse proxy to cluster services</a></li>
+  </ol>
+</nav>
+        </div>
+    </div>
+
+
+        
+
+
+
+
+    <div class="mw-100" id="paige-content"><p>At <a href="https://mobingi.com">Mobingi</a>, when we are developing services that run on Kubernetes, we generally use <a href="https://github.com/kubernetes/minikube">Minikube</a> or <a href="https://blog.docker.com/2018/01/docker-mac-kubernetes/">Kubernetes in Docker for Mac</a>. We also have a cluster that runs on <a href="https://cloud.google.com/kubernetes-engine/">GKE</a> that we use for development. In this post, I will share how we access some of the services that are running on our development cluster.</p>
+<h2 id="using-kubectl-port-forward">Using kubectl port-forward<a aria-label="Link to this section" class="paige-header-link" href="#using-kubectl-port-forward"></a></h2>
+<p>Using <a href="https://kubernetes.io/docs/tasks/access-application-cluster/port-forward-access-application-cluster/">kubectl port-forward</a> is probably the cheapest and the most straightforward. For example, if I want to access a cluster service <code>svc1</code> through my localhost, I use <code>kubectl port-forward</code> like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ kubectl get pod
+</span></span><span class="line"><span class="cl">NAME                            READY     STATUS    RESTARTS   AGE
+</span></span><span class="line"><span class="cl">svc1-66dd787767-d6b22           2/2       Running   <span class="m">0</span>          7d 
+</span></span><span class="line"><span class="cl">svc1-66dd787767-ks92f           2/2       Running   <span class="m">0</span>          7d 
+</span></span><span class="line"><span class="cl">svc2-578786c554-rlw2w           2/2       Running   <span class="m">0</span>          7d 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># This will connect to the first pod (we have two available):</span>
+</span></span><span class="line"><span class="cl">$ kubectl port-forward <span class="sb">`</span>kubectl get pod --no-headers<span class="o">=</span><span class="nb">true</span> -o <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    custom-columns<span class="o">=</span>:metadata.name <span class="p">|</span> grep svc1 <span class="p">|</span> head -n1<span class="sb">`</span> 8080:8080
+</span></span><span class="line"><span class="cl">Forwarding from 127.0.0.1:8080 -&gt; <span class="m">8080</span>
+</span></span></code></pre></div><p>The left <code>8080</code> is my local port, the right <code>8080</code> is the pod port where svc1 is running.</p>
+<p>One thing to note with <code>kubectl port-forward</code> through is that it won&rsquo;t disconnect automatically even when the pod is restarted, say for example, due to an update from CI. I have to restart the command by doing a Ctrl+C and then rerun.</p>
+<h2 id="exposing-the-service-using-nodeport-or-loadbalancer">Exposing the service using NodePort or LoadBalancer<a aria-label="Link to this section" class="paige-header-link" href="#exposing-the-service-using-nodeport-or-loadbalancer"></a></h2>
+<p>This part is probably the easiest to setup. You can check the details from the Kubernetes <a href="https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types">documentation</a>. But you have to be careful though, especially with load balancers. These are not cheap. We have gone with this route during our early Kubernetes days and we ended up with a lot of load balancers. This was when our clusters were still in AWS. In AWS, (I&rsquo;m not sure if it is still the case now) when you specify <code>LoadBalancer</code> as service type, a classic load balancer will be provisioned for your service. That means one load balancer per exposed service!</p>
+<p>When we moved to GKE, we started using <a href="https://github.com/kubernetes/ingress-gce">GLBC</a> which uses an L7 load balancer via the Ingress API. This improved our costs a little bit since GLBC can support up to five backend services per load balancer using paths. The slight downside was that Ingress updates were a bit slow. It&rsquo;s not a big deal though since it&rsquo;s only in the development cluster and we use blue/green deployment in production. But still, some updates can take up to ten minutes.</p>
+<h2 id="using-nginx-as-a-reverse-proxy-to-cluster-services">Using nginx as a reverse proxy to cluster services<a aria-label="Link to this section" class="paige-header-link" href="#using-nginx-as-a-reverse-proxy-to-cluster-services"></a></h2>
+<p>In our quest to further minimize costs, we are currently using <a href="https://www.nginx.com/">nginx</a> as our way of exposing services. We provisioned a single Ingress that points to an nginx service which serves as a reverse proxy to our cluster services. This was the cheapest for us as we only have one load balancer for all services. And updating the nginx reverse proxy service takes only a few seconds. So far, this worked for us with no significant problems for the past couple of months.</p>
+<p>Here&rsquo;s an example of an nginx reverse proxy service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="ss">apiVersion</span><span class="p">:</span> <span class="n">v1</span>
+</span></span><span class="line"><span class="cl"><span class="ss">kind</span><span class="p">:</span> <span class="no">ConfigMap</span>
+</span></span><span class="line"><span class="cl"><span class="ss">metadata</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">name</span><span class="p">:</span> <span class="n">serviceproxy</span><span class="o">-</span><span class="n">conf</span>
+</span></span><span class="line"><span class="cl"><span class="ss">data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="n">serviceproxy</span><span class="o">.</span><span class="n">conf</span><span class="p">:</span> <span class="o">|</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">listen</span> <span class="mi">80</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">server_name</span> <span class="n">development</span><span class="o">.</span><span class="n">mobingi</span><span class="o">.</span><span class="n">com</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">resolver</span> <span class="n">kube</span><span class="o">-</span><span class="n">dns</span><span class="o">.</span><span class="n">kube</span><span class="o">-</span><span class="nb">system</span><span class="o">.</span><span class="n">svc</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">local</span> <span class="n">valid</span><span class="o">=</span><span class="mi">10</span><span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">location</span> <span class="o">~</span> <span class="o">^/</span><span class="n">svc1</span><span class="o">/</span><span class="p">(</span><span class="o">.</span><span class="n">*</span><span class="p">)</span><span class="err">$</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="no">Real</span><span class="o">-</span><span class="no">IP</span> <span class="vg">$remote_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">proxy_set_header</span> <span class="n">X</span><span class="o">-</span><span class="no">Forwarded</span><span class="o">-</span><span class="no">For</span> <span class="vg">$remote_addr</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">proxy_set_header</span> <span class="no">Host</span> <span class="vg">$host</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">rewrite</span> <span class="o">^/</span><span class="n">svc1</span><span class="o">/</span><span class="p">(</span><span class="o">.</span><span class="n">*</span><span class="p">)</span><span class="err">$</span> <span class="sr">/$1 break;
+</span></span></span><span class="line"><span class="cl"><span class="sr">            proxy_pass &#34;http:/</span><span class="o">/</span><span class="n">svc1</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">svc</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">local</span><span class="s2">&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            proxy_http_version 1.1;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        }
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">        location ~ ^/svc2/(.*)$ {
+</span></span></span><span class="line"><span class="cl"><span class="s2">            proxy_set_header X-Real-IP $remote_addr;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            proxy_set_header X-Forwarded-For $remote_addr;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            proxy_set_header Host $host;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            rewrite ^/svc2/(.*)$ /$1 break;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            proxy_pass &#34;</span><span class="ss">http</span><span class="p">:</span><span class="sr">//s</span><span class="n">vc2</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">svc</span><span class="o">.</span><span class="n">cluster</span><span class="o">.</span><span class="n">local</span><span class="s2">&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">            proxy_http_version 1.1;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        }
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">        # root health check requirement in GKE ingress
+</span></span></span><span class="line"><span class="cl"><span class="s2">        location / {
+</span></span></span><span class="line"><span class="cl"><span class="s2">            return 200 &#39;healthy</span><span class="se">\n</span><span class="s2">&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        }
+</span></span></span><span class="line"><span class="cl"><span class="s2">    }
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">---
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">apiVersion: apps/v1
+</span></span></span><span class="line"><span class="cl"><span class="s2">kind: Deployment
+</span></span></span><span class="line"><span class="cl"><span class="s2">metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  name: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">spec:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  replicas: 1
+</span></span></span><span class="line"><span class="cl"><span class="s2">  revisionHistoryLimit: 3
+</span></span></span><span class="line"><span class="cl"><span class="s2">  selector:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    matchLabels:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      app: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">  template:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      labels:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        app: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">    spec:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      containers:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      - name: nginx
+</span></span></span><span class="line"><span class="cl"><span class="s2">        image: nginx:1.13
+</span></span></span><span class="line"><span class="cl"><span class="s2">        ports:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        - containerPort: 80
+</span></span></span><span class="line"><span class="cl"><span class="s2">        volumeMounts:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        - name: config-volume
+</span></span></span><span class="line"><span class="cl"><span class="s2">          mountPath: /etc/nginx/conf.d/
+</span></span></span><span class="line"><span class="cl"><span class="s2">      volumes:
+</span></span></span><span class="line"><span class="cl"><span class="s2">      - name: config-volume
+</span></span></span><span class="line"><span class="cl"><span class="s2">        configMap:
+</span></span></span><span class="line"><span class="cl"><span class="s2">          name: serviceproxy-conf
+</span></span></span><span class="line"><span class="cl"><span class="s2">          items:
+</span></span></span><span class="line"><span class="cl"><span class="s2">          - key: serviceproxy.conf
+</span></span></span><span class="line"><span class="cl"><span class="s2">            path: serviceproxy.conf
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">---
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">apiVersion: autoscaling/v1
+</span></span></span><span class="line"><span class="cl"><span class="s2">kind: HorizontalPodAutoscaler
+</span></span></span><span class="line"><span class="cl"><span class="s2">metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  name: serviceproxy-hpa
+</span></span></span><span class="line"><span class="cl"><span class="s2">  namespace: default
+</span></span></span><span class="line"><span class="cl"><span class="s2">spec:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  scaleTargetRef:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    apiVersion: apps/v1
+</span></span></span><span class="line"><span class="cl"><span class="s2">    kind: Deployment
+</span></span></span><span class="line"><span class="cl"><span class="s2">    name: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">  minReplicas: 1
+</span></span></span><span class="line"><span class="cl"><span class="s2">  maxReplicas: 10
+</span></span></span><span class="line"><span class="cl"><span class="s2">  targetCPUUtilizationPercentage: 80
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">---
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">apiVersion: v1
+</span></span></span><span class="line"><span class="cl"><span class="s2">kind: Service
+</span></span></span><span class="line"><span class="cl"><span class="s2">metadata:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  name: serviceproxy
+</span></span></span><span class="line"><span class="cl"><span class="s2">spec:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  type: NodePort
+</span></span></span><span class="line"><span class="cl"><span class="s2">  ports:
+</span></span></span><span class="line"><span class="cl"><span class="s2">  - name: http
+</span></span></span><span class="line"><span class="cl"><span class="s2">    protocol: TCP
+</span></span></span><span class="line"><span class="cl"><span class="s2">    port: 80
+</span></span></span><span class="line"><span class="cl"><span class="s2">    targetPort: 80
+</span></span></span><span class="line"><span class="cl"><span class="s2">  selector:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    app: serviceproxy
+</span></span></span></code></pre></div><p>In this example, all services, mainly <code>svc1</code> and <code>svc2</code>, are running in the <code>default</code> namespace. Save this as service.yaml and deploy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ kubectl create -f service.yaml
+</span></span></code></pre></div><p>A sample Ingress controller for the reverse proxy service:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="ss">apiVersion</span><span class="p">:</span> <span class="n">extensions</span><span class="o">/</span><span class="n">v1beta1</span>
+</span></span><span class="line"><span class="cl"><span class="ss">kind</span><span class="p">:</span> <span class="no">Ingress</span>
+</span></span><span class="line"><span class="cl"><span class="ss">metadata</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">name</span><span class="p">:</span> <span class="n">serviceproxy</span><span class="o">-</span><span class="n">ingress</span>
+</span></span><span class="line"><span class="cl">  <span class="ss">annotations</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">kubernetes</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">ingress</span><span class="o">.</span><span class="n">class</span><span class="p">:</span> <span class="s2">&#34;gce&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="ss">spec</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="ss">tls</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="ss">secretName</span><span class="p">:</span> <span class="n">mobingi</span><span class="o">-</span><span class="n">tls</span>
+</span></span><span class="line"><span class="cl">  <span class="ss">rules</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  <span class="o">-</span> <span class="ss">host</span><span class="p">:</span> <span class="n">development</span><span class="o">.</span><span class="n">mobingi</span><span class="o">.</span><span class="n">com</span>
+</span></span><span class="line"><span class="cl">    <span class="ss">http</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="ss">paths</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="o">-</span> <span class="ss">backend</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">          <span class="ss">serviceName</span><span class="p">:</span> <span class="n">serviceproxy</span>
+</span></span><span class="line"><span class="cl">          <span class="ss">servicePort</span><span class="p">:</span> <span class="mi">80</span>
+</span></span></code></pre></div><p>Save this as ingress.yaml and deploy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ kubectl create -f ingress.yaml
+</span></span></code></pre></div><p>After everything is ready (Ingress provisioning takes some time), you should be able to access <code>svc1</code> through <code>https://development.mobingi.com/svc1/some-endpoint</code>, <code>svc2</code> through <code>https://development.mobingi.com/svc2/another-endpoint</code>, etc. Of course, you have to point your domain to your Ingress load balancer&rsquo;s IP address which you can see using the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ kubectl get ingress serviceproxy-ingress
+</span></span><span class="line"><span class="cl">NAME                   HOSTS                     ADDRESS          PORTS     AGE
+</span></span><span class="line"><span class="cl">serviceproxy-ingress   development.mobingi.com   1.2.3.4          80, <span class="m">443</span>   91d
+</span></span></code></pre></div><p>If you&rsquo;re wondering how to setup the TLS portion, you can refer to my previous <a href="https://flowerinthenight.com/blog/2018/02/20/k8s-tls-digicert">post</a> about the very subject.</p>
+<br>
+</div>
+
+
+    </div>
+</article>
+
+
+
+
+    
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+                        
+                    </main>
+
+                    
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+
+<footer class="mb-3" id="paige-footer">
+    
+
+    
+        <div class="mb-3" id="paige-prev-next">
+            
+                <p class="mb-0 text-center text-secondary" id="paige-next">
+                    <a class="link-secondary" href="http://localhost:1313/blog/2018-02-20-k8s-tls-digicert/">Creating a Kubernetes TLS secret using certificates from DigiCert</a> &rsaquo;
+                </p>
+            
+
+            
+                <p class="mb-0 text-center text-secondary" id="paige-prev">
+                    &lsaquo; <a class="link-secondary" href="http://localhost:1313/blog/2018-04-30-camera-class-filter-driver/">Camera Class Filter Driver for Windows</a>
+                </p>
+            
+        </div>
+    
+
+    
+
+    
+        <p class="mb-0 text-center text-secondary" id="paige-copyright">© Flowerinthenight, 2016-2024. All rights reserved.</p>
+    
+
+    <p class="mb-0 text-center" id="paige-credit">
+        <a class="link-secondary text-decoration-none" href="https://github.com/willfaught/paige" >Paige Theme</a>
+    </p>
+
+    
+</footer>
+
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+
+<script  crossorigin="anonymous"   defer  integrity="sha256-gfPiYYSP&#43;RNtNeRBt45mJombFJmNf0V0Ipu785Obi0M="   referrerpolicy="no-referrer"  src="/js/paige/bootstrap/bootstrap.bundle.min.81f3e261848ff9136d35e441b78e6626899b14998d7f4574229bbbf3939b8b43.js" ></script>
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+    
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-EZWHM5C9YT"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-EZWHM5C9YT');
+        }
+      </script>
+    
+  
+
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+<noscript>JavaScript is required</noscript>
+
+
+        
+    </body>
+</html>

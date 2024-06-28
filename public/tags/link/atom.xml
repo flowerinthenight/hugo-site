@@ -1,2 +1,176 @@
-<?xml version="1.0" encoding="utf-8"?><feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom"><author><email>root@flowerinthenight.com</email><name>Flowerinthenight</name><uri>https://flowerinthenight.com</uri></author><icon>https://flowerinthenight.com/</icon><id>tag:flowerinthenight.com,0001-01-01:/tags/link/atom.xml</id><link href="https://flowerinthenight.com/tags/link/atom.xml" rel="self" type="application/atom+xml"/><link href="https://flowerinthenight.com/tags/link/" rel="alternate" type="text/html"/><link href="https://flowerinthenight.com/tags/link/rss.xml" rel="alternate" type="application/rss+xml"/><logo>https://flowerinthenight.com/</logo><rights type="html">© Flowerinthenight, 2016-2024. All rights reserved.</rights><title type="html">Link · Tags · About</title><updated>2024-05-30T00:00:00-07:00</updated><entry><author/><content type="html"><![CDATA[<p>It takes you to the home page.</p>
-<p><a href="https://flowerinthenight.com/tmp/link/" title="Link">⏎</a></p>]]></content><id>tag:flowerinthenight.com,2023-09-24:/tmp/link/</id><link href="https://willfaught.com/paige" rel="alternate" type="text/html"/><published>2023-09-24T21:29:30-07:00</published><rights type="html">© Flowerinthenight, 2016-2024. All rights reserved.</rights><summary type="html">A front matter link.</summary><title type="html">Link</title><updated>2023-09-24T21:29:30-07:00</updated></entry></feed>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed  xml:lang="en"  xmlns="http://www.w3.org/2005/Atom">
+    
+        <author>
+            
+                <email>root@flowerinthenight.com</email>
+            
+
+            
+                <name>Flowerinthenight</name>
+            
+
+            
+                <uri>https://flowerinthenight.com</uri>
+            
+        </author>
+    
+
+    
+        <icon>http://localhost:1313/</icon>
+    
+
+    <id>tag:localhost:1313,0001-01-01:/tags/link/atom.xml</id>
+
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/link/atom.xml" rel="self" type="application/atom+xml"/>
+        
+    
+        
+
+        
+            
+        
+
+        
+            <link href="http://localhost:1313/tags/link/" rel="alternate" type="text/html"/>
+        
+    
+        
+
+        
+
+        
+            <link href="http://localhost:1313/tags/link/rss.xml" rel="alternate" type="application/rss+xml"/>
+        
+    
+
+    
+
+    
+        <logo>http://localhost:1313/</logo>
+    
+
+    
+        <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+    
+
+    
+
+    <title type="html"><![CDATA[Link · Tags · About]]></title>
+    <updated>2024-05-30T00:00:00-07:00</updated>
+
+    
+        <entry>
+            
+            
+            
+            
+            
+            
+            
+
+            
+
+            
+                
+                
+
+                
+            
+
+            
+
+            
+
+            
+
+            
+                
+                    <author>
+                        
+
+                        
+
+                        
+                    </author>
+                
+            
+
+            
+                <content type="html"><![CDATA[<p>It takes you to the home page.</p>
+<p><a href="http://localhost:1313/tmp/link/" title="Link">⏎</a></p>]]></content>
+            
+
+            <id>tag:localhost:1313,2023-09-24:/tmp/link/</id>
+
+            
+                
+
+                
+                    
+
+                    <link href="https://willfaught.com/paige" rel="alternate" type="text/html"/>
+                
+            
+
+            
+
+            
+                <published>2023-09-24T21:29:30-07:00</published>
+            
+
+            
+                <rights type="html"><![CDATA[© Flowerinthenight, 2016-2024. All rights reserved.]]></rights>
+            
+
+            
+                <summary type="html"><![CDATA[A front matter link.]]></summary>
+            
+
+            <title type="html"><![CDATA[Link]]></title>
+            <updated>2023-09-24T21:29:30-07:00</updated>
+        </entry>
+    
+</feed>

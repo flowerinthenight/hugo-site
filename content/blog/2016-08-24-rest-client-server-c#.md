@@ -5,7 +5,7 @@ date: "2016-08-24"
 paige:
   feed:
     hide_page: true
-categories: ["Code", "C#"]
+categories: ["code", "csharp"]
 weight: 1
 ---
 

@@ -1,1 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?><rss version="2.0" xml:lang="en" xmlns:atom="http://www.w3.org/2005/Atom"><channel><link href="https://flowerinthenight.com/tags/devops/atom.xml" rel="self" type="application/atom+xml"/><link href="https://flowerinthenight.com/tags/devops/" rel="alternate" type="text/html"/><link href="https://flowerinthenight.com/tags/devops/rss.xml" rel="alternate" type="application/rss+xml"/><copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright><description>Recent content</description><language>en</language><lastBuildDate>2018-01-24 00:00:00 -0800 PST</lastBuildDate><link>https://flowerinthenight.com/tags/devops/</link><managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor><title>Devops · Tags · About</title><webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster></channel></rss>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+    
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"  xml:lang="en"  xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/devops/atom.xml" rel="self" type="application/atom+xml"/>
+            
+        
+            
+
+            
+                
+            
+
+            
+                <link href="http://localhost:1313/tags/devops/" rel="alternate" type="text/html"/>
+            
+        
+            
+
+            
+
+            
+                <link href="http://localhost:1313/tags/devops/rss.xml" rel="alternate" type="application/rss+xml"/>
+            
+        
+
+        
+
+        
+            <copyright>© Flowerinthenight, 2016-2024. All rights reserved.</copyright>
+        
+
+        <description>Recent content</description>
+
+        
+            <language>en</language>
+        
+
+        
+            <lastBuildDate>2018-01-24 00:00:00 -0800 PST</lastBuildDate>
+        
+
+        <link>http://localhost:1313/tags/devops/</link>
+
+        
+            <managingEditor>root@flowerinthenight.com (Flowerinthenight)</managingEditor>
+        
+
+        <title>Devops · Tags · About</title>
+
+        
+            <webMaster>root@flowerinthenight.com (Flowerinthenight)</webMaster>
+        
+
+        
+    </channel>
+</rss>
