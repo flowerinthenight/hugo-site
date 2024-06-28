@@ -1,7 +1,7 @@
 [build.environment]
 HUGO_VERSION = "0.128.0"
 DART_SASS_VERSION = "1.77.5"
-TZ = "America/Los_Angeles"
+TZ = "Asia/Tokyo"
 
 [build]
 publish = "public"
