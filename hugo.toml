@@ -68,7 +68,7 @@ term = ["atom", "html", "rss"]
 disable = false
 
 [params.paige]
-site_title = "f/t"
+site_title = ""
 site_description = ""
 style = "#paige-content > * { margin-left: auto; margin-right: auto; max-width: 60rem; }"
 
