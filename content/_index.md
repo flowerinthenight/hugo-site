@@ -38,7 +38,7 @@ paige:
                     <li>Microservices (Go, .NET Core, Service Fabric)</li>
                     <li>Front-end (Angular, JavaScript, TypeScript)</li>
                 </ul>
-                <li>Engineer, 2008-2016 &#124; <a href="https://en.wikipedia.org/wiki/Acquisition_of_the_IBM_PC_business_by_Lenovo">IBM -> Lenovo</a></li>
+                <li>Research Engineer, 2008-2016 &#124; <a href="https://en.wikipedia.org/wiki/Acquisition_of_the_IBM_PC_business_by_Lenovo">IBM -> Lenovo</a></li>
                 <ul>
                     <li>Device driver development (WDM, KMDF, UMDF, Linux, Android)</li>
                     <li>BIOS development (C, x86 ASM)</li>
