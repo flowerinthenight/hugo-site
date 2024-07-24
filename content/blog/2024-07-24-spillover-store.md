@@ -14,7 +14,7 @@ One of [Alphaus](https://www.alphaus.cloud/)' data processing pipelines ingests 
 
 These pod resource limits are usually enough about 80% of the time. However, since late last year, some of the accounts have datasets that are way, way beyond these limits causing persistent [**OOMKilled**](https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/#exceed-a-container-s-memory-limit) events.
 
-Our first stop-gap solution was to increase the memory limit. The trouble was, even with 20GB+ of memory wasn't really enough for some of the input datasets. And on top of this, GKE's cluster autoscaler also started to increase the VM sizes to those which we don't have CUDs for. Suffice it to say, it increased our monthly cloud spend to about +20%.
+Our first stop-gap solution was to increase the memory limit. The trouble was, even with 20GB+ of memory wasn't really enough for some of the input datasets. And on top of this, GKE's cluster autoscaler also started to increase the VM sizes to those which we don't have CUDs for. Suffice it to say, it increased our monthly cloud spend to about **+20%** while delaying the overall processing time due to pods crashing (and restarting).
 
 We tried several solutions. One was using local files which required increasing the size of the attached storage. While cost-effective, the performance drop was significant. We also tried using the database we are currently using which turned out worse in terms of perfomance and costs. We also tried to use our cache layer (named [Jupiter](https://github.com/alphauslabs/jupiter)) which was very performant but prohibitively expensive.
 
