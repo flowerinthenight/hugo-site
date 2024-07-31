@@ -10,7 +10,7 @@ tags: [infra, system-design]
 weight: 1
 ---
 
-One of [Alphaus](https://www.alphaus.cloud/)' data processing pipelines ingests around 10TB of client financial data per day. The processing engine is running on [GKE](https://cloud.google.com/kubernetes-engine) with around 80-100 (depending on what week in the month) pods sharing the total workload. Each pod has around 10GB of memory and 30GB of attached storage. The consistency of this load allowed us to purchase enough [Committed Use Discounts (CUDs)](https://cloud.google.com/docs/cuds) for the underlying VMs to save on compute costs.
+One of [Alphaus](https://www.alphaus.cloud/)' data processing pipelines ingests around 10TB of client financial data per day. The processing engine is running on [GKE](https://cloud.google.com/kubernetes-engine) with around 80-100 (depending on what week of the month) pods sharing the total workload. Each pod has around 10GB of memory and 30GB of attached storage. The consistency of this load allowed us to purchase enough [Committed Use Discounts (CUDs)](https://cloud.google.com/docs/cuds) for the underlying VMs to save on compute costs.
 
 These pod resource limits are usually enough 80% of the time. However, since late last year, some of the accounts have datasets that are way, way beyond these limits causing persistent [**OOMKilled**](https://kubernetes.io/docs/tasks/configure-pod-container/assign-memory-resource/#exceed-a-container-s-memory-limit) events.
 
