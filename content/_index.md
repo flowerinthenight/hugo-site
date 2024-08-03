@@ -24,7 +24,7 @@ paige:
             Also, why <b>Flowerinthenight</b>? Good question. If you are thinking about Flowerinthenight, the princess from Diana Wynne Jones' <a href="https://en.wikipedia.org/wiki/Castle_in_the_Air_(novel)">Castle In The Air</a>, then you are right. Anyway, it goes without saying that she is one of my favorite book characters of all time. Seriously, I can't think of any other princess with a name as fantastic as hers.
             </p>
             <p>
-            <b>Work history</b>
+            <b>Work history</b> (20 years)
             <ul>
                 <li>CTO, 2017-present &#124; <a href="https://alphaus.cloud/">Alphaus Inc.</a>, Japan</li>
                 <ul>
