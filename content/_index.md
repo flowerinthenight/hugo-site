@@ -34,9 +34,8 @@ paige:
                 </ul>
                 <li>Senior Software Engineer, 2016-2017 &#124; <a href="http://www.terarecon.com/">TeraRecon, Inc.</a></li>
                 <ul>
-                    <li>Image processing, 2D/3D rendering (C#, C, C++, DICOM)</li>
-                    <li>Microservices (Go, .NET Core, Service Fabric)</li>
-                    <li>Front-end (Angular, JavaScript, TypeScript)</li>
+                    <li>Image processing/analysis, 2D/3D rendering (C#, C, C++, DICOM)</li>
+                    <li>Tools and services (Go, .NET Core, Service Fabric)</li>
                 </ul>
                 <li>Research Engineer, 2008-2016 &#124; <a href="https://en.wikipedia.org/wiki/Acquisition_of_the_IBM_PC_business_by_Lenovo">IBM -> Lenovo</a></li>
                 <ul>
