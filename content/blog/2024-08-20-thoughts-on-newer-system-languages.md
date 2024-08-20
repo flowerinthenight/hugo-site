@@ -14,7 +14,7 @@ I'm talking about the new crop of systems programming languages that advertise t
 
 This post will not be an X vs Y review, or at least, not intentionally. Programming languages, I think, are one of those things that developers tend to get attached to, alongside editors, OS'es (or distros in the Linux world). "Here be dragons.", as they say. But I want to share my thoughts from a perspective of someone who can introduce a new programming language to teams, instead of someone who wants to make a case and convince somebody who can do so.
 
-Before I joined, Alphaus was a PHP shop. Around early 2018, after about half a year, I introduced Go as our main programming language but only for new services; no rewrites. I didn't know Go at that time, nobody in the company did. But why Go though? I could have chosen Java, or C#. Seven years on, now, I consider that a good decision. Did I know it would be? Of course not. Java probably would have been fine. But thinking about it now, I would attribute it mainly down to Go's simplicity (or size?). Or at least at that time.
+Before I joined, Alphaus was a PHP shop. Around early 2018, after about half a year, I introduced Go as our main programming language but only for new services; no rewrites. I didn't know Go at that time, nobody in the company did. But why Go though? I could have chosen Java, or C#. Seven years on, now, I consider that a good decision. Did I know it would be? Of course not. Java probably would have been fine. But thinking about it now, I would attribute it mainly down to Go's simplicity.
 
 <br>
 
