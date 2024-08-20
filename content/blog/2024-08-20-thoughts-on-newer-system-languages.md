@@ -62,6 +62,6 @@ I'm actually looking at Zig now. It resonates with me as it still feels "C"-ish 
 
 This post has been all over the place. In the end, you might not care whatever my choice will be and the justifications I have for it but another way of looking at it is that if you happen to be in the position of trying to convince your leader(s) to switch to your preferred programming language, basing your arguments only from an objective point of view might not hold much water. You're probably going to fight an already losing battle from the start.
 
-Or it could still work though, who knows.
+Or it could still work, you know. Who knows.
 
 <br>
