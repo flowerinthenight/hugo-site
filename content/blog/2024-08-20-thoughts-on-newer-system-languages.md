@@ -48,7 +48,7 @@ You could argue that it's impractical, maybe borderline irresponsible, of me to 
 
 I know Rust a bit. I've dabbled with it outside work although I'm not really proficient with it since I haven't written any production code with it. It is a complex language. Not C++-level kind of complex but it is still very complex. I believe it is "the better C++" and if I'm still working in C++ now, I'd choose it as well. But I'm not. And my bias is stronger now than ever before due to C, and now, Go.
 
-I'm actually looking at Zig now. It resonates to me as it still feels "C"-ish but a lot better. I like the choice of control over memory allocations. It's not as safe as Rust but it provides mechanisms to make it much safer than C. And it's still a simple language overall. Having said that, no decisions yet. It's only been 2-3 months. And I'm not in a hurry. I think the only real blocker at the moment is it not being tagged 1.x yet.
+I'm actually looking at Zig now. It resonates with me as it still feels "C"-ish but a lot better. I like the choice of control over memory allocations. It's not as safe as Rust but it provides mechanisms to make it much safer than C. And it's still a simple language overall. Having said that, no decisions yet. It's only been 2-3 months. And I'm not in a hurry. I think the only real blocker at the moment is it not being tagged 1.x yet.
 
 <br>
 
