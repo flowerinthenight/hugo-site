@@ -3,9 +3,6 @@ title: "`memx` - Get process' memory usage (Linux)"
 description: "2024-05-30"
 categories: ["Tech"]
 date: "2024-05-30"
-paige:
-  feed:
-    hide_page: true
 tags: [process, memory, usage, linux, golang]
 weight: 1
 ---

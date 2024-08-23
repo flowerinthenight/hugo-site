@@ -3,9 +3,6 @@ title: "Attempt to replace `hedge`'s member tracking with `hashicorp/memberlist`
 description: "2023-04-28"
 categories: ["Tech"]
 date: "2023-04-28"
-paige:
-  feed:
-    hide_page: true
 tags: [memberlist, hedge, distributed-computing, k8s, kubernetes]
 weight: 1
 ---

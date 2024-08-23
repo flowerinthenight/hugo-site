@@ -3,9 +3,6 @@ title: "`oomkill-watch` - A tool to watch OOMKilled events in k8s"
 description: "2024-05-03"
 categories: ["Tech"]
 date: "2024-05-03"
-paige:
-  feed:
-    hide_page: true
 tags: [k8s, oomkilled, events, watch, kubectl, golang]
 weight: 1
 ---

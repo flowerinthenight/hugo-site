@@ -3,9 +3,6 @@ title: "CTO Diaries #4: On not shipping your org chart"
 description: "2023-08-09"
 categories: ["Tech"]
 date: "2023-08-09"
-paige:
-  feed:
-    hide_page: true
 tags: [cto-diaries, cto, diaries, conways-law]
 weight: 1
 ---

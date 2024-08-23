@@ -3,9 +3,6 @@ title: "Alphaus Blue API"
 description: "2023-05-03"
 categories: ["Tech"]
 date: "2023-05-03"
-paige:
-  feed:
-    hide_page: true
 tags: [alphaus, blog, engineering, technical]
 weight: 1
 ---

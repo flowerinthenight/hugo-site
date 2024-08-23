@@ -3,9 +3,6 @@ title: "Announcing our new product, OCTO"
 description: "2023-05-29"
 categories: ["Tech"]
 date: "2023-05-29"
-paige:
-  feed:
-    hide_page: true
 tags: [product, release, alphaus, octo]
 weight: 1
 ---

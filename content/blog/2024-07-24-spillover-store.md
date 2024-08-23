@@ -3,9 +3,6 @@ title: "How Alphaus saves on costs by 'stitching storage'"
 description: "2024-07-24"
 categories: ["infra"]
 date: "2024-07-24"
-paige:
-  feed:
-    hide_page: true
 tags: [infra, system-design]
 weight: 1
 ---

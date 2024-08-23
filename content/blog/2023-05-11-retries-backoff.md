@@ -3,9 +3,6 @@ title: "Retries with backoff in distributed systems"
 description: "2023-05-11"
 categories: ["Tech"]
 date: "2023-05-11"
-paige:
-  feed:
-    hide_page: true
 tags: [retry, retries, backoff, distributed-systems]
 weight: 1
 ---

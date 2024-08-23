@@ -3,9 +3,6 @@ title: "The DIVS model"
 description: "2024-05-13"
 categories: ["Tech"]
 date: "2024-05-13"
-paige:
-  feed:
-    hide_page: true
 tags: [process, startup, agile, development]
 weight: 1
 ---

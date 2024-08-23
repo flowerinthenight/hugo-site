@@ -3,9 +3,6 @@ title: "Revisiting latency numbers"
 description: "2024-06-28"
 categories: ["infra"]
 date: "2024-06-28"
-paige:
-  feed:
-    hide_page: true
 tags: [infra, system-design, latency]
 weight: 1
 ---
