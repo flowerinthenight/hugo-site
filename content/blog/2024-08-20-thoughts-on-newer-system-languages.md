@@ -8,6 +8,9 @@ paige:
     hide_page: true
 tags: [zig, systems, programming]
 weight: 1
+outputs:
+- html
+- rss
 ---
 
 I'm talking about the new crop of systems programming languages that advertise themselves as better replacements for C and/or C++: [Rust](https://www.rust-lang.org/), [Zig](https://ziglang.org/), [D](https://dlang.org/), [Odin](https://odin-lang.org/), [ Nim ](https://nim-lang.org/), etc. I'm using the word "new" loosely here as Rust and Zig, for example, are almost a decade old now. The topic of systems programming has been on my radar (again) recently at work due to our attempts at improving the performance of some of the more critical parts of our stack. At [Alphaus](https://www.alphaus.cloud/), we use Go as our main programming language and as much as I like Go, there are still areas in our infrastructure that could be served better with non-GC languages.
