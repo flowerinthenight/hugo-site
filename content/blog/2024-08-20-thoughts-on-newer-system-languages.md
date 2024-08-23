@@ -3,9 +3,6 @@ title: "Thoughts on the newer systems programming languages"
 description: "2024-08-20"
 categories: ["programming"]
 date: "2024-08-20"
-paige:
-  feed:
-    hide_page: true
 tags: [zig, systems, programming]
 weight: 1
 outputs:
