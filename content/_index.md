@@ -44,7 +44,7 @@ paige:
                     <li>Video, audio development (DirectShow, Media Foundation, OpenCV, DirectX, Intel IPP)</li>
                     <li>Windows development (Win32, MFC, COM, .NET, UWP)</li>
                     <li>Android development (framework level, JNI, C++)</li>
-                    <li>Embedded systems</li>
+                    <li>Embedded systems (C, C++, ASM)</li>
                 </ul>
                 <li>And many others (mostly C/C++)...</li>
             </ul>
