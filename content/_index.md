@@ -29,7 +29,7 @@ paige:
                 <li>CTO, 2017-present &#124; <a href="https://alphaus.cloud/">Alphaus Inc.</a>, Japan</li>
                 <ul>
                     <li>Product/technology strategy, engineering management, recruitment</li>
-                    <li>Software architecture, infrastructure, CIO hat, engineering processes</li>
+                    <li>Software architecture, infrastructure, engineering processes</li>
                     <li>FinOps, Multicloud (AWS, GCP, Azure)</li>
                 </ul>
                 <li>Senior Software Engineer, 2016-2017 &#124; <a href="http://www.terarecon.com/">TeraRecon, Inc.</a></li>
