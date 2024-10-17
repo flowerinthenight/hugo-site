@@ -2,9 +2,11 @@ baseurl = "https://flowerinthenight.com"
 copyright = "© Flowerinthenight, 2016-2024. All rights reserved."
 enablerobotstxt = true
 languagecode = "en-us"
-paginate = 10000
 timezone = "Asia/Tokyo"
 titlecasestyle = "Go"
+
+[pagination]
+pagerSize = 10000
 
 [services]
   [services.googleAnalytics]
