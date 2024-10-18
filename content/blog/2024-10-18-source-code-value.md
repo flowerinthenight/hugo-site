@@ -34,7 +34,7 @@ One more point he emphasized is the idea of program life, death, and revival. Th
 
 Philosophy aside, what can we learn from these arguments? Here are some proposals:
 
-* It is a good idea to retain the original programmers for as long as possible. Perhaps easier said than done due to a lot of factors.
+* It is a good idea to retain the original programmers for as long as possible. (Perhaps easier said than done due to a lot of factors.)
 * Onboarding is slow and expensive. Try to focus on the possibility of the new members having access to the original programmers during the transition.
 * In general, keeping programmers longer is more cost effective than high turnover.
 * Documentation, while unable to capture the whole program theory, is still helpful in providing context, however minimal, in theory knowledge transfer.
