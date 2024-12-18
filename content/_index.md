@@ -57,7 +57,7 @@ paige:
             </ul>
             </p>
             <p><b>Contact</b></p>
-            Feel free to contact me via <a href="mailto:root@flowerinthenight.com">email</a> if you need CTO coaching, consulting, or fractional CTO services. I do occasional <a href="https://github.com/flowerinthenight">OSS</a> in my spare time as well so if you're interested in that instead, drop me a line. Please be aware that I receive many emails so my response might be delayed.
+            Feel free to contact me via <a href="mailto:root@flowerinthenight.com">email</a> if you need CTO coaching, consulting, or fractional CTO services. I do occasional <a href="https://github.com/flowerinthenight">OSS</a> in my spare time as well so if you're interested in that instead, drop me a line. Be aware that I receive many emails so my response might be delayed.
         </div>
     </div>
 </div>
