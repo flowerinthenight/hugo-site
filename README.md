@@ -4,4 +4,7 @@
 $ brew install hugo
 $ brew install sass/sass/sass
 $ hugo server
+
+# Update theme:
+$ hugo mod get github.com/willfaught/paige@latest
 ```
