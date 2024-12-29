@@ -48,6 +48,6 @@ So, interested in becoming a systems programmer? First, know your target. Your l
 
 **Closing**
 
-I acknowledge that there are many opinions out there that don't necessarily align with this advice. For instance, a quick check on publicly available literature yields topics about architectural patterns, algorithmic thinking, FIRST and SOLID principles, systems thinking, formal verifications, thinking in terms of tradeoffs (which I agree by the way), thinking in terms of costs, DDD, etc. (which are all well and good), but I think that by being deliberate about target thinking takes you a long way towards becoming a systems programmer.
+I acknowledge that there are many opinions out there that don't necessarily align with this advice. For instance, a quick check on publicly available literature yields topics about architectural patterns, algorithmic thinking, FIRST and SOLID principles, systems thinking, formal verifications, thinking in terms of tradeoffs (which I agree by the way), thinking in terms of costs, etc. (which are all well and good), but I think that by being deliberate about target thinking takes you a long way towards becoming a systems programmer.
 
 <br>
