@@ -42,12 +42,12 @@ Understanding your target allows you to leverage what it can and can't do. Its c
 
 Your knowledge of targets will also help you better understand how complex systems are being designed: even distributed systems, or systems you're probably using now.
 
-And of course, debugging. Not language syntax debugging, but those pesky, difficult-to-reproduce, SLA-violating production bugs. I don't think I need to expound about this more.
+And lastly, debugging. Not language syntax debugging, but those pesky, difficult-to-reproduce, SLA-violating production bugs. I don't think I need to expound about this more.
 
 So, interested in becoming a systems programmer? First, know your target. Your language of choice is just one of your tools to program your target.
 
 **Closing**
 
-I acknowledge that there are many opinions out there that don't necessarily align with this advice. For instance, a quick check on publicly available literature yields topics about architectural patterns, algorithmic thinking, FIRST and SOLID principles, systems thinking, formal verifications, thinking in terms of tradeoffs (which I agree by the way), thinking in terms of costs, DDD, etc., but I think that by being deliberate about target thinking takes you a long way towards becoming a systems programmer. And personally, I think that "know your target" is a good starting point for future conversations as well.
+I acknowledge that there are many opinions out there that don't necessarily align with this advice. For instance, a quick check on publicly available literature yields topics about architectural patterns, algorithmic thinking, FIRST and SOLID principles, systems thinking, formal verifications, thinking in terms of tradeoffs (which I agree by the way), thinking in terms of costs, DDD, etc. (which are all well and good), but I think that by being deliberate about target thinking takes you a long way towards becoming a systems programmer.
 
 <br>
