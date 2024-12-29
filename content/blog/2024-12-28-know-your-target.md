@@ -42,6 +42,8 @@ Understanding your target allows you to leverage what it can and can't do. Its c
 
 Your knowledge of targets will also help you better understand how complex systems are being designed: even distributed systems, or systems you're probably using now.
 
+And of course, debugging. Not language syntax debugging, but those pesky, difficult-to-reproduce, SLA-violating production bugs. I don't think I need to expound about this more.
+
 So, interested in becoming a systems programmer? First, know your target. Your language of choice is just one of your tools to program your target.
 
 **Closing**
