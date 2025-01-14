@@ -17,6 +17,10 @@ paige:
             <p class="text-left">Current: <b>Toll the Hounds</b></p>
             <p class="text-left">
             <ul>
+                <li>The Farseer Trilogy</li>
+                <ul>
+                    <li>Assassin's Apprentice</li>
+                </ul>
                 <li>Chapter One (Michael Wood)</li>
                 <li>The Margate Murders</li>
                 <li>The Near Witch</li>
