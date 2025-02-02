@@ -66,7 +66,8 @@ paige:
 
 <div class="column-gap-3 d-flex display-6 justify-content-center mb-3">
     {{< paige/icon class="bi bi-github" title="GitHub" url="https://github.com/flowerinthenight/" >}}
-    {{< paige/icon class="bi bi-linkedin" title="LinkedIn" url="https://www.linkedin.com/in/chew-esmero-b0613289/" >}}
     {{< paige/icon class="bi bi-twitter" title="Bluesky" url="https://bsky.app/profile/flowerinthenight.com" >}}
+    {{< paige/icon class="bi bi-linkedin" title="LinkedIn" url="https://www.linkedin.com/in/chew-esmero-b0613289/" >}}
+    {{< paige/icon class="bi bi-rss" title="RSS" url="https://flowerinthenight.com/rss.xml" >}}
 </div>
 </p>
