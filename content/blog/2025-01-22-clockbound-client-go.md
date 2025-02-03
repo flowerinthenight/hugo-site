@@ -14,3 +14,11 @@ As great a tech Google's [TrueTime](https://cloud.google.com/spanner/docs/true-t
 I've heard of AWS' [TimeSync Service](https://aws.amazon.com/blogs/compute/its-about-time-microsecond-accurate-clocks-on-amazon-ec2-instances/) before but only in passing. Now that they've also released [DSQL](https://aws.amazon.com/blogs/database/introducing-amazon-aurora-dsql/), and having seen the papers and blogs about it, turns out that TimeSync is their equivalent to TrueTime, and that there is an API for it!
 
 <br>
+
+Related blogs:
+
+1) This blog
+2) [AWS ClockBound client for Go (update)](/blog/2025-01-27-clockbound-client-go-update/)
+3) [Distributed locking on AWS (ClockBound)](/blog/2025-02-02-aws-dist-locking/)
+
+<br>
