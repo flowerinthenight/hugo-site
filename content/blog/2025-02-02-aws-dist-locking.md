@@ -21,5 +21,6 @@ Related blogs:
 2) [AWS ClockBound client for Go (update)](/blog/2025-01-27-clockbound-client-go-update/)
 3) This blog post
 4) [Cluster membership management on AWS](/blog/2025-02-07-aws-cluster-membership/)
+5) [Static-linked CGO binaries using musl and Zig](/blog/2025-02-15-cgo-static-linked-bin-musl/)
 
 <br>

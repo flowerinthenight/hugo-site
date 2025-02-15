@@ -25,5 +25,6 @@ Related blogs:
 2) [AWS ClockBound client for Go (update)](/blog/2025-01-27-clockbound-client-go-update/)
 3) [Distributed locking on AWS (ClockBound)](/blog/2025-02-02-aws-dist-locking/)
 4) This blog
+5) [Static-linked CGO binaries using musl and Zig](/blog/2025-02-15-cgo-static-linked-bin-musl/)
 
 <br>

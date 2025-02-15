@@ -19,5 +19,6 @@ Related blogs:
 2) This blog post
 3) [Distributed locking on AWS (ClockBound)](/blog/2025-02-02-aws-dist-locking/)
 4) [Cluster membership management on AWS](/blog/2025-02-07-aws-cluster-membership/)
+5) [Static-linked CGO binaries using musl and Zig](/blog/2025-02-15-cgo-static-linked-bin-musl/)
 
 <br>
