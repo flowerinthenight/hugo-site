@@ -54,7 +54,7 @@ $ ldd ./example
       not a dynamic executable
 ```
 
-So, yes, we can build static binaries even with CGO; but now, I'm stuck with `musl`. I'm sure `musl` is a fine piece of software, but I'm not really that familiar with it. I'm aware we use it at work since many of our containers in production use Alpine Linux as base. But would I exchange `glibc` for `musl` just for static binaries? I'm not so sure.
+So, yes, we can build static binaries even with CGO; but now, I'm stuck with `musl`. I'm sure `musl` is a fine piece of software, but I'm not really that familiar with it. I'm aware we use it at work since many of our containers in production use Alpine Linux as base. But would I exchange `glibc` for `musl` just for static binaries? I'm not sure yet. Probably.
 
 As always, tradeoffs.
 
