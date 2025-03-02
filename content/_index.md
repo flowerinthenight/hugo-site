@@ -21,7 +21,7 @@ paige:
             Hi, my name is <b><a href="https://www.linkedin.com/in/chew-esmero-b0613289/">Chew</a></b> and welcome to my blog. I'm currently the CTO of <a href="https://alphaus.cloud/">Alphaus</a>, a Tokyo-based startup doing cloud financial operations. My interests at the moment revolve around distributed systems and cloud computing. Outside of work, I enjoy <a href="/bookshelf/">reading</a>, especially <a href="https://en.wikipedia.org/wiki/High_fantasy">high fantasy</a> with very interesting magic systems. I'm also into music. I play a couple of instruments (bass, guitar, piano, and drums) although I'm not very good at any of them.
             </p>
             <p>
-            Also, why <b>Flowerinthenight</b>? Good question. If you are thinking about Flowerinthenight, the princess from Diana Wynne Jones' <a href="https://en.wikipedia.org/wiki/Castle_in_the_Air_(novel)">Castle In The Air</a>, then you are right. Anyway, it goes without saying that she is one of my favorite book characters of all time. Seriously, I can't think of any other princess with a name as fantastic as hers.
+            Also, why <b>Flowerinthenight</b>? Good question. If you are thinking about Flower-in-the-Night, the princess from Diana Wynne Jones' <a href="https://en.wikipedia.org/wiki/Castle_in_the_Air_(novel)">Castle In The Air</a>, then you are right. Anyway, it goes without saying that she is one of my favorite book characters of all time. Seriously, I can't think of any other princess with a name as fantastic as hers.
             </p>
             <p>
             <b>Work history</b> (20+ years)
