@@ -108,7 +108,7 @@ fn main() {
 
 In this code, `x_clone` here looks like our previous example but it isn't. For `Arc`s, you clone the pointer to increase its reference count, not clone the inner object itself. `x_clone` and `x` here still points to the same `X` object. `Arc` will only cleanup its inner object once the reference count goes to zero.
 
-This is actually alright for me, albeit the weird ergonomics of the `.clone()`, and `.lock()` with its implicit unlock pair when going out of scope. What is slightly unexpected is if it's for atomics; I still have to wrap an atomic with an `Arc` as well. For example,
+This is actually alright for me, albeit the weird ergonomics of `.clone()`, and `.lock()` with its implicit unlock pair when going out of scope. What is slightly unexpected is if it's for atomics; I still have to wrap an atomic with an `Arc` as well. For example,
 
 ```rust
 fn main() {
@@ -125,7 +125,7 @@ fn main() {
 }
 ```
 
-I feel like there not really a need for `Arc` here since it's, you know, atomic.
+I feel like there's not really a need for `Arc` here since it's, you know, atomic.
 
 #### Using `Vec<T>` for late initialization of objects
 
