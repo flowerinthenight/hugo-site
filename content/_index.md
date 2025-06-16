@@ -15,7 +15,7 @@ paige:
 <div class="container-fluid">
     <div class="justify-content-center row">
         <div class="col col-auto col-lg-7 px-0">
-            <p>Latest blog entry: <b><a href="/blog/2025-03-28-more-on-rust/">Fighting Rust’s borrow checker</a></b></p>
+            <p>Latest blog entry: <b><a href="/blog/2025-06-15-some-updates/">What's been going on?</a></b></p>
             <br>
             <p class="text-left">
             Hi, my name is <b><a href="https://www.linkedin.com/in/chew-esmero-b0613289/">Chew</a></b> and welcome to my blog. I'm currently the CTO of <a href="https://alphaus.cloud/">Alphaus</a>, a Tokyo-based startup doing cloud financial operations. My interests at the moment revolve around distributed systems and cloud computing. Outside of work, I enjoy <a href="/bookshelf/">reading</a>, especially <a href="https://en.wikipedia.org/wiki/High_fantasy">high fantasy</a> with very interesting magic systems. I'm also into music. I play a couple of instruments (bass, guitar, piano, and drums) although I'm not very good at any of them.
