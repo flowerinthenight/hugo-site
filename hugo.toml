@@ -10,7 +10,7 @@ pagerSize = 10000
 
 [services]
   [services.googleAnalytics]
-    ID = 'G-EZWHM5C9YT'
+    id = 'G-EZWHM5C9YT'
 
 [languages.en]
 title = "flowerinthenight"
@@ -34,17 +34,17 @@ name = "Bookshelf"
 url = "/bookshelf/"
 weight = 3
 
-[[languages.en.menu.main]]
-identifier = "tags"
-name = "Tags"
-url = "/tags/"
-weight = 4
+# [[languages.en.menu.main]]
+# identifier = "tags"
+# name = "Tags"
+# url = "/tags/"
+# weight = 4
 
-[[languages.en.menu.main]]
-identifier = "search"
-name = "Search"
-url = "/search/"
-weight = 5
+# [[languages.en.menu.main]]
+# identifier = "search"
+# name = "Search"
+# url = "/search/"
+# weight = 5
 
 [markup.goldmark.renderer]
 unsafe = true
