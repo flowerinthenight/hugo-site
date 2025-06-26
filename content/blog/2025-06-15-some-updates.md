@@ -16,3 +16,5 @@ Now, I'm working on another startup (again) in my spare time, and in my own pace
 I might talk about it at some point in the future but in the meantime, I'll continue building it in stealth mode.
 
 Just so you know.
+
+<br>
