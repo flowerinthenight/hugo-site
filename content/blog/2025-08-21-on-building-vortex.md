@@ -41,4 +41,6 @@ More to share soon as we build out the next pieces.
 
 > **Sidenote:** This project actually made me excited in programming once again as it involves tinkering with the low-level guts of the Linux kernel, which I love.
 
+The source code is [here](https://github.com/flowerinthenight/vortex-agent/), if you're interested.
+
 <br>
