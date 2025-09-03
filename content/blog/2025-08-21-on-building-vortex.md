@@ -44,3 +44,10 @@ More to share soon as we build out the next pieces.
 The source code is [here](https://github.com/flowerinthenight/vortex-agent/), if you're interested.
 
 <br>
+
+Related blogs:
+
+1) This blog
+2) [Using QEMU for eBPF testing](/blog/2025-09-03-ebpf-qemu-test/)
+
+<br>
