@@ -14,7 +14,7 @@ paige:
             <p class="text-left">
             These are the books I've read so far. At least the ones I remembered. I'll be updating this list from time to time.
             </p>
-            <p class="text-left">Current: <b>Toll the Hounds</b></p>
+            <p class="text-left">Current: <b>The Final Vow, Toll the Hounds</b></p>
             <p class="text-left">
             <ul>
                 <li>The Farseer Trilogy</li>
