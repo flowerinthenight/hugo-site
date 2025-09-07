@@ -34,6 +34,7 @@ paige:
                     <li>Dead Ground</li>
                     <li>The Botanist</li>
                     <li>The Mercy Chair</li>
+                    <li>The Final Vow</li>
                 </ul>
                 <li>The Malazan Book of the Fallen</li>
                 <ul>
