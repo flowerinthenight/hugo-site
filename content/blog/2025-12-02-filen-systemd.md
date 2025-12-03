@@ -13,7 +13,7 @@ This is a guide for my (future) self.
 
 To setup [Filen](https://filen.io/) as a systemd service, see guide below. As an example, the username we will be using is `user1`.
 
-1] Create a unit file under `/usr/lib/systemd/system/` for our service. Take note of the binary location and the mount point.
+**[1]** Create a unit file under `/usr/lib/systemd/system/` for our service. Take note of the binary location and the mount point.
 
 > ```sh
 > cat >/usr/lib/systemd/system/filen-mount.service <<EOL
@@ -35,7 +35,7 @@ To setup [Filen](https://filen.io/) as a systemd service, see guide below. As an
 > EOL
 > ```
 
-2] Set the service to start on boot.
+**[2]** Set the service to start on boot.
 
 > ```sh
 > systemctl daemon-reload
