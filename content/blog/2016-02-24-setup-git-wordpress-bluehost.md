@@ -2,7 +2,6 @@
 title: "How I setup `git` for my WordPress installation in BlueHost"
 description: "2016-02-24"
 categories: ["Tech"]
-categories: ["Tech"]
 date: "2016-02-24"
 paige:
   feed:
