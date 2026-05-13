@@ -11,7 +11,7 @@ weight: 1
 
 To my wonderful readers,
 
-As you may have noticed, I haven't been posting anything for quite a while. The main reason really is that most of the traffic in this site comes from AI scraper bots. I need some time to step back and figure out the best way to move forward. Whether that means new technical safeguards or a change in how I share my work, I want to make sure I’m building something sustainable.
+As you may have noticed, I haven't been posting anything for quite a while. The main reason really is that most of the traffic in this site now comes from AI scraper bots. I need some time to step back and figure out the best way to move forward. Whether that means new technical safeguards or a change in how I share my work, I want to make sure I’m building something sustainable.
 
 Thank you for being patient with me. I’ll be back once I’ve cleared the air.
 
