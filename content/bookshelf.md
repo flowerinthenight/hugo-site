@@ -17,6 +17,10 @@ paige:
             <p class="text-left">Current: <b>DS Cross Mysteries, Toll the Hounds</b></p>
             <p class="text-left">
             <ul>
+                <li>DS Cross Mysteries</li>
+                <ul>
+                    <li>The Dentist</li>
+                </ul>
                 <li>Recall (JD Kirk)</li>
                 <li>Project Hail Mary</li>
                 <li>The Farseer Trilogy</li>
