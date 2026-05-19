@@ -20,6 +20,7 @@ paige:
                 <li>DS Cross Mysteries</li>
                 <ul>
                     <li>The Dentist</li>
+                    <li>The Cyclist</li>
                 </ul>
                 <li>Recall (JD Kirk)</li>
                 <li>Project Hail Mary</li>
