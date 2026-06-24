@@ -21,6 +21,8 @@ paige:
                 <ul>
                     <li>The Dentist</li>
                     <li>The Cyclist</li>
+                    <li>The Patient</li>
+                    <li>The Politician</li>
                 </ul>
                 <li>Recall (JD Kirk)</li>
                 <li>Project Hail Mary</li>
