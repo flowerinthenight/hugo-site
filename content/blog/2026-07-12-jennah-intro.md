@@ -15,6 +15,8 @@ And because it's all in one place, I can commit a whole reasoning step atomicall
 
 More to come soon.
 
-(If you're an investor in the space, you can contact me anytime. And yes, Jennah will be competing with [Mem0](https://mem0.ai/), [Zep](https://www.getzep.com/), etc.)
+<br>
+
+(If you're an investor in the space, you can contact me anytime. And yes, Jennah will be competing with [Mem0](https://mem0.ai/), [Zep](https://www.getzep.com/))
 
 <br>
