@@ -27,6 +27,6 @@ This solution allowed us to actually revert back to our original pod resource li
 
 As Alphaus grows (and therefore ingests more and more data) and serve more clients, maybe we will eventually end up using **Apache Ignite** or some other off-the-shelf distributed solutions, but as of now, **SoS** works. With that said, if you have a cost-effective (and better) product/solution in mind, please feel free to contact us. We'd love to talk.
 
-Finally, you can find **SoS**'s implementation [here](https://github.com/flowerinthenight/hedge/blob/main/sos.go) (if you're interested).
+Finally, you can find **SoS**'s implementation [here](https://github.com/flowerinthenight/hedge/blob/v3/sos.go) (if you're interested).
 
 <br>
