@@ -17,6 +17,6 @@ More to come soon.
 
 <br>
 
-(If you're an investor in the space, you can contact me anytime. And yes, Jennah will be competing with [Mem0](https://mem0.ai/), [Zep](https://www.getzep.com/))
+(If you're an investor in the space, you can contact me anytime. And yes, Jennah will be competing with [Mem0](https://mem0.ai/), [Zep](https://www.getzep.com/).)
 
 <br>
