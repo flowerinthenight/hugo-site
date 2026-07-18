@@ -23,6 +23,7 @@ paige:
                     <li>The Cyclist</li>
                     <li>The Patient</li>
                     <li>The Politician</li>
+                    <li>The Monk</li>
                 </ul>
                 <li>Recall (JD Kirk)</li>
                 <li>Project Hail Mary</li>
