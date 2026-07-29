@@ -26,6 +26,10 @@ paige:
             <p>
             <b>Work history</b> (20+ years)
             <ul>
+                <li>Founder, 2025-present &#124; <a href="https://nightblue.io/" target="_blank" rel="noopener noreferrer">NightBlue</a></li>
+                <ul>
+                    <li>Working on <b><a href="https://jennah.nightblue.io/" target="_blank" rel="noopener noreferrer">Jennah</a></b>, a memory platform for AI agents</li>
+                </ul>
                 <li>CTO, 2017-present &#124; <a href="https://alphaus.cloud/" target="_blank" rel="noopener noreferrer">Alphaus Inc.</a>, Japan</li>
                 <ul>
                     <li>Product/technology strategy, engineering management, recruitment</li>
