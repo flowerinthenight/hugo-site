@@ -45,6 +45,7 @@ paige:
                     <li>The Botanist</li>
                     <li>The Mercy Chair</li>
                     <li>The Final Vow</li>
+                    <li>The Killer's Mark</li>
                 </ul>
                 <li>The Malazan Book of the Fallen</li>
                 <ul>
