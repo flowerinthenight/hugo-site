@@ -24,6 +24,8 @@ paige:
                     <li>The Patient</li>
                     <li>The Politician</li>
                     <li>The Monk</li>
+                    <li>The Teacher</li>
+                    <li>The Bookseller</li>
                 </ul>
                 <li>Recall (JD Kirk)</li>
                 <li>Project Hail Mary</li>
